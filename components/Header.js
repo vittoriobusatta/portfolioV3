@@ -41,7 +41,7 @@ function Header({ logoColor, color, color2 }) {
           color: color2,
           border: `1px solid ${logoColor}`,
           borderRadius: "20px",
-          padding: "4px"
+          padding: "2px"
         }}
         onChange={handleLanguageChange}
         value={language}

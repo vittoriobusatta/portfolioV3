@@ -13,7 +13,35 @@
     "link": "https://decortakaz.vercel.app/",
     "color": "#563213",
     "color2": "#C89773",
-    "background": "#FDF1E6"
+    "background": "#FDF1E6",
+    "description": {
+      "fr": "Décor Ta Kaz est une entreprise de menuiserie artisanale'. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
+      "en": "Décor Ta Kaz is a carpentry company. Their website is a showcase website that presents their services and their work."
+    },
+    "article": {
+      "title": {
+        "fr": "Une maison d'oeuvre",
+        "en": "A work house"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "De la conception du logo en passant par le design puis au développement du site, j'ai porté différentes casquettes dans cette mission pour répondre aux besoins du client.",
+        "en": "From the conception of the logo to the design and then to the development of the site, I wore different hats in this mission to meet the client's needs."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/decortakaz/dtk1.jpg",
+          "alt": "Décor Ta Kaz - Image 1"
+        },
+        "img2": {
+          "src": "/images/decortakaz/dtk2.jpg",
+          "alt": "Décor Ta Kaz - Image 2"
+        }
+      }
+    }
   },
   {
     "name": "Nocta",
@@ -29,7 +57,21 @@
     "link": "",
     "color": "#093738",
     "color2": "#FDFCFD",
-    "background": "#ECF8F5"
+    "background": "#ECF8F5",
+    "article": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "",
+        "en": ""
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      }
+    }
   },
   {
     "name": "Muteza",
@@ -45,7 +87,21 @@
     "link": "https://muteza.vercel.app/",
     "color": "#FFB189",
     "color2": "#FFF5F0",
-    "background": "#F8F4EC"
+    "background": "#F8F4EC",
+    "article": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "",
+        "en": ""
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      }
+    }
   },
   {
     "name": "Galleria",
@@ -77,7 +133,21 @@
     "link": "https://www.ab-distribution.re/",
     "color": "#F86542",
     "color2": "#FFF0D1",
-    "background": "#F8F0EC"
+    "background": "#F8F0EC",
+    "article": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "",
+        "en": ""
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      }
+    }
   },
   {
     "name": "Unkle",
@@ -93,7 +163,31 @@
     "link": "https://password-components.vercel.app/",
     "color": "#2B9DFD",
     "color2": "#FDFCFD",
-    "background": "#ECFAFF"
+    "background": "#ECFAFF",
+    "article": {
+      "title": {
+        "fr": "Une sécurité garantie",
+        "en": "A guaranteed safety"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "La mission était d'intégrer la maquette d'un composant qui vérifie la sécurité des mots de passe avec des critères qui diffèrent selon que l'on soit un client ou un employé.",
+        "en": "The mission was to integrate the mockup of a component that checks the security of passwords with criteria that differ depending on whether you are a customer or an employee."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/unkle/unk1.jpg",
+          "alt": "Unkle - Image 1"
+        },
+        "img2": {
+          "src": "/images/unkle/unk2.jpg",
+          "alt": "Unkle - Image 2"
+        }
+      }
+    }
   },
   {
     "name": "Sunnyside",
@@ -109,6 +203,20 @@
     "link": "https://sunnyside-lovat.vercel.app/",
     "color": "#F8D914",
     "color2": "#FDFCFD",
-    "background": "#FCFFEC"
+    "background": "#FCFFEC",
+    "article": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "",
+        "en": ""
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      }
+    }
   }
 ]

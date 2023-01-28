@@ -1,18 +1,61 @@
 .projects {
   &__landing {
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    padding: 16px 26px;
+    padding: 100px 26px 0;
     @media screen and (min-width: 768px) {
       min-height: 100vh;
     }
   }
   &__content {
-    height: 300vh;
-    padding: 20px 20px;
+    min-height: 1000px;
+    padding: 44px 26px;
+    overflow: hidden;
+  }
+  &__about {
+    &__subtitle {
+      font-family: $rivalSans;
+      font-weight: $medium;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    &__title {
+      font-family: $sirenia;
+      font-weight: $medium;
+      font-size: 44px;
+      max-width: 300px;
+      line-height: 44px;
+      margin: 22px 0;
+    }
+    &__description {
+      font-family: $rivalSans;
+      font-weight: $regular;
+      font-size: 14px;
+      color: #6e6d72;
+    }
+  }
+  &__images {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 62px;
+    & img {
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      &:first-child {
+        transform: translateY(0px) translateX(-20px);
+        width: 60%;
+        max-width: 385px;
+      }
+      &:last-child {
+        transform: translateY(120px) translateX(20px);
+        width: 70%;
+        max-width: 585px;
+      }
+    }
   }
 }
 
@@ -21,33 +64,40 @@
     font-size: 52px;
     font-weight: $medium;
     font-family: $sirenia;
-    text-align: center;
   }
   &__list {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 20px;
+    margin-top: 44px;
     column-gap: 20px;
-    row-gap: 10px;
-
+    row-gap: 44px;
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(4, 1fr);
     }
-    & li {
-      margin: 0 10px;
-      grid-area: auto;
-      & p {
-        text-align: start;
+  }
+  &__item {
+    grid-area: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      row-gap: 8px;
+      & h4 {
         font-size: 14px;
         font-weight: $medium;
         font-family: $rivalSans;
+        text-transform: uppercase;
       }
-    }
-    & li:nth-child(2),
-    & li:nth-child(4) {
-      display: flex;
-      justify-content: flex-end;
+      & p {
+        text-align: start;
+        font-size: 14px;
+        font-weight: $regular;
+        font-family: $rivalSans;
+      }
     }
   }
 }

@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import fs from "fs";
 import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
+import Image from "next/image";
 
 export default function Product({ projects }) {
   // const paths = data.map((item) => ({
@@ -30,12 +31,13 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-  const landingList = [
-    projects.type,
-    projects.date[language],
-    projects.role[language],
-    projects.technologies,
-  ];
+  const landingList = Object.entries(projects).filter(
+    ([key]) =>
+      key === "type" ||
+      key === "date" ||
+      key === "role" ||
+      key === "technologies"
+  );
 
   return (
     <>
@@ -65,12 +67,61 @@ export default function Product({ projects }) {
           <ul className="landing__list">
             {landingList.map((item, index) => (
               <li key={index} className="landing__item">
-                <p>{item}</p>
+                <div className="landing__item__inner">
+                  <h4>{item[0]}</h4>
+                  <p>{item[1][language] ? item[1][language] : item[1]}</p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
-        <div className="projects__content"></div>
+        <div style={{ color: projects.color }} className="projects__content">
+          <div className="projects__about">
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <svg
+                data-v-669b4a84=""
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                height="12"
+              >
+                <path
+                  data-v-669b4a84=""
+                  d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h4 className="projects__about__subtitle">
+                {projects.article.subtitle[language]}
+              </h4>
+            </div>
+            <h3 className="projects__about__title">
+              {projects.article.title[language]}
+            </h3>
+            <p className="projects__about__description">
+              {projects.article.about[language]}
+            </p>
+          </div>
+          <div className="projects__images">
+            <Image
+              src={projects.article.images.img1.src}
+              alt={projects.article.images.img1.alt}
+              width={385}
+              height={481}
+            />
+            <Image
+              src={projects.article.images.img2.src}
+              alt={projects.article.images.img2.alt}
+              width={585}
+              height={733}
+            />
+          </div>
+        </div>
       </section>
     </>
   );
