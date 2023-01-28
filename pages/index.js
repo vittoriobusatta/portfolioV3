@@ -1,7 +1,15 @@
 import React from "react";
 import Head from "next/head";
+import fs from "fs";
+import Link from "next/link";
 
-function Home() {
+export async function getStaticProps() {
+  const data = await JSON.parse(fs.readFileSync("./public/db.json", "utf-8"));
+  return { props: { data } };
+}
+
+function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
@@ -17,7 +25,13 @@ function Home() {
         <meta property="og:url" content="https://www.example.com" />
       </Head>
       <main>
-        <h1>Home</h1>
+        {data.map((item) => (
+          <div key={item.id}>
+            <Link href={`/projects/${item.id}`}>
+              <h1>{item.name}</h1>
+            </Link>
+          </div>
+        ))}
       </main>
     </>
   );

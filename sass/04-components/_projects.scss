@@ -1,0 +1,19 @@
+.projects {
+  &__landing {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+      font-size: 52px;
+      font-weight: $medium;
+      font-family: $sirenia;
+      text-align: center;
+    }
+  }
+  &__content {
+    height: 300vh;
+    padding: 20px 20px;
+  }
+}
