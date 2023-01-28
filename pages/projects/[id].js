@@ -11,7 +11,7 @@ export default function Product({ projects }) {
 
   // let path = paths.find((item) => item.params.path === projects.path);
 
-  const [color2, setColor2] = useState(projects.color2);
+  const [logoColor, setColor2] = useState(projects.color2);
 
   const button = useRef(null);
 
@@ -40,7 +40,7 @@ export default function Product({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header color2={color2} />
+      <Header logoColor={logoColor} color={projects.color} color2={projects.color2} />
 
       <section
         className="projects"

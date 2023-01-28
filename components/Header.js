@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Logo } from "assets/icons";
 import Link from "next/link";
 import { LanguageContext } from "utils/translate";
 
-function Header({ color2 }) {
+function Header({ logoColor, color, color2 }) {
   const { language } = useContext(LanguageContext);
   const { setLanguage } = useContext(LanguageContext);
 
@@ -12,12 +12,39 @@ function Header({ color2 }) {
     window.localStorage.setItem("language", e.target.value);
   };
 
+  const [scrollTop, setScrollTop] = useState(0);
+  const header = useRef(null);
+
+  useEffect(() => {
+    function onScroll() {
+      let currentPosition = window.pageYOffset;
+      if (currentPosition > scrollTop) {
+        header.current.style.top = "-100px";
+      } else {
+        header.current.style.top = "0";
+      }
+      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+    }
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollTop]);
+
   return (
-    <header>
+    <header ref={header}>
       <Link href="/">
-        <Logo color2={color2} />
+        <Logo logoColor={logoColor} />
       </Link>
-      <select onChange={handleLanguageChange} value={language}>
+      <select
+        style={{
+          backgroundColor: color,
+          color: color2,
+          border: `1px solid ${logoColor}`,
+          padding: "2px"
+        }}
+        onChange={handleLanguageChange}
+        value={language}
+      >
         <option value="fr">FR</option>
         <option value="en">EN</option>
       </select>
