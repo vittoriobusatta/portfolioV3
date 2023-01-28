@@ -49,11 +49,13 @@
         transform: translateY(0px) translateX(-20px);
         width: 60%;
         max-width: 385px;
+        max-height: 481px;
       }
       &:last-child {
         transform: translateY(120px) translateX(20px);
         width: 70%;
-        max-width: 585px;
+        max-width: 385px;
+        max-height: 481px;
       }
     }
   }

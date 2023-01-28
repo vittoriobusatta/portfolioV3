@@ -60,16 +60,26 @@
     "background": "#ECF8F5",
     "article": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Une collection inspirée du présent",
+        "en": "A collection inspired by today's"
       },
       "subtitle": {
-        "fr": "",
-        "en": ""
+        "fr": "À propos du projet",
+        "en": "About project"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "NOCTA, une collection pour le collectif, est arrivée. L’habillement de forme hoche la tête au sport, mais est enraciné et inspiré par ceux qui errent dans les rues, qui sont sur la route et veulent fonctionnel, confortable et élevé essentiels de tous les jours.",
+        "en": "NOCTA, a collection for the collective, has arrived. The form fitting apparel nods to sport, but is rooted and inspired by those who roam the streets, who are on the go and want functional, comfortable and elevated everyday essentials."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/nocta/nct1.jpg",
+          "alt": "Nocta - Image 1"
+        },
+        "img2": {
+          "src": "/images/nocta/nct2.jpg",
+          "alt": "Nocta - Image 2"
+        }
       }
     }
   },
@@ -90,16 +100,26 @@
     "background": "#F8F4EC",
     "article": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Un sérum personnalisé.",
+        "en": "A personalized skin serum"
       },
       "subtitle": {
-        "fr": "",
-        "en": ""
+        "fr": "À propos du projet",
+        "en": "About project"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Dans ce projet expérimentale, j'ai reproduit à l'identique le site Muteza. J'ai élaboré une version responsive du site ainsi que certaines optimisations en vue d'ameliorer les performances. Ce projet m'a permis de manipuler les librairies GSAP et Locomotive Scroll.",
+        "en": "In this experimental project, I reproduced the Muteza website. I developed a responsive version of the site as well as some optimizations in order to improve the performance. This project allowed me to manipulate the GSAP and Locomotive Scroll libraries."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/muteza/mtz1.jpg",
+          "alt": "Muteza - Image 1"
+        },
+        "img2": {
+          "src": "/images/muteza/mtz2.jpg",
+          "alt": "Muteza - Image 2"
+        }
       }
     }
   },
@@ -117,7 +137,31 @@
     "link": "http://galleria-ten.vercel.app/",
     "color": "#030D3E",
     "color2": "#FDFCFD",
-    "background": "#EEECF8"
+    "background": "#EEECF8",
+    "article": {
+      "title": {
+        "fr": "Découvrez l’art de l’interaction.",
+        "en": "Discover the art of interaction."
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "Ce projet expérimental m'a aidé à me fortifier dans la prise en main de React. J'ai réalisé un slideshow (diaporama interactif) d'une galerie qui expose les caractéristiques d'œuvres d'art célèbre comme leurs histoires, descriptif ainsi que leurs peintres.",
+        "en": "This experimental project helped me to strengthen my grip on React. I made a slideshow (interactive slideshow) of a gallery that exhibits the characteristics of famous works of art such as their stories, descriptions and painters."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/galleria/gla1.jpg",
+          "alt": "Galleria - Image 1"
+        },
+        "img2": {
+          "src": "/images/galleria/gla2.jpg",
+          "alt": "Galleria - Image 2"
+        }
+      }
+    }
   },
   {
     "name": "AB Distribution",
@@ -140,12 +184,22 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "",
-        "en": ""
+        "fr": "À propos du projet",
+        "en": "About project"
       },
       "about": {
         "fr": "",
         "en": ""
+      },
+      "images": {
+        "img1": {
+          "src": "/images/ab-distribution/ab1.jpg",
+          "alt": "AB Distribution - Image 1"
+        },
+        "img2": {
+          "src": "/images/ab-distribution/ab2.jpg",
+          "alt": "AB Distribution - Image 2"
+        }
       }
     }
   },
@@ -206,16 +260,26 @@
     "background": "#FCFFEC",
     "article": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Une agence brillante",
+        "en": "A brilliant agency"
       },
       "subtitle": {
-        "fr": "",
-        "en": ""
+        "fr": "À propos du projet",
+        "en": "About project"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Ce projet expérimental était un challenge de la plateforme Front-End Mentor. J'ai conçu la page d'accueil d'une agence créative fictive à partir d'une charte graphique et une maquette définie.",
+        "en": "This experimental project was a challenge for the Front-End Mentor platform. I designed the home page of a fictional creative agency from a graphic charter and a defined layout."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/sunnyside/sun1.jpg",
+          "alt": "Sunnyside - Image 1"
+        },
+        "img2": {
+          "src": "/images/sunnyside/sun2.jpg",
+          "alt": "Sunnyside - Image 2"
+        }
       }
     }
   }
