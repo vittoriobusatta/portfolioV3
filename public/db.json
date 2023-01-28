@@ -4,12 +4,12 @@
     "id": 1,
     "path": "decortakaz",
     "type": "Mission",
-    "date": { "fr": "Janvier 2023", "en": "January 2023" },
+    "date": { "fr": "Décembre 2023", "en": "December 2023" },
     "role": {
       "fr": "Développement & Conception",
       "en": "Development & Design"
     },
-    "technologies": "Nextjs, React, Figma",
+    "technologies": "Nextjs, React",
     "link": "https://decortakaz.vercel.app/",
     "color": "#563213",
     "color2": "#C89773",
@@ -21,7 +21,10 @@
     "path": "nocta",
     "type": "Expérimental",
     "date": { "fr": "Février 2023", "en": "February 2023" },
-    "role": "Branding & Design",
+    "role": {
+      "fr": "Identité visuelle & Conception",
+      "en": "Branding & Design"
+    },
     "technologies": "Figma",
     "link": "",
     "color": "#093738",
@@ -34,7 +37,10 @@
     "path": "muteza",
     "type": "Expérimental",
     "date": { "fr": "Novembre 2022", "en": "November 2022" },
-    "role": "Développement",
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
     "technologies": "React, SCSS",
     "link": "https://muteza.vercel.app/",
     "color": "#FFB189",
@@ -47,7 +53,10 @@
     "path": "galleria",
     "type": "Expérimental",
     "date": { "fr": "Août 2022", "en": "August 2022" },
-    "role": "Développement",
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
     "technologies": "React",
     "link": "http://galleria-ten.vercel.app/",
     "color": "#030D3E",
@@ -59,8 +68,11 @@
     "id": 5,
     "path": "ab-distribution",
     "type": "Mission",
-    "date": { "fr": "Mai 2022", "en": "May 2022" },
-    "role": "Développement & Design",
+    "date": { "fr": "Janvier 2023", "en": "January 2023" },
+    "role": {
+      "fr": "Développement & Conception",
+      "en": "Development & Design"
+    },
     "technologies": "React, Figma",
     "link": "https://www.ab-distribution.re/",
     "color": "#F86542",
@@ -73,7 +85,10 @@
     "path": "unkle",
     "type": "Mission",
     "date": { "fr": "Juin 2022", "en": "June 2022" },
-    "role": "Développement",
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
     "technologies": "React, Regex",
     "link": "https://password-components.vercel.app/",
     "color": "#2B9DFD",
@@ -85,8 +100,11 @@
     "id": 7,
     "path": "sunnyside",
     "type": "Expérimental",
-    "date": { "fr": "Juillet 2022", "en": "July 2022"},
-    "role": "Développement",
+    "date": { "fr": "Juillet 2022", "en": "July 2022" },
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
     "technologies": "React",
     "link": "https://sunnyside-lovat.vercel.app/",
     "color": "#F8D914",

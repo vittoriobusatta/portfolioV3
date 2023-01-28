@@ -31,8 +31,6 @@ export default function Product({ projects }) {
 
   const { language } = useContext(LanguageContext);
 
-  console.log(projects.date[language]);
-
   return (
     <>
       <Head>
@@ -53,8 +51,21 @@ export default function Product({ projects }) {
           className="projects__landing"
           ref={button}
         >
-          <h1 className="projects__landing__title">{projects.name}</h1>
-          <h1>{[projects.date[language]]}</h1>
+          <h1 className="landing__title">{projects.name}</h1>
+          <ul className="landing__list">
+          <li>
+              <p>{projects.type}</p>
+            </li>
+            <li>
+              <p>{projects.date[language]}</p>
+            </li>
+            <li>
+              <p>{projects.role[language]}</p>
+            </li>
+            <li>
+              <p>{projects.technologies}</p>
+            </li>
+          </ul>
         </div>
         <div className="projects__content"></div>
       </section>

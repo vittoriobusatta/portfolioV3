@@ -5,15 +5,35 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    &__title {
-      font-size: 52px;
-      font-weight: $medium;
-      font-family: $sirenia;
-      text-align: center;
-    }
   }
   &__content {
     height: 300vh;
     padding: 20px 20px;
+  }
+}
+
+.landing {
+  &__title {
+    font-size: 52px;
+    font-weight: $medium;
+    font-family: $sirenia;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    & li {
+      margin: 0 10px;
+      font-size: 14px;
+      font-weight: $medium;
+      font-family: $rivalSans;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 }

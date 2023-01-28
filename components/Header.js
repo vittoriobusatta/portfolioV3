@@ -18,8 +18,8 @@ function Header({ color2 }) {
         <Logo color2={color2} />
       </Link>
       <select onChange={handleLanguageChange} value={language}>
-        <option value="fr">Français</option>
-        <option value="en">English</option>
+        <option value="fr">FR</option>
+        <option value="en">EN</option>
       </select>
     </header>
   );

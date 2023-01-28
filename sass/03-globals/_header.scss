@@ -6,7 +6,7 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 26px;
+  padding: 16px 26px;
   min-height: 60px;
   z-index: 999;
   @media screen and (min-width: 576px) {
@@ -24,8 +24,7 @@ header {
 }
 
 label {
-  background-color: #f1f1f1;
-  color: #555;
   border: none;
   cursor: pointer;
+  overflow: hidden;
 }
