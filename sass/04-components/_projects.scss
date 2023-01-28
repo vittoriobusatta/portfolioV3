@@ -3,7 +3,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 100px 26px ;
+    padding: 104px 26px ;
     @media screen and (min-width: 768px) {
       min-height: 100vh;
     }
@@ -58,6 +58,9 @@
       }
     }
   }
+  &__view {
+    margin-top: 182px;
+  }
 }
 
 .landing {
@@ -72,7 +75,7 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 44px;
     column-gap: 20px;
-    row-gap: 44px;
+    row-gap: 32px;
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -86,7 +89,6 @@
       display: flex;
       flex-direction: column;
       width: fit-content;
-      row-gap: 8px;
       & h4 {
         font-size: 14px;
         font-weight: $medium;

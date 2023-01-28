@@ -18,7 +18,7 @@
       "fr": "Décor Ta Kaz est une entreprise de menuiserie artisanale'. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
       "en": "Décor Ta Kaz is a carpentry company. Their website is a showcase website that presents their services and their work."
     },
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Une maison d'oeuvre",
         "en": "A work house"
@@ -41,6 +41,21 @@
           "alt": "Décor Ta Kaz - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Un design sur mesure",
+        "en": "A tailored design"
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Découvrez le site web de Décor Ta Kaz, une entreprise de menuiserie artisanale. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
+        "en": "Discover the website of Décor Ta Kaz, a carpentry company. Their website is a showcase website that presents their services and their work."
+      },
+      "images": {}
     }
   },
   {
@@ -58,7 +73,7 @@
     "color": "#093738",
     "color2": "#FDFCFD",
     "background": "#ECF8F5",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Une collection inspirée du présent",
         "en": "A collection inspired by today's"
@@ -81,6 +96,21 @@
           "alt": "Nocta - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   },
   {
@@ -98,7 +128,7 @@
     "color": "#FFB189",
     "color2": "#FFF5F0",
     "background": "#F8F4EC",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Un sérum personnalisé.",
         "en": "A personalized skin serum"
@@ -121,6 +151,21 @@
           "alt": "Muteza - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   },
   {
@@ -138,7 +183,7 @@
     "color": "#030D3E",
     "color2": "#FDFCFD",
     "background": "#EEECF8",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Découvrez l’art de l’interaction.",
         "en": "Discover the art of interaction."
@@ -161,6 +206,21 @@
           "alt": "Galleria - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   },
   {
@@ -178,7 +238,7 @@
     "color": "#F86542",
     "color2": "#FFF0D1",
     "background": "#F8F0EC",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "",
         "en": ""
@@ -201,6 +261,21 @@
           "alt": "AB Distribution - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   },
   {
@@ -218,7 +293,7 @@
     "color": "#2B9DFD",
     "color2": "#FDFCFD",
     "background": "#ECFAFF",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Une sécurité garantie",
         "en": "A guaranteed safety"
@@ -241,6 +316,21 @@
           "alt": "Unkle - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "Vision du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   },
   {
@@ -258,7 +348,7 @@
     "color": "#F8D914",
     "color2": "#FDFCFD",
     "background": "#FCFFEC",
-    "article": {
+    "aboutproject": {
       "title": {
         "fr": "Une agence brillante",
         "en": "A brilliant agency"
@@ -281,6 +371,21 @@
           "alt": "Sunnyside - Image 2"
         }
       }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "subtitle": {
+        "fr": "",
+        "en": "P"
+      },
+      "about": {
+        "fr": "",
+        "en": ""
+      },
+      "images": {}
     }
   }
 ]

@@ -4,8 +4,29 @@ import fs from "fs";
 import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
 import Image from "next/image";
+import { Star } from "assets/icons";
+
+export function ProjectsGallery({ projects }) {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleProductSelect = (product) => {
+    setSelectedProduct(product);
+
+    const project = Object.entries(projects).find(
+      ([key]) => key === product.path
+    );
+     b
+  };
+  return (
+    <>
+      
+    </>
+  );
+}
 
 export default function Product({ projects }) {
+
+  console.log(projects);
   // const paths = data.map((item) => ({
   //   params: { path: item.path.toString() },
   // }));
@@ -75,7 +96,7 @@ export default function Product({ projects }) {
             ))}
           </ul>
         </div>
-        <div style={{ color: projects.color }} className="projects__content">
+        <div className="projects__content" style={{ color: projects.color }}>
           <div className="projects__about">
             <div
               style={{
@@ -83,45 +104,55 @@ export default function Product({ projects }) {
                 alignItems: "center",
               }}
             >
-              <svg
-                data-v-669b4a84=""
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-              >
-                <path
-                  data-v-669b4a84=""
-                  d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+              <Star />
               <h4 className="projects__about__subtitle">
-                {projects.article.subtitle[language]}
+                {projects.aboutproject.subtitle[language]}
               </h4>
             </div>
             <h3 className="projects__about__title">
-              {projects.article.title[language]}
+              {projects.aboutproject.title[language]}
             </h3>
             <p className="projects__about__description">
-              {projects.article.about[language]}
+              {projects.aboutproject.about[language]}
             </p>
           </div>
           <div className="projects__images">
             <Image
-              src={projects.article.images.img1.src}
-              alt={projects.article.images.img1.alt}
+              src={projects.aboutproject.images.img1.src}
+              alt={projects.aboutproject.images.img1.alt}
               width={385}
               height={481}
               priority
             />
             <Image
-              src={projects.article.images.img2.src}
-              alt={projects.article.images.img2.alt}
+              src={projects.aboutproject.images.img2.src}
+              alt={projects.aboutproject.images.img2.alt}
               width={385}
               height={481}
               priority
             />
+          </div>
+          <div className="projects__view" style={{ color: projects.color }}>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <Star />
+              <h4 className="projects__about__subtitle">
+                {projects.viewproject.subtitle[language]}
+              </h4>
+            </div>
+            <h3 className="projects__about__title">
+              {projects.viewproject.title[language]}
+            </h3>
+            <p className="projects__about__description">
+              {projects.viewproject.about[language]}
+            </p>
+          </div>
+          <div className="projects__slideshow">
+            <ProjectsGallery />
           </div>
         </div>
       </section>
