@@ -12,6 +12,7 @@ export default function Product({ projects }) {
   // let path = paths.find((item) => item.params.path === projects.path);
 
   const [logoColor, setColor2] = useState(projects.color2);
+  const { language } = useContext(LanguageContext);
 
   const button = useRef(null);
 
@@ -29,7 +30,12 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-  const { language } = useContext(LanguageContext);
+  const landingList = [
+    projects.type,
+    projects.date[language],
+    projects.role[language],
+    projects.technologies,
+  ];
 
   return (
     <>
@@ -40,7 +46,11 @@ export default function Product({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header logoColor={logoColor} color={projects.color} color2={projects.color2} />
+      <Header
+        logoColor={logoColor}
+        color={projects.color}
+        color2={projects.color2}
+      />
 
       <section
         className="projects"
@@ -53,18 +63,11 @@ export default function Product({ projects }) {
         >
           <h1 className="landing__title">{projects.name}</h1>
           <ul className="landing__list">
-          <li>
-              <p>{projects.type}</p>
-            </li>
-            <li>
-              <p>{projects.date[language]}</p>
-            </li>
-            <li>
-              <p>{projects.role[language]}</p>
-            </li>
-            <li>
-              <p>{projects.technologies}</p>
-            </li>
+            {landingList.map((item, index) => (
+              <li key={index} className="landing__item">
+                <p>{item}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="projects__content"></div>
