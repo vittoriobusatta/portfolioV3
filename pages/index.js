@@ -9,7 +9,6 @@ export async function getStaticProps() {
 }
 
 function Home({ data }) {
-  console.log(data);
   return (
     <>
       <Head>

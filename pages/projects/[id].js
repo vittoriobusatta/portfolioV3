@@ -113,12 +113,14 @@ export default function Product({ projects }) {
               alt={projects.article.images.img1.alt}
               width={385}
               height={481}
+              priority
             />
             <Image
               src={projects.article.images.img2.src}
               alt={projects.article.images.img2.alt}
               width={385}
               height={481}
+              priority
             />
           </div>
         </div>
