@@ -75,12 +75,14 @@ export default function Product({ projects }) {
 
       <section
         className="projects"
-        style={{ backgroundColor: projects.background }}
+        style={{ backgroundColor: projects.background,
+        "--color": projects.color,
+        "--color2": projects.color2
+        }}
       >
         <div
           className="projects__landing"
           ref={button}
-          style={{ backgroundColor: projects.color, color: projects.color2 }}
         >
           <h1 className="landing__title">{projects.name}</h1>
           <ul className="landing__list">
@@ -93,8 +95,16 @@ export default function Product({ projects }) {
               </li>
             ))}
           </ul>
+          <a
+            className="landing__link"
+            href={projects.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit website
+          </a>
         </div>
-        <div className="projects__content" style={{ color: projects.color }}>
+        <div className="projects__content">
           <div className="projects__about">
             <div
               style={{
@@ -130,7 +140,7 @@ export default function Product({ projects }) {
               />
             </div>
           </div>
-          <div className="projects__view" style={{ color: projects.color }}>
+          <div className="projects__view">
             <div
               style={{
                 display: "inline-flex",
@@ -188,19 +198,10 @@ export default function Product({ projects }) {
                   <div
                     className="slideshow__list__border"
                     style={{
-                      transform:
-                        screenWidth > 576
-                          ? `translateY(${selected * 100}%)`
-                          : `translateX(${selected * 100}%)`,
-                      borderColor: projects.color,
-                      width:
-                        screenWidth > 576
-                          ? "100%"
-                          : `${100 / thubnails.length}%`,
-                      height:
-                        screenWidth > 576
-                          ? `${100 / thubnails.length}%`
-                          : "100%",
+                      "--borderTranslateY" : `${selected * 100}%`,
+                      "--borderTranslateX" : `${selected * 100}%`,
+                      "--thubnailsWidth" : `${100 / thubnails.length}%`,
+                      "--thubnailsHeight" : `${100 / thubnails.length}%`,
                     }}
                   />
                   {thubnails.map((item, index) => (

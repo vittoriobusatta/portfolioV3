@@ -3,7 +3,9 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 104px 26px;
+    padding: 122px 26px;
+    color: $color_secondary;
+    background-color: $color_primary;
     @media screen and (min-width: 576px) {
       align-items: center;
       padding: 188px 32px;
@@ -16,6 +18,7 @@
     min-height: 1000px;
     padding: 44px 26px;
     overflow: hidden;
+    color: $color_primary;
     @media screen and (min-width: 576px) {
       padding: 44px 32px;
     }
@@ -146,6 +149,28 @@
     font-weight: $medium;
     font-family: $sirenia;
   }
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: $medium;
+    font-family: $rivalSans;
+    text-transform: uppercase;
+    margin-top: 32px;
+    color: $color_secondary;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color_secondary;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
 }
 
 .slideshow {
@@ -175,7 +200,7 @@
       object-position: center;
       transition: clip-path 0.5s ease-in-out;
       @media screen and (min-width: 576px) {
-      min-width: calc((100vw - 10%) - 148px);
+        min-width: calc((100vw - 10%) - 148px);
       }
       @media screen and (min-width: 768px) {
         max-width: 300px;
@@ -199,10 +224,18 @@
       top: 0%;
       left: 0%;
       height: 100%;
-      border: 1px solid;
+      border: 1px solid $color_primary;
       z-index: 2;
       flex: 1;
       transition: transform 0.5s ease-in-out;
+      transform: translateX(var(--borderTranslateX));
+      height: 100%;
+      width: var(--thubnailsWidth);
+      @media screen and (min-width: 576px) {
+        transform: translateY(var(--borderTranslateY));
+        height: var(--thubnailsHeight);
+        width: 100%;
+      }
     }
   }
   &__thubnails {
@@ -218,5 +251,6 @@
     background-repeat: repeat;
     object-fit: fill;
     cursor: pointer;
+   
   }
 }
