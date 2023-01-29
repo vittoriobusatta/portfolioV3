@@ -159,13 +159,20 @@ export default function Product({ projects }) {
                   />
                 ) : null}
               </div>
-              <ul className="slideshow__list">
+              <ul
+                className="slideshow__list"
+                style={{ color: projects.color2 }}
+              >
                 {thubnails.map((item, index) => (
                   <li
                     key={index}
-                    className={`slideshow__thubnails${
-                      selected === index ? "--selected" : ""
-                    }`}
+                    className="slideshow__thubnails"
+                    style={{
+                      border:
+                        selected === index
+                          ? `1px solid ${projects.color}`
+                          : "",
+                    }}
                     onClick={() => handleImageSelect(item, index)}
                   >
                     <Image
