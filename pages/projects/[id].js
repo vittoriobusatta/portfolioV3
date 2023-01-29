@@ -150,12 +150,14 @@ export default function Product({ projects }) {
           <div className="projects__slideshow">
             <div className="slideshow__container">
               <div className="slideshow__banner">
-                <Image
-                  src={currentImage.src}
-                  alt={currentImage.alt}
-                  width={958}
-                  height={511}
-                />
+                {currentImage ? (
+                  <Image
+                    src={currentImage.src}
+                    alt={currentImage.alt}
+                    width={958}
+                    height={511}
+                  />
+                ) : null}
               </div>
               <ul className="slideshow__list">
                 {thubnails.map((item, index) => (
