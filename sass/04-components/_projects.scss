@@ -9,7 +9,7 @@
       padding: 188px 32px;
     }
     @media screen and (min-width: 768px) {
-      min-height: 100vh;
+      padding: 204px 32px;
     }
   }
   &__content {
@@ -51,36 +51,51 @@
       color: #776d6d;
       max-width: 400px;
     }
-  }
-  &__images {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 62px;
-    & img {
-      height: auto;
-      object-fit: cover;
-      object-position: center;
-      &:first-child {
-        transform: translateY(0px) translateX(-20px);
-        width: 60%;
-        max-width: 385px;
-        max-height: 481px;
+    &__images {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 52px;
+      @media screen and (min-width: 576px) {
+        margin-top: 62px;
       }
-      &:last-child {
-        transform: translateY(120px) translateX(20px);
-        width: 70%;
-        max-width: 385px;
-        max-height: 481px;
+      @media screen and (min-width: 768px) {
+        margin-top: 88px;
+      }
+      @media screen and (min-width: 992px) {
+        justify-content: space-around;
+      }
+      & img {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        &:first-child {
+          transform: translateY(0px) translateX(-20px);
+          width: 60%;
+          max-width: 385px;
+          max-height: 481px;
+        }
+        &:last-child {
+          transform: translateY(120px) translateX(20px);
+          width: 70%;
+          max-width: 385px;
+          max-height: 481px;
+        }
       }
     }
   }
   &__view {
     margin-top: 182px;
-  }
-  &__slideshow {
-    margin-top: 44px;
-    width: 100%;
+    &__slideshow {
+      width: 100%;
+      margin-top: 52px;
+      @media screen and (min-width: 576px) {
+        margin-top: 62px;
+      }
+      @media screen and (min-width: 768px) {
+        margin-top: 88px;
+      }
+    }
   }
 }
 
@@ -120,6 +135,9 @@
         font-weight: $regular;
         font-family: $rivalSans;
         max-width: 100px;
+        @media screen and (min-width: 992px) {
+          max-width: 400px;
+        }
       }
     }
   }
@@ -140,7 +158,7 @@
     row-gap: 22px;
     @media screen and (min-width: 576px) {
       flex-direction: row;
-    column-gap: 22px;
+      column-gap: 22px;
     }
   }
   &__banner {
@@ -168,6 +186,25 @@
       width: 10%;
       flex-direction: column;
       row-gap: 22px;
+    }
+  }
+  &__thubnails {
+    position: static;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+    min-height: 10rem;
+    flex: 1;
+    border: 1px solid transparent;
+    background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
+    background-position: 50% 90%;
+    background-size: cover;
+    background-repeat: repeat;
+    object-fit: fill;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
     }
   }
 }

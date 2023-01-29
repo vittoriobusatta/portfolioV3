@@ -111,22 +111,22 @@ export default function Product({ projects }) {
             <p className="projects__about__description">
               {projects.aboutproject.about[language]}
             </p>
-          </div>
-          <div className="projects__images">
-            <Image
-              src={projects.aboutproject.images.img1.src}
-              alt={projects.aboutproject.images.img1.alt}
-              width={385}
-              height={481}
-              priority
-            />
-            <Image
-              src={projects.aboutproject.images.img2.src}
-              alt={projects.aboutproject.images.img2.alt}
-              width={385}
-              height={481}
-              priority
-            />
+            <div className="projects__about__images">
+              <Image
+                src={projects.aboutproject.images.img1.src}
+                alt={projects.aboutproject.images.img1.alt}
+                width={385}
+                height={481}
+                priority
+              />
+              <Image
+                src={projects.aboutproject.images.img2.src}
+                alt={projects.aboutproject.images.img2.alt}
+                width={385}
+                height={481}
+                priority
+              />
+            </div>
           </div>
           <div className="projects__view" style={{ color: projects.color }}>
             <div
@@ -146,44 +146,39 @@ export default function Product({ projects }) {
             <p className="projects__about__description">
               {projects.viewproject.about[language]}
             </p>
-          </div>
-          <div className="projects__slideshow">
-            <div className="slideshow__container">
-              <div className="slideshow__banner">
-                {currentImage ? (
-                  <Image
-                    src={currentImage.src}
-                    alt={currentImage.alt}
-                    width={958}
-                    height={511}
-                  />
-                ) : null}
-              </div>
-              <ul
-                className="slideshow__list"
-                style={{ color: projects.color2 }}
-              >
-                {thubnails.map((item, index) => (
-                  <li
-                    key={index}
-                    className="slideshow__thubnails"
-                    style={{
-                      border:
-                        selected === index
-                          ? `1px solid ${projects.color}`
-                          : "",
-                    }}
-                    onClick={() => handleImageSelect(item, index)}
-                  >
+            <div className="projects__view__slideshow">
+              <div className="slideshow__container">
+                <div className="slideshow__banner">
+                  {currentImage ? (
                     <Image
-                      src={item.src}
-                      alt={item.alt}
+                      src={currentImage.src}
+                      alt={currentImage.alt}
                       width={958}
                       height={511}
                     />
-                  </li>
-                ))}
-              </ul>
+                  ) : null}
+                </div>
+                <ul
+                  className="slideshow__list"
+                  style={{ color: projects.color2 }}
+                >
+                  {thubnails.map((item, index) => (
+                    <li
+                      key={index}
+                      className="slideshow__thubnails"
+                      style={{
+                        border:
+                          selected === index
+                            ? `1px solid ${projects.color}`
+                            : "",
+                        backgroundImage: `url(${item.src})`,
+                        backgroundClip: "content-box",
+                      }}
+                      onClick={() => handleImageSelect(item, index)}
+                    ></li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
