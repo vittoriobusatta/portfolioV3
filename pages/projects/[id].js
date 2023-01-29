@@ -13,6 +13,19 @@ export default function Product({ projects }) {
 
   // let path = paths.find((item) => item.params.path === projects.path);
 
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handleProductSelect = (product) => {
@@ -55,6 +68,8 @@ export default function Product({ projects }) {
     setCurrentImage(image);
     setSelected(index);
   };
+
+  
 
   return (
     <>
@@ -162,12 +177,17 @@ export default function Product({ projects }) {
                   className="slideshow__list"
                   style={{ color: projects.color2 }}
                 >
-                  <div className="slideshow__list__border"
-                  style={{
-                    transform: `translateX(${selected * 100}%)`,
-                    borderColor: projects.color,
-                    width: `${100 / thubnails.length}%`,
-                  }}
+                  <div
+                    className="slideshow__list__border"
+                    style={{
+                      transform:
+                        screenWidth > 576
+                          ? `translateY(${selected * 100}%)`
+                          : `translateX(${selected * 100}%)`,
+                      borderColor: projects.color,
+                      width: screenWidth > 576 ? "100%" : `${100 / thubnails.length}%`,
+                      height: screenWidth > 576 ? `${100 / thubnails.length}%` : "100%" ,
+                    }}
                   />
                   {thubnails.map((item, index) => (
                     <li
