@@ -387,7 +387,7 @@
     },
     "technologies": "React",
     "link": "https://sunnyside-lovat.vercel.app/",
-    "color": "#F8D914",
+    "color": "#ffdc00",
     "color2": "#FDFCFD",
     "background": "#FCFFEC",
     "aboutproject": {
@@ -416,18 +416,39 @@
     },
     "viewproject": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Explorez le côté ensoleillé ",
+        "en": "Explore the sunny side"
       },
       "subtitle": {
-        "fr": "",
-        "en": "P"
+        "fr": "Aperçu du projet",
+        "en": "Project view"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium."
       },
-      "images": {}
+      "images": {
+        "img3": {
+          "src": "/images/sunnyside/sun3.jpg",
+          "alt": "Sunnyside - Image 3"
+        },
+        "img4": {
+          "src": "/images/sunnyside/sun4.jpg",
+          "alt": "Sunnyside - Image 4"
+        },
+        "img5": {
+          "src": "/images/sunnyside/sun5.jpg",
+          "alt": "Sunnyside - Image 5"
+        },
+        "img6": {
+          "src": "/images/sunnyside/sun6.jpg",
+          "alt": "Sunnyside - Image 6"
+        },
+        "img7": {
+          "src": "/images/sunnyside/sun7.jpg",
+          "alt": "Sunnyside - Image 7"
+        }
+      }
     }
   }
 ]
