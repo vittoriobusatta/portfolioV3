@@ -389,7 +389,28 @@
         "fr": "",
         "en": ""
       },
-      "images": {}
+      "images": {
+        "img3": {
+          "src": "/images/unkle/unk3.png",
+          "alt": "Unkle - Image 3"
+        },
+        "img4": {
+          "src": "/images/unkle/unk4.png",
+          "alt": "Unkle - Image 4"
+        },
+        "img5": {
+          "src": "/images/unkle/unk5.png",
+          "alt": "Unkle - Image 5"
+        },
+        "img6": {
+          "src": "/images/unkle/unk6.png",
+          "alt": "Unkle - Image 6"
+        },
+        "img7": {
+          "src": "/images/unkle/unk7.png",
+          "alt": "Unkle - Image 7"
+        }
+      }
     }
   },
   {
