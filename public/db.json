@@ -307,6 +307,10 @@
         "img7": {
           "src": "/images/galleria/gla7.jpg",
           "alt": "Galleria - Image 7"
+        },
+        "img8": {
+          "src": "/images/galleria/gla8.jpg",
+          "alt": "Galleria - Image 8"
         }
       }
     }
@@ -439,7 +443,6 @@
           "src": "/images/unkle/unk6.png",
           "alt": "Unkle - Image 6"
         }
-        
       }
     }
   },
