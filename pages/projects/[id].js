@@ -165,11 +165,14 @@ export default function Product({ projects }) {
                             currentImage === item
                               ? {
                                   opacity: 1,
-                                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                                  clipPath:
+                                    "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                                    transform: `translateX(${selected * -100}%)`,
                                 }
                               : {
                                   opacity: 0,
-                                  clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                                  clipPath:
+                                    "polygon(0 0, 0 0, 0 100%, 0% 100%)",
                                 }
                           }
                         />
