@@ -71,6 +71,14 @@
         "img6": {
           "src": "/images/decortakaz/dkt6.jpg",
           "alt": "Décor Ta Kaz - Image 6"
+        },
+        "img7": {
+          "src": "/images/decortakaz/dkt7.jpg",
+          "alt": "Décor Ta Kaz - Image 7"
+        },
+        "img8": {
+          "src": "/images/decortakaz/dkt8.jpg",
+          "alt": "Décor Ta Kaz - Image 8"
         }
       }
     }
