@@ -182,7 +182,32 @@
         "fr": "",
         "en": ""
       },
-      "images": {}
+      "images": {
+        "img3": {
+          "src": "/images/muteza/mtz3.jpg",
+          "alt": "Muteza - Image 3"
+        },
+        "img4": {
+          "src": "/images/muteza/mtz4.jpg",
+          "alt": "Muteza - Image 4"
+        },
+        "img5": {
+          "src": "/images/muteza/mtz5.jpg",
+          "alt": "Muteza - Image 5"
+        },
+        "img6": {
+          "src": "/images/muteza/mtz6.jpg",
+          "alt": "Muteza - Image 6"
+        },
+        "img7": {
+          "src": "/images/muteza/mtz7.jpg",
+          "alt": "Muteza - Image 7"
+        },
+        "img8": {
+          "src": "/images/muteza/mtz8.jpg",
+          "alt": "Muteza - Image 8"
+        }
+      }
     }
   },
   {
