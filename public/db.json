@@ -171,16 +171,16 @@
     },
     "viewproject": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Un éclat de beauté",
+        "en": "A beauty glow"
       },
       "subtitle": {
         "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Muteza est une imitation fictive d’atolla, une société de sérum de peau par abonnement. Vise à vous fournir un sérum qui s’adapte à votre peau. Ce projet n’est que mon point de vue sur la refonte de leur site Web actuel.",
+        "en": "Muteza is a fictional imitation of atolla, a subscription based skin serum company. Aimed at providing you a serum that adapts with your skin. This project is just my take on the redesign of their current website."
       },
       "images": {
         "img3": {
