@@ -6,32 +6,18 @@ import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 
-export function ProjectsGallery({ projects }) {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  const handleProductSelect = (product) => {
-    setSelectedProduct(product);
-
-    const project = Object.entries(projects).find(
-      ([key]) => key === product.path
-    );
-     b
-  };
-  return (
-    <>
-      
-    </>
-  );
-}
-
 export default function Product({ projects }) {
-
-  console.log(projects);
   // const paths = data.map((item) => ({
   //   params: { path: item.path.toString() },
   // }));
 
   // let path = paths.find((item) => item.params.path === projects.path);
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleProductSelect = (product) => {
+    setSelectedProduct(product);
+  };
 
   const [logoColor, setColor2] = useState(projects.color2);
   const { language } = useContext(LanguageContext);
@@ -60,6 +46,16 @@ export default function Product({ projects }) {
       key === "technologies"
   );
 
+  const thubnails = Object.values(projects.viewproject.images);
+
+  const [currentImage, setCurrentImage] = useState(thubnails[0]);
+  const [selected, setSelected] = useState(0);
+
+  const handleImageSelect = (image, index) => {
+    setCurrentImage(image);
+    setSelected(index);
+  };
+
   return (
     <>
       <Head>
@@ -80,9 +76,9 @@ export default function Product({ projects }) {
         style={{ backgroundColor: projects.background }}
       >
         <div
-          style={{ backgroundColor: projects.color, color: projects.color2 }}
           className="projects__landing"
           ref={button}
+          style={{ backgroundColor: projects.color, color: projects.color2 }}
         >
           <h1 className="landing__title">{projects.name}</h1>
           <ul className="landing__list">
@@ -152,7 +148,34 @@ export default function Product({ projects }) {
             </p>
           </div>
           <div className="projects__slideshow">
-            <ProjectsGallery />
+            <div className="slideshow__container">
+              <div className="slideshow__banner">
+                <Image
+                  src={currentImage.src}
+                  alt={projects.viewproject.images.img3.alt}
+                  width={958}
+                  height={511}
+                />
+              </div>
+              <ul className="slideshow__list">
+                {thubnails.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`slideshow__thubnails${
+                      selected === index ? "--selected" : ""
+                    }`}
+                    onClick={() => handleImageSelect(item, index)}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={958}
+                      height={511}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

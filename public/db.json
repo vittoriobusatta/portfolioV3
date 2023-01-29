@@ -33,11 +33,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/decortakaz/dtk1.jpg",
+          "src": "/images/decortakaz/dkt1.jpg",
           "alt": "Décor Ta Kaz - Image 1"
         },
         "img2": {
-          "src": "/images/decortakaz/dtk2.jpg",
+          "src": "/images/decortakaz/dkt2.jpg",
           "alt": "Décor Ta Kaz - Image 2"
         }
       }
@@ -48,14 +48,31 @@
         "en": "A tailored design"
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
         "fr": "Découvrez le site web de Décor Ta Kaz, une entreprise de menuiserie artisanale. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
         "en": "Discover the website of Décor Ta Kaz, a carpentry company. Their website is a showcase website that presents their services and their work."
       },
-      "images": {}
+      "images": {
+        "img3": {
+          "src": "/images/decortakaz/dkt3.jpg",
+          "alt": "Décor Ta Kaz - Image 3"
+        },
+        "img4": {
+          "src": "/images/decortakaz/dkt4.jpg",
+          "alt": "Décor Ta Kaz - Image 4"
+        },
+        "img5": {
+          "src": "/images/decortakaz/dkt5.jpg",
+          "alt": "Décor Ta Kaz - Image 5"
+        },
+        "img6": {
+          "src": "/images/decortakaz/dkt6.jpg",
+          "alt": "Décor Ta Kaz - Image 6"
+        }
+      }
     }
   },
   {
@@ -103,7 +120,7 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
@@ -158,7 +175,7 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
@@ -213,7 +230,7 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
@@ -268,7 +285,7 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
@@ -323,7 +340,7 @@
         "en": ""
       },
       "subtitle": {
-        "fr": "Vision du projet",
+        "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
