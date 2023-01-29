@@ -22,6 +22,7 @@ function Home({ data }) {
         />
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:url" content="https://www.example.com" />
+        <meta name="theme-color" content="#fff" />
       </Head>
       <main>
         {data.map((item) => (

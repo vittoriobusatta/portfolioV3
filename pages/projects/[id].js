@@ -155,12 +155,12 @@ export default function Product({ projects }) {
                     <>
                       {currentImage ? (
                         <Image
+                          key={item.id}
                           className="slideshow__banner__image"
                           src={item.src}
                           alt={item.alt}
                           width={958}
                           height={511}
-                          key={index}
                           priority
                           style={
                             currentImage === item
@@ -168,7 +168,7 @@ export default function Product({ projects }) {
                                   opacity: 1,
                                   clipPath:
                                     "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                                    transform: `translateX(${selected * -100}%)`,
+                                  transform: `translateX(${selected * -100}%)`,
                                 }
                               : {
                                   opacity: 0,
@@ -205,7 +205,7 @@ export default function Product({ projects }) {
                   />
                   {thubnails.map((item, index) => (
                     <li
-                      key={index}
+                      key={item.id}
                       className="slideshow__thubnails"
                       style={{
                         backgroundImage: `url(${item.src})`,
