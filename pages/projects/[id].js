@@ -152,7 +152,7 @@ export default function Product({ projects }) {
               <div className="slideshow__banner">
                 <Image
                   src={currentImage.src}
-                  alt={projects.viewproject.images.img3.alt}
+                  alt={currentImage.alt}
                   width={958}
                   height={511}
                 />
