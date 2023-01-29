@@ -378,16 +378,16 @@
     },
     "viewproject": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Sécurité maximale pour votre entreprise",
+        "en": "Maximal security for your company"
       },
       "subtitle": {
         "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium."
       },
       "images": {
         "img3": {
