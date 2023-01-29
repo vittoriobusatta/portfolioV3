@@ -4,7 +4,7 @@
     "id": 1,
     "path": "decortakaz",
     "type": "Mission",
-    "date": { "fr": "Décembre 2023", "en": "December 2023" },
+    "date": { "fr": "Décembre 2022", "en": "December 2022" },
     "role": {
       "fr": "Développement & Conception",
       "en": "Development & Design"
@@ -276,16 +276,16 @@
     },
     "viewproject": {
       "title": {
-        "fr": "",
-        "en": ""
+        "fr": "Un voyage dans l'histoire",
+        "en": "A journey through history"
       },
       "subtitle": {
         "fr": "Aperçu du projet",
         "en": "Project view"
       },
       "about": {
-        "fr": "",
-        "en": ""
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium."
       },
       "images": {
         "img3": {
