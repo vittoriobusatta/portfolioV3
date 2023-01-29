@@ -162,15 +162,18 @@ export default function Product({ projects }) {
                   className="slideshow__list"
                   style={{ color: projects.color2 }}
                 >
+                  <div className="slideshow__list__border"
+                  style={{
+                    transform: `translateX(${selected * 100}%)`,
+                    borderColor: projects.color,
+                    width: `${100 / thubnails.length}%`,
+                  }}
+                  />
                   {thubnails.map((item, index) => (
                     <li
                       key={index}
                       className="slideshow__thubnails"
                       style={{
-                        border:
-                          selected === index
-                            ? `1px solid ${projects.color}`
-                            : "",
                         backgroundImage: `url(${item.src})`,
                         backgroundClip: "content-box",
                       }}
