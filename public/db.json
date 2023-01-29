@@ -287,7 +287,28 @@
         "fr": "",
         "en": ""
       },
-      "images": {}
+      "images": {
+        "img3": {
+          "src": "/images/galleria/gla3.jpg",
+          "alt": "Galleria - Image 3"
+        },
+        "img4": {
+          "src": "/images/galleria/gla4.jpg",
+          "alt": "Galleria - Image 4"
+        },
+        "img5": {
+          "src": "/images/galleria/gla5.jpg",
+          "alt": "Galleria - Image 5"
+        },
+        "img6": {
+          "src": "/images/galleria/gla6.jpg",
+          "alt": "Galleria - Image 6"
+        },
+        "img7": {
+          "src": "/images/galleria/gla7.jpg",
+          "alt": "Galleria - Image 7"
+        }
+      }
     }
   },
   {
