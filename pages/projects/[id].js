@@ -5,37 +5,43 @@ import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
+import gsap from "gsap";
 
 export default function Product({ projects }) {
-  // const paths = data.map((item) => ({
-  //   params: { path: item.path.toString() },
-  // }));
+  const { language } = useContext(LanguageContext);
 
-  // let path = paths.find((item) => item.params.path === projects.path);
+  const thubnails = Object.values(projects.viewproject.images);
+  const imageBanner = Object.values(projects.viewproject.images);
+  const landingList = Object.entries(projects).filter(
+    ([key]) =>
+      key === "type" ||
+      key === "date" ||
+      key === "role" ||
+      key === "technologies"
+  );
 
   const [screenWidth, setScreenWidth] = useState(0);
+  const [logoColor, setColor2] = useState(projects.color2);
+  const [currentImage, setCurrentImage] = useState(thubnails[0]);
+  const [selected, setSelected] = useState(0);
+
+  const button = useRef(null);
+
+  const handleImageSelect = (image, index) => {
+    setCurrentImage(image);
+    setSelected(index);
+  };
 
   useEffect(() => {
     function handleResize() {
       setScreenWidth(window.innerWidth);
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  const handleProductSelect = (product) => {
-    setSelectedProduct(product);
-  };
-
-  const [logoColor, setColor2] = useState(projects.color2);
-  const { language } = useContext(LanguageContext);
-
-  const button = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -50,26 +56,6 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
-
-  const landingList = Object.entries(projects).filter(
-    ([key]) =>
-      key === "type" ||
-      key === "date" ||
-      key === "role" ||
-      key === "technologies"
-  );
-
-  const thubnails = Object.values(projects.viewproject.images);
-
-  const [currentImage, setCurrentImage] = useState(thubnails[0]);
-  const [selected, setSelected] = useState(0);
-
-  const handleImageSelect = (image, index) => {
-    setCurrentImage(image);
-    setSelected(index);
-  };
-
-  
 
   return (
     <>
@@ -164,14 +150,29 @@ export default function Product({ projects }) {
             <div className="projects__view__slideshow">
               <div className="slideshow__container">
                 <div className="slideshow__banner">
-                  {currentImage ? (
-                    <Image
-                      src={currentImage.src}
-                      alt={currentImage.alt}
-                      width={958}
-                      height={511}
-                    />
-                  ) : null}
+                  {imageBanner.map((item, index) => (
+                    <>
+                      {currentImage ? (
+                        <Image
+                          className="slideshow__banner__image"
+                          src={item.src}
+                          alt={item.alt}
+                          width={958}
+                          height={511}
+                          key={index}
+                          priority
+                          style={
+                            currentImage === item
+                              ? {
+                                  opacity: 1,
+                                  clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)"
+                                }
+                              : { opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }
+                          }
+                        />
+                      ) : null}
+                    </>
+                  ))}
                 </div>
                 <ul
                   className="slideshow__list"
@@ -185,8 +186,14 @@ export default function Product({ projects }) {
                           ? `translateY(${selected * 100}%)`
                           : `translateX(${selected * 100}%)`,
                       borderColor: projects.color,
-                      width: screenWidth > 576 ? "100%" : `${100 / thubnails.length}%`,
-                      height: screenWidth > 576 ? `${100 / thubnails.length}%` : "100%" ,
+                      width:
+                        screenWidth > 576
+                          ? "100%"
+                          : `${100 / thubnails.length}%`,
+                      height:
+                        screenWidth > 576
+                          ? `${100 / thubnails.length}%`
+                          : "100%",
                     }}
                   />
                   {thubnails.map((item, index) => (
