@@ -58,11 +58,10 @@ export default function Product({ projects }) {
           if (entry.isIntersecting === true) {
             gsap.to(aboutImagesContainer.current.children[0].children[0], {
               scale: 1,
-              delay: 0.9,
             });
             gsap.to(aboutImagesContainer.current.children[1].children[0], {
               scale: 1,
-              delay: 1.1,
+              delay: 0.1,
             });
           }
         });
