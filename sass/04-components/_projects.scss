@@ -100,6 +100,7 @@
   &__subtitle {
     display: inline-flex;
     align-items: center;
+    overflow: hidden;
     & h4 {
       font-family: $rivalSans;
       font-weight: $medium;

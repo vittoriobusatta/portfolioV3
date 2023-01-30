@@ -27,6 +27,7 @@ export default function Product({ projects }) {
   const button = useRef(null);
   const aboutImagesContainer = useRef(null);
   const projectView = useRef(null);
+  const projectAbout = useRef(null);
   const charsAbout = useRef([]);
   const charsView = useRef([]);
 
@@ -50,7 +51,7 @@ export default function Product({ projects }) {
   }, []);
 
   useEffect(() => {
-    gsap.set(charsAbout.current, { y: 100, opacity: 0,});
+    gsap.set(charsAbout.current, { y: 100, opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -63,6 +64,23 @@ export default function Product({ projects }) {
               scale: 1,
               delay: 1.1,
             });
+          }
+        });
+      },
+      { threshold: .7 }
+    );
+
+    observer.observe(aboutImagesContainer.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    gsap.set(charsView.current, { y: 100, opacity: 0 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting === true) {
             charsAbout.current.forEach((char, index) => {
               gsap.to(char, {
                 y: 0,
@@ -76,13 +94,13 @@ export default function Product({ projects }) {
       { threshold: 0.2 }
     );
 
-    observer.observe(aboutImagesContainer.current);
+    observer.observe(projectAbout.current);
 
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    gsap.set(charsView.current, { y: 100, opacity: 0,});
+    gsap.set(charsView.current, { y: 100, opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -151,29 +169,31 @@ export default function Product({ projects }) {
           </a>
         </div>
         <div className="projects__content">
-          <div className="projects__about">
-            <div className="projects__subtitle">
-              <Star />
-              <h4>{projects.aboutproject.subtitle[language]}</h4>
+          <div className="projects__about" ref={projectAbout}>
+            <div className="projects__about__head">
+              <div className="projects__subtitle">
+                <Star />
+                <h4>{projects.aboutproject.subtitle[language]}</h4>
+              </div>
+              <h3 className="projects__title">
+                {Object.entries(projects.aboutproject.title[language]).map(
+                  (item, index) => (
+                    <span
+                      className="projects__title__char"
+                      key={index}
+                      ref={(el) => {
+                        charsAbout.current[index] = el;
+                      }}
+                    >
+                      {item[1]}
+                    </span>
+                  )
+                )}
+              </h3>
+              <p className="projects__description">
+                {projects.aboutproject.about[language]}
+              </p>
             </div>
-            <h3 className="projects__title">
-            {Object.entries(projects.aboutproject.title[language]).map(
-                (item, index) => (
-                  <span
-                  className="projects__title__char"
-                    key={index}
-                    ref={(el) => {
-                      charsAbout.current[index] = el;
-                    }}
-                  >
-                    {item[1]}
-                  </span>
-                )
-              )}
-            </h3>
-            <p className="projects__description">
-              {projects.aboutproject.about[language]}
-            </p>
             <div
               className="projects__about__images"
               ref={aboutImagesContainer}
@@ -217,7 +237,7 @@ export default function Product({ projects }) {
               {Object.entries(projects.viewproject.title[language]).map(
                 (item, index) => (
                   <span
-                  className="projects__title__char"
+                    className="projects__title__char"
                     key={index}
                     ref={(el) => {
                       charsView.current[index] = el;
