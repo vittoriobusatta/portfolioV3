@@ -27,7 +27,8 @@ export default function Product({ projects }) {
   const button = useRef(null);
   const aboutImagesContainer = useRef(null);
   const projectView = useRef(null);
-  const chars = useRef([]);
+  const charsAbout = useRef([]);
+  const charsView = useRef([]);
 
   const handleImageSelect = (image, index) => {
     setCurrentImage(image);
@@ -49,21 +50,30 @@ export default function Product({ projects }) {
   }, []);
 
   useEffect(() => {
+    gsap.set(charsAbout.current, { y: 100, opacity: 0,});
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting === true) {
             gsap.to(aboutImagesContainer.current.children[0].children[0], {
               scale: 1,
+              delay: 0.9,
             });
             gsap.to(aboutImagesContainer.current.children[1].children[0], {
               scale: 1,
-              delay: 0.1,
+              delay: 1.1,
+            });
+            charsAbout.current.forEach((char, index) => {
+              gsap.to(char, {
+                y: 0,
+                opacity: 1,
+                delay: index * 0.05,
+              });
             });
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.2 }
     );
 
     observer.observe(aboutImagesContainer.current);
@@ -72,12 +82,12 @@ export default function Product({ projects }) {
   }, []);
 
   useEffect(() => {
-    gsap.set(chars.current, { y: 100, opacity: 0,});
+    gsap.set(charsView.current, { y: 100, opacity: 0,});
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            chars.current.forEach((char, index) => {
+            charsView.current.forEach((char, index) => {
               gsap.to(char, {
                 y: 0,
                 opacity: 1,
@@ -147,7 +157,19 @@ export default function Product({ projects }) {
               <h4>{projects.aboutproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
-              {projects.aboutproject.title[language]}
+            {Object.entries(projects.aboutproject.title[language]).map(
+                (item, index) => (
+                  <span
+                  className="projects__title__char"
+                    key={index}
+                    ref={(el) => {
+                      charsAbout.current[index] = el;
+                    }}
+                  >
+                    {item[1]}
+                  </span>
+                )
+              )}
             </h3>
             <p className="projects__description">
               {projects.aboutproject.about[language]}
@@ -198,7 +220,7 @@ export default function Product({ projects }) {
                   className="projects__title__char"
                     key={index}
                     ref={(el) => {
-                      chars.current[index] = el;
+                      charsView.current[index] = el;
                     }}
                   >
                     {item[1]}
