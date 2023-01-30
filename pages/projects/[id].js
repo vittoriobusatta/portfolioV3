@@ -75,15 +75,13 @@ export default function Product({ projects }) {
 
       <section
         className="projects"
-        style={{ backgroundColor: projects.background,
-        "--color": projects.color,
-        "--color2": projects.color2
+        style={{
+          backgroundColor: projects.background,
+          "--color": projects.color,
+          "--color2": projects.color2,
         }}
       >
-        <div
-          className="projects__landing"
-          ref={button}
-        >
+        <div className="projects__landing" ref={button}>
           <h1 className="landing__title">{projects.name}</h1>
           <ul className="landing__list">
             {landingList.map((item, index) => (
@@ -124,20 +122,26 @@ export default function Product({ projects }) {
               {projects.aboutproject.about[language]}
             </p>
             <div className="projects__about__images">
-              <Image
-                src={projects.aboutproject.images.img1.src}
-                alt={projects.aboutproject.images.img1.alt}
-                width={385}
-                height={481}
-                priority
-              />
-              <Image
-                src={projects.aboutproject.images.img2.src}
-                alt={projects.aboutproject.images.img2.alt}
-                width={385}
-                height={481}
-                priority
-              />
+              <div className="projects__about__images__inner">
+                <Image
+                  src={projects.aboutproject.images.img1.src}
+                  alt={projects.aboutproject.images.img1.alt}
+                  width={385}
+                  height={481}
+                  priority
+                />
+                <div className="projects__about__images__placeholder" />
+              </div>
+              <div className="projects__about__images__inner">
+                <Image
+                  src={projects.aboutproject.images.img2.src}
+                  alt={projects.aboutproject.images.img2.alt}
+                  width={385}
+                  height={481}
+                  priority
+                />
+                <div className="projects__about__images__placeholder" />
+              </div>
             </div>
           </div>
           <div className="projects__view">
@@ -198,10 +202,10 @@ export default function Product({ projects }) {
                   <div
                     className="slideshow__list__border"
                     style={{
-                      "--borderTranslateY" : `${selected * 100}%`,
-                      "--borderTranslateX" : `${selected * 100}%`,
-                      "--thubnailsWidth" : `${100 / thubnails.length}%`,
-                      "--thubnailsHeight" : `${100 / thubnails.length}%`,
+                      "--borderTranslateY": `${selected * 100}%`,
+                      "--borderTranslateX": `${selected * 100}%`,
+                      "--thubnailsWidth": `${100 / thubnails.length}%`,
+                      "--thubnailsHeight": `${100 / thubnails.length}%`,
                     }}
                   />
                   {thubnails.map((item, index) => (
