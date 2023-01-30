@@ -33,27 +33,6 @@
     }
   }
   &__about {
-    &__subtitle {
-      font-family: $rivalSans;
-      font-weight: $medium;
-      font-size: 12px;
-      margin-left: 8px;
-    }
-    &__title {
-      font-family: $sirenia;
-      font-weight: $medium;
-      font-size: 44px;
-      max-width: 300px;
-      line-height: 44px;
-      margin: 22px 0;
-    }
-    &__description {
-      font-family: $rivalSans;
-      font-weight: $regular;
-      font-size: 14px;
-      color: #776d6d;
-      max-width: 400px;
-    }
     &__images {
       display: flex;
       justify-content: center;
@@ -99,7 +78,7 @@
         height: 99%;
         background: #f3efec;
         opacity: 1;
-        transition: opacity .8s ease;
+        transition: opacity 0.8s ease;
       }
     }
   }
@@ -115,6 +94,31 @@
         margin-top: 88px;
       }
     }
+  }
+  &__subtitle {
+    display: inline-flex;
+    align-items: center;
+    & h4 {
+      font-family: $rivalSans;
+      font-weight: $medium;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+  }
+  &__title {
+    font-family: $sirenia;
+    font-weight: $medium;
+    font-size: 44px;
+    max-width: 300px;
+    line-height: 44px;
+    margin: 22px 0;
+  }
+  &__description {
+    font-family: $rivalSans;
+    font-weight: $regular;
+    font-size: 14px;
+    color: #707070;
+    max-width: 400px;
   }
 }
 

@@ -105,20 +105,17 @@ export default function Product({ projects }) {
         <div className="projects__content">
           <div className="projects__about">
             <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-              }}
+              className="projects__subtitle"
             >
               <Star />
-              <h4 className="projects__about__subtitle">
+              <h4>
                 {projects.aboutproject.subtitle[language]}
               </h4>
             </div>
-            <h3 className="projects__about__title">
+            <h3 className="projects__title">
               {projects.aboutproject.title[language]}
             </h3>
-            <p className="projects__about__description">
+            <p className="projects__description">
               {projects.aboutproject.about[language]}
             </p>
             <div className="projects__about__images">
@@ -145,21 +142,18 @@ export default function Product({ projects }) {
             </div>
           </div>
           <div className="projects__view">
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-              }}
+          <div
+              className="projects__subtitle"
             >
               <Star />
-              <h4 className="projects__about__subtitle">
+              <h4>
                 {projects.viewproject.subtitle[language]}
               </h4>
             </div>
-            <h3 className="projects__about__title">
+            <h3 className="projects__title">
               {projects.viewproject.title[language]}
             </h3>
-            <p className="projects__about__description">
+            <p className="projects__description">
               {projects.viewproject.about[language]}
             </p>
             <div className="projects__view__slideshow">
