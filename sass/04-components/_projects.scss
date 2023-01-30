@@ -50,6 +50,7 @@
       &__inner {
         position: relative;
         height: fit-content;
+        overflow: hidden;
         &:first-child {
           transform: translateY(0px) translateX(-20px);
           width: 60vw;
@@ -68,6 +69,11 @@
           height: auto;
           object-fit: cover;
           object-position: center;
+          transform: scale(1.1);
+          transition: transform 0.8s ease;
+          &:hover {
+            transform: scale(1);
+          }
         }
       }
       &__placeholder {
