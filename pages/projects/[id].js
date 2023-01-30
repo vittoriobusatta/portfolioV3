@@ -26,6 +26,7 @@ export default function Product({ projects }) {
   const [selected, setSelected] = useState(0);
 
   const button = useRef(null);
+  const aboutImagesContainer = useRef(null);
 
   const handleImageSelect = (image, index) => {
     setCurrentImage(image);
@@ -53,6 +54,30 @@ export default function Product({ projects }) {
     });
 
     observer.observe(button.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting === true) {
+            console.log("intersecting");
+            gsap.to(aboutImagesContainer.current.children[0].children[0], {
+              scale: 1,
+            });
+            gsap.to(aboutImagesContainer.current.children[1].children[0], {
+              scale: 1,
+              delay: 0.1,
+            });
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+
+    observer.observe(aboutImagesContainer.current);
 
     return () => observer.disconnect();
   }, []);
@@ -116,6 +141,7 @@ export default function Product({ projects }) {
             </p>
             <div
               className="projects__about__images"
+              ref={aboutImagesContainer}
               style={{
                 "--placeholder": projects.placeholder,
               }}
