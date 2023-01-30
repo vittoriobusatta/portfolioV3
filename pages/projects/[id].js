@@ -104,13 +104,9 @@ export default function Product({ projects }) {
         </div>
         <div className="projects__content">
           <div className="projects__about">
-            <div
-              className="projects__subtitle"
-            >
+            <div className="projects__subtitle">
               <Star />
-              <h4>
-                {projects.aboutproject.subtitle[language]}
-              </h4>
+              <h4>{projects.aboutproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
               {projects.aboutproject.title[language]}
@@ -118,7 +114,12 @@ export default function Product({ projects }) {
             <p className="projects__description">
               {projects.aboutproject.about[language]}
             </p>
-            <div className="projects__about__images">
+            <div
+              className="projects__about__images"
+              style={{
+                "--placeholder": projects.placeholder,
+              }}
+            >
               <div className="projects__about__images__inner">
                 <Image
                   src={projects.aboutproject.images.img1.src}
@@ -137,18 +138,19 @@ export default function Product({ projects }) {
                   height={481}
                   priority
                 />
-                <div className="projects__about__images__placeholder" />
+                <div
+                  style={{
+                    "--placeholder": projects.placeholder,
+                  }}
+                  className="projects__about__images__placeholder"
+                />
               </div>
             </div>
           </div>
           <div className="projects__view">
-          <div
-              className="projects__subtitle"
-            >
+            <div className="projects__subtitle">
               <Star />
-              <h4>
-                {projects.viewproject.subtitle[language]}
-              </h4>
+              <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
               {projects.viewproject.title[language]}

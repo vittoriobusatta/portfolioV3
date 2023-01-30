@@ -14,6 +14,7 @@
     "color": "#563213",
     "color2": "#C89773",
     "background": "#FDF1E6",
+    "placeholder": "#ffe7d2",
     "description": {
       "fr": "Décor Ta Kaz est une entreprise de menuiserie artisanale'. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
       "en": "Décor Ta Kaz is a carpentry company. Their website is a showcase website that presents their services and their work."
@@ -104,6 +105,7 @@
     "color": "#093738",
     "color2": "#FDFCFD",
     "background": "#ECF8F5",
+    "placeholder": "#d8f3ee",
     "aboutproject": {
       "title": {
         "fr": "Une collection inspirée du présent",
@@ -180,6 +182,7 @@
     "color": "#FFB189",
     "color2": "#FFF5F0",
     "background": "#F8F4EC",
+    "placeholder": "#ffece3",
     "aboutproject": {
       "title": {
         "fr": "Un sérum personnalisé.",
@@ -266,6 +269,7 @@
     "color": "#030D3E",
     "color2": "#FDFCFD",
     "background": "#EEECF8",
+    "placeholder": "#dae0fa",
     "aboutproject": {
       "title": {
         "fr": "Découvrez l’art de l’interaction.",
@@ -352,6 +356,7 @@
     "color": "#F86542",
     "color2": "#FFF0D1",
     "background": "#F8F0EC",
+    "placeholder": "#ffdad2",
     "aboutproject": {
       "title": {
         "fr": "",
@@ -407,6 +412,7 @@
     "color": "#2B9DFD",
     "color2": "#FDFCFD",
     "background": "#ECFAFF",
+    "placeholder": "#cee8ff",
     "aboutproject": {
       "title": {
         "fr": "Une sécurité garantie",
@@ -488,6 +494,7 @@
     "color": "#ffdc00",
     "color2": "#FDFCFD",
     "background": "#FCFFEC",
+    "placeholder": "#fff7c3",
     "aboutproject": {
       "title": {
         "fr": "Une agence brillante",
