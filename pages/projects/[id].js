@@ -78,7 +78,7 @@ export default function Product({ projects }) {
 
   useEffect(() => {
     gsap.set(charsAbout.current, { y: 100, opacity: 0 });
-    gsap.set(subtitle1.current.children, { y: 100, opacity: 0 });
+    gsap.set(subtitle1.current.children, { y: "100%", opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -109,7 +109,7 @@ export default function Product({ projects }) {
 
   useEffect(() => {
     gsap.set(charsView.current, { y: 100, opacity: 0 });
-    gsap.set(subtitle2.current.children, { y: 100, opacity: 0 });
+    gsap.set(subtitle2.current.children, { y: "100%", opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -137,8 +137,6 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
-
-  console.log(charsView);
 
   return (
     <>
