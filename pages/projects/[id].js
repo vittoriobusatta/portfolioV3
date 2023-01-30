@@ -67,7 +67,7 @@ export default function Product({ projects }) {
           }
         });
       },
-      { threshold: .7 }
+      { threshold: 0.7 }
     );
 
     observer.observe(aboutImagesContainer.current);
@@ -85,7 +85,7 @@ export default function Product({ projects }) {
               gsap.to(char, {
                 y: 0,
                 opacity: 1,
-                delay: index * 0.05,
+                delay: index * 0.03,
               });
             });
           }
@@ -109,7 +109,7 @@ export default function Product({ projects }) {
               gsap.to(char, {
                 y: 0,
                 opacity: 1,
-                delay: index * 0.05,
+                delay: index * 0.03,
               });
             });
           }
