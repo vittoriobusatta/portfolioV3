@@ -20,29 +20,19 @@ export default function Product({ projects }) {
       key === "technologies"
   );
 
-  const [screenWidth, setScreenWidth] = useState(0);
   const [logoColor, setColor2] = useState(projects.color2);
   const [currentImage, setCurrentImage] = useState(thubnails[0]);
   const [selected, setSelected] = useState(0);
 
   const button = useRef(null);
   const aboutImagesContainer = useRef(null);
+  const projectView = useRef(null);
+  const chars = useRef([]);
 
   const handleImageSelect = (image, index) => {
     setCurrentImage(image);
     setSelected(index);
   };
-
-  useEffect(() => {
-    function handleResize() {
-      setScreenWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -63,7 +53,6 @@ export default function Product({ projects }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting === true) {
-            console.log("intersecting");
             gsap.to(aboutImagesContainer.current.children[0].children[0], {
               scale: 1,
             });
@@ -78,6 +67,30 @@ export default function Product({ projects }) {
     );
 
     observer.observe(aboutImagesContainer.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    gsap.set(chars.current, { y: 100, opacity: 0,});
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            chars.current.forEach((char, index) => {
+              gsap.to(char, {
+                y: 0,
+                opacity: 1,
+                delay: index * 0.05,
+              });
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(projectView.current);
 
     return () => observer.disconnect();
   }, []);
@@ -173,13 +186,25 @@ export default function Product({ projects }) {
               </div>
             </div>
           </div>
-          <div className="projects__view">
+          <div className="projects__view" ref={projectView}>
             <div className="projects__subtitle">
               <Star />
               <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
-              {projects.viewproject.title[language]}
+              {Object.entries(projects.viewproject.title[language]).map(
+                (item, index) => (
+                  <span
+                  className="projects__title__char"
+                    key={index}
+                    ref={(el) => {
+                      chars.current[index] = el;
+                    }}
+                  >
+                    {item[1]}
+                  </span>
+                )
+              )}
             </h3>
             <p className="projects__description">
               {projects.viewproject.about[language]}
