@@ -30,6 +30,8 @@ export default function Product({ projects }) {
   const projectAbout = useRef(null);
   const charsAbout = useRef([]);
   const charsView = useRef([]);
+  const subtitle1 = useRef([]);
+  const subtitle2 = useRef([]);
 
   const handleImageSelect = (image, index) => {
     setCurrentImage(image);
@@ -75,7 +77,8 @@ export default function Product({ projects }) {
   }, []);
 
   useEffect(() => {
-    gsap.set(charsView.current, { y: 100, opacity: 0 });
+    gsap.set(charsAbout.current, { y: 100, opacity: 0 });
+    gsap.set(subtitle1.current.children, { y: 100, opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -86,6 +89,12 @@ export default function Product({ projects }) {
                 opacity: 1,
                 delay: index * 0.03,
               });
+            });
+            gsap.to(subtitle1.current.children, {
+              y: 0,
+              opacity: 1,
+              ease: "power4.out",
+              delay: 0.2,
             });
           }
         });
@@ -100,6 +109,7 @@ export default function Product({ projects }) {
 
   useEffect(() => {
     gsap.set(charsView.current, { y: 100, opacity: 0 });
+    gsap.set(subtitle2.current.children, { y: 100, opacity: 0 });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -111,6 +121,12 @@ export default function Product({ projects }) {
                 delay: index * 0.03,
               });
             });
+            gsap.to(subtitle2.current.children, {
+              y: 0,
+              opacity: 1,
+              ease: "power4.out",
+              delay: 0.2,
+            });
           }
         });
       },
@@ -121,6 +137,8 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
+
+  console.log(charsView);
 
   return (
     <>
@@ -170,7 +188,12 @@ export default function Product({ projects }) {
         <div className="projects__content">
           <div className="projects__about" ref={projectAbout}>
             <div className="projects__about__head">
-              <div className="projects__subtitle">
+              <div
+                className="projects__subtitle"
+                ref={(el) => {
+                  subtitle1.current = el;
+                }}
+              >
                 <Star />
                 <h4>{projects.aboutproject.subtitle[language]}</h4>
               </div>
@@ -228,7 +251,12 @@ export default function Product({ projects }) {
             </div>
           </div>
           <div className="projects__view" ref={projectView}>
-            <div className="projects__subtitle">
+            <div
+              className="projects__subtitle"
+              ref={(el) => {
+                subtitle2.current = el;
+              }}
+            >
               <Star />
               <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
