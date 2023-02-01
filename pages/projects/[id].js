@@ -140,7 +140,6 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-  console.log(projects.typographyproject.source[language]);
 
   return (
     <>

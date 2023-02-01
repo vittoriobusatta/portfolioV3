@@ -93,11 +93,11 @@
       "source": {
         "fr": {
           "police": "Manrope",
-        "source": "Google Fonts, Fonts.google.com"
+          "source": "Google Fonts, Fonts.google.com"
         },
         "en": {
-        "font": "Manrope",
-        "foundry": "Google Fonts, Fonts.google.com"
+          "font": "Manrope",
+          "foundry": "Google Fonts, Fonts.google.com"
         }
       },
       "vector": {
@@ -390,8 +390,14 @@
     },
     "typographyproject": {
       "source": {
-        "font": "Libre Baskerville",
-        "foundry": "Fonts Geek, Fonts Geek.com"
+        "fr": {
+          "police": "Libre Baskerville",
+          "source": "Fonts Geek, Fonts Geek.com"
+        },
+        "en": {
+          "font": "Libre Baskerville",
+          "foundry": "Fonts Geek, Fonts Geek.com"
+        }
       },
       "vector": {
         "src": "/images/galleria/glaTypo.svg",
@@ -651,8 +657,14 @@
     },
     "typographyproject": {
       "source": {
-        "font": "Manrope",
-        "foundry": "Google Fonts, Fonts.google.com"
+        "fr": {
+          "police": "Manrope",
+          "source": "Google Fonts, Fonts.google.com"
+        },
+        "en": {
+          "font": "Manrope",
+          "foundry": "Google Fonts, Fonts.google.com"
+        }
       },
       "vector": {
         "src": "/images/sunnyside/sunnysideTypo.svg",
