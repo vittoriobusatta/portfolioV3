@@ -8,10 +8,10 @@
     background-color: $color_primary;
     @media screen and (min-width: 576px) {
       align-items: center;
-      padding: 188px 32px;
+      padding: 188px 32px 144px;
     }
     @media screen and (min-width: 768px) {
-      padding: 204px 32px;
+      padding: 204px 32px 188px;
     }
   }
   &__content {
@@ -77,7 +77,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 95%;
+        height: 98%;
         background: var(--placeholder);
         opacity: 1;
         transition: opacity 0.8s ease;
@@ -111,17 +111,22 @@
       margin-top: 44px;
       width: 100%;
     }
+    &__source {
+      font-size: 14px;
+      font-weight: $regular;
+      margin-top: 22px;
+    }
+    &__details {
+      width: 100%;
+      display: flex;
+      margin-top: 12px;
+    }
     &__vector {
       width: auto;
       max-width: 330px;
       height: auto;
       object-fit: cover;
       object-position: center;
-    }
-    &__source {
-      font-size: 14px;
-      font-weight: $regular;
-      margin-top: 22px;
     }
     &__key {
       text-transform: uppercase;
@@ -218,8 +223,9 @@
     margin-top: 32px;
     color: $color_secondary;
     @media screen and (min-width: 576px) {
-      margin-top: 62px;
+      margin-top: 88px;
     }
+   
     &::after {
       content: "";
       position: absolute;

@@ -140,7 +140,6 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-
   return (
     <>
       <Head>
@@ -199,7 +198,7 @@ export default function Product({ projects }) {
                 <h4>{projects.aboutproject.subtitle[language]}</h4>
               </div>
               <h3 className="projects__title">
-                {/* {Object.entries(projects.aboutproject.title[language]).map(
+                {Object.entries(projects.aboutproject.title[language]).map(
                   (item, index) => (
                     <span
                       className="projects__title__char"
@@ -211,8 +210,7 @@ export default function Product({ projects }) {
                       {item[1]}
                     </span>
                   )
-                )} */}
-                {projects.aboutproject.title[language]}
+                )}
               </h3>
               <p className="projects__description">
                 {projects.aboutproject.about[language]}
@@ -225,31 +223,28 @@ export default function Product({ projects }) {
                 "--placeholder": projects.placeholder,
               }}
             >
-              <div className="projects__about__images__inner">
-                <Image
-                  src={projects.aboutproject.images.img1.src}
-                  alt={projects.aboutproject.images.img1.alt}
-                  width={385}
-                  height={481}
-                  priority
-                />
-                <div className="projects__about__images__placeholder" />
-              </div>
-              <div className="projects__about__images__inner">
-                <Image
-                  src={projects.aboutproject.images.img2.src}
-                  alt={projects.aboutproject.images.img2.alt}
-                  width={385}
-                  height={481}
-                  priority
-                />
-                <div
-                  style={{
-                    "--placeholder": projects.placeholder,
-                  }}
-                  className="projects__about__images__placeholder"
-                />
-              </div>
+              {Object.values(projects.aboutproject.images).map(
+                (item, index) => (
+                  <div className="projects__about__images__inner" key={index}>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={385}
+                      height={481}
+                      priority
+                      style={{
+                        "--placeholder": projects.placeholder,
+                      }}
+                    />
+                    <div
+                      style={{
+                        "--placeholder": projects.placeholder,
+                      }}
+                      className="projects__about__images__placeholder"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
           <div className="projects__view" ref={projectView}>
@@ -263,7 +258,7 @@ export default function Product({ projects }) {
               <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
-              {/* {Object.entries(projects.viewproject.title[language]).map(
+              {Object.entries(projects.viewproject.title[language]).map(
                 (item, index) => (
                   <span
                     className="projects__title__char"
@@ -275,8 +270,7 @@ export default function Product({ projects }) {
                     {item[1]}
                   </span>
                 )
-              )} */}
-              {projects.viewproject.title[language]}
+              )}
             </h3>
             <p className="projects__description">
               {projects.viewproject.about[language]}
@@ -354,27 +348,18 @@ export default function Product({ projects }) {
                   priority
                 />
                 <div className="projects__typography__source">
-                  {Object.entries(projects.typographyproject.source[language]).map(
-                    (item, index) => (
-                      <div
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          marginTop: "22px",
-                        }}
-                      >
-                        <span className="projects__typography__key" key={index}>
-                          {item[0]}
-                        </span>
-                        <span
-                          className="projects__typography__value"
-                          key={index}
-                        >
-                          {item[1]}
-                        </span>
-                      </div>
-                    )
-                  )}
+                  {Object.entries(
+                    projects.typographyproject.source[language]
+                  ).map((item, index) => (
+                    <div className="projects__typography__details">
+                      <span className="projects__typography__key" key={index}>
+                        {item[0]}
+                      </span>
+                      <span className="projects__typography__value" key={index}>
+                        {item[1]}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
