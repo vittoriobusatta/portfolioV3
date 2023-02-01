@@ -28,6 +28,8 @@ export default function Product({ projects }) {
   const aboutImagesContainer = useRef(null);
   const projectView = useRef(null);
   const projectAbout = useRef(null);
+  const projectTypography = useRef(null);
+  const projectMobile = useRef(null);
   const charsAbout = useRef([]);
   const charsView = useRef([]);
   const subtitle1 = useRef([]);
@@ -138,6 +140,8 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
+  console.log(projects.typographyproject.source[language]);
+
   return (
     <>
       <Head>
@@ -196,7 +200,7 @@ export default function Product({ projects }) {
                 <h4>{projects.aboutproject.subtitle[language]}</h4>
               </div>
               <h3 className="projects__title">
-                {Object.entries(projects.aboutproject.title[language]).map(
+                {/* {Object.entries(projects.aboutproject.title[language]).map(
                   (item, index) => (
                     <span
                       className="projects__title__char"
@@ -208,7 +212,8 @@ export default function Product({ projects }) {
                       {item[1]}
                     </span>
                   )
-                )}
+                )} */}
+                {projects.aboutproject.title[language]}
               </h3>
               <p className="projects__description">
                 {projects.aboutproject.about[language]}
@@ -259,7 +264,7 @@ export default function Product({ projects }) {
               <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
-              {Object.entries(projects.viewproject.title[language]).map(
+              {/* {Object.entries(projects.viewproject.title[language]).map(
                 (item, index) => (
                   <span
                     className="projects__title__char"
@@ -271,7 +276,8 @@ export default function Product({ projects }) {
                     {item[1]}
                   </span>
                 )
-              )}
+              )} */}
+              {projects.viewproject.title[language]}
             </h3>
             <p className="projects__description">
               {projects.viewproject.about[language]}
@@ -337,6 +343,43 @@ export default function Product({ projects }) {
               </div>
             </div>
           </div>
+          {projects.typographyproject && (
+            <div className="projects__typography" ref={projectTypography}>
+              <div className="projects__typography__inner">
+                <Image
+                  className="projects__typography__vector"
+                  src={projects.typographyproject.vector.src}
+                  alt={projects.typographyproject.vector.alt}
+                  width={570}
+                  height={55}
+                  priority
+                />
+                <div className="projects__typography__source">
+                  {Object.entries(projects.typographyproject.source[language]).map(
+                    (item, index) => (
+                      <div
+                        style={{
+                          width: "100%",
+                          display: "flex",
+                          marginTop: "22px",
+                        }}
+                      >
+                        <span className="projects__typography__key" key={index}>
+                          {item[0]}
+                        </span>
+                        <span
+                          className="projects__typography__value"
+                          key={index}
+                        >
+                          {item[1]}
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>

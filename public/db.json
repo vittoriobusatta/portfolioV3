@@ -88,6 +88,16 @@
           "alt": "Décor Ta Kaz - Image 8"
         }
       }
+    },
+    "typographyproject": {
+      "source": {
+        "font": "Manrope",
+        "foundry": "Google Fonts, Fonts.google.com"
+      },
+      "vector": {
+        "src": "/images/decortakaz/decortakazTypo.svg",
+        "alt": "Décor Ta Kaz - Typography"
+      }
     }
   },
   {
@@ -164,6 +174,22 @@
           "src": "/images/nocta/nct6.jpg",
           "alt": "Nocta - Image 6"
         }
+      }
+    },
+    "typographyproject": {
+      "source": {
+        "fr": {
+          "police": "Univers 93",
+          "source": "Fonts Geek, fontsgeek.com"
+        },
+        "en": {
+          "font": "Univers 93",
+          "foundry": "Fonts Geek, fontsgeek.com"
+        }
+      },
+      "vector": {
+        "src": "/images/nocta/noctaTypo.svg",
+        "alt": "Nocta - Typography"
       }
     }
   },
@@ -252,6 +278,22 @@
           "alt": "Muteza - Image 8"
         }
       }
+    },
+    "typographyproject": {
+      "source": {
+        "fr": {
+          "police": "Univers 93",
+          "source": "Fonts Geek, fontsgeek.com"
+        },
+        "en": {
+          "font": "Univers 93",
+          "foundry": "Fonts Geek, fontsgeek.com"
+        }
+      },
+      "vector": {
+        "src": "/images/muteza/mutezaTypo.svg",
+        "alt": "Muteza - Typography"
+      }
     }
   },
   {
@@ -338,6 +380,16 @@
           "src": "/images/galleria/gla8.jpg",
           "alt": "Galleria - Image 8"
         }
+      }
+    },
+    "typographyproject": {
+      "source": {
+        "font": "Libre Baskerville",
+        "foundry": "Fonts Geek, Fonts Geek.com"
+      },
+      "vector": {
+        "src": "/images/galleria/glaTypo.svg",
+        "alt": "Galleria - Typography"
       }
     }
   },
@@ -589,6 +641,16 @@
           "src": "/images/sunnyside/sun7.jpg",
           "alt": "Sunnyside - Image 7"
         }
+      }
+    },
+    "typographyproject": {
+      "source": {
+        "font": "Manrope",
+        "foundry": "Google Fonts, Fonts.google.com"
+      },
+      "vector": {
+        "src": "/images/sunnyside/sunnysideTypo.svg",
+        "alt": "Sunnyside - Typography"
       }
     }
   }

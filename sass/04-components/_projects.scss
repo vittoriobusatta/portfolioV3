@@ -97,6 +97,43 @@
       }
     }
   }
+  &__typography {
+    margin-top: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__inner {
+      display: inline-flex;
+      align-items: center;
+      flex-direction: column;
+      column-gap: 22px;
+      margin-top: 44px;
+      width: 100%;
+    }
+    &__vector {
+      width: auto;
+      max-width: 330px;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+    &__source {
+      font-size: 14px;
+      font-weight: $regular;
+      width: 100%;
+      margin-top: 22px;
+    }
+    &__key {
+      text-transform: uppercase;
+      flex: 1;
+    }
+    &__value {
+      color: #707070;
+      font-weight: $regular;
+      flex: 1;
+    }
+  }
   &__subtitle {
     display: inline-flex;
     align-items: center;
