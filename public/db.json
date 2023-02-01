@@ -490,6 +490,22 @@
           "alt": "AB Distribution - Image 8"
         }
       }
+    },
+    "typographyproject": {
+      "source": {
+        "fr": {
+          "police": "New Kansas",
+          "source": "Adobe Font, fonts.adobe.com"
+        },
+        "en": {
+          "font": "New Kansas",
+          "foundry": "Adobe Font, fonts.adobe.com"
+        }
+      },
+      "vector": {
+        "src": "/images/abdistribution/abdistributionTypo.svg",
+        "alt": "AB Distribution - Typography"
+      }
     }
   },
   {
@@ -658,11 +674,11 @@
     "typographyproject": {
       "source": {
         "fr": {
-          "police": "Manrope",
+          "police": "Faunces",
           "source": "Google Fonts, Fonts.google.com"
         },
         "en": {
-          "font": "Manrope",
+          "font": "Faunces",
           "foundry": "Google Fonts, Fonts.google.com"
         }
       },

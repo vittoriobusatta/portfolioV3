@@ -232,9 +232,6 @@ export default function Product({ projects }) {
                       width={385}
                       height={481}
                       priority
-                      style={{
-                        "--placeholder": projects.placeholder,
-                      }}
                     />
                     <div
                       style={{
