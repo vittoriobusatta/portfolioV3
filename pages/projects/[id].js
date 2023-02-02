@@ -361,7 +361,33 @@ export default function Product({ projects }) {
               </div>
             </div>
           )}
+          {/* {projects.colorproject && (
+            <div className="projects__color" ref={projectColor}>
+              <div className="projects__color__inner">
+                <Image
+                  className="projects__color__vector"
+                  src={projects.colorproject.vector.src}
+                  alt={projects.colorproject.vector.alt}
+                  width={1512}
+                  height={1612}
+                  priority
+                />
+              </div>
+            </div>
+          )} */}
         </div>
+        {projects.otherproject && (
+          <div className="projects__other">
+            <Image
+              className="projects__other__vector"
+              src={projects.otherproject.image.src}
+              alt={projects.otherproject.image.alt}
+              width={1512}
+              height={1612}
+              priority
+            />
+          </div>
+        )}
       </section>
     </>
   );

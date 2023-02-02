@@ -197,6 +197,12 @@
         "src": "/images/nocta/noctaTypo.svg",
         "alt": "Nocta - Typography"
       }
+    },
+    "otherproject": {
+      "image": {
+        "src": "/images/nocta/nct7.jpg",
+        "alt": "Nocta - Image 7"
+      }
     }
   },
   {
