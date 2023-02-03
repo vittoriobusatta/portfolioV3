@@ -762,11 +762,11 @@
           },
           "src": {
             "fr": {
-              "police": "Faunces",
+              "police": "Barlow",
               "source": "Google Fonts, fonts.google.com"
             },
             "en": {
-              "font": "Faunces",
+              "font": "Barlow",
               "foundry": "Google Fonts, fonts.google.com"
             }
           }
@@ -776,13 +776,14 @@
             "src": "/images/sunnyside/typo2.svg",
             "alt": "Sunnyside - Typography 2"
           },
+
           "src": {
             "fr": {
-              "police": "Barlow",
+              "police": "Faunces",
               "source": "Google Fonts, fonts.google.com"
             },
             "en": {
-              "font": "Barlow",
+              "font": "Faunces",
               "foundry": "Google Fonts, fonts.google.com"
             }
           }

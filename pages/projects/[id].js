@@ -377,9 +377,6 @@ function Typo({ typo, name , typographyproject}) {
 
   const projectTypography = useRef(null);
 
-  console.log(typographyproject);
-
-
   return (
     <>
       <div className="projects__typography" ref={projectTypography}>
