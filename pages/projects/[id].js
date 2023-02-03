@@ -4,7 +4,6 @@ import React, {
   useEffect,
   useRef,
   useState,
-  useCallback,
 } from "react";
 import fs from "fs";
 import Header from "@/components/Header";
@@ -12,6 +11,8 @@ import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
+
+
 
 export default function Product({ projects }) {
   const { language } = useContext(LanguageContext);
@@ -34,7 +35,6 @@ export default function Product({ projects }) {
   const aboutImagesContainer = useRef(null);
   const projectView = useRef(null);
   const projectAbout = useRef(null);
-  const projectTypography = useRef(null);
   const projectMobile = useRef(null);
   const charsAbout = useRef([]);
   const charsView = useRef([]);
@@ -147,24 +147,7 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-  const typoArray = Object.entries(projects.typographyproject).map(
-    ([key, value]) => value
-  );
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const currentTypo = typoArray[currentIndex];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex) =>
-        currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
-      );
-    }, 4500);
-    return () => clearInterval(interval);
-  }, []);
-
-let key = Object.keys(currentTypo.src[language]);
-let value = Object.values(currentTypo.src[language]);
 
   return (
     <>
@@ -360,29 +343,7 @@ let value = Object.values(currentTypo.src[language]);
             </div>
           </div>
           {projects.typographyproject && (
-            <div className="projects__typography" ref={projectTypography}>
-              <div className="projects__typography__inner">
-                <Image
-                  className="projects__typography__vector"
-                  src={currentTypo.vector.src}
-                  alt={currentTypo.vector.alt}
-                  width={570}
-                  height={55}
-                  priority
-                />
-
-                <div className="projects__typography__details">
-                  <span className="projects__typography__font">
-                    <p>{key[0]}</p>
-                    <p>{value[0]}</p>
-                  </span>
-                  <span className="projects__typography__source">
-                    <p>{key[1]}</p>
-                    <p>{value[1]}</p>
-                  </span>
-                </div>
-              </div>
-            </div>
+            <Typo project={projects.typographyproject} />
           )}
           {/* {projects.colorproject && (
             <div className="projects__color" ref={projectColor}>
@@ -401,6 +362,60 @@ let value = Object.values(currentTypo.src[language]);
         </div>
         {projects.otherproject && <div className="projects__other"></div>}
       </section>
+    </>
+  );
+}
+
+function Typo({ project }) {
+  const { language } = useContext(LanguageContext);
+
+  const typoArray = Object.entries(project).map(
+    ([key, value]) => value
+  );
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentTypo = typoArray[currentIndex];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndex) =>
+        currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  let key = Object.keys(currentTypo.src[language]);
+  let value = Object.values(currentTypo.src[language]);
+
+  const projectTypography = useRef(null);
+
+
+  return (
+    <>
+      <div className="projects__typography" ref={projectTypography}>
+        <div className="projects__typography__inner">
+          <Image
+            className="projects__typography__vector"
+            src={currentTypo.vector.src}
+            alt={currentTypo.vector.alt}
+            width={570}
+            height={55}
+            priority
+          />
+
+          <div className="projects__typography__details">
+            <span className="projects__typography__font">
+              <p>{key[0]}</p>
+              <p>{value[0]}</p>
+            </span>
+            <span className="projects__typography__source">
+              <p>{key[1]}</p>
+              <p>{value[1]}</p>
+            </span>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
