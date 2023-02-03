@@ -122,11 +122,18 @@
     }
     &__vector {
       max-width: 300px;
-      max-height: 35px;
       width: 50vw;
       height: auto;
       @media screen and (min-width: 576px) {
         max-width: 330px;
+      }
+      &__nocta {
+        width: 70vw;
+      }
+      &__muteza,
+      &__galleria
+      {
+        max-height: 35px;
       }
     }
     &__font {

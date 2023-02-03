@@ -382,8 +382,8 @@ function Typo({ project, name }) {
       <div className="projects__typography" ref={projectTypography}>
         <div className="projects__typography__inner">
           <Image
-            className={`projects__typography__vector
-            `}
+            className={`projects__typography__vector 
+            projects__typography__vector__${name}`}
             src={currentTypo.vector.src}
             alt={currentTypo.vector.alt}
             width={570}

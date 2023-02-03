@@ -419,7 +419,7 @@
     "typographyproject": {
       "typo1": {
         "vector": {
-          "src": "/images/galleria/glaTypo.svg",
+          "src": "/images/galleria/typo1.svg",
           "alt": "Galleria - Typography"
         },
         "src": {
@@ -524,7 +524,7 @@
     "typographyproject": {
       "typo1": {
         "vector": {
-          "src": "/images/abdistribution/abdistributionTypo.svg",
+          "src": "/images/abdistribution/typo1.svg",
           "alt": "AB Distribution - Typography"
         },
         "src": {
@@ -534,6 +534,22 @@
           },
           "en": {
             "font": "New Kansas",
+            "foundry": "Adobe Font, fonts.adobe.com"
+          }
+        }
+      },
+      "typo2": {
+        "vector": {
+          "src": "/images/abdistribution/typo2.svg",
+          "alt": "AB Distribution - Typography"
+        },
+        "src": {
+          "fr": {
+            "police": "Rival Sans",
+            "source": "Adobe Font, fonts.adobe.com"
+          },
+          "en": {
+            "font": "Rival Sans",
             "foundry": "Adobe Font, fonts.adobe.com"
           }
         }
