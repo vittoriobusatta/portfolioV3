@@ -379,7 +379,7 @@ function Typo({ project }) {
       setCurrentIndex((currentIndex) =>
         currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
       );
-    }, 3000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
