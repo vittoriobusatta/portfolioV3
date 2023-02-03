@@ -90,19 +90,21 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "Manrope",
-          "source": "Google Fonts, fonts.google.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/decortakaz/decortakazTypo.svg",
+          "alt": "Décor Ta Kaz - Typography"
         },
-        "en": {
-          "font": "Manrope",
-          "foundry": "Google Fonts, fonts.google.com"
+        "src": {
+          "fr": {
+            "font": "Manrope",
+            "foundry": "Google Fonts, fonts.google.com"
+          },
+          "en": {
+            "font": "Manrope",
+            "foundry": "Google Fonts, fonts.google.com"
+          }
         }
-      },
-      "vector": {
-        "src": "/images/decortakaz/decortakazTypo.svg",
-        "alt": "Décor Ta Kaz - Typography"
       }
     }
   },
@@ -183,19 +185,21 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "Univers 93",
-          "source": "Fonts Geek, fontsgeek.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/nocta/noctaTypo.svg",
+          "alt": "Nocta - Typography"
         },
-        "en": {
-          "font": "Univers 93",
-          "foundry": "Fonts Geek, fontsgeek.com"
+        "src": {
+          "fr": {
+            "police": "Univers 93",
+            "source": "Fonts Geek, fontsgeek.com"
+          },
+          "en": {
+            "font": "Univers 93",
+            "foundry": "Fonts Geek, fontsgeek.com"
+          }
         }
-      },
-      "vector": {
-        "src": "/images/nocta/noctaTypo.svg",
-        "alt": "Nocta - Typography"
       }
     },
     "otherproject": {
@@ -292,19 +296,37 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "Univers 93",
-          "source": "Fonts Geek, fontsgeek.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/muteza/typo1.svg",
+          "alt": "Muteza - Typography 1"
         },
-        "en": {
-          "font": "Univers 93",
-          "foundry": "Fonts Geek, fontsgeek.com"
+        "src": {
+          "fr": {
+            "police": "Elgoc",
+            "source": "Fonts Geek, fontsgeek.com"
+          },
+          "en": {
+            "font": "Elgoc",
+            "foundry": "Fonts Geek, fontsgeek.com"
+          }
         }
       },
-      "vector": {
-        "src": "/images/muteza/mutezaTypo.svg",
-        "alt": "Muteza - Typography"
+      "typo2": {
+        "vector": {
+          "src": "/images/muteza/typo2.svg",
+          "alt": "Muteza - Typography 2"
+        },
+        "src": {
+          "fr": {
+            "police": "TT Norms",
+            "source": "Fonts Geek, fontsgeek.com"
+          },
+          "en": {
+            "font": "TT Norms",
+            "foundry": "Fonts Geek, fontsgeek.com"
+          }
+        }
       }
     }
   },
@@ -395,19 +417,21 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "Libre Baskerville",
-          "source": "Fonts Geek, fontsgeek.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/galleria/glaTypo.svg",
+          "alt": "Galleria - Typography"
         },
-        "en": {
-          "font": "Libre Baskerville",
-          "foundry": "Fonts Geek, fontsgeek.com"
+        "src": {
+          "fr": {
+            "font": "Libre Baskerville",
+            "foundry": "Fonts Geek, fontsgeek.com"
+          },
+          "en": {
+            "font": "Libre Baskerville",
+            "foundry": "Fonts Geek, fontsgeek.com"
+          }
         }
-      },
-      "vector": {
-        "src": "/images/galleria/glaTypo.svg",
-        "alt": "Galleria - Typography"
       }
     }
   },
@@ -498,19 +522,21 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "New Kansas",
-          "source": "Adobe Font, fonts.adobe.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/abdistribution/abdistributionTypo.svg",
+          "alt": "AB Distribution - Typography"
         },
-        "en": {
-          "font": "New Kansas",
-          "foundry": "Adobe Font, fonts.adobe.com"
+        "src": {
+          "fr": {
+            "police": "New Kansas",
+            "source": "Adobe Font, fonts.adobe.com"
+          },
+          "en": {
+            "font": "New Kansas",
+            "foundry": "Adobe Font, fonts.adobe.com"
+          }
         }
-      },
-      "vector": {
-        "src": "/images/abdistribution/abdistributionTypo.svg",
-        "alt": "AB Distribution - Typography"
       }
     }
   },
@@ -678,19 +704,21 @@
       }
     },
     "typographyproject": {
-      "source": {
-        "fr": {
-          "police": "Faunces",
-          "source": "Google Fonts, fonts.google.com"
+      "typo1": {
+        "vector": {
+          "src": "/images/sunnyside/sunnysideTypo.svg",
+          "alt": "Sunnyside - Typography"
         },
-        "en": {
-          "font": "Faunces",
-          "foundry": "Google Fonts, fonts.google.com"
+        "src": {
+          "fr": {
+            "police": "Faunces",
+            "source": "Google Fonts, fonts.google.com"
+          },
+          "en": {
+            "font": "Faunces",
+            "foundry": "Google Fonts, fonts.google.com"
+          }
         }
-      },
-      "vector": {
-        "src": "/images/sunnyside/sunnysideTypo.svg",
-        "alt": "Sunnyside - Typography"
       }
     }
   }

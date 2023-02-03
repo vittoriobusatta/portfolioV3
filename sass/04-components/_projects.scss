@@ -111,15 +111,14 @@
       margin-top: 44px;
       width: 100%;
     }
-    &__source {
-      font-size: 14px;
-      font-weight: $regular;
-      margin-top: 22px;
-    }
     &__details {
       width: 100%;
       display: flex;
-      margin-top: 12px;
+      flex-direction: column;
+      margin-top: 32px;
+      text-transform: uppercase;
+      font-size: 14px;
+      row-gap: 12px;
     }
     &__vector {
       max-width: 300px;
@@ -130,14 +129,30 @@
         max-width: 330px;
       }
     }
-    &__key {
-      text-transform: uppercase;
-      flex: 1;
+    &__font {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 22px;
+      & p:last-child {
+        color: #707070;
+        text-transform: initial;
+        text-align: end;
+      }
     }
-    &__value {
-      color: #707070;
+    &__source {
       font-weight: $regular;
-      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 22px;
+      & p:last-child {
+        color: #707070;
+        text-transform: initial;
+        text-align: end;
+      }
     }
   }
   &__subtitle {

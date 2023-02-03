@@ -1,5 +1,11 @@
 import Head from "next/head";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+} from "react";
 import fs from "fs";
 import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
@@ -78,6 +84,7 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
+
   useEffect(() => {
     gsap.set(charsAbout.current, { y: 100, opacity: 0 });
     gsap.set(subtitle1.current.children, { y: "100%", opacity: 0 });
@@ -139,6 +146,25 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
+
+  const typoArray = Object.entries(projects.typographyproject).map(
+    ([key, value]) => value
+  );
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentTypo = typoArray[currentIndex];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndex) =>
+        currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
+      );
+    }, 4500);
+    return () => clearInterval(interval);
+  }, []);
+
+let key = Object.keys(currentTypo.src[language]);
+let value = Object.values(currentTypo.src[language]);
 
   return (
     <>
@@ -338,25 +364,22 @@ export default function Product({ projects }) {
               <div className="projects__typography__inner">
                 <Image
                   className="projects__typography__vector"
-                  src={projects.typographyproject.vector.src}
-                  alt={projects.typographyproject.vector.alt}
+                  src={currentTypo.vector.src}
+                  alt={currentTypo.vector.alt}
                   width={570}
                   height={55}
                   priority
                 />
-                <div className="projects__typography__source">
-                  {Object.entries(
-                    projects.typographyproject.source[language]
-                  ).map((item, index) => (
-                    <div className="projects__typography__details">
-                      <span className="projects__typography__key" key={index}>
-                        {item[0]}
-                      </span>
-                      <span className="projects__typography__value" key={index}>
-                        {item[1]}
-                      </span>
-                    </div>
-                  ))}
+
+                <div className="projects__typography__details">
+                  <span className="projects__typography__font">
+                    <p>{key[0]}</p>
+                    <p>{value[0]}</p>
+                  </span>
+                  <span className="projects__typography__source">
+                    <p>{key[1]}</p>
+                    <p>{value[1]}</p>
+                  </span>
                 </div>
               </div>
             </div>
@@ -376,18 +399,7 @@ export default function Product({ projects }) {
             </div>
           )} */}
         </div>
-        {projects.otherproject && (
-          <div className="projects__other">
-            <Image
-              className="projects__other__vector"
-              src={projects.otherproject.image.src}
-              alt={projects.otherproject.image.alt}
-              width={1512}
-              height={1612}
-              priority
-            />
-          </div>
-        )}
+        {projects.otherproject && <div className="projects__other"></div>}
       </section>
     </>
   );
