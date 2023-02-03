@@ -719,6 +719,22 @@
             "foundry": "Google Fonts, fonts.google.com"
           }
         }
+      },
+      "typo2": {
+        "vector": {
+          "src": "/images/sunnyside/typo2.svg",
+          "alt": "Sunnyside - Typography 2"
+        },
+        "src": {
+          "fr": {
+            "police": "Barlow",
+            "source": "Google Fonts, fonts.google.com"
+          },
+          "en": {
+            "font": "Barlow",
+            "foundry": "Google Fonts, fonts.google.com"
+          }
+        }
       }
     }
   }
