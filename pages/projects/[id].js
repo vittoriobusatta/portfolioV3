@@ -333,21 +333,10 @@ export default function Product({ projects }) {
             </div>
           </div>
           {projects.typographyproject && (
-            <Typo project={projects.typographyproject} />
+            <Typo project={projects.typographyproject} name={projects.path} />
           )}
           {projects.colorproject && (
-            <div className="projects__color" ref={projectColor}>
-              <div className="projects__color__inner">
-                <Image
-                  className="projects__color__vector"
-                  src={projects.colorproject.vector.src}
-                  alt={projects.colorproject.vector.alt}
-                  width={1512}
-                  height={1612}
-                  priority
-                />
-              </div>
-            </div>
+            <div className="projects__color" ref={projectColor}></div>
           )}
         </div>
         {projects.otherproject && (
@@ -366,7 +355,7 @@ export default function Product({ projects }) {
   );
 }
 
-function Typo({ project }) {
+function Typo({ project, name }) {
   const { language } = useContext(LanguageContext);
 
   const typoArray = Object.entries(project).map(([key, value]) => value);
@@ -393,7 +382,8 @@ function Typo({ project }) {
       <div className="projects__typography" ref={projectTypography}>
         <div className="projects__typography__inner">
           <Image
-            className="projects__typography__vector"
+            className={`projects__typography__vector
+            `}
             src={currentTypo.vector.src}
             alt={currentTypo.vector.alt}
             width={570}
