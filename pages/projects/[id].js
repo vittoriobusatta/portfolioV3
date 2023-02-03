@@ -1,18 +1,11 @@
 import Head from "next/head";
-import React, {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import fs from "fs";
 import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
-
-
 
 export default function Product({ projects }) {
   const { language } = useContext(LanguageContext);
@@ -84,7 +77,6 @@ export default function Product({ projects }) {
     return () => observer.disconnect();
   }, []);
 
-
   useEffect(() => {
     gsap.set(charsAbout.current, { y: 100, opacity: 0 });
     gsap.set(subtitle1.current.children, { y: "100%", opacity: 0 });
@@ -146,8 +138,6 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
-
-
 
   return (
     <>
@@ -345,7 +335,7 @@ export default function Product({ projects }) {
           {projects.typographyproject && (
             <Typo project={projects.typographyproject} />
           )}
-          {/* {projects.colorproject && (
+          {projects.colorproject && (
             <div className="projects__color" ref={projectColor}>
               <div className="projects__color__inner">
                 <Image
@@ -358,9 +348,19 @@ export default function Product({ projects }) {
                 />
               </div>
             </div>
-          )} */}
+          )}
         </div>
-        {projects.otherproject && <div className="projects__other"></div>}
+        {projects.otherproject && (
+          <div className="projects__other">
+            <Image
+              src={projects.otherproject.image.src}
+              alt={projects.otherproject.image.alt}
+              width={1512}
+              height={1612}
+              priority
+            />
+          </div>
+        )}
       </section>
     </>
   );
@@ -369,9 +369,7 @@ export default function Product({ projects }) {
 function Typo({ project }) {
   const { language } = useContext(LanguageContext);
 
-  const typoArray = Object.entries(project).map(
-    ([key, value]) => value
-  );
+  const typoArray = Object.entries(project).map(([key, value]) => value);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTypo = typoArray[currentIndex];
@@ -389,7 +387,6 @@ function Typo({ project }) {
   let value = Object.values(currentTypo.src[language]);
 
   const projectTypography = useRef(null);
-
 
   return (
     <>
