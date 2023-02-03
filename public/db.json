@@ -90,19 +90,25 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/decortakaz/decortakazTypo.svg",
-          "alt": "Décor Ta Kaz - Typography"
-        },
-        "src": {
-          "fr": {
-            "font": "Manrope",
-            "foundry": "Google Fonts, fonts.google.com"
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/decortakaz/decortakazTypo.svg",
+            "alt": "Décor Ta Kaz - Typography"
           },
-          "en": {
-            "font": "Manrope",
-            "foundry": "Google Fonts, fonts.google.com"
+          "src": {
+            "fr": {
+              "font": "Manrope",
+              "foundry": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Manrope",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
           }
         }
       }
@@ -185,19 +191,25 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/nocta/noctaTypo.svg",
-          "alt": "Nocta - Typography"
-        },
-        "src": {
-          "fr": {
-            "police": "Univers 93",
-            "source": "Fonts Geek, fontsgeek.com"
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/nocta/noctaTypo.svg",
+            "alt": "Nocta - Typography"
           },
-          "en": {
-            "font": "Univers 93",
-            "foundry": "Fonts Geek, fontsgeek.com"
+          "src": {
+            "fr": {
+              "police": "Univers 93",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Univers 93",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
           }
         }
       }
@@ -296,35 +308,41 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/muteza/typo1.svg",
-          "alt": "Muteza - Typography 1"
-        },
-        "src": {
-          "fr": {
-            "police": "Elgoc",
-            "source": "Fonts Geek, fontsgeek.com"
-          },
-          "en": {
-            "font": "Elgoc",
-            "foundry": "Fonts Geek, fontsgeek.com"
-          }
-        }
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
       },
-      "typo2": {
-        "vector": {
-          "src": "/images/muteza/typo2.svg",
-          "alt": "Muteza - Typography 2"
-        },
-        "src": {
-          "fr": {
-            "police": "TT Norms",
-            "source": "Fonts Geek, fontsgeek.com"
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/muteza/typo1.svg",
+            "alt": "Muteza - Typography 1"
           },
-          "en": {
-            "font": "TT Norms",
-            "foundry": "Fonts Geek, fontsgeek.com"
+          "src": {
+            "fr": {
+              "police": "Elgoc",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Elgoc",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
+          }
+        },
+        "typo2": {
+          "vector": {
+            "src": "/images/muteza/typo2.svg",
+            "alt": "Muteza - Typography 2"
+          },
+          "src": {
+            "fr": {
+              "police": "TT Norms",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "TT Norms",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
           }
         }
       }
@@ -417,19 +435,25 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/galleria/typo1.svg",
-          "alt": "Galleria - Typography"
-        },
-        "src": {
-          "fr": {
-            "font": "Libre Baskerville",
-            "foundry": "Fonts Geek, fontsgeek.com"
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/galleria/typo1.svg",
+            "alt": "Galleria - Typography"
           },
-          "en": {
-            "font": "Libre Baskerville",
-            "foundry": "Fonts Geek, fontsgeek.com"
+          "src": {
+            "fr": {
+              "font": "Libre Baskerville",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Libre Baskerville",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
           }
         }
       }
@@ -522,35 +546,41 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/abdistribution/typo1.svg",
-          "alt": "AB Distribution - Typography"
-        },
-        "src": {
-          "fr": {
-            "police": "New Kansas",
-            "source": "Adobe Font, fonts.adobe.com"
-          },
-          "en": {
-            "font": "New Kansas",
-            "foundry": "Adobe Font, fonts.adobe.com"
-          }
-        }
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
       },
-      "typo2": {
-        "vector": {
-          "src": "/images/abdistribution/typo2.svg",
-          "alt": "AB Distribution - Typography"
-        },
-        "src": {
-          "fr": {
-            "police": "Rival Sans",
-            "source": "Adobe Font, fonts.adobe.com"
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/abdistribution/typo1.svg",
+            "alt": "AB Distribution - Typography"
           },
-          "en": {
-            "font": "Rival Sans",
-            "foundry": "Adobe Font, fonts.adobe.com"
+          "src": {
+            "fr": {
+              "police": "New Kansas",
+              "source": "Adobe Font, fonts.adobe.com"
+            },
+            "en": {
+              "font": "New Kansas",
+              "foundry": "Adobe Font, fonts.adobe.com"
+            }
+          }
+        },
+        "typo2": {
+          "vector": {
+            "src": "/images/abdistribution/typo2.svg",
+            "alt": "AB Distribution - Typography"
+          },
+          "src": {
+            "fr": {
+              "police": "Rival Sans",
+              "source": "Adobe Font, fonts.adobe.com"
+            },
+            "en": {
+              "font": "Rival Sans",
+              "foundry": "Adobe Font, fonts.adobe.com"
+            }
           }
         }
       }
@@ -720,35 +750,41 @@
       }
     },
     "typographyproject": {
-      "typo1": {
-        "vector": {
-          "src": "/images/sunnyside/typo1.svg",
-          "alt": "Sunnyside - Typography"
-        },
-        "src": {
-          "fr": {
-            "police": "Faunces",
-            "source": "Google Fonts, fonts.google.com"
-          },
-          "en": {
-            "font": "Faunces",
-            "foundry": "Google Fonts, fonts.google.com"
-          }
-        }
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
       },
-      "typo2": {
-        "vector": {
-          "src": "/images/sunnyside/typo2.svg",
-          "alt": "Sunnyside - Typography 2"
-        },
-        "src": {
-          "fr": {
-            "police": "Barlow",
-            "source": "Google Fonts, fonts.google.com"
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/sunnyside/typo1.svg",
+            "alt": "Sunnyside - Typography"
           },
-          "en": {
-            "font": "Barlow",
-            "foundry": "Google Fonts, fonts.google.com"
+          "src": {
+            "fr": {
+              "police": "Faunces",
+              "source": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Faunces",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
+          }
+        },
+        "typo2": {
+          "vector": {
+            "src": "/images/sunnyside/typo2.svg",
+            "alt": "Sunnyside - Typography 2"
+          },
+          "src": {
+            "fr": {
+              "police": "Barlow",
+              "source": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Barlow",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
           }
         }
       }

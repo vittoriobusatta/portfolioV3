@@ -333,7 +333,7 @@ export default function Product({ projects }) {
             </div>
           </div>
           {projects.typographyproject && (
-            <Typo project={projects.typographyproject} name={projects.path} />
+            <Typo typo={projects.typographyproject} name={projects.path} typographyproject={projects.typographyproject} />
           )}
           {projects.colorproject && (
             <div className="projects__color" ref={projectColor}></div>
@@ -355,10 +355,10 @@ export default function Product({ projects }) {
   );
 }
 
-function Typo({ project, name }) {
+function Typo({ typo, name , typographyproject}) {
   const { language } = useContext(LanguageContext);
 
-  const typoArray = Object.entries(project).map(([key, value]) => value);
+  const typoArray = Object.entries(typo.details).map(([key, value]) => value);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTypo = typoArray[currentIndex];
@@ -377,9 +377,19 @@ function Typo({ project, name }) {
 
   const projectTypography = useRef(null);
 
+  console.log(typographyproject);
+
+
   return (
     <>
       <div className="projects__typography" ref={projectTypography}>
+        <div
+          className="projects__typography__subtitle"
+        >
+          <Star />
+          <h4>{typographyproject.subtitle[language]}</h4>
+        </div>
+        <div className="projects__typography__bar"></div>
         <div className="projects__typography__inner">
           <Image
             className={`projects__typography__vector 
