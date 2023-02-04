@@ -6,6 +6,7 @@ import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
+import Lenis from "@studio-freight/lenis";
 
 export default function Product({ projects }) {
   const { language } = useContext(LanguageContext);
@@ -19,6 +20,19 @@ export default function Product({ projects }) {
       key === "role" ||
       key === "technologies"
   );
+
+  if (typeof window !== "undefined") {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }
 
   const [logoColor, setColor2] = useState(projects.color2);
   const [currentImage, setCurrentImage] = useState(thubnails[0]);
