@@ -333,7 +333,12 @@ export default function Product({ projects }) {
             </div>
           </div>
           {projects.typographyproject && (
-            <Typo typo={projects.typographyproject} name={projects.path} typographyproject={projects.typographyproject} />
+            <Typo
+              typo={projects.typographyproject}
+              language={language}
+              name={projects.path}
+              typographyproject={projects.typographyproject}
+            />
           )}
           {projects.colorproject && (
             <div className="projects__color" ref={projectColor}></div>
@@ -355,20 +360,22 @@ export default function Product({ projects }) {
   );
 }
 
-function Typo({ typo, name , typographyproject}) {
-  const { language } = useContext(LanguageContext);
-
+function Typo({ typo, name, language, typographyproject }) {
   const typoArray = Object.entries(typo.details).map(([key, value]) => value);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTypo = typoArray[currentIndex];
+
+  const handleCircleClick = (index) => {
+    setCurrentIndex(index);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex) =>
         currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
       );
-    }, 2500);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -377,33 +384,50 @@ function Typo({ typo, name , typographyproject}) {
 
   const projectTypography = useRef(null);
 
+  console.log(typoArray.length);
+
   return (
     <>
       <div className="projects__typography" ref={projectTypography}>
-        <div
-          className="projects__typography__subtitle"
-        >
+        <div className="projects__typography__subtitle">
           <Star />
           <h4>{typographyproject.subtitle[language]}</h4>
         </div>
         <div className="projects__typography__bar"></div>
-        <div className="projects__typography__inner">
-          <Image
-            className={`projects__typography__vector 
+        <div className="projects__typography__content">
+          <div className="projects__typography__inner">
+            <Image
+              className={`projects__typography__vector 
             projects__typography__vector__${name}`}
-            src={currentTypo.vector.src}
-            alt={currentTypo.vector.alt}
-            width={570}
-            height={55}
-            priority
-          />
+              src={currentTypo.vector.src}
+              alt={currentTypo.vector.alt}
+              width={570}
+              height={55}
+              priority
+            />
+            {typoArray.length > 1 && (
+              <div className="reviews_circles">
+              {typoArray.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={
+                    index === currentIndex
+                      ? "reviews_circle"
+                      : "reviews_circle active"
+                  }
+                  onClick={() => handleCircleClick(index)}
+                />
+              ))}
+            </div>
+            )}
+          </div>
 
           <div className="projects__typography__details">
-            <span className="projects__typography__font">
+            <span className="projects__typography__info">
               <p>{key[0]}</p>
               <p>{value[0]}</p>
             </span>
-            <span className="projects__typography__source">
+            <span className="projects__typography__info">
               <p>{key[1]}</p>
               <p>{value[1]}</p>
             </span>
