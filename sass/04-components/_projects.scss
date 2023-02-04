@@ -201,6 +201,7 @@
       padding: 44px 0;
       & img {
         width: 60vw;
+        max-width: 400px;
       }
     }
     &__details {
@@ -209,8 +210,11 @@
       align-items: center;
       flex-direction: column;
       & p {
+        font-family: $rivalSans;
+        line-height: 18px;
         font-size: 14px;
         color: #707070;
+        font-weight: $regular;
       }
     }
   }
@@ -240,6 +244,7 @@
     font-size: 14px;
     color: #707070;
     max-width: 400px;
+    line-height: 18px;
   }
   &__bar {
     width: 100%;

@@ -361,7 +361,6 @@ export default function Product({ projects }) {
               typographyproject={projects.typographyproject}
             />
           )}
-          ·
         </div>
         {projects.otherproject && (
           <div className="projects__other">
