@@ -112,6 +112,20 @@
           }
         }
       }
+    },
+    "brandingproject": {
+      "subtitle": {
+        "fr": "Création du logo",
+        "en": "Logo creation"
+      },
+      "description": {
+        "fr": "Pour ce logo, j'ai voulu représenté une petite maison pour retrouver l'idée de la Kaz qui signifie en français Maison. J'ai fusionner à cette icone plusieurs planches de bois pour rappeler le domaine de l'entreprise qui est la menuiserie. Pour la palette de couleurs j'ai utilisé plusieurs variétés de marrons.",
+        "en": "For this logo, I wanted to represent a small house to find the idea of the Kaz which means in French House. I have merged this icon with several wooden boards to remind the domain of the company which is carpentry. For the color palette I used several varieties of browns."
+      },
+      "images": {
+        "src": "/images/decortakaz/dkt9.webp",
+        "alt": "Décor Ta Kaz - Image 9"
+      }
     }
   },
   {
@@ -215,7 +229,7 @@
       }
     },
     "otherproject": {
-      "image": {
+      "images": {
         "src": "/images/nocta/nct7.webp",
         "alt": "Nocta - Image 7"
       }

@@ -16,7 +16,7 @@
   }
   &__content {
     min-height: 1000px;
-    padding: 44px 26px;
+    padding: 44px 26px 62px;
     overflow: hidden;
     color: $color_primary;
     @media screen and (min-width: 576px) {
@@ -88,7 +88,7 @@
     margin-top: 182px;
     &__slideshow {
       width: 100%;
-      margin-top: 52px;
+      margin-top: 44px;
       @media screen and (min-width: 576px) {
         margin-top: 62px;
       }
@@ -184,11 +184,34 @@
         background-color: var(--color);
       }
     }
-    &__bar {
+  }
+  &__branding {
+    width: 100%;
+    margin-top: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &__image {
       width: 100%;
-      height: 1px;
-      background-color: #d8d8d8;
-      background-color: var(--color);
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 44px 0;
+      & img {
+        width: 60vw;
+      }
+    }
+    &__details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & p {
+        font-size: 14px;
+        color: #707070;
+      }
     }
   }
   &__subtitle {
@@ -217,6 +240,12 @@
     font-size: 14px;
     color: #707070;
     max-width: 400px;
+  }
+  &__bar {
+    width: 100%;
+    height: 1px;
+    background-color: #d8d8d8;
+    background-color: var(--color);
   }
 }
 
@@ -302,7 +331,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    row-gap: 22px;
+    row-gap: 26px;
     @media screen and (min-width: 576px) {
       flex-direction: row;
       column-gap: 22px;

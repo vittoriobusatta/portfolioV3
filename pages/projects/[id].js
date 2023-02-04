@@ -332,6 +332,27 @@ export default function Product({ projects }) {
               </div>
             </div>
           </div>
+          {projects.brandingproject && (
+            <div className="projects__branding">
+              <div className="projects__typography__subtitle">
+                <Star />
+                <h4>{projects.brandingproject.subtitle[language]}</h4>
+              </div>
+              <div className="projects__bar"></div>
+              <div className="projects__branding__image">
+                <Image
+                  src={projects.brandingproject.images.src}
+                  alt={projects.brandingproject.images.alt}
+                  width={1512}
+                  height={1612}
+                  priority
+                />
+              </div>
+              <div className="projects__branding__details">
+                <p>{projects.brandingproject.description[language]}</p>
+              </div>
+            </div>
+          )}
           {projects.typographyproject && (
             <Typo
               typo={projects.typographyproject}
@@ -340,15 +361,13 @@ export default function Product({ projects }) {
               typographyproject={projects.typographyproject}
             />
           )}
-          {projects.colorproject && (
-            <div className="projects__color" ref={projectColor}></div>
-          )}
+          ·
         </div>
         {projects.otherproject && (
           <div className="projects__other">
             <Image
-              src={projects.otherproject.image.src}
-              alt={projects.otherproject.image.alt}
+              src={projects.otherproject.images.src}
+              alt={projects.otherproject.images.alt}
               width={1512}
               height={1612}
               priority
@@ -391,7 +410,7 @@ function Typo({ typo, name, language, typographyproject }) {
           <Star />
           <h4>{typographyproject.subtitle[language]}</h4>
         </div>
-        <div className="projects__typography__bar"></div>
+        <div className="projects__bar"></div>
         <div className="projects__typography__content">
           <div className="projects__typography__inner">
             <Image
@@ -405,18 +424,18 @@ function Typo({ typo, name, language, typographyproject }) {
             />
             {typoArray.length > 1 && (
               <div className="projects__typography__circles">
-              {typoArray.map((item, index) => (
-                <div
-                  key={item.id}
-                  className={
-                    index === currentIndex
-                      ? "projects__typography__button projects__typography__button--active"
-                      : "projects__typography__button"
-                  }
-                  onClick={() => handleCircleClick(index)}
-                />
-              ))}
-            </div>
+                {typoArray.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={
+                      index === currentIndex
+                        ? "projects__typography__button projects__typography__button--active"
+                        : "projects__typography__button"
+                    }
+                    onClick={() => handleCircleClick(index)}
+                  />
+                ))}
+              </div>
             )}
           </div>
 
