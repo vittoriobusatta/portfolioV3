@@ -34,11 +34,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/decortakaz/dkt1.jpg",
+          "src": "/images/decortakaz/dkt1.webp",
           "alt": "Décor Ta Kaz - Image 1"
         },
         "img2": {
-          "src": "/images/decortakaz/dkt2.jpg",
+          "src": "/images/decortakaz/dkt2.webp",
           "alt": "Décor Ta Kaz - Image 2"
         }
       }
@@ -59,32 +59,32 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/decortakaz/dkt3.jpg",
+          "src": "/images/decortakaz/dkt3.webp",
           "alt": "Décor Ta Kaz - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/decortakaz/dkt4.jpg",
+          "src": "/images/decortakaz/dkt4.webp",
           "alt": "Décor Ta Kaz - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/decortakaz/dkt5.jpg",
+          "src": "/images/decortakaz/dkt5.webp",
           "alt": "Décor Ta Kaz - Image 5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/decortakaz/dkt6.jpg",
+          "src": "/images/decortakaz/dkt6.webp",
           "alt": "Décor Ta Kaz - Image 6"
         },
         "img7": {
           "id": 5,
-          "src": "/images/decortakaz/dkt7.jpg",
+          "src": "/images/decortakaz/dkt7.webp",
           "alt": "Décor Ta Kaz - Image 7"
         },
         "img8": {
           "id": 6,
-          "src": "/images/decortakaz/dkt8.jpg",
+          "src": "/images/decortakaz/dkt8.webp",
           "alt": "Décor Ta Kaz - Image 8"
         }
       }
@@ -145,11 +145,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/nocta/nct1.jpg",
+          "src": "/images/nocta/nct1.webp",
           "alt": "Nocta - Image 1"
         },
         "img2": {
-          "src": "/images/nocta/nct2.jpg",
+          "src": "/images/nocta/nct2.webp",
           "alt": "Nocta - Image 2"
         }
       }
@@ -170,22 +170,22 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/nocta/nct3.jpg",
+          "src": "/images/nocta/nct3.webp",
           "alt": "Nocta - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/nocta/nct4.jpg",
+          "src": "/images/nocta/nct4.webp",
           "alt": "Nocta - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/nocta/nct5.jpg",
+          "src": "/images/nocta/nct5.webp",
           "alt": "Nocta - Image 5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/nocta/nct6.jpg",
+          "src": "/images/nocta/nct6.webp",
           "alt": "Nocta - Image 6"
         }
       }
@@ -216,7 +216,7 @@
     },
     "otherproject": {
       "image": {
-        "src": "/images/nocta/nct7.jpg",
+        "src": "/images/nocta/nct7.webp",
         "alt": "Nocta - Image 7"
       }
     }
@@ -252,11 +252,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/muteza/mtz1.jpg",
+          "src": "/images/muteza/mtz1.webp",
           "alt": "Muteza - Image 1"
         },
         "img2": {
-          "src": "/images/muteza/mtz2.jpg",
+          "src": "/images/muteza/mtz2.webp",
           "alt": "Muteza - Image 2"
         }
       }
@@ -277,32 +277,32 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/muteza/mtz3.jpg",
+          "src": "/images/muteza/mtz3.webp",
           "alt": "Muteza - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/muteza/mtz4.jpg",
+          "src": "/images/muteza/mtz4.webp",
           "alt": "Muteza - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/muteza/mtz5.jpg",
+          "src": "/images/muteza/mtz5.webp",
           "alt": "Muteza - Image 5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/muteza/mtz6.jpg",
+          "src": "/images/muteza/mtz6.webp",
           "alt": "Muteza - Image 6"
         },
         "img7": {
           "id": 5,
-          "src": "/images/muteza/mtz7.jpg",
+          "src": "/images/muteza/mtz7.webp",
           "alt": "Muteza - Image 7"
         },
         "img8": {
           "id": 6,
-          "src": "/images/muteza/mtz8.jpg",
+          "src": "/images/muteza/mtz8.webp",
           "alt": "Muteza - Image 8"
         }
       }
@@ -379,11 +379,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/galleria/gla1.jpg",
+          "src": "/images/galleria/gla1.webp",
           "alt": "Galleria - Image 1"
         },
         "img2": {
-          "src": "/images/galleria/gla2.jpg",
+          "src": "/images/galleria/gla2.webp",
           "alt": "Galleria - Image 2"
         }
       }
@@ -404,32 +404,32 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/galleria/gla3.jpg",
+          "src": "/images/galleria/gla3.webp",
           "alt": "Galleria - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/galleria/gla4.jpg",
+          "src": "/images/galleria/gla4.webp",
           "alt": "Galleria - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/galleria/gla5.jpg",
+          "src": "/images/galleria/gla5.webp",
           "alt": "Galleria - Image 5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/galleria/gla6.jpg",
+          "src": "/images/galleria/gla6.webp",
           "alt": "Galleria - Image 6"
         },
         "img7": {
           "id": 5,
-          "src": "/images/galleria/gla7.jpg",
+          "src": "/images/galleria/gla7.webp",
           "alt": "Galleria - Image 7"
         },
         "img8": {
           "id": 6,
-          "src": "/images/galleria/gla8.jpg",
+          "src": "/images/galleria/gla8.webp",
           "alt": "Galleria - Image 8"
         }
       }
@@ -490,11 +490,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/unkle/unk1.jpg",
+          "src": "/images/unkle/unk1.webp",
           "alt": "Unkle - Image 1"
         },
         "img2": {
-          "src": "/images/unkle/unk2.jpg",
+          "src": "/images/unkle/unk2.webp",
           "alt": "Unkle - Image 2"
         }
       }
@@ -515,27 +515,27 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/unkle/unk3.png",
+          "src": "/images/unkle/unk3.webp",
           "alt": "Unkle - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/unkle/unk4.png",
+          "src": "/images/unkle/unk4.webp",
           "alt": "Unkle - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/unkle/unk5.png",
+          "src": "/images/unkle/unk5.webp",
           "alt": "Unkle - Image 5"
         },
         "img7": {
           "id": 4,
-          "src": "/images/unkle/unk7.png",
+          "src": "/images/unkle/unk7.webp",
           "alt": "Unkle - Image 7"
         },
         "img6": {
           "id": 5,
-          "src": "/images/unkle/unk6.png",
+          "src": "/images/unkle/unk6.webp",
           "alt": "Unkle - Image 6"
         }
       }
@@ -572,11 +572,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/sunnyside/sun1.jpg",
+          "src": "/images/sunnyside/sun1.webp",
           "alt": "Sunnyside - Image 1"
         },
         "img2": {
-          "src": "/images/sunnyside/sun2.jpg",
+          "src": "/images/sunnyside/sun2.webp",
           "alt": "Sunnyside - Image 2"
         }
       }
@@ -597,27 +597,27 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/sunnyside/sun3.jpg",
+          "src": "/images/sunnyside/sun3.webp",
           "alt": "Sunnyside - Image 3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/sunnyside/sun4.jpg",
+          "src": "/images/sunnyside/sun4.webp",
           "alt": "Sunnyside - Image 4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/sunnyside/sun5.jpg",
+          "src": "/images/sunnyside/sun5.webp",
           "alt": "Sunnyside - Image 5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/sunnyside/sun6.jpg",
+          "src": "/images/sunnyside/sun6.webp",
           "alt": "Sunnyside - Image 6"
         },
         "img7": {
           "id": 5,
-          "src": "/images/sunnyside/sun7.jpg",
+          "src": "/images/sunnyside/sun7.webp",
           "alt": "Sunnyside - Image 7"
         }
       }
