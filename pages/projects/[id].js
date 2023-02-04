@@ -375,7 +375,7 @@ function Typo({ typo, name, language, typographyproject }) {
       setCurrentIndex((currentIndex) =>
         currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
       );
-    }, 4000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -383,8 +383,6 @@ function Typo({ typo, name, language, typographyproject }) {
   let value = Object.values(currentTypo.src[language]);
 
   const projectTypography = useRef(null);
-
-  console.log(typoArray.length);
 
   return (
     <>
@@ -406,14 +404,14 @@ function Typo({ typo, name, language, typographyproject }) {
               priority
             />
             {typoArray.length > 1 && (
-              <div className="reviews_circles">
+              <div className="projects__typography__circles">
               {typoArray.map((item, index) => (
                 <div
                   key={item.id}
                   className={
                     index === currentIndex
-                      ? "reviews_circle"
-                      : "reviews_circle active"
+                      ? "projects__typography__button projects__typography__button--active"
+                      : "projects__typography__button"
                   }
                   onClick={() => handleCircleClick(index)}
                 />
