@@ -19,204 +19,204 @@ function Loader() {
   let thirdSpan = useRef(null);
   let overlay = useRef(null);
 
-  // useEffect(() => {
-  //   const onLoad = () => {
-  //     gsap.fromTo(
-  //       container.current,
-  //       { opacity: 1, y: 0 + "%", skewY: 0 + "deg" },
-  //       {
-  //         duration: 1.8,
-  //         ease: "expo.out",
-  //         delay: 4.4,
-  //         y: -110 + "%",
-  //         skewY: 2.5 + "deg",
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       overlay.current,
-  //       {
-  //         clipPath: "circle(0%",
-  //       },
-  //       {
-  //         delay: 3.4,
-  //         duration: 1,
-  //         ease: "Expo.easeInOut",
-  //         clipPath: "circle(100%",
-  //         opacity: 1,
-  //       }
-  //     );
+  useEffect(() => {
+    const onLoad = () => {
+      gsap.fromTo(
+        container.current,
+        { opacity: 1, y: 0 + "%", skewY: 0 + "deg" },
+        {
+          duration: 1.8,
+          ease: "expo.out",
+          delay: 4.4,
+          y: -110 + "%",
+          skewY: 2.5 + "deg",
+        }
+      );
+      gsap.fromTo(
+        overlay.current,
+        {
+          clipPath: "circle(0%",
+        },
+        {
+          delay: 3.4,
+          duration: 1,
+          ease: "Expo.easeInOut",
+          clipPath: "circle(100%",
+          opacity: 1,
+        }
+      );
 
-  //     gsap.fromTo(
-  //       circle.current,
-  //       {
-  //         y: 100 + "%",
-  //       },
-  //       {
-  //         delay: 1,
-  //         y: 0,
-  //         ease: "expo.out",
-  //         opacity: 1,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       P.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 1.5,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       T.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 1.6,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       L.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 1.7,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       O.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 1.8,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       I.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 2,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       F.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 1.9,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       R.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 2,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       O2.current,
-  //       {
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 2.2,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       O3.current,
-  //       {
-  //         opacity: 0,
-  //         y: 20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 2.3,
-  //         ease: "power2.out",
-  //         y: 0,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       point.current,
-  //       {
-  //         opacity: 0,
-  //         y: 50,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         delay: 2.4,
-  //         ease: "power3.out",
-  //         y: 0,
-  //       }
-  //     );
+      gsap.fromTo(
+        circle.current,
+        {
+          y: 100 + "%",
+        },
+        {
+          delay: 1,
+          y: 0,
+          ease: "expo.out",
+          opacity: 1,
+        }
+      );
+      gsap.fromTo(
+        P.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 1.5,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        T.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 1.6,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        L.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 1.7,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        O.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 1.8,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        I.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 2,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        F.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 1.9,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        R.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 2,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        O2.current,
+        {
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 2.2,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        O3.current,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          delay: 2.3,
+          ease: "power2.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        point.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          delay: 2.4,
+          ease: "power3.out",
+          y: 0,
+        }
+      );
 
-  //     gsap.fromTo(
-  //       firstSpan.current,
-  //       {
-  //         y: 200 + "%",
-  //       },
-  //       {
-  //         delay: 2.4,
-  //         y: 0,
-  //         opacity: 1,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       secondSpan.current,
-  //       {
-  //         y: 200 + "%",
-  //       },
-  //       {
-  //         delay: 2.5,
-  //         y: 0,
-  //         opacity: 1,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       thirdSpan.current,
-  //       {
-  //         y: 200 + "%",
-  //       },
-  //       {
-  //         delay: 2.8,
-  //         y: 0,
-  //         opacity: 1,
-  //       }
-  //     );
-  //   };
-  //   onLoad();
-  // }, []);
+      gsap.fromTo(
+        firstSpan.current,
+        {
+          y: 200 + "%",
+        },
+        {
+          delay: 2.4,
+          y: 0,
+          opacity: 1,
+        }
+      );
+      gsap.fromTo(
+        secondSpan.current,
+        {
+          y: 200 + "%",
+        },
+        {
+          delay: 2.5,
+          y: 0,
+          opacity: 1,
+        }
+      );
+      gsap.fromTo(
+        thirdSpan.current,
+        {
+          y: 200 + "%",
+        },
+        {
+          delay: 2.8,
+          y: 0,
+          opacity: 1,
+        }
+      );
+    };
+    onLoad();
+  }, []);
 
   const year = new Date().getFullYear()
 
@@ -233,7 +233,6 @@ function Loader() {
           height="203"
           viewBox="0 0 180 203"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden"
         >
           <path
             ref={P}
