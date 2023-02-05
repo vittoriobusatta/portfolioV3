@@ -56,7 +56,7 @@ function Home({ data }) {
                   )}
                   <div
                     style={{
-                      "--placeholder": item.placeholder,
+                      "--placeholder": item.color,
                     }}
                     className="placeholder"
                   />
