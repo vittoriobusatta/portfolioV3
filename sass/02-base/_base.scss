@@ -19,7 +19,7 @@
 
 @supports (padding: env(safe-area-inset-top)) {
   body {
-    font-family: "Manrope", sans-serif;
+    font-family: $rivalSans;
     font-size: 1.6rem;
   }
 }

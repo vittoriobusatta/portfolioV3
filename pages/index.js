@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import fs from "fs";
 import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/Header";
 
 export async function getStaticProps() {
   const data = await JSON.parse(fs.readFileSync("./public/db.json", "utf-8"));
@@ -9,6 +11,10 @@ export async function getStaticProps() {
 }
 
 function Home({ data }) {
+  console.log(data);
+  data.map((item, index) => {
+    console.log(item);
+  });
   return (
     <>
       <Head>
@@ -24,13 +30,29 @@ function Home({ data }) {
         <meta property="og:url" content="https://www.example.com" />
         <meta name="theme-color" content="#fff" />
       </Head>
-      <main>
-        {data.map((item) => (
-          <div key={item.id}>
+
+      <Header logoColor={"#222"} />
+
+      <main className="home">
+        {data.map((item, index) => (
+          <figure className="home__items" key={item.id}>
             <Link href={`/projects/${item.id}`}>
-              <h1>{item.name}</h1>
+              <figcaption>
+                <span>0{index + 1}</span>
+                <h1>{item.name}</h1>
+              </figcaption>
+              <div className="home__items__img">
+                {item.thumbnail && (
+                  <Image
+                    src={item.thumbnail.src}
+                    alt={item.thumbnail.alt}
+                    width={500}
+                    height={500}
+                  />
+                )}
+              </div>
             </Link>
-          </div>
+          </figure>
         ))}
       </main>
     </>

@@ -15,6 +15,10 @@
     "color2": "#C89773",
     "background": "#FDF1E6",
     "placeholder": "#ffe7d2",
+    "thumbnail": {
+      "src": "/images/decortakaz/dkt0.jpg",
+      "alt": "Décor Ta Kaz - Thumbnail"
+    },
     "description": {
       "fr": "Décor Ta Kaz est une entreprise de menuiserie artisanale'. Leur site web est un site vitrine qui présente leurs services et leurs réalisations.",
       "en": "Décor Ta Kaz is a carpentry company. Their website is a showcase website that presents their services and their work."
@@ -144,6 +148,10 @@
     "color2": "#FDFCFD",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
+    "thumbnail": {
+      "src": "/images/nocta/nct0.jpg",
+      "alt": "Nocta - Thumbnail"
+    },
     "aboutproject": {
       "title": {
         "fr": "Une collection inspirée du présent",
@@ -251,6 +259,10 @@
     "color2": "#FFF5F0",
     "background": "#F8F4EC",
     "placeholder": "#ffece3",
+    "thumbnail": {
+      "src": "/images/muteza/mtz0.jpg",
+      "alt": "Muteza - Thumbnail"
+    },
     "aboutproject": {
       "title": {
         "fr": "Un sérum personnalisé.",
@@ -378,6 +390,10 @@
     "color2": "#FDFCFD",
     "background": "#EEECF8",
     "placeholder": "#dae0fa",
+    "thumbnail": {
+      "src": "/images/galleria/gla0.jpg",
+      "alt": "Galleria - Thumbnail"
+    },
     "aboutproject": {
       "title": {
         "fr": "Découvrez l’art de l’interaction.",
@@ -489,6 +505,10 @@
     "color2": "#FDFCFD",
     "background": "#ECFAFF",
     "placeholder": "#d9f5ff",
+    "thumbnail": {
+      "src": "/images/unkle/unk0.jpg",
+      "alt": "Unkle - Thumbnail"
+    },
     "aboutproject": {
       "title": {
         "fr": "Une sécurité garantie",
@@ -571,6 +591,10 @@
     "color2": "#FDFCFD",
     "background": "#FCFFEC",
     "placeholder": "#fff7c3",
+    "thumbnail": {
+      "src": "/images/sunnyside/sun0.jpg",
+      "alt": "Sunnyside - Thumbnail"
+    },
     "aboutproject": {
       "title": {
         "fr": "Une agence brillante",

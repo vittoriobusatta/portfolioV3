@@ -1,0 +1,23 @@
+.home {
+  padding: 20vh 13.25vw 2.5rem;
+  &__items {
+    margin: 0 auto 15vh;
+    & a {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 22px;
+    }
+    & span {
+      font-family: $rivalSans;
+      font-size: 14px;
+      color: #222;
+      line-height: 18px;
+      font-weight: $regular;
+    }
+    & h1 {
+      color: #222;
+      font-family: $sirenia;
+      font-size: 38px;
+    }
+  }
+}
