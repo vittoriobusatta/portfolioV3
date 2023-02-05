@@ -20,8 +20,6 @@ export default function Product({ projects }) {
       key === "technologies"
   );
 
- 
-
   const [logoColor, setColor2] = useState(projects.color2);
   const [currentImage, setCurrentImage] = useState(thubnails[0]);
   const [selected, setSelected] = useState(0);
@@ -238,7 +236,7 @@ export default function Product({ projects }) {
                       style={{
                         "--placeholder": projects.placeholder,
                       }}
-                      className="projects__about__images__placeholder"
+                      className="placeholder"
                     />
                   </div>
                 )

@@ -11,7 +11,7 @@ export async function getStaticProps() {
 }
 
 function Home({ data }) {
-   return (
+  return (
     <>
       <Head>
         <title>Home</title>
@@ -37,7 +37,7 @@ function Home({ data }) {
                 <span>0{index + 1}</span>
                 <h1>{item.name}</h1>
               </figcaption>
-              <div className="home__items__img">
+              <div className="home__image">
                 {item.thumbnail && (
                   <Image
                     src={item.thumbnail.src}
@@ -46,6 +46,12 @@ function Home({ data }) {
                     height={500}
                   />
                 )}
+                <div
+                  style={{
+                    "--placeholder": item.placeholder,
+                  }}
+                  className="placeholder"
+                />
               </div>
             </Link>
           </figure>

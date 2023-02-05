@@ -1,5 +1,6 @@
 .home {
   padding: 20vh 13.25vw 2.5rem;
+  background-color: #fff;
   &__items {
     margin: 0 auto 15vh;
     & a {
@@ -18,6 +19,15 @@
       color: #222;
       font-family: $sirenia;
       font-size: 38px;
+    }
+  }
+  &__image {
+    position: relative;
+    & img {
+      position: relative;
+      width: 100%;
+      z-index: 2;
+      max-width: 600px;
     }
   }
 }
