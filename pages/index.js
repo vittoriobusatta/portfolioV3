@@ -39,12 +39,12 @@ function Home({ data }) {
                 "--color": item.color,
               }}
             >
-              <Link href={`/projects/${item.id}`}>
-                <figcaption>
-                  <span>0{index + 1}</span>
-                  <h1>{item.name}</h1>
-                </figcaption>
-                <div className="homepage__image">
+              <figcaption>
+                <span>0{index + 1}</span>
+                <h1>{item.name}</h1>
+              </figcaption>
+              <div className="homepage__image">
+                <Link href={`/projects/${item.id}`}>
                   {item.thumbnail && (
                     <Image
                       src={item.thumbnail.src}
@@ -60,8 +60,8 @@ function Home({ data }) {
                     }}
                     className="placeholder"
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
             </figure>
           ))}
         </div>

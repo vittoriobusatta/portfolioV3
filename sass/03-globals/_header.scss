@@ -10,6 +10,9 @@ header {
   min-height: 60px;
   z-index: 999;
   transition: top 0.3s ease-in-out;
+  & svg {
+    mix-blend-mode: difference;
+  }
   @media screen and (min-width: 576px) {
     padding: 16px 32px;
   }

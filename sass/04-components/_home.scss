@@ -13,13 +13,9 @@
   }
   &__items {
     display: flex;
-    justify-content: center;
-    & a {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 22px;
-      width: fit-content;
-    }
+    flex-direction: column;
+    grid-gap: 22px;
+    width: fit-content;
     & span {
       font-family: $rivalSans;
       font-size: 14px;
