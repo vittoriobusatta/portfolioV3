@@ -10,12 +10,15 @@
     align-items: center;
     flex-direction: column;
     row-gap: 10vh;
+    @media screen and (min-width: 992px) {
+      row-gap: 20vh;
+    }
   }
   &__items {
     display: flex;
     flex-direction: column;
     grid-gap: 22px;
-    width: 100%;
+    width: fit-content;
     & span {
       font-family: $rivalSans;
       font-size: 14px;
