@@ -113,6 +113,7 @@
       width: 100%;
     }
     &__inner {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -132,7 +133,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      flex: 1;
+      width: 100%;
     }
     &__vector {
       max-width: 200px;
@@ -170,6 +171,8 @@
       align-items: center;
       flex-direction: column;
       row-gap: 6px;
+      position: absolute;
+      right: 0;
     }
     &__button {
       width: 6px;
