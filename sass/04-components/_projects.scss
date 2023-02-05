@@ -16,7 +16,7 @@
   }
   &__content {
     min-height: 1000px;
-    padding: 44px 26px 62px;
+    padding: 62px 26px 88px;
     overflow: hidden;
     color: $color_primary;
     @media screen and (min-width: 576px) {
@@ -75,7 +75,7 @@
     }
   }
   &__view {
-    margin-top: 182px;
+    margin-top: 202px;
     &__slideshow {
       width: 100%;
       margin-top: 44px;
@@ -91,7 +91,7 @@
     }
   }
   &__typography {
-    margin-top: 62px;
+    margin-top: 88px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -136,10 +136,7 @@
       align-items: center;
       flex-direction: column;
       width: 100%;
-      padding: 32px 0;
-      @media screen and (min-width: 768px) {
-        padding: 44px 0;
-      }
+      padding: 44px 0;
     }
     &__vector {
       max-width: 200px;
@@ -205,10 +202,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 32px 0;
-      @media screen and (min-width: 768px) {
-        padding: 44px 0;
-      }
+      padding: 44px 0;
       & img {
         width: 60vw;
         max-width: 300px;
