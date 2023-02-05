@@ -62,6 +62,7 @@
       align-items: center;
       color: #1d1d1d;
       & span {
+        opacity: 0;
         font-family: $rivalSans;
         font-weight: $medium;
       }
