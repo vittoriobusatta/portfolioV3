@@ -26,15 +26,16 @@
   }
   &__content {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    row-gap: 20rem;
-    & svg path {
-      opacity: 0;
-      fill: #1d1d1d;
+    row-gap: 80px;
+    & svg {
+      width: 50vw;
+      height: 20vh;
+      min-height: 120px;
+      & path {
+        fill: #1d1d1d;
+      }
     }
   }
   &__circle {
@@ -47,21 +48,11 @@
       border-radius: 50%;
       animation: bounce 1.5s ease infinite;
       animation-delay: 1.1s;
-      opacity: 0;
     }
   }
   &__details {
-    & div {
-      &:nth-child(1) {
-        margin-bottom: 2px;
-      }
-      &:nth-child(3) {
-        margin-top: 14px;
-      }
-    }
+    overflow: hidden;
     &__row {
-      overflow: hidden;
-      height: 14px;
       font-size: 12px;
       text-transform: uppercase;
       display: flex;
@@ -69,7 +60,6 @@
       align-items: center;
       color: #1d1d1d;
       & span {
-        opacity: 0;
         font-family: $rivalSans;
         font-weight: $medium;
       }
