@@ -30,39 +30,41 @@ function Home({ data }) {
       <Header logoColor={"#222"} />
 
       <main className="homepage">
-        {data.map((item, index) => (
-          <figure
-            className="homepage__items"
-            key={item.id}
-            style={{
-              "--color": item.color,
-            }}
-          >
-            <Link href={`/projects/${item.id}`}>
-              <figcaption>
-                <span>0{index + 1}</span>
-                <h1>{item.name}</h1>
-              </figcaption>
-              <div className="homepage__image">
-                {item.thumbnail && (
-                  <Image
-                    src={item.thumbnail.src}
-                    alt={item.thumbnail.alt}
-                    width={500}
-                    height={500}
-                    priority
+        <div className="homepage__list">
+          {data.map((item, index) => (
+            <figure
+              className="homepage__items"
+              key={item.id}
+              style={{
+                "--color": item.color,
+              }}
+            >
+              <Link href={`/projects/${item.id}`}>
+                <figcaption>
+                  <span>0{index + 1}</span>
+                  <h1>{item.name}</h1>
+                </figcaption>
+                <div className="homepage__image">
+                  {item.thumbnail && (
+                    <Image
+                      src={item.thumbnail.src}
+                      alt={item.thumbnail.alt}
+                      width={500}
+                      height={500}
+                      priority
+                    />
+                  )}
+                  <div
+                    style={{
+                      "--placeholder": item.placeholder,
+                    }}
+                    className="placeholder"
                   />
-                )}
-                <div
-                  style={{
-                    "--placeholder": item.placeholder,
-                  }}
-                  className="placeholder"
-                />
-              </div>
-            </Link>
-          </figure>
-        ))}
+                </div>
+              </Link>
+            </figure>
+          ))}
+        </div>
       </main>
     </>
   );
