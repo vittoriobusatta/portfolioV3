@@ -412,15 +412,17 @@ function Typo({ typo, name, language, typographyproject }) {
         <div className="projects__bar"></div>
         <div className="projects__typography__content">
           <div className="projects__typography__inner">
-            <Image
-              className={`projects__typography__vector 
+            <div className="projects__typography__image">
+              <Image
+                className={`projects__typography__vector 
             projects__typography__vector__${name}`}
-              src={currentTypo.vector.src}
-              alt={currentTypo.vector.alt}
-              width={570}
-              height={55}
-              priority
-            />
+                src={currentTypo.vector.src}
+                alt={currentTypo.vector.alt}
+                width={570}
+                height={55}
+                priority
+              />
+            </div>
             {typoArray.length > 1 && (
               <div className="projects__typography__circles">
                 {typoArray.map((item, index) => (

@@ -1,28 +1,32 @@
-.home {
+.homepage {
   padding: 20vh 13.25vw 2.5rem;
   background-color: #fff;
   &__items {
     margin: 0 auto 15vh;
+    display: flex;
+    justify-content: center;
     & a {
       display: flex;
       flex-direction: column;
       grid-gap: 22px;
+      width: fit-content;
     }
     & span {
       font-family: $rivalSans;
       font-size: 14px;
-      color: #222;
+      color: var(--color);
       line-height: 18px;
       font-weight: $regular;
     }
     & h1 {
-      color: #222;
+      color: var(--color);
       font-family: $sirenia;
       font-size: 38px;
     }
   }
   &__image {
     position: relative;
+    width: fit-content;
     & img {
       position: relative;
       width: 100%;

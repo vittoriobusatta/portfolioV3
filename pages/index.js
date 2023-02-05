@@ -29,21 +29,28 @@ function Home({ data }) {
 
       <Header logoColor={"#222"} />
 
-      <main className="home">
+      <main className="homepage">
         {data.map((item, index) => (
-          <figure className="home__items" key={item.id}>
+          <figure
+            className="homepage__items"
+            key={item.id}
+            style={{
+              "--color": item.color,
+            }}
+          >
             <Link href={`/projects/${item.id}`}>
               <figcaption>
                 <span>0{index + 1}</span>
                 <h1>{item.name}</h1>
               </figcaption>
-              <div className="home__image">
+              <div className="homepage__image">
                 {item.thumbnail && (
                   <Image
                     src={item.thumbnail.src}
                     alt={item.thumbnail.alt}
                     width={500}
                     height={500}
+                    priority
                   />
                 )}
                 <div

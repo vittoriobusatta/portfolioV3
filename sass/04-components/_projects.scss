@@ -127,12 +127,19 @@
       font-size: 14px;
       row-gap: 12px;
     }
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex: 1;
+    }
     &__vector {
-      max-width: 300px;
+      max-width: 200px;
       width: 50vw;
       height: auto;
       @media screen and (min-width: 576px) {
-        max-width: 330px;
+        max-width: 230px;
       }
       &__nocta {
         width: 70vw;
@@ -162,11 +169,11 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      row-gap: 8px;
+      row-gap: 6px;
     }
     &__button {
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: #ede0d4;
       cursor: pointer;
