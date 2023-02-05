@@ -16,7 +16,7 @@
   }
   &__content {
     min-height: 1000px;
-    padding: 62px 26px 88px;
+    padding: 62px 26px;
     overflow: hidden;
     color: $color_primary;
     @media screen and (min-width: 576px) {
@@ -164,9 +164,10 @@
       flex-direction: row;
       column-gap: 22px;
       & p:last-child {
-        color: #707070;
+        color: $paragraph_color;
         text-transform: initial;
         text-align: end;
+        font-weight: $regular;
       }
     }
     &__circles {
@@ -215,9 +216,9 @@
       flex-direction: column;
       & p {
         font-family: $rivalSans;
-        line-height: 18px;
+        line-height: $p_line_height;
         font-size: 14px;
-        color: #707070;
+        color: $paragraph_color;
         font-weight: $regular;
       }
     }
@@ -246,9 +247,9 @@
     font-family: $rivalSans;
     font-weight: $regular;
     font-size: 14px;
-    color: #707070;
+    color: $paragraph_color;
     max-width: 400px;
-    line-height: 18px;
+    line-height: $p_line_height;
   }
   &__bar {
     width: 100%;

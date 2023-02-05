@@ -13,6 +13,7 @@
     "link": "https://decortakaz.re/",
     "color": "#563213",
     "color2": "#C89773",
+    "paragraph": "#957a63",
     "background": "#ffecdb",
     "placeholder": "#ffe7d2",
     "thumbnail": {
@@ -146,6 +147,7 @@
     "link": "",
     "color": "#093738",
     "color2": "#FDFCFD",
+    "paragraph": "#6e8586",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
@@ -258,6 +260,7 @@
     "color": "#FFA372",
     "color2": "#FFF5F0",
     "background": "#F8F4EC",
+    "paragraph": "#9e9895",
     "placeholder": "#ffece3",
     "thumbnail": {
       "src": "/images/muteza/mtz0.webp",
@@ -389,6 +392,7 @@
     "color": "#030D3E",
     "color2": "#FDFCFD",
     "background": "#EEECF8",
+    "paragraph": "#666e8e",
     "placeholder": "#dae0fa",
     "thumbnail": {
       "src": "/images/galleria/gla0.webp",
@@ -504,6 +508,7 @@
     "color": "#2B9DFE",
     "color2": "#FDFCFD",
     "background": "#ECFAFF",
+    "paragraph": "#96b1bc",
     "placeholder": "#d9f5ff",
     "thumbnail": {
       "src": "/images/unkle/unk0.webp",
@@ -590,6 +595,7 @@
     "color": "#ffdc00",
     "color2": "#FDFCFD",
     "background": "#FCFFEC",
+    "paragraph": "#a9a99e",
     "placeholder": "#fff7c3",
     "thumbnail": {
       "src": "/images/sunnyside/sun0.webp",
