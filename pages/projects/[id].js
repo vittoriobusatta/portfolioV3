@@ -6,8 +6,9 @@ import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
+import Link from "next/link";
 
-export default function Product({ projects }) {
+export default function Product({ projects, data }) {
   const { language } = useContext(LanguageContext);
 
   const thubnails = Object.values(projects.viewproject.images);
@@ -138,6 +139,17 @@ export default function Product({ projects }) {
 
     return () => observer.disconnect();
   }, []);
+
+  let [nextproject, setNextproject] = useState(data[0]);
+
+  useEffect(() => {
+    const index = data.findIndex((project) => project.id === projects.id);
+    if (index === data.length - 1) {
+      setNextproject(data[0]);
+    } else {
+      setNextproject(data[index + 1]);
+    }
+  }, [projects, data]);
 
   return (
     <>
@@ -375,6 +387,17 @@ export default function Product({ projects }) {
             />
           </div>
         )}
+      </section>
+      <section
+        className="projects__next"
+        style={{
+          "--color": projects.color,
+          "--color2": projects.color2,
+        }}
+      >
+        <Link href={`/projects/${nextproject.id}`}>
+          <h1>{language === "en" ? "Next project" : "Projet suivant"}</h1>
+        </Link>
       </section>
     </>
   );
