@@ -24,8 +24,9 @@ header {
   }
 }
 
-label {
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
+select {
+  background-color: #f9f9ed;
+  & option {
+    color: #222;
+  }
 }
