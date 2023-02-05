@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 10vh;
+    row-gap: 8vh;
     @media screen and (min-width: 992px) {
       row-gap: 20vh;
     }
@@ -17,7 +17,7 @@
   &__items {
     display: flex;
     flex-direction: column;
-    grid-gap: 22px;
+    grid-gap: 12px;
     width: fit-content;
     & span {
       font-family: $rivalSans;
