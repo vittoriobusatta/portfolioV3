@@ -2,6 +2,7 @@ import React from "react";
 import "../sass/styles.scss";
 import { LanguageProvider } from "utils/translate";
 import Lenis from "@studio-freight/lenis";
+import Loader from "@/components/Loader";
 
 function MyApp({ Component, pageProps }) {
   if (typeof window !== "undefined") {
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <LanguageProvider>
+        <Loader />
         <Component {...pageProps} />
       </LanguageProvider>
     </>
