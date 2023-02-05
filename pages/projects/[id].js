@@ -388,7 +388,7 @@ export default function Product({ projects, data }) {
           </div>
         )}
       </section>
-      <section
+      {/* <section
         className="projects__next"
         style={{
           "--color": projects.color,
@@ -398,7 +398,7 @@ export default function Product({ projects, data }) {
         <Link href={`/projects/${nextproject.id}`}>
           <h1>{language === "en" ? "Next project" : "Projet suivant"}</h1>
         </Link>
-      </section>
+      </section> */}
     </>
   );
 }
