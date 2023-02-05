@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://www.decortakaz.re",
+  siteUrl: process.env.SITE_URL || "https://www.vittoriobusatta.fr",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 };
