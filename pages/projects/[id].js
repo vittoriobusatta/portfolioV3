@@ -161,6 +161,7 @@ export default function Product({ projects }) {
           backgroundColor: projects.background,
           "--color": projects.color,
           "--color2": projects.color2,
+          "--placeholder": projects.placeholder,
         }}
       >
         <div className="projects__landing" ref={button}>

@@ -182,7 +182,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background-color: #ede0d4;
+      background-color: var(--placeholder);
       cursor: pointer;
       &--active {
         background-color: var(--color);

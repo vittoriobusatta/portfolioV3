@@ -123,7 +123,7 @@
         "en": "Logo creation"
       },
       "description": {
-        "fr": "Pour ce logo, j'ai voulu représenté une petite maison pour retrouver l'idée de la Kaz qui signifie en français Maison. J'ai fusionner à cette icone plusieurs planches de bois pour rappeler le domaine de l'entreprise qui est la menuiserie. Pour la palette de couleurs j'ai utilisé plusieurs variétés de marrons.",
+        "fr": "J'ai voulu représenté une petite maison pour retrouver l'idée de la Kaz qui signifie en français Maison. J'ai fusionner à cette icone plusieurs planches de bois pour rappeler le domaine de l'entreprise qui est la menuiserie. Pour la palette de couleurs j'ai utilisé plusieurs variétés de marrons.",
         "en": "For this logo, I wanted to represent a small house to find the idea of the Kaz which means in French House. I have merged this icon with several wooden boards to remind the domain of the company which is carpentry. For the color palette I used several varieties of browns."
       },
       "images": {
@@ -605,8 +605,8 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Ce projet expérimental était un challenge de la plateforme Front-End Mentor. J'ai conçu la page d'accueil d'une agence créative fictive à partir d'une charte graphique et une maquette définie.",
-        "en": "This experimental project was a challenge for the Front-End Mentor platform. I designed the home page of a fictional creative agency from a graphic charter and a defined layout."
+        "fr": "Ce projet expérimental était un challenge de la plateforme Front-End Mentor. J'ai conçu la page d'accueil d'une agence créative fictive à partir d'une charte graphique et une maquette prédéfini.",
+        "en": "This experimental project was a challenge from the Front-End Mentor platform. I designed the home page of a fictitious creative agency from a predefined graphic charter and mockup."
       },
       "images": {
         "img1": {
