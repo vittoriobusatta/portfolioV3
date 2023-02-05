@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     grid-gap: 22px;
-    width: fit-content;
+    width: 100%;
     & span {
       font-family: $rivalSans;
       font-size: 14px;
@@ -32,11 +32,19 @@
   &__image {
     position: relative;
     width: fit-content;
+    min-width: 100%;
+    & a {
+      display: block;
+      height: 100%;
+    }
     & img {
       position: relative;
       width: 100%;
       z-index: 2;
       max-width: 600px;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
