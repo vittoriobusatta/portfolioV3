@@ -11,11 +11,7 @@ export async function getStaticProps() {
 }
 
 function Home({ data }) {
-  console.log(data);
-  data.map((item, index) => {
-    console.log(item);
-  });
-  return (
+   return (
     <>
       <Head>
         <title>Home</title>
