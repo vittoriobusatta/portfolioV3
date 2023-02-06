@@ -408,8 +408,8 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Ce projet expérimental m'a aidé à me fortifier dans la prise en main de React. J'ai réalisé un slideshow (diaporama interactif) d'une galerie qui expose les caractéristiques d'œuvres d'art célèbre comme leurs histoires, descriptif ainsi que leurs peintres.",
-        "en": "This experimental project helped me to strengthen my grip on React. I made a slideshow (interactive slideshow) of a gallery that exhibits the characteristics of famous works of art such as their stories, descriptions and painters."
+        "fr": "En utilisant React, j’ai conçu un site web interactif pour présenter des œuvres d'art sous une forme attrayante. Basé sur une maquette prédéfinie, je l’ai intégrée en une expérience de diaporama pour les utilisateurs, permettant une navigation fluide entre les différentes œuvres d'art. La qualité de la maquette a été préservée dans la version en ligne, offrant une expérience complète de l'art sans avoir besoin de se déplacer physiquement.",
+        "en": "Using React, I designed an interactive website to present works of art in an attractive form. Based on a predefined layout, I integrated it into a slideshow experience for users, allowing seamless navigation between the different works of art. The quality of the model has been preserved in the online version, offering a complete art experience without having to physically move."
       },
       "images": {
         "img1": {
