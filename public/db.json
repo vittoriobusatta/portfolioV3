@@ -211,6 +211,11 @@
           "id": 4,
           "src": "/images/nocta/nct6.webp",
           "alt": "Nocta - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/nocta/nct7.webp",
+          "alt": "Nocta - Image 7"
         }
       }
     },
@@ -240,8 +245,8 @@
     },
     "otherproject": {
       "images": {
-        "src": "/images/nocta/nct7.webp",
-        "alt": "Nocta - Image 7"
+        "src": "/images/nocta/nct8.webp",
+        "alt": "Nocta - Image 8"
       }
     }
   },

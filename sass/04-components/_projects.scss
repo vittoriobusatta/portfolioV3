@@ -251,6 +251,12 @@
     color: $paragraph_color;
     max-width: 400px;
     line-height: $p_line_height;
+    @media screen and (min-width: 576px) {
+      max-width: 500px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 600px;
+    }
   }
   &__next {
     width: 100%;
