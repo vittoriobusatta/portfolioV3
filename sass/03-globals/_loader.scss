@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   top: 0;
-  background: #fff;
+  background-color: $color_background;
   z-index: 1;
   height: calc(100% + $safe_area_inset_top);
   width: 100%;
@@ -20,7 +20,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #fff;
+    background-color: $color_background;
     z-index: 200;
     opacity: 0;
   }
@@ -64,7 +64,7 @@
       & span {
         opacity: 0;
         font-family: $rivalSans;
-        font-weight: $medium;
+        font-weight: $bold;
       }
     }
   }

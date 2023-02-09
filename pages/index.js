@@ -24,7 +24,7 @@ function Home({ data }) {
         />
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:url" content="https://www.example.com" />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#fffde8" />
       </Head>
 
       <Header logoColor={"#222"} />
