@@ -40,6 +40,21 @@ export default function Product({ projects, data }) {
     setSelected(index);
   };
 
+  // UseEffect pour changer automatiquement les imageBanner
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (selected === thubnails.length - 1) {
+        setCurrentImage(thubnails[0]);
+        setSelected(0);
+      } else {
+        setCurrentImage(thubnails[selected + 1]);
+        setSelected(selected + 1);
+      }
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [selected]);
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
