@@ -525,8 +525,8 @@
         "en": "About project"
       },
       "about": {
-        "fr": "La mission était d'intégrer la maquette d'un composant qui vérifie la sécurité des mots de passe avec des critères qui diffèrent selon que l'on soit un client ou un employé.",
-        "en": "The mission was to integrate the mockup of a component that checks the security of passwords with criteria that differ depending on whether you are a customer or an employee."
+        "fr": "J'ai travaillé sur la mise en place d'un vérificateur de complexité de mot de passe pour Unkle, en suivant les directives d'un designer de l'entreprise. J'ai utilisé les expressions régulières (regex) pour implémenter cette fonctionnalité, permettant aux utilisateurs de vérifier la robustesse de leur mot de passe avant de l'utiliser sur le site. Ce vérificateur de complexité renforce la sécurité du site en garantissant que les mots de passe choisis par les utilisateurs répondent aux normes de sécurité élevées établies par l'entreprise.",
+        "en": "I worked on setting up a password complexity checker for Unkle, following the instructions of a company designer. I used the regular expressions (regex) to implement this feature, allowing users to check the robustness of their password before using it on the site. This complexity checker enhances site security by ensuring that the passwords chosen by users meet the high security standards set by the company."
       },
       "images": {
         "img1": {
@@ -541,8 +541,8 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Gardien des mot de passe",
-        "en": "Password keeper"
+        "fr": "Une protection renforcée",
+        "en": "A reinforced protection"
       },
       "subtitle": {
         "fr": "Aperçu du projet",
@@ -612,8 +612,8 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Ce projet expérimental était un challenge de la plateforme Front-End Mentor. J'ai conçu la page d'accueil d'une agence créative fictive à partir d'une charte graphique et une maquette prédéfini.",
-        "en": "This experimental project was a challenge from the Front-End Mentor platform. I designed the home page of a fictitious creative agency from a predefined graphic charter and mockup."
+        "fr": "J'ai travaillé sur l'intégration de la maquette pour le site web de Sunnyside, une agence web fictive. En utilisant des technologies modernes telles que HTML, CSS et JavaScript, j'ai transformé la maquette en une expérience utilisateur interactive et dynamique. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et cohérente pour l'agence.",
+        "en": "I worked on the integration of the model for the website of Sunnyside, a fictional web agency. Using modern technologies such as HTML, CSS and JavaScript, I transformed the mockup into an interactive and dynamic user experience. I have ensured that the visual quality of the agency is maintained throughout the integration process, providing a professional and consistent presentation for the agency."
       },
       "images": {
         "img1": {

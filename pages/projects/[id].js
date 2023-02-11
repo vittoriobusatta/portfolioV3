@@ -210,7 +210,7 @@ export default function Product({ projects, data }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit website
+            {language === "en" ? "Visit website" : "Voir le site"}
           </a>
         </div>
         <div className="projects__content">
