@@ -20,10 +20,6 @@
       "src": "/images/decortakaz/dkt0.webp",
       "alt": "Décor Ta Kaz - Thumbnail"
     },
-    "description": {
-      "fr": "En tant que designer, j'ai pris en compte les besoins en termes d'UX pour les utilisateurs du site web de Décor Ta Kaz, une entreprise de menuiserie artisanale. J'ai ensuite réalisé une étude approfondie pour comprendre les attentes des utilisateurs et ainsi concevoir une expérience en ligne optimale pour eux. Cela a inclus la conception d'une nouvelle identité pour l'entreprise, avec un logo repensé et une maquette de site web intégrée avec Next.js pour une expérience de navigation fluide et attractive.",
-      "en": "As a designer, I took into account the needs in terms of UX for users of the website of Decor Ta Kaz, a craft carpentry company. I conducted an in-depth study to understand users' expectations and thus design an optimal online experience for them. This included the design of a new corporate identity, with a redesigned logo and an integrated website layout with Next.js for a smooth and attractive browsing experience."
-    },
     "aboutproject": {
       "title": {
         "fr": "Une maison d'oeuvre",
@@ -124,8 +120,8 @@
         "en": "Logo creation"
       },
       "description": {
-        "fr": "J'ai voulu représenté une petite maison pour retrouver l'idée de la Kaz qui signifie en français Maison. J'ai fusionner à cette icone plusieurs planches de bois pour rappeler le domaine de l'entreprise qui est la menuiserie. Pour la palette de couleurs j'ai utilisé plusieurs variétés de marrons.",
-        "en": "For this logo, I wanted to represent a small house to find the idea of the Kaz which means in French House. I have merged this icon with several wooden boards to remind the domain of the company which is carpentry. For the color palette I used several varieties of browns."
+        "fr": "J'ai représenté une maison pour retrouver l'idée de la Kaz, un mot créole qui signifie « maison ». J'ai ensuite fusionner à cela plusieurs planches de bois avec plusieurs variétés de marrons pour rappeler le domaine de l'entreprise qui est la menuiserie.",
+        "en": "I represented a house to find the idea of the Kaz, a Creole word that means «house». I then fuse to this several planks of wood with several varieties of chestnuts to recall the domain of the company which is carpentry."
       },
       "images": {
         "src": "/images/decortakaz/dkt9.webp",
@@ -281,8 +277,8 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Dans ce projet expérimentale, j'ai reproduit à l'identique le site Muteza. J'ai élaboré une version responsive du site ainsi que certaines optimisations en vue d'ameliorer les performances. Ce projet m'a permis de manipuler les librairies GSAP et Locomotive Scroll.",
-        "en": "In this experimental project, I reproduced the Muteza website. I developed a responsive version of the site as well as some optimizations in order to improve the performance. This project allowed me to manipulate the GSAP and Locomotive Scroll libraries."
+        "fr": "J'ai travaillé sur l'adaptation du site de Muteza pour qu'il soit accessible sur tous types d'écrans, offrant ainsi une expérience utilisateur fluide et agréable à tous les visiteurs, peu importe leur appareil. Pour ce faire, j'ai utilisé un framework pour améliorer les performances et garantir une expérience rapide et efficace pour les utilisateurs. ",
+        "en": "I worked on adapting the Muteza website to be accessible on all types of screens, thus offering a smooth and pleasant user experience to all visitors, regardless of their device. To do this, I used a framework to improve performance and ensure a fast and efficient user experience. "
       },
       "images": {
         "img1": {
@@ -305,8 +301,8 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Muteza est une imitation fictive d’atolla, une société de sérum de peau par abonnement. Vise à vous fournir un sérum qui s’adapte à votre peau. Ce projet n’est que mon point de vue sur la refonte de leur site Web actuel.",
-        "en": "Muteza is a fictional imitation of atolla, a subscription based skin serum company. Aimed at providing you a serum that adapts with your skin. This project is just my take on the redesign of their current website."
+        "fr": "Le site Muteza présente un sérum miracle qui a été conçu pour répondre aux besoins de la peau. La présentation du produit est soignée et met en avant les ingrédients clés qui le composent. Les avis des utilisateurs sont également disponibles, permettant de voir les témoignages concrets des bénéfices obtenus grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable et permet de découvrir en détail le produit et son impact sur la peau.",
+        "en": "The Muteza site features a miracle serum that has been designed to meet the needs of the skin. The presentation of the product is careful and highlights the key ingredients that make it up. User reviews are also available, allowing to see the concrete testimonies of the benefits obtained through the use of serum. The experience of browsing the site is pleasant and allows to discover in detail the product and its impact on the skin."
       },
       "images": {
         "img3": {
@@ -534,7 +530,7 @@
       },
       "images": {
         "img1": {
-          "src": "/images/unkle/unk1.webp",
+          "src": "/images/unkle/unk1.jpg",
           "alt": "Unkle - Image 1"
         },
         "img2": {
@@ -545,8 +541,8 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Sécurité maximale pour votre entreprise",
-        "en": "Maximal security for your company"
+        "fr": "Gardien des mot de passe",
+        "en": "Password keeper"
       },
       "subtitle": {
         "fr": "Aperçu du projet",

@@ -71,6 +71,8 @@
           object-fit: cover;
           object-position: center;
           transform: scale(1.2);
+          height: auto;
+          width: auto;
         }
       }
     }
@@ -243,6 +245,7 @@
     line-height: 44px;
     margin: 16px 0 22px;
     overflow: hidden;
+    text-transform: capitalize;
   }
   &__description {
     font-family: $rivalSans;
