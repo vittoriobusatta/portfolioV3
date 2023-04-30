@@ -62,32 +62,6 @@ export default function Product({ projects, data }) {
     return () => observer.disconnect();
   }, []);
 
-  // un code pour selectionner toutes les images et declencher un code qui s'execute quand elles sont chargées
-
-  // useEffect(() => {
-  //   gsap.set(charsAbout.current, { y: 100, opacity: 0 });
-  // const observer = new IntersectionObserver(
-  //   (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting === true) {
-  //         gsap.to(aboutImagesContainer.current.children[0].children[0], {
-  //           scale: 1,
-  //         });
-  //         gsap.to(aboutImagesContainer.current.children[1].children[0], {
-  //           scale: 1,
-  //           delay: 0.1,
-  //         });
-  //       }
-  //     });
-  //   },
-  //   { threshold: 0.7 }
-  // );
-
-  //   observer.observe(aboutImagesContainer.current);
-
-  //   return () => observer.disconnect();
-  // }, []);
-
   useEffect(() => {
     gsap.set(charsAbout.current, { y: 100, opacity: 0 });
     gsap.set(subtitle1.current.children, { y: "100%", opacity: 0 });
@@ -161,9 +135,6 @@ export default function Product({ projects, data }) {
     }
   }, [projects, data]);
 
-  
-
-  // console.log("data", {data}, "paths", {paths});
 
   return (
     <>
@@ -206,7 +177,7 @@ export default function Product({ projects, data }) {
                 <h4>{projects.aboutproject.subtitle[language]}</h4>
               </div>
               <h3 className="projects__title">
-                {Object.entries(projects.aboutproject.title[language]).map(
+                {/* {Object.entries(projects.aboutproject.title[language]).map(
                   (item, index) => (
                     <span
                       className="projects__title__char"
@@ -218,7 +189,8 @@ export default function Product({ projects, data }) {
                       {item[1]}
                     </span>
                   )
-                )}
+                )} */}
+                {projects.aboutproject.title[language]}
               </h3>
               <p className="projects__description">
                 {projects.aboutproject.about[language]}
@@ -266,7 +238,7 @@ export default function Product({ projects, data }) {
               <h4>{projects.viewproject.subtitle[language]}</h4>
             </div>
             <h3 className="projects__title">
-              {Object.entries(projects.viewproject.title[language]).map(
+              {/* {Object.entries(projects.viewproject.title[language]).map(
                 (item, index) => (
                   <span
                     className="projects__title__char"
@@ -278,7 +250,8 @@ export default function Product({ projects, data }) {
                     {item[1]}
                   </span>
                 )
-              )}
+              )} */}
+              {projects.viewproject.title[language]}
             </h3>
             <p className="projects__description">
               {projects.viewproject.about[language]}
@@ -480,22 +453,18 @@ function Typo({ typo, name, language, typographyproject }) {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await axios.get(
-    "http://localhost:3000/api/database/db"
-  );
+  const res = await axios.get("http://localhost:3000/api/database/db");
   const data = await res.data;
-  const { id } = params;
-  let projects = data.find((item) => item.id === parseInt(id));
+  const { path } = params;
+  let projects = data.find((item) => item.path === path);
   return { props: { data, projects } };
 }
 
 export async function getStaticPaths() {
-  const res = await axios.get(
-    "http://localhost:3000/api/database/db"
-  );
+  const res = await axios.get("http://localhost:3000/api/database/db");
   const data = await res.data;
   const paths = data.map((item) => ({
-    params: { id: item.id.toString() },
+    params: { path: item.path.toString() },
   }));
   return { paths, fallback: false };
 }

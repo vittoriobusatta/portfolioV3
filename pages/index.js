@@ -20,7 +20,6 @@ export async function getServerSideProps() {
 }
 
 function Home({ data }) {
-  console.log(data);
   return (
     <>
       <Head>

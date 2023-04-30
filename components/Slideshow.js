@@ -35,7 +35,8 @@ const Slideshow = ({ data }) => {
             ref={slideContainerRef}
             style={
               {
-                "--color": item.color
+                "--color": item.color,
+                "--color2": item.color2
               }
             }
           >

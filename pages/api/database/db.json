@@ -142,7 +142,7 @@
     "technologies": "Figma",
     "link": "",
     "color": "#093738",
-    "color2": "#FDFCFD",
+    "color2": "#ECF8F5",
     "paragraph": "#6e8586",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
@@ -259,7 +259,7 @@
     "technologies": "React, SCSS",
     "link": "https://muteza.vercel.app/",
     "color": "#FFA372",
-    "color2": "#FFF5F0",
+    "color2": "#F8F4EC",
     "background": "#F8F4EC",
     "paragraph": "#9e9895",
     "placeholder": "#ffece3",
@@ -391,7 +391,7 @@
     "technologies": "React",
     "link": "http://galleria-ten.vercel.app/",
     "color": "#030D3E",
-    "color2": "#FDFCFD",
+    "color2": "#EEECF8",
     "background": "#EEECF8",
     "paragraph": "#666e8e",
     "placeholder": "#dae0fa",
@@ -507,7 +507,7 @@
     "technologies": "React, Regex",
     "link": "https://password-components.vercel.app/",
     "color": "#2B9DFE",
-    "color2": "#FDFCFD",
+    "color2": "#ECFAFF",
     "background": "#ECFAFF",
     "paragraph": "#99a8af",
     "placeholder": "#d9f5ff",
@@ -594,7 +594,7 @@
     "technologies": "React",
     "link": "https://sunnyside-lovat.vercel.app/",
     "color": "#ffdc00",
-    "color2": "#FDFCFD",
+    "color2": "#FCFFEC",
     "background": "#FCFFEC",
     "paragraph": "#a9a99e",
     "placeholder": "#fff7c3",
@@ -707,6 +707,28 @@
           }
         }
       }
+    }
+  },
+  {
+    "name": "Kaigai",
+    "id": 7,
+    "path": "kaigai",
+    "type": "Competition",
+    "date": { "fr": "Avrip 2023", "en": "April 2023" },
+    "role": {
+      "fr": "Branding",
+      "en": "Branding"
+    },
+    "technologies": "Figma, Illustrator",
+    "link": "",
+    "color": "#E38EA6",
+    "color2": "#FBE0ED",
+    "background": "#FCFFEC",
+    "paragraph": "#a9a99e",
+    "placeholder": "#fff7c3",
+    "thumbnail": {
+      "src": "/images/sunnyside/sun0.webp",
+      "alt": "Sunnyside - Thumbnail"
     }
   }
 ]

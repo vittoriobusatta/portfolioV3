@@ -80,6 +80,7 @@
   pointer-events: none;
   width: 100%;
   justify-content: center;
+  background-color: var(--color2);
   &--active {
     opacity: 1;
     pointer-events: auto;

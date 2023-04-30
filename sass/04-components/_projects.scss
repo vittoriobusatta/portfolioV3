@@ -312,9 +312,11 @@
       flex-direction: column;
       width: fit-content;
       & h4 {
-        font-size: 14px;
+        font-size: 16px;
+        font-family: $tuskerGrotesk;
+        font-style: normal;
         font-weight: $medium;
-        font-family: $rivalSans;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
       }
       & p {
@@ -338,9 +340,11 @@
   }
   &__link {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: $tuskerGrotesk;
+    font-style: normal;
     font-weight: $medium;
-    font-family: $rivalSans;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-top: 32px;
     color: $color_secondary;
