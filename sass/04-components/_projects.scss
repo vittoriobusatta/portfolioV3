@@ -108,7 +108,7 @@
       & h4 {
         font-family: $tuskerGrotesk;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.03em;
         font-size: 12px;
         margin-left: 8px;
       }
@@ -233,7 +233,7 @@
     & h4 {
       font-family: $tuskerGrotesk;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       font-size: 12px;
       margin-left: 8px;
     }
@@ -244,7 +244,7 @@
     font-size: 44px;
     max-width: 300px;
     line-height: 120%;
-    letter-spacing: 0.03em;
+    // letter-spacing: 0.03em;
     margin: 16px 0 22px;
     overflow: hidden;
   }
@@ -337,7 +337,7 @@
     font-weight: $medium;
     font-family: $tuskerGrotesk;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    // letter-spacing: 0.03em;
   }
   &__link {
     position: relative;
@@ -345,7 +345,7 @@
     font-family: $tuskerGrotesk;
     font-style: normal;
     font-weight: $medium;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-top: 32px;
     color: $color_secondary;

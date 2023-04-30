@@ -24,7 +24,6 @@ const Slideshow = ({ data }) => {
     setCurrentSlide(slideContainerRef.current);
   }, [current]);
 
-
   return (
     <div className="slideshow">
       <div className="slides" ref={slideWrapperRef}>
@@ -33,15 +32,13 @@ const Slideshow = ({ data }) => {
             className={`slide ${current === index ? "slide--active" : ""}`}
             key={index}
             ref={slideContainerRef}
-            style={
-              {
-                "--color": item.color,
-                "--color2": item.color2
-              }
-            }
+            style={{
+              "--color": item.color,
+              "--color2": item.color2,
+            }}
           >
             <h1 className="slide__title">{item.name}</h1>
-            <Link  href={`/projects/${item.path}`}>Read the case</Link>
+            <Link href={`/projects/${item.path}`}>Read the case</Link>
           </div>
         ))}
       </div>
