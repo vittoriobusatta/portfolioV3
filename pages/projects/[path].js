@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
-import gsap from "gsap";
 import ProjectHead from "@/components/Projects/ProjectHead";
 import axios from "axios";
 import Typography from "@/components/Projects/Typography";
@@ -72,14 +71,8 @@ export default function Product({ projects, data }) {
         <ProjectHead projects={projects} button={button} language={language} />
 
         <div className="projects__content">
-          <AboutProject
-            projects={projects}
-            language={language}
-          />
-          <ProjectView
-            projects={projects}
-            language={language}
-          />
+          <AboutProject projects={projects} language={language} />
+          <ProjectView projects={projects} language={language} />
           {projects.brandingproject && (
             <div className="projects__branding">
               <div className="projects__typography__subtitle">
@@ -137,8 +130,10 @@ export default function Product({ projects, data }) {
   );
 }
 
+const HOST = process.env.NEXT_PUBLIC_HOST;
+
 export async function getStaticProps({ params }) {
-  const res = await axios.get("http://localhost:3000/api/database/db");
+  const res = await axios.get(`${HOST}/api/database/db`);
   const data = await res.data;
   const { path } = params;
   let projects = data.find((item) => item.path === path);
@@ -146,7 +141,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const res = await axios.get("http://localhost:3000/api/database/db");
+  const res = await axios.get(`${HOST}/api/database/db`);
   const data = await res.data;
   const paths = data.map((item) => ({
     params: { path: item.path.toString() },
