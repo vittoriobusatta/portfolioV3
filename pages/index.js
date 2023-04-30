@@ -20,6 +20,7 @@ export async function getServerSideProps() {
 }
 
 function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
@@ -40,41 +41,6 @@ function Home({ data }) {
 
       <main className="homepage">
         <Slideshow data={data} />
-        {/* <div className="homepage__list">
-          {data.map((item, index) => (
-            <figure
-              className="homepage__items"
-              key={item.id}
-              style={{
-                "--color": item.color,
-              }}
-            >
-              <figcaption>
-                <span>0{index + 1}</span>
-                <h1>{item.name}</h1>
-              </figcaption>
-              <div className="homepage__image">
-                <Link href={`/projects/${item.id}`}>
-                  {item.thumbnail && (
-                    <Image
-                      src={item.thumbnail.src}
-                      alt={item.thumbnail.alt}
-                      width={500}
-                      height={500}
-                      priority
-                    />
-                  )}
-                  <div
-                    style={{
-                      "--placeholder": item.color,
-                    }}
-                    className="placeholder"
-                  />
-                </Link>
-              </div>
-            </figure>
-          ))}
-        </div> */}
       </main>
     </>
   );

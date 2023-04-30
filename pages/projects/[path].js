@@ -130,10 +130,9 @@ export default function Product({ projects, data }) {
   );
 }
 
-const HOST = "https://www.vittoriobusatta.fr";
 
 export async function getStaticProps({ params }) {
-  const res = await axios.get(`${HOST}/api/database/db`);
+  const res = await axios.get("http://localhost:3000/api/database/db");
   const data = await res.data;
   const { path } = params;
   let projects = data.find((item) => item.path === path);
@@ -141,7 +140,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const res = await axios.get(`${HOST}/api/database/db`);
+  const res = await axios.get("http://localhost:3000/api/database/db");
   const data = await res.data;
   const paths = data.map((item) => ({
     params: { path: item.path.toString() },
