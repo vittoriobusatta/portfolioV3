@@ -9,8 +9,9 @@ import axios from "axios";
 import Typography from "@/components/Projects/Typography";
 import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
+import data from "../../public/db.json";
 
-export default function Product({ projects, data }) {
+export default function Product({ projects }) {
   const { language } = useContext(LanguageContext);
 
   const [logoColor, setColor2] = useState(projects.color2);
@@ -130,18 +131,17 @@ export default function Product({ projects, data }) {
   );
 }
 
-
 export async function getStaticProps({ params }) {
-  const res = await axios.get("http://localhost:3000/api/database/db");
-  const data = await res.data;
+  // const res = await axios.get("http://localhost:3000/api/database/db");
+  // const data = await res.data;
   const { path } = params;
   let projects = data.find((item) => item.path === path);
-  return { props: { data, projects } };
+  return { props: { projects } };
 }
 
 export async function getStaticPaths() {
-  const res = await axios.get("http://localhost:3000/api/database/db");
-  const data = await res.data;
+  // const res = await axios.get("http://localhost:3000/api/database/db");
+  // const data = await res.data;
   const paths = data.map((item) => ({
     params: { path: item.path.toString() },
   }));

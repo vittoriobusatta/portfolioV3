@@ -1,0 +1,732 @@
+[
+  {
+    "name": "Décor Ta Kaz",
+    "id": 1,
+    "path": "decortakaz",
+    "type": "Mission",
+    "date": { "fr": "Décembre 2022", "en": "December 2022" },
+    "role": {
+      "fr": "Développement & Conception",
+      "en": "Development & Design"
+    },
+    "technologies": "Nextjs, React",
+    "link": "https://decortakaz.re/",
+    "color": "#4E2705",
+    "color2": "#FEF1E7",
+    "paragraph": "#301702",
+    "placeholder": "#ffe7d2",
+    "thumbnail": {
+      "src": "/images/decortakaz/dkt0.webp",
+      "alt": "Décor Ta Kaz - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Une maison d'oeuvre",
+        "en": "A work house"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "En tant que designer, j'ai pris en compte les besoins en termes d'UX pour les utilisateurs du site web de Décor Ta Kaz, une entreprise de menuiserie artisanale. J'ai réalisé une étude approfondie pour comprendre les attentes des utilisateurs et ainsi concevoir une expérience en ligne optimale pour eux. Cela a inclus la conception d'une nouvelle identité pour l'entreprise, avec un logo repensé et une maquette de site web intégrée avec Next.js pour une expérience de navigation fluide et attractive.",
+        "en": "As a designer, I took into account the needs in terms of UX for users of the website of Decor Ta Kaz, a craft carpentry company. I conducted an in-depth study to understand users' expectations and thus design an optimal online experience for them. This included the design of a new corporate identity, with a redesigned logo and an integrated website layout with Next.js for a smooth and attractive browsing experience."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/decortakaz/dkt1.webp",
+          "alt": "Décor Ta Kaz - Image 1"
+        },
+        "img2": {
+          "src": "/images/decortakaz/dkt2.webp",
+          "alt": "Décor Ta Kaz - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Un design sur mesure",
+        "en": "A tailored design"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Découvrez les talents de Décor Ta Kaz à travers ce site web conçu pour mettre en lumière les produits et services de l'entreprise. Vous pourrez facilement explorer les différentes catégories de réalisations, chacune mise en valeur par un design élégant. Le site est conçu pour répondre aux besoins des utilisateurs en offrant une expérience personnalisée adaptée à leurs centres d'intérêt.",
+        "en": "Discover the talents of Décor Ta Kaz through this website designed to highlight the company’s products and services. You can easily explore the different categories of achievements, each highlighted by an elegant design. The site is designed to meet the needs of users by offering a personalized experience tailored to their interests."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/decortakaz/dkt3.webp",
+          "alt": "Décor Ta Kaz - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/decortakaz/dkt4.webp",
+          "alt": "Décor Ta Kaz - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/decortakaz/dkt5.webp",
+          "alt": "Décor Ta Kaz - Image 5"
+        },
+        "img6": {
+          "id": 4,
+          "src": "/images/decortakaz/dkt6.webp",
+          "alt": "Décor Ta Kaz - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/decortakaz/dkt7.webp",
+          "alt": "Décor Ta Kaz - Image 7"
+        },
+        "img8": {
+          "id": 6,
+          "src": "/images/decortakaz/dkt8.webp",
+          "alt": "Décor Ta Kaz - Image 8"
+        }
+      }
+    },
+    "typographyproject": {
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/decortakaz/typo1.svg",
+            "alt": "Décor Ta Kaz - Typography"
+          },
+          "src": {
+            "fr": {
+              "font": "Manrope",
+              "foundry": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Manrope",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
+          }
+        }
+      }
+    },
+    "brandingproject": {
+      "subtitle": {
+        "fr": "Création du logo",
+        "en": "Logo creation"
+      },
+      "description": {
+        "fr": "J'ai représenté une maison pour retrouver l'idée de la Kaz, un mot créole qui signifie « maison ». J'ai ensuite fusionner à cela plusieurs planches de bois avec plusieurs variétés de marrons pour rappeler le domaine de l'entreprise qui est la menuiserie.",
+        "en": "I represented a house to find the idea of the Kaz, a Creole word that means «house». I then fuse to this several planks of wood with several varieties of chestnuts to recall the domain of the company which is carpentry."
+      },
+      "images": {
+        "src": "/images/decortakaz/dkt9.svg",
+        "alt": "Décor Ta Kaz - Image 9"
+      }
+    }
+  },
+  {
+    "name": "Nocta",
+    "id": 2,
+    "path": "nocta",
+    "type": "Expérimental",
+    "date": { "fr": "Février 2023", "en": "February 2023" },
+    "role": {
+      "fr": "Identité visuelle & Conception",
+      "en": "Branding & Design"
+    },
+    "technologies": "Figma",
+    "color": "#093738",
+    "color2": "#ECF8F5",
+    "paragraph": "#6e8586",
+    "background": "#ECF8F5",
+    "placeholder": "#d8f3ee",
+    "thumbnail": {
+      "src": "/images/nocta/nct0.webp",
+      "alt": "Nocta - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Une collection inspirée du présent",
+        "en": "A collection inspired by today's"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "Le projet de rebranding de la marque Nocta a consisté en une analyse approfondie de l'identité visuelle existante et en la mise en place d'une nouvelle stratégie de marque qui reflète les valeurs et les objectifs de la marque. De plus, le redesign du site web a mis en œuvre une expérience utilisateur améliorée, avec une navigation plus fluide et des visuels plus attrayants pour renforcer la présentation de la marque en ligne.",
+        "en": "The rebranding project of the Nocta brand consisted of a thorough analysis of the existing visual identity and the implementation of a new brand strategy that reflects the brand’s values and objectives. In addition, the redesign of the website has implemented an improved user experience, with smoother navigation and more attractive visuals to enhance the online brand presentation."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/nocta/nct1.webp",
+          "alt": "Nocta - Image 1"
+        },
+        "img2": {
+          "src": "/images/nocta/nct2.webp",
+          "alt": "Nocta - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Une élégance sur le terrain",
+        "en": "An elegance on the field"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "NOCTA, une collection pour le collectif, est arrivée. L’habillement de forme hoche la tête au sport, mais est enraciné et inspiré par ceux qui errent dans les rues, qui sont sur la route et veulent fonctionnel, confortable et élevé essentiels de tous les jours.",
+        "en": "NOCTA, a collection for the collective, has arrived. The form fitting apparel nods to sport, but is rooted and inspired by those who roam the streets, who are on the go and want functional, comfortable and elevated everyday essentials."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/nocta/nct3.webp",
+          "alt": "Nocta - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/nocta/nct4.webp",
+          "alt": "Nocta - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/nocta/nct5.webp",
+          "alt": "Nocta - Image 5"
+        },
+        "img6": {
+          "id": 4,
+          "src": "/images/nocta/nct6.webp",
+          "alt": "Nocta - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/nocta/nct7.webp",
+          "alt": "Nocta - Image 7"
+        }
+      }
+    },
+    "typographyproject": {
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/nocta/noctaTypo.svg",
+            "alt": "Nocta - Typography"
+          },
+          "src": {
+            "fr": {
+              "police": "Univers 93",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Univers 93",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
+          }
+        }
+      }
+    },
+    "otherproject": {
+      "images": {
+        "src": "/images/nocta/nct8.webp",
+        "alt": "Nocta - Image 8"
+      }
+    }
+  },
+  {
+    "name": "Muteza",
+    "id": 3,
+    "path": "muteza",
+    "type": "Expérimental",
+    "date": { "fr": "Novembre 2022", "en": "November 2022" },
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
+    "technologies": "React, SCSS",
+    "link": "https://muteza.vercel.app/",
+    "color": "#FFA372",
+    "color2": "#F8F4EC",
+    "background": "#F8F4EC",
+    "paragraph": "#9e9895",
+    "placeholder": "#ffece3",
+    "thumbnail": {
+      "src": "/images/muteza/mtz0.webp",
+      "alt": "Muteza - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Un sérum personnalisé",
+        "en": "A personalized skin serum"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "J'ai travaillé sur l'adaptation du site de Muteza pour qu'il soit accessible sur tous types d'écrans, offrant ainsi une expérience utilisateur fluide et agréable à tous les visiteurs, peu importe leur appareil. Pour ce faire, j'ai utilisé un framework pour améliorer les performances et garantir une expérience rapide et efficace pour les utilisateurs. ",
+        "en": "I worked on adapting the Muteza website to be accessible on all types of screens, thus offering a smooth and pleasant user experience to all visitors, regardless of their device. To do this, I used a framework to improve performance and ensure a fast and efficient user experience. "
+      },
+      "images": {
+        "img1": {
+          "src": "/images/muteza/mtz1.webp",
+          "alt": "Muteza - Image 1"
+        },
+        "img2": {
+          "src": "/images/muteza/mtz2.webp",
+          "alt": "Muteza - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Un éclat de beauté",
+        "en": "A beauty glow"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Le site Muteza présente un sérum miracle qui a été conçu pour répondre aux besoins de la peau. La présentation du produit est soignée et met en avant les ingrédients clés qui le composent. Les avis des utilisateurs sont également disponibles, permettant de voir les témoignages concrets des bénéfices obtenus grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable et permet de découvrir en détail le produit et son impact sur la peau.",
+        "en": "The Muteza site features a miracle serum that has been designed to meet the needs of the skin. The presentation of the product is careful and highlights the key ingredients that make it up. User reviews are also available, allowing to see the concrete testimonies of the benefits obtained through the use of serum. The experience of browsing the site is pleasant and allows to discover in detail the product and its impact on the skin."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/muteza/mtz3.webp",
+          "alt": "Muteza - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/muteza/mtz4.webp",
+          "alt": "Muteza - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/muteza/mtz5.webp",
+          "alt": "Muteza - Image 5"
+        },
+        "img6": {
+          "id": 4,
+          "src": "/images/muteza/mtz6.webp",
+          "alt": "Muteza - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/muteza/mtz7.webp",
+          "alt": "Muteza - Image 7"
+        },
+        "img8": {
+          "id": 6,
+          "src": "/images/muteza/mtz8.webp",
+          "alt": "Muteza - Image 8"
+        }
+      }
+    },
+    "typographyproject": {
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/muteza/typo1.svg",
+            "alt": "Muteza - Typography 1"
+          },
+          "src": {
+            "fr": {
+              "police": "Elgoc",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Elgoc",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
+          }
+        },
+        "typo2": {
+          "vector": {
+            "src": "/images/muteza/typo2.svg",
+            "alt": "Muteza - Typography 2"
+          },
+          "src": {
+            "fr": {
+              "police": "TT Norms",
+              "source": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "TT Norms",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Galleria",
+    "id": 4,
+    "path": "galleria",
+    "type": "Expérimental",
+    "date": { "fr": "Août 2022", "en": "August 2022" },
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
+    "technologies": "React",
+    "link": "http://galleria-ten.vercel.app/",
+    "color": "#030D3E",
+    "color2": "#EEECF8",
+    "background": "#EEECF8",
+    "paragraph": "#666e8e",
+    "placeholder": "#dae0fa",
+    "thumbnail": {
+      "src": "/images/galleria/gla0.webp",
+      "alt": "Galleria - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Découvrez l’art de l’interaction.",
+        "en": "Discover the art of interaction."
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "En utilisant React, j’ai conçu un site web interactif pour présenter des œuvres d'art sous une forme attrayante. Basé sur une maquette prédéfinie, je l’ai intégrée en une expérience de diaporama pour les utilisateurs, permettant une navigation fluide entre les différentes œuvres d'art. La qualité de la maquette a été préservée dans la version en ligne, offrant une expérience complète de l'art sans avoir besoin de se déplacer physiquement.",
+        "en": "Using React, I designed an interactive website to present works of art in an attractive form. Based on a predefined layout, I integrated it into a slideshow experience for users, allowing seamless navigation between the different works of art. The quality of the model has been preserved in the online version, offering a complete art experience without having to physically move."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/galleria/gla1.webp",
+          "alt": "Galleria - Image 1"
+        },
+        "img2": {
+          "src": "/images/galleria/gla2.webp",
+          "alt": "Galleria - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Un voyage dans l'histoire",
+        "en": "A journey through history"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Plongez dans le monde de l'art avec Galleria, une plateforme interactive qui propose une expérience visuelle immersive. Chaque œuvre d'art est présentée avec un design attrayant pour vous offrir une expérience visuelle unique. Grâce aux options de diaporama, vous pouvez facilement naviguer entre les œuvres d'art, découvrir une variété de styles et de techniques, ainsi que l'histoire derrière chaque œuvre.",
+        "en": "Dive into the world of art with Galleria, an interactive platform that offers an immersive visual experience. Each artwork is presented with an attractive design to offer you a unique visual experience. With slideshow options, you can easily navigate between artworks, discover a variety of styles and techniques, as well as the history behind each artwork."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/galleria/gla3.webp",
+          "alt": "Galleria - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/galleria/gla4.webp",
+          "alt": "Galleria - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/galleria/gla5.webp",
+          "alt": "Galleria - Image 5"
+        },
+        "img6": {
+          "id": 4,
+          "src": "/images/galleria/gla6.webp",
+          "alt": "Galleria - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/galleria/gla7.webp",
+          "alt": "Galleria - Image 7"
+        },
+        "img8": {
+          "id": 6,
+          "src": "/images/galleria/gla8.webp",
+          "alt": "Galleria - Image 8"
+        }
+      }
+    },
+    "typographyproject": {
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/galleria/typo1.svg",
+            "alt": "Galleria - Typography"
+          },
+          "src": {
+            "fr": {
+              "font": "Libre Baskerville",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            },
+            "en": {
+              "font": "Libre Baskerville",
+              "foundry": "Fonts Geek, fontsgeek.com"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Unkle",
+    "id": 5,
+    "path": "unkle",
+    "type": "Mission",
+    "date": { "fr": "Juin 2022", "en": "June 2022" },
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
+    "technologies": "React, Regex",
+    "link": "https://password-components.vercel.app/",
+    "color": "#2B9DFE",
+    "color2": "#ECFAFF",
+    "background": "#ECFAFF",
+    "paragraph": "#99a8af",
+    "placeholder": "#d9f5ff",
+    "thumbnail": {
+      "src": "/images/unkle/unk0.webp",
+      "alt": "Unkle - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Une sécurité garantie",
+        "en": "A guaranteed safety"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "J'ai travaillé sur la mise en place d'un vérificateur de complexité de mot de passe pour Unkle, en suivant les directives d'un designer de l'entreprise. J'ai utilisé les expressions régulières (regex) pour implémenter cette fonctionnalité, permettant aux utilisateurs de vérifier la robustesse de leur mot de passe avant de l'utiliser sur le site. Ce vérificateur de complexité renforce la sécurité du site en garantissant que les mots de passe choisis par les utilisateurs répondent aux normes de sécurité élevées établies par l'entreprise.",
+        "en": "I worked on setting up a password complexity checker for Unkle, following the instructions of a company designer. I used the regular expressions (regex) to implement this feature, allowing users to check the robustness of their password before using it on the site. This complexity checker enhances site security by ensuring that the passwords chosen by users meet the high security standards set by the company."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/unkle/unk1.jpg",
+          "alt": "Unkle - Image 1"
+        },
+        "img2": {
+          "src": "/images/unkle/unk2.webp",
+          "alt": "Unkle - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Une protection renforcée",
+        "en": "A reinforced protection"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/unkle/unk3.webp",
+          "alt": "Unkle - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/unkle/unk4.webp",
+          "alt": "Unkle - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/unkle/unk5.webp",
+          "alt": "Unkle - Image 5"
+        },
+        "img7": {
+          "id": 4,
+          "src": "/images/unkle/unk7.webp",
+          "alt": "Unkle - Image 7"
+        },
+        "img6": {
+          "id": 5,
+          "src": "/images/unkle/unk6.webp",
+          "alt": "Unkle - Image 6"
+        }
+      }
+    }
+  },
+  {
+    "name": "Sunnyside",
+    "id": 6,
+    "path": "sunnyside",
+    "type": "Expérimental",
+    "date": { "fr": "Juillet 2022", "en": "July 2022" },
+    "role": {
+      "fr": "Développement",
+      "en": "Development"
+    },
+    "technologies": "React",
+    "link": "https://sunnyside-lovat.vercel.app/",
+    "color": "#ffdc00",
+    "color2": "#FCFFEC",
+    "background": "#FCFFEC",
+    "paragraph": "#a9a99e",
+    "placeholder": "#fff7c3",
+    "thumbnail": {
+      "src": "/images/sunnyside/sun0.webp",
+      "alt": "Sunnyside - Thumbnail"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": "Une agence brillante",
+        "en": "A brilliant agency"
+      },
+      "subtitle": {
+        "fr": "À propos du projet",
+        "en": "About project"
+      },
+      "about": {
+        "fr": "J'ai travaillé sur l'intégration de la maquette pour le site web de Sunnyside, une agence web fictive. En utilisant des technologies modernes telles que HTML, CSS et JavaScript, j'ai transformé la maquette en une expérience utilisateur interactive et dynamique. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et cohérente pour l'agence.",
+        "en": "I worked on the integration of the model for the website of Sunnyside, a fictional web agency. Using modern technologies such as HTML, CSS and JavaScript, I transformed the mockup into an interactive and dynamic user experience. I have ensured that the visual quality of the agency is maintained throughout the integration process, providing a professional and consistent presentation for the agency."
+      },
+      "images": {
+        "img1": {
+          "src": "/images/sunnyside/sun1.webp",
+          "alt": "Sunnyside - Image 1"
+        },
+        "img2": {
+          "src": "/images/sunnyside/sun2.webp",
+          "alt": "Sunnyside - Image 2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": "Explorez le côté ensoleillé ",
+        "en": "Explore the sunny side"
+      },
+      "subtitle": {
+        "fr": "Aperçu du projet",
+        "en": "Project view"
+      },
+      "about": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in urna imperdiet, vehicula quam sed, aliquam diam. Vestibulum placerat turpis urna, vel cursus turpis vestibulum suscipit. Duis dapibus elit pretium."
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "/images/sunnyside/sun3.webp",
+          "alt": "Sunnyside - Image 3"
+        },
+        "img4": {
+          "id": 2,
+          "src": "/images/sunnyside/sun4.webp",
+          "alt": "Sunnyside - Image 4"
+        },
+        "img5": {
+          "id": 3,
+          "src": "/images/sunnyside/sun5.webp",
+          "alt": "Sunnyside - Image 5"
+        },
+        "img6": {
+          "id": 4,
+          "src": "/images/sunnyside/sun6.webp",
+          "alt": "Sunnyside - Image 6"
+        },
+        "img7": {
+          "id": 5,
+          "src": "/images/sunnyside/sun7.webp",
+          "alt": "Sunnyside - Image 7"
+        }
+      }
+    },
+    "typographyproject": {
+      "subtitle": {
+        "fr": "Typographie",
+        "en": "Typography"
+      },
+      "details": {
+        "typo1": {
+          "vector": {
+            "src": "/images/sunnyside/typo1.svg",
+            "alt": "Sunnyside - Typography"
+          },
+          "src": {
+            "fr": {
+              "police": "Barlow",
+              "source": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Barlow",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
+          }
+        },
+        "typo2": {
+          "vector": {
+            "src": "/images/sunnyside/typo2.svg",
+            "alt": "Sunnyside - Typography 2"
+          },
+
+          "src": {
+            "fr": {
+              "police": "Faunces",
+              "source": "Google Fonts, fonts.google.com"
+            },
+            "en": {
+              "font": "Faunces",
+              "foundry": "Google Fonts, fonts.google.com"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Kaigai",
+    "id": 7,
+    "path": "kaigai",
+    "type": "Competition",
+    "date": { "fr": "Avril 2023", "en": "April 2023" },
+    "role": {
+      "fr": "Branding",
+      "en": "Branding"
+    },
+    "technologies": "Figma, Illustrator",
+    "link": "",
+    "color": "#E38EA6",
+    "color2": "#FBE0ED",
+    "background": "#FCFFEC",
+    "paragraph": "#a9a99e",
+    "placeholder": "#fff7c3",
+    "thumbnail": {
+      "src": "/images/sunnyside/sun0.webp",
+      "alt": "Sunnyside - Thumbnail"
+    }
+  }
+]

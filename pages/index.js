@@ -1,28 +1,26 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/Header";
 import Slideshow from "@/components/Slideshow";
-import axios from "axios";
+import data from "../public/db.json"
 
-export async function getServerSideProps() {
-  try {
-    const response = await axios.get('http://localhost:3000/api/database/db');
-    const data = response.data;
-    return {
-      props: { data },
-    };
-  } catch (error) {
-    console.log(error);
-    return {
-      props: { data: null },
-    };
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     const response = await axios.get('http://localhost:3000/api/database/db');
+//     const data = response.data;
+//     return {
+//       props: { data },
+//     };
+//   } catch (error) {
+//     console.log(error);
+//     return {
+//       props: { data: null },
+//     };
+//   }
+// }
 
 
-function Home({ data }) {
+function Home() {
   return (
     <>
       <Head>
