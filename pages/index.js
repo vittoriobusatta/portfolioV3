@@ -1,16 +1,26 @@
 import React from "react";
 import Head from "next/head";
-import fs from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import Slideshow from "@/components/Slideshow";
+import axios from "axios";
 
-export async function getStaticProps() {
-  const data = await JSON.parse(fs.readFileSync("./public/db.json", "utf-8"));
-  return { props: { data } };
+export async function getServerSideProps() {
+  const res = await axios.get(
+    "http://localhost:3000/api/database/db"
+  );
+  const data = await res.data;
+
+  return {
+    props: {
+      data,
+    },
+  };
 }
 
 function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
@@ -30,7 +40,8 @@ function Home({ data }) {
       <Header logoColor={"#222"} />
 
       <main className="homepage">
-        <div className="homepage__list">
+        <Slideshow data={data} />
+        {/* <div className="homepage__list">
           {data.map((item, index) => (
             <figure
               className="homepage__items"
@@ -64,7 +75,7 @@ function Home({ data }) {
               </div>
             </figure>
           ))}
-        </div>
+        </div> */}
       </main>
     </>
   );

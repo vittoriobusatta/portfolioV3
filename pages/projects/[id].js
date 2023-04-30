@@ -1,25 +1,18 @@
 import Head from "next/head";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import fs from "fs";
 import Header from "@/components/Header";
 import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
-import Link from "next/link";
+import ProjectHead from "@/components/ProjectHead";
+import axios from "axios";
 
 export default function Product({ projects, data }) {
   const { language } = useContext(LanguageContext);
 
   const thubnails = Object.values(projects.viewproject.images);
   const imageBanner = Object.values(projects.viewproject.images);
-  const landingList = Object.entries(projects).filter(
-    ([key]) =>
-      key === "type" ||
-      key === "date" ||
-      key === "role" ||
-      key === "technologies"
-  );
 
   const [logoColor, setColor2] = useState(projects.color2);
   const [currentImage, setCurrentImage] = useState(thubnails[0]);
@@ -69,29 +62,31 @@ export default function Product({ projects, data }) {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    gsap.set(charsAbout.current, { y: 100, opacity: 0 });
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting === true) {
-            gsap.to(aboutImagesContainer.current.children[0].children[0], {
-              scale: 1,
-            });
-            gsap.to(aboutImagesContainer.current.children[1].children[0], {
-              scale: 1,
-              delay: 0.1,
-            });
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
+  // un code pour selectionner toutes les images et declencher un code qui s'execute quand elles sont chargées
 
-    observer.observe(aboutImagesContainer.current);
+  // useEffect(() => {
+  //   gsap.set(charsAbout.current, { y: 100, opacity: 0 });
+  // const observer = new IntersectionObserver(
+  //   (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting === true) {
+  //         gsap.to(aboutImagesContainer.current.children[0].children[0], {
+  //           scale: 1,
+  //         });
+  //         gsap.to(aboutImagesContainer.current.children[1].children[0], {
+  //           scale: 1,
+  //           delay: 0.1,
+  //         });
+  //       }
+  //     });
+  //   },
+  //   { threshold: 0.7 }
+  // );
 
-    return () => observer.disconnect();
-  }, []);
+  //   observer.observe(aboutImagesContainer.current);
+
+  //   return () => observer.disconnect();
+  // }, []);
 
   useEffect(() => {
     gsap.set(charsAbout.current, { y: 100, opacity: 0 });
@@ -166,6 +161,10 @@ export default function Product({ projects, data }) {
     }
   }, [projects, data]);
 
+  
+
+  // console.log("data", {data}, "paths", {paths});
+
   return (
     <>
       <Head>
@@ -192,27 +191,8 @@ export default function Product({ projects, data }) {
           "--paragraph": projects.paragraph,
         }}
       >
-        <div className="projects__landing" ref={button}>
-          <h1 className="landing__title">{projects.name}</h1>
-          <ul className="landing__list">
-            {landingList.map((item, index) => (
-              <li key={index} className="landing__item">
-                <div className="landing__item__inner">
-                  <h4>{item[0]}</h4>
-                  <p>{item[1][language] ? item[1][language] : item[1]}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <a
-            className="landing__link"
-            href={projects.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {language === "en" ? "Visit website" : "Voir le site"}
-          </a>
-        </div>
+        <ProjectHead projects={projects} button={button} language={language} />
+
         <div className="projects__content">
           <div className="projects__about" ref={projectAbout}>
             <div className="projects__about__head">
@@ -255,11 +235,14 @@ export default function Product({ projects, data }) {
                 (item, index) => (
                   <div className="projects__about__images__inner" key={index}>
                     <Image
+                      className="image"
                       src={item.src}
                       alt={item.alt}
                       width={385}
                       height={481}
                       priority
+                      placeholder="blur"
+                      blurDataURL={projects.placeholder}
                     />
                     <div
                       style={{
@@ -497,14 +480,20 @@ function Typo({ typo, name, language, typographyproject }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await JSON.parse(fs.readFileSync("./public/db.json", "utf-8"));
+  const res = await axios.get(
+    "http://localhost:3000/api/database/db"
+  );
+  const data = await res.data;
   const { id } = params;
   let projects = data.find((item) => item.id === parseInt(id));
   return { props: { data, projects } };
 }
 
 export async function getStaticPaths() {
-  const data = await JSON.parse(fs.readFileSync("./public/db.json", "utf-8"));
+  const res = await axios.get(
+    "http://localhost:3000/api/database/db"
+  );
+  const data = await res.data;
   const paths = data.map((item) => ({
     params: { id: item.id.toString() },
   }));

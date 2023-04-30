@@ -1,6 +1,6 @@
 .projects {
   // padding-bottom: 44px;
-  &__landing {
+  &__head {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -70,9 +70,10 @@
           height: auto;
           object-fit: cover;
           object-position: center;
-          transform: scale(1.2);
+          // transform: scale(1.2);
           height: auto;
           width: auto;
+          transition: transform 0.3s ease-in-out;
         }
       }
     }
@@ -286,7 +287,7 @@
   }
 }
 
-.landing {
+.head {
   &__list {
     width: 100%;
     display: grid;
@@ -331,7 +332,9 @@
   &__title {
     font-size: 52px;
     font-weight: $medium;
-    font-family: $sirenia;
+    font-family: $tuskerGrotesk;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
   &__link {
     position: relative;

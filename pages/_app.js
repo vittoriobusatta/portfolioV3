@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <LanguageProvider>
-        <Loader />
+        {/* <Loader /> */}
         <Component {...pageProps} />
       </LanguageProvider>
     </>
