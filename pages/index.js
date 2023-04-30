@@ -7,20 +7,22 @@ import Slideshow from "@/components/Slideshow";
 import axios from "axios";
 
 export async function getServerSideProps() {
-  const res = await axios.get(
-    "http://localhost:3000/api/database/db"
-  );
-  const data = await res.data;
-
-  return {
-    props: {
-      data,
-    },
-  };
+  try {
+    const response = await axios.get('http://localhost:3000/api/database/db');
+    const data = response.data;
+    return {
+      props: { data },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: { data: null },
+    };
+  }
 }
 
+
 function Home({ data }) {
-  console.log(data);
   return (
     <>
       <Head>
