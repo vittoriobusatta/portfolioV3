@@ -443,7 +443,7 @@
     }
   }
   &__thubnails {
-    position: static;
+    position: relative;
     z-index: 1;
     display: block;
     overflow: visible;

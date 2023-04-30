@@ -1,13 +1,11 @@
 import { Star } from "assets/icons";
 import { gsap } from "gsap";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 
 function ProjectView({ language, projects }) {
   const { title, subtitle, about } = projects.viewproject;
-
   const thubnails = Object.values(projects.viewproject.images);
-  const imageBanner = Object.values(projects.viewproject.images);
 
   const projectView = useRef(null);
   const subtle = useRef([]);
@@ -56,6 +54,7 @@ function ProjectView({ language, projects }) {
     return () => observer.disconnect();
   }, []);
 
+  console.log(selected);
 
   return (
     <div className="projects__view" ref={projectView}>
@@ -73,11 +72,10 @@ function ProjectView({ language, projects }) {
       <div className="projects__view__slideshow">
         <div className="slideshow__container">
           <div className="slideshow__banner">
-            {imageBanner.map((item, index) => (
-              <>
+            {thubnails.map((item, index) => (
+              <Fragment key={item.id}>
                 {currentImage ? (
                   <Image
-                    key={item.id}
                     className="slideshow__banner__image"
                     src={item.src}
                     alt={item.alt}
@@ -99,7 +97,7 @@ function ProjectView({ language, projects }) {
                     }
                   />
                 ) : null}
-              </>
+              </Fragment>
             ))}
           </div>
           <ul className="slideshow__list" style={{ color: projects.color2 }}>
@@ -115,7 +113,7 @@ function ProjectView({ language, projects }) {
             {thubnails.map((item, index) => (
               <li
                 key={item.id}
-                className="slideshow__thubnails"
+                className={`slideshow__thubnails class${index}`}
                 style={{
                   backgroundImage: `url(${item.src})`,
                   backgroundClip: "content-box",

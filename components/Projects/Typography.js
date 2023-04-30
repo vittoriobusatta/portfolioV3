@@ -26,6 +26,10 @@ function Typography({ typo, name, language, typographyproject }) {
 
   const projectTypography = useRef(null);
 
+  // typoArray.map((item, index) => (
+  //   console.log(item)
+  // ))
+
   return (
     <>
       <div className="projects__typography" ref={projectTypography}>
@@ -51,7 +55,7 @@ function Typography({ typo, name, language, typographyproject }) {
               <div className="projects__typography__circles">
                 {typoArray.map((item, index) => (
                   <div
-                    key={item.id}
+                    key={index}
                     className={
                       index === currentIndex
                         ? "projects__typography__button projects__typography__button--active"
