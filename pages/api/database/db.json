@@ -706,27 +706,5 @@
         }
       }
     }
-  },
-  {
-    "name": "Kaigai",
-    "id": 7,
-    "path": "kaigai",
-    "type": "Competition",
-    "date": { "fr": "Avril 2023", "en": "April 2023" },
-    "role": {
-      "fr": "Branding",
-      "en": "Branding"
-    },
-    "technologies": "Figma, Illustrator",
-    "link": "",
-    "color": "#E38EA6",
-    "color2": "#FBE0ED",
-    "background": "#FCFFEC",
-    "paragraph": "#a9a99e",
-    "placeholder": "#fff7c3",
-    "thumbnail": {
-      "src": "/images/sunnyside/sun0.webp",
-      "alt": "Sunnyside - Thumbnail"
-    }
   }
 ]
