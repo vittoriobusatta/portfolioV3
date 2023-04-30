@@ -5,48 +5,18 @@ import { LanguageContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import gsap from "gsap";
-import ProjectHead from "@/components/ProjectHead";
+import ProjectHead from "@/components/Projects/ProjectHead";
 import axios from "axios";
+import Typography from "@/components/Projects/Typography";
+import AboutProject from "@/components/Projects/AboutProject";
+import ProjectView from "@/components/Projects/ProjectView";
 
 export default function Product({ projects, data }) {
   const { language } = useContext(LanguageContext);
 
-  const thubnails = Object.values(projects.viewproject.images);
-  const imageBanner = Object.values(projects.viewproject.images);
-
   const [logoColor, setColor2] = useState(projects.color2);
-  const [currentImage, setCurrentImage] = useState(thubnails[0]);
-  const [selected, setSelected] = useState(0);
 
   const button = useRef(null);
-  const aboutImagesContainer = useRef(null);
-  const projectView = useRef(null);
-  const projectAbout = useRef(null);
-  const projectMobile = useRef(null);
-  const charsAbout = useRef([]);
-  const charsView = useRef([]);
-  const subtitle1 = useRef([]);
-  const subtitle2 = useRef([]);
-
-  const handleImageSelect = (image, index) => {
-    setCurrentImage(image);
-    setSelected(index);
-  };
-
-  // UseEffect pour changer automatiquement les imageBanner
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (selected === thubnails.length - 1) {
-        setCurrentImage(thubnails[0]);
-        setSelected(0);
-      } else {
-        setCurrentImage(thubnails[selected + 1]);
-        setSelected(selected + 1);
-      }
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [selected]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -62,79 +32,16 @@ export default function Product({ projects, data }) {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    gsap.set(charsAbout.current, { y: 100, opacity: 0 });
-    gsap.set(subtitle1.current.children, { y: "100%", opacity: 0 });
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting === true) {
-            charsAbout.current.forEach((char, index) => {
-              gsap.to(char, {
-                y: 0,
-                opacity: 1,
-                delay: index * 0.03,
-              });
-            });
-            gsap.to(subtitle1.current.children, {
-              y: 0,
-              opacity: 1,
-              ease: "power4.out",
-              delay: 0.2,
-            });
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+  // let [nextproject, setNextproject] = useState(data[0]);
 
-    observer.observe(projectAbout.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    gsap.set(charsView.current, { y: 100, opacity: 0 });
-    gsap.set(subtitle2.current.children, { y: "100%", opacity: 0 });
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            charsView.current.forEach((char, index) => {
-              gsap.to(char, {
-                y: 0,
-                opacity: 1,
-                delay: index * 0.03,
-              });
-            });
-            gsap.to(subtitle2.current.children, {
-              y: 0,
-              opacity: 1,
-              ease: "power4.out",
-              delay: 0.2,
-            });
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(projectView.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  let [nextproject, setNextproject] = useState(data[0]);
-
-  useEffect(() => {
-    const index = data.findIndex((project) => project.id === projects.id);
-    if (index === data.length - 1) {
-      setNextproject(data[0]);
-    } else {
-      setNextproject(data[index + 1]);
-    }
-  }, [projects, data]);
-
+  // useEffect(() => {
+  //   const index = data.findIndex((project) => project.id === projects.id);
+  //   if (index === data.length - 1) {
+  //     setNextproject(data[0]);
+  //   } else {
+  //     setNextproject(data[index + 1]);
+  //   }
+  // }, [projects, data]);
 
   return (
     <>
@@ -155,7 +62,7 @@ export default function Product({ projects, data }) {
       <section
         className="projects"
         style={{
-          backgroundColor: projects.background,
+          backgroundColor: projects.color2,
           "--color": projects.color,
           "--color2": projects.color2,
           "--placeholder": projects.placeholder,
@@ -165,158 +72,14 @@ export default function Product({ projects, data }) {
         <ProjectHead projects={projects} button={button} language={language} />
 
         <div className="projects__content">
-          <div className="projects__about" ref={projectAbout}>
-            <div className="projects__about__head">
-              <div
-                className="projects__subtitle"
-                ref={(el) => {
-                  subtitle1.current = el;
-                }}
-              >
-                <Star />
-                <h4>{projects.aboutproject.subtitle[language]}</h4>
-              </div>
-              <h3 className="projects__title">
-                {/* {Object.entries(projects.aboutproject.title[language]).map(
-                  (item, index) => (
-                    <span
-                      className="projects__title__char"
-                      key={index}
-                      ref={(el) => {
-                        charsAbout.current[index] = el;
-                      }}
-                    >
-                      {item[1]}
-                    </span>
-                  )
-                )} */}
-                {projects.aboutproject.title[language]}
-              </h3>
-              <p className="projects__description">
-                {projects.aboutproject.about[language]}
-              </p>
-            </div>
-            <div
-              className="projects__about__images"
-              ref={aboutImagesContainer}
-              style={{
-                "--placeholder": projects.placeholder,
-              }}
-            >
-              {Object.values(projects.aboutproject.images).map(
-                (item, index) => (
-                  <div className="projects__about__images__inner" key={index}>
-                    <Image
-                      className="image"
-                      src={item.src}
-                      alt={item.alt}
-                      width={385}
-                      height={481}
-                      priority
-                      placeholder="blur"
-                      blurDataURL={projects.placeholder}
-                    />
-                    <div
-                      style={{
-                        "--placeholder": projects.placeholder,
-                      }}
-                      className="placeholder"
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-          <div className="projects__view" ref={projectView}>
-            <div
-              className="projects__subtitle"
-              ref={(el) => {
-                subtitle2.current = el;
-              }}
-            >
-              <Star />
-              <h4>{projects.viewproject.subtitle[language]}</h4>
-            </div>
-            <h3 className="projects__title">
-              {/* {Object.entries(projects.viewproject.title[language]).map(
-                (item, index) => (
-                  <span
-                    className="projects__title__char"
-                    key={index}
-                    ref={(el) => {
-                      charsView.current[index] = el;
-                    }}
-                  >
-                    {item[1]}
-                  </span>
-                )
-              )} */}
-              {projects.viewproject.title[language]}
-            </h3>
-            <p className="projects__description">
-              {projects.viewproject.about[language]}
-            </p>
-            <div className="projects__view__slideshow">
-              <div className="slideshow__container">
-                <div className="slideshow__banner">
-                  {imageBanner.map((item, index) => (
-                    <>
-                      {currentImage ? (
-                        <Image
-                          key={item.id}
-                          className="slideshow__banner__image"
-                          src={item.src}
-                          alt={item.alt}
-                          width={958}
-                          height={511}
-                          priority
-                          style={
-                            currentImage === item
-                              ? {
-                                  opacity: 1,
-                                  clipPath:
-                                    "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                                  transform: `translateX(${selected * -100}%)`,
-                                }
-                              : {
-                                  opacity: 0,
-                                  clipPath:
-                                    "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                                }
-                          }
-                        />
-                      ) : null}
-                    </>
-                  ))}
-                </div>
-                <ul
-                  className="slideshow__list"
-                  style={{ color: projects.color2 }}
-                >
-                  <div
-                    className="slideshow__list__border"
-                    style={{
-                      "--borderTranslateY": `${selected * 100}%`,
-                      "--borderTranslateX": `${selected * 100}%`,
-                      "--thubnailsWidth": `${100 / thubnails.length}%`,
-                      "--thubnailsHeight": `${100 / thubnails.length}%`,
-                    }}
-                  />
-                  {thubnails.map((item, index) => (
-                    <li
-                      key={item.id}
-                      className="slideshow__thubnails"
-                      style={{
-                        backgroundImage: `url(${item.src})`,
-                        backgroundClip: "content-box",
-                      }}
-                      onClick={() => handleImageSelect(item, index)}
-                    ></li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <AboutProject
+            projects={projects}
+            language={language}
+          />
+          <ProjectView
+            projects={projects}
+            language={language}
+          />
           {projects.brandingproject && (
             <div className="projects__branding">
               <div className="projects__typography__subtitle">
@@ -339,7 +102,7 @@ export default function Product({ projects, data }) {
             </div>
           )}
           {projects.typographyproject && (
-            <Typo
+            <Typography
               typo={projects.typographyproject}
               language={language}
               name={projects.path}
@@ -370,84 +133,6 @@ export default function Product({ projects, data }) {
           <h1>{language === "en" ? "Next project" : "Projet suivant"}</h1>
         </Link>
       </section> */}
-    </>
-  );
-}
-
-function Typo({ typo, name, language, typographyproject }) {
-  const typoArray = Object.entries(typo.details).map(([key, value]) => value);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const currentTypo = typoArray[currentIndex];
-
-  const handleCircleClick = (index) => {
-    setCurrentIndex(index);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex) =>
-        currentIndex === typoArray.length - 1 ? 0 : currentIndex + 1
-      );
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
-  let key = Object.keys(currentTypo.src[language]);
-  let value = Object.values(currentTypo.src[language]);
-
-  const projectTypography = useRef(null);
-
-  return (
-    <>
-      <div className="projects__typography" ref={projectTypography}>
-        <div className="projects__typography__subtitle">
-          <Star />
-          <h4>{typographyproject.subtitle[language]}</h4>
-        </div>
-        <div className="projects__bar"></div>
-        <div className="projects__typography__content">
-          <div className="projects__typography__inner">
-            <div className="projects__typography__image">
-              <Image
-                className={`projects__typography__vector 
-            projects__typography__vector__${name}`}
-                src={currentTypo.vector.src}
-                alt={currentTypo.vector.alt}
-                width={570}
-                height={55}
-                priority
-              />
-            </div>
-            {typoArray.length > 1 && (
-              <div className="projects__typography__circles">
-                {typoArray.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className={
-                      index === currentIndex
-                        ? "projects__typography__button projects__typography__button--active"
-                        : "projects__typography__button"
-                    }
-                    onClick={() => handleCircleClick(index)}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="projects__typography__details">
-            <span className="projects__typography__info">
-              <p>{key[0]}</p>
-              <p>{value[0]}</p>
-            </span>
-            <span className="projects__typography__info">
-              <p>{key[1]}</p>
-              <p>{value[1]}</p>
-            </span>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

@@ -1,13 +1,11 @@
 import React from "react";
 
 function ProjectHead({ projects, button, language }) {
-  const headList = Object.entries(projects).filter(
-    ([key]) =>
-      key === "type" ||
-      key === "date" ||
-      key === "role" ||
-      key === "technologies"
+  const allowedKeys = ["type", "date", "role", "technologies"];
+  const headList = Object.entries(projects).filter(([key]) =>
+    allowedKeys.includes(key)
   );
+
   return (
     <div className="projects__head" ref={button}>
       <h1 className="head__title">{projects.name}</h1>
@@ -21,14 +19,16 @@ function ProjectHead({ projects, button, language }) {
           </li>
         ))}
       </ul>
-      <a
-        className="head__link"
-        href={projects.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {language === "en" ? "Visit website" : "Voir le site"}
-      </a>
+      {projects.link && (
+        <a
+          className="head__link"
+          href={projects.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {language === "en" ? "Visit website" : "Voir le site"}
+        </a>
+      )}
     </div>
   );
 }

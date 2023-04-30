@@ -13,8 +13,7 @@
     "link": "https://decortakaz.re/",
     "color": "#4E2705",
     "color2": "#FEF1E7",
-    "paragraph": "#938070",
-    "background": "#ffecdb",
+    "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
       "src": "/images/decortakaz/dkt0.webp",
@@ -124,7 +123,7 @@
         "en": "I represented a house to find the idea of the Kaz, a Creole word that means «house». I then fuse to this several planks of wood with several varieties of chestnuts to recall the domain of the company which is carpentry."
       },
       "images": {
-        "src": "/images/decortakaz/dkt9.webp",
+        "src": "/images/decortakaz/dkt9.svg",
         "alt": "Décor Ta Kaz - Image 9"
       }
     }
@@ -140,7 +139,6 @@
       "en": "Branding & Design"
     },
     "technologies": "Figma",
-    "link": "",
     "color": "#093738",
     "color2": "#ECF8F5",
     "paragraph": "#6e8586",
