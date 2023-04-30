@@ -130,7 +130,7 @@ export default function Product({ projects, data }) {
   );
 }
 
-const HOST = process.env.NEXT_PUBLIC_HOST;
+const HOST = "https://www.vittoriobusatta.fr";
 
 export async function getStaticProps({ params }) {
   const res = await axios.get(`${HOST}/api/database/db`);
