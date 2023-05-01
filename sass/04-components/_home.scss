@@ -115,7 +115,7 @@
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // width: 80%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -131,10 +131,12 @@
   justify-content: center;
   align-items: center;
   column-gap: 8px;
+  width: 100%;
 }
 
 .slides__thumbs {
-  width: 50px;
+  width: 100%;
+  max-width: 50px;
   height: 30px;
   border-radius: 5px;
   display: flex;
