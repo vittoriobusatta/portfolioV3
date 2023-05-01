@@ -36,32 +36,30 @@ const Slideshow = ({ data }) => {
       }}
     >
       <div className="slides" ref={slideWrapperRef}>
-        <div className="slides__content">
-          {data.map((item, index) => (
-            <div
-              className={`slide ${current === index ? "slide--active" : ""}`}
-              key={index}
-              ref={slideContainerRef}
-              style={{
-                "--color": item.color,
-                "--color2": item.color2,
-              }}
-            >
-              <Image
-                className="slideshow__banner__image"
-                src={item.thumbnail.src}
-                alt={item.thumbnail.alt}
-                width={300}
-                height={173}
-                priority
-              />
-              <h1 className="slide__title">{item.name}</h1>
-              <Link href={`/projects/${item.path}`}>Read the case</Link>
-            </div>
-          ))}
-        </div>
+        {data.map((item, index) => (
+          <div
+            className={`slide ${current === index ? "slide--active" : ""}`}
+            key={index}
+            ref={slideContainerRef}
+            style={{
+              "--color": item.color,
+              "--color2": item.color2,
+            }}
+          >
+            <Image
+              className="slideshow__banner__image"
+              src={item.thumbnail.src}
+              alt={item.thumbnail.alt}
+              width={300}
+              height={173}
+              priority
+            />
+            <h1 className="slide__title">{item.name}</h1>
+            <Link href={`/projects/${item.path}`}>Read the case</Link>
+          </div>
+        ))}
 
-        <div className="slideshow__controls">
+        {/* <div className="slideshow__controls">
           <button
             className="slideshow__controls__button"
             onClick={() => navigate(current - 1)}
@@ -116,7 +114,7 @@ const Slideshow = ({ data }) => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
