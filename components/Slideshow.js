@@ -24,6 +24,8 @@ const Slideshow = ({ data }) => {
     setCurrentSlide(slideContainerRef.current);
   }, [current]);
 
+  console.log(data);
+
   return (
     <div className="slideshow">
       <div className="slides" ref={slideWrapperRef}>
@@ -37,6 +39,14 @@ const Slideshow = ({ data }) => {
               "--color2": item.color2,
             }}
           >
+            <Image
+              className="slideshow__banner__image"
+              src={item.thumbnail.src}
+              alt={item.thumbnail.alt}
+              width={300}
+              height={173}
+              priority
+            />
             <h1 className="slide__title">{item.name}</h1>
             <Link href={`/projects/${item.path}`}>Read the case</Link>
           </div>
