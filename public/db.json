@@ -16,7 +16,7 @@
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
-      "src": "/images/decortakaz/dkt0.webp",
+      "src": "/images/decortakaz/dkt0.svg",
       "alt": "Décor Ta Kaz - Thumbnail"
     },
     "aboutproject": {
@@ -145,7 +145,7 @@
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
-      "src": "/images/nocta/nct0.webp",
+      "src": "/images/nocta/nct0.svg",
       "alt": "Nocta - Thumbnail"
     },
     "aboutproject": {
@@ -262,7 +262,7 @@
     "paragraph": "#201713",
     "placeholder": "#ffece3",
     "thumbnail": {
-      "src": "/images/muteza/mtz0.webp",
+      "src": "/images/muteza/mtz0.svg",
       "alt": "Muteza - Thumbnail"
     },
     "aboutproject": {
@@ -394,7 +394,7 @@
     "paragraph": "#666e8e",
     "placeholder": "#dae0fa",
     "thumbnail": {
-      "src": "/images/galleria/gla0.webp",
+      "src": "/images/galleria/gla0.svg",
       "alt": "Galleria - Thumbnail"
     },
     "aboutproject": {
@@ -510,7 +510,7 @@
     "paragraph": "#99a8af",
     "placeholder": "#d9f5ff",
     "thumbnail": {
-      "src": "/images/unkle/unk0.webp",
+      "src": "/images/unkle/unk0.svg",
       "alt": "Unkle - Thumbnail"
     },
     "aboutproject": {
@@ -597,7 +597,7 @@
     "paragraph": "#a9a99e",
     "placeholder": "#fff7c3",
     "thumbnail": {
-      "src": "/images/sunnyside/sun0.webp",
+      "src": "/images/sunnyside/sun0.svg",
       "alt": "Sunnyside - Thumbnail"
     },
     "aboutproject": {
