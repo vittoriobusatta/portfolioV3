@@ -24,8 +24,6 @@ const Slideshow = ({ data }) => {
     setCurrentSlide(slideContainerRef.current);
   }, [current]);
 
-  console.log(data);
-
   return (
     <div className="slideshow">
       <div className="slides" ref={slideWrapperRef}>
