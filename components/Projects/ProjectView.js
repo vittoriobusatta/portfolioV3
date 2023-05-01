@@ -54,8 +54,6 @@ function ProjectView({ language, projects }) {
     return () => observer.disconnect();
   }, []);
 
-  console.log(selected);
-
   return (
     <div className="projects__view" ref={projectView}>
       <div
