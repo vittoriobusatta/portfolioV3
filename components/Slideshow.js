@@ -29,7 +29,12 @@ const Slideshow = ({ data }) => {
   };
 
   return (
-    <div className="sliders">
+    <div
+      className="sliders"
+      style={{
+        backgroundColor: data[current]?.color2,
+      }}
+    >
       <div className="slides" ref={slideWrapperRef}>
         <div className="slides__content">
           {data.map((item, index) => (
@@ -80,7 +85,7 @@ const Slideshow = ({ data }) => {
                 className="slides__thumbs"
                 key={index}
                 style={{
-                  backgroundColor: data[current].color,
+                  backgroundColor: data[current]?.color,
                 }}
                 onClick={() => handleImageSelect(item, index)}
               >
