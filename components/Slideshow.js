@@ -59,7 +59,9 @@ const Slideshow = ({ data }) => {
           </div>
         ))}
 
-        {/* <div className="slideshow__controls">
+       
+      </div>
+      <div className="slideshow__controls">
           <button
             className="slideshow__controls__button"
             onClick={() => navigate(current - 1)}
@@ -114,8 +116,7 @@ const Slideshow = ({ data }) => {
               />
             </svg>
           </button>
-        </div> */}
-      </div>
+        </div>
     </div>
   );
 };
