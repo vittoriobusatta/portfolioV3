@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Slideshow from "@/components/Slideshow";
-import data from "../public/db.json"
 
 // export async function getServerSideProps() {
 //   try {
@@ -19,8 +18,16 @@ import data from "../public/db.json"
 //   }
 // }
 
-
 function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((resdata) => setData(resdata))
+      .catch((err) => setErreur(err.message));
+  }, []);
+
   return (
     <>
       <Head>
