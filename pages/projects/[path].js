@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
-import { LanguageContext } from "utils/translate";
+import { GeneralContext } from "utils/translate";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import ProjectHead from "@/components/Projects/ProjectHead";
@@ -12,7 +12,7 @@ import data from "../../public/db.json";
 import { motion } from "framer-motion";
 
 export default function Product({ projects }) {
-  const { language } = useContext(LanguageContext);
+  const { language } = useContext(GeneralContext);
 
   const [logoColor, setColor2] = useState(projects.color2);
   const button = useRef(null);

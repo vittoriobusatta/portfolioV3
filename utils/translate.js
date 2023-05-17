@@ -1,20 +1,28 @@
 import React, { createContext, useEffect, useState } from "react";
 
-export const LanguageContext = createContext();
+export const GeneralContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("fr");
+  const [slideCurrent, setSlideCurrent] = useState(0);
 
- useEffect(() => {
+  useEffect(() => {
     const localLanguage = window.localStorage.getItem("language");
     if (localLanguage) {
       setLanguage(localLanguage);
     }
+
+    const localSlideCurrent = window.localStorage.getItem("slideCurrent");
+    if (localSlideCurrent) {
+      setSlideCurrent(Number(localSlideCurrent));
+    }
   }, []);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <GeneralContext.Provider
+      value={{ language, setLanguage, slideCurrent, setSlideCurrent }}
+    >
       {children}
-    </LanguageContext.Provider>
+    </GeneralContext.Provider>
   );
 };

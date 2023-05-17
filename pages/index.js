@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Slideshow from "@/components/Slideshow";
+import { GeneralContext } from "utils/translate";
 
 // export async function getServerSideProps() {
 //   try {
@@ -27,6 +28,10 @@ function Home() {
       .then((resdata) => setData(resdata))
       .catch((err) => setErreur(err.message));
   }, []);
+
+  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
+
+  console.log(slideCurrent);
 
   return (
     <>
