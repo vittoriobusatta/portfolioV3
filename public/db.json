@@ -16,7 +16,7 @@
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
-      "src": "/images/decortakaz/dtk0.jpg",
+      "src": "/images/decortakaz/dtk0.webp",
       "alt": "Décor Ta Kaz - Thumbnail"
     },
     "logo": {
@@ -403,7 +403,7 @@
     "paragraph": "#666e8e",
     "placeholder": "#dae0fa",
     "thumbnail": {
-      "src": "/images/galleria/gla0.jpg",
+      "src": "/images/galleria/gla0.webp",
       "alt": "Galleria - Thumbnail"
     },
     "logo": {
