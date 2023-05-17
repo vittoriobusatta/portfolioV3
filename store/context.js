@@ -16,6 +16,15 @@ export const LanguageProvider = ({ children }) => {
     if (localSlideCurrent) {
       setSlideCurrent(Number(localSlideCurrent));
     }
+
+    const browserLanguage =
+      navigator.language || navigator.userLanguage || "fr";
+
+    if (browserLanguage.startsWith("en")) {
+      setLanguage("en");
+    } else {
+      setLanguage("fr");
+    }
   }, []);
 
   return (
