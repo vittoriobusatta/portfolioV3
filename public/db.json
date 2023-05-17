@@ -148,7 +148,7 @@
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
-      "src": "/images/nocta/nct0.jpg",
+      "src": "/images/nocta/nct0.webp",
       "alt": "Nocta - Thumbnail"
     },
     "logo": {
@@ -522,7 +522,7 @@
     "paragraph": "#99a8af",
     "placeholder": "#d9f5ff",
     "thumbnail": {
-      "src": "/images/unkle/unk0.jpg",
+      "src": "/images/unkle/unk0.webp",
       "alt": "Unkle - Thumbnail"
     },
     "logo": {
@@ -612,7 +612,7 @@
     "paragraph": "#a9a99e",
     "placeholder": "#fff7c3",
     "thumbnail": {
-      "src": "/images/sunnyside/sun0.jpg",
+      "src": "/images/sunnyside/sun0.webp",
       "alt": "Sunnyside - Thumbnail"
     },
     "logo": {
