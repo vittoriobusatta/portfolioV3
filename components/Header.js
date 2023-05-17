@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Logo } from "assets/icons";
 import Link from "next/link";
-import { GeneralContext } from "utils/translate";
+import { GeneralContext } from "store/context";
 
 function Header({ logoColor, color, color2 }) {
   const { language } = useContext(GeneralContext);

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
-import { GeneralContext } from "utils/translate";
+import { GeneralContext } from "store/context";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import ProjectHead from "@/components/Projects/ProjectHead";

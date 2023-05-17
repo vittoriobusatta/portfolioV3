@@ -1,6 +1,6 @@
 import React from "react";
 import "../sass/styles.scss";
-import { LanguageProvider } from "utils/translate";
+import { LanguageProvider } from "store/context";
 import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader";
 

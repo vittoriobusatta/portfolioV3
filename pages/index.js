@@ -1,23 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
-import Slideshow from "@/components/Slideshow";
-import { GeneralContext } from "utils/translate";
-
-// export async function getServerSideProps() {
-//   try {
-//     const response = await axios.get('http://localhost:3000/api/database/db');
-//     const data = response.data;
-//     return {
-//       props: { data },
-//     };
-//   } catch (error) {
-//     console.log(error);
-//     return {
-//       props: { data: null },
-//     };
-//   }
-// }
+import Carousel from "@/components/Carousel/Carousel";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -28,10 +12,6 @@ function Home() {
       .then((resdata) => setData(resdata))
       .catch((err) => setErreur(err.message));
   }, []);
-
-  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
-
-  console.log(slideCurrent);
 
   return (
     <>
@@ -51,8 +31,8 @@ function Home() {
 
       <Header logoColor={"#222"} />
 
-      <main className="homepage">
-        <Slideshow data={data} />
+      <main className="landing">
+        <Carousel data={data} />
       </main>
     </>
   );

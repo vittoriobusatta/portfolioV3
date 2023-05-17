@@ -1,0 +1,118 @@
+.landing {
+  background-color: $color_background;
+  &__carousel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.sliders {
+  height: calc(100% - 122px);
+  width: 100%;
+  position: relative;
+  &__items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--color2);
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      & h1.slide__title {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.5s ease-in-out;
+      }
+      & .sliders__items__content__image {
+        transform: scale(1);
+      }
+    }
+    & h1 {
+      font-family: $tuskerGrotesk;
+      font-size: 64px;
+      text-transform: uppercase;
+      color: var(--color);
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    & a {
+      font-family: $rivalSans;
+      font-weight: $bold;
+      font-size: 14px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: var(--color);
+    }
+    &__content {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 44px;
+      &__image {
+        height: auto;
+        width: 90vw;
+        max-width: 850px;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.1);
+        transition: transform 0.8s ease, opacity 0.5s ease;
+        opacity: 0;
+        z-index: 2;
+        position: relative;
+        &--loaded {
+          // transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.carousel__controls {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 22px;
+  padding: 0 26px;
+  max-width: 470px;
+  & button {
+    background: none;
+    cursor: pointer;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    width: 100%;
+    &__thumbs {
+      width: 100%;
+      max-width: 50px;
+      height: 30px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.5;
+      & img {
+        max-height: 15px;
+      }
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+}
