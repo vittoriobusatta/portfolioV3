@@ -28,11 +28,6 @@ const Slideshow = ({ data }) => {
     return () => clearInterval(interval);
   }, [slideCurrent]);
 
-  const handleImageSelect = (thumbs, index) => {
-    setSlideCurrent(index);
-    window.localStorage.setItem("slideCurrent", index);
-  };
-
   return (
     <div
       className="landing__carousel"
@@ -89,8 +84,8 @@ const Slideshow = ({ data }) => {
       <CarouselControls
         data={data}
         slideCurrent={slideCurrent}
+        setSlideCurrent={setSlideCurrent}
         navigate={navigate}
-        handleImageSelect={handleImageSelect}
       />
     </div>
   );

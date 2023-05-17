@@ -78,7 +78,7 @@
   }
 }
 
-.carousel__controls {
+.controls {
   height: auto;
   width: 100%;
   display: flex;
@@ -87,9 +87,12 @@
   column-gap: 22px;
   padding: 0 26px;
   max-width: 470px;
-  & button {
+  &__button {
     background: none;
     cursor: pointer;
+    &--right {
+      transform: rotate(180deg);
+    }
   }
   &__container {
     display: flex;
