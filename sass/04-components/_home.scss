@@ -144,7 +144,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  opacity: 0.5;
   & img {
     max-height: 15px;
+  }
+  &--active {
+    opacity: 1;
   }
 }

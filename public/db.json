@@ -522,7 +522,7 @@
     "paragraph": "#99a8af",
     "placeholder": "#d9f5ff",
     "thumbnail": {
-      "src": "/images/unkle/unk0.jpg",
+      "src": "/images/unkle/unk0.svg",
       "alt": "Unkle - Thumbnail"
     },
     "logo": {
@@ -543,11 +543,11 @@
       },
       "images": {
         "img1": {
-          "src": "/images/unkle/unk1.jpg",
+          "src": "/images/unkle/unk1.svg",
           "alt": "Unkle - Image 1"
         },
         "img2": {
-          "src": "/images/unkle/unk2.webp",
+          "src": "/images/unkle/unk2.svg",
           "alt": "Unkle - Image 2"
         }
       }

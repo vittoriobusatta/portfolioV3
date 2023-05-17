@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { LanguageContext } from "utils/translate";
 
 const Slideshow = ({ data }) => {
   const slideContainerRef = useRef(null);
@@ -10,6 +11,7 @@ const Slideshow = ({ data }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [currentSlide, setCurrentSlide] = useState([]);
   const [slideTotal, setSlideTotal] = useState(data.length);
+  const { language } = useContext(LanguageContext);
 
   const navigate = (index) => {
     if (index < 0) {
@@ -50,12 +52,20 @@ const Slideshow = ({ data }) => {
               className="slideshow__banner__image"
               src={item.thumbnail.src}
               alt={item.thumbnail.alt}
-              width={300}
+              width={1920}
               height={173}
               priority
             />
             <h1 className="slide__title">{item.name}</h1>
-            <Link href={`/projects/${item.path}`}>Read the case</Link>
+            <Link href={`/projects/${item.path}`}>
+              {
+                language === "fr" ? (
+                  "Lire le projet"
+                ) : (
+                  "Read the case"
+                )
+              }
+            </Link>
           </div>
         ))}
        
@@ -81,7 +91,7 @@ const Slideshow = ({ data }) => {
           <div className="slideshow__controls__container">
             {data.map((item, index) => (
               <div
-                className="slides__thumbs"
+                className={`slides__thumbs ${current === index ? "slides__thumbs--active" : ""}`}
                 key={index}
                 style={{
                   backgroundColor: data[current]?.color,
