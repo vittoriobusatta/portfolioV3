@@ -16,8 +16,22 @@
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
-      "src": "/images/decortakaz/dtk0.webp",
-      "alt": "Décor Ta Kaz - Thumbnail"
+      "img1": {
+        "src": "/images/decortakaz/dtkthumb1.jpg",
+        "alt": "Décor Ta Kaz - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/decortakaz/dtkthumb2.jpg",
+        "alt": "Décor Ta Kaz - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/decortakaz/dtk0.webp",
+        "alt": "Décor Ta Kaz - Thumbnail"
+      },
+      "img4": {
+        "src": "/images/decortakaz/dtkthumb3.svg",
+        "alt": "Décor Ta Kaz - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/decortakaz/logo.svg"

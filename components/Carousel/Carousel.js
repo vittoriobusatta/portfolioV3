@@ -21,12 +21,16 @@ const Slideshow = ({ data }) => {
     setSlideCurrent(index);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      navigate(slideCurrent + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slideCurrent]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     navigate(slideCurrent + 1);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [slideCurrent]);
+
+  {
+    data.map((item, index) => console.log(item.thumbnail));
+  }
 
   return (
     <div
@@ -48,34 +52,75 @@ const Slideshow = ({ data }) => {
               "--color2": item.color2,
             }}
           >
-            <div
-              className="sliders__items__content"
-              style={{
-                "--placeholder": item.color,
-              }}
-            >
-              <Image
-                className={`sliders__items__content__image ${
-                  !loaded ? "sliders__items__content__image--loaded" : ""
-                } `}
-                onLoadingComplete={() => setLoaded(false)}
-                src={item.thumbnail.src}
-                alt={item.thumbnail.alt}
-                width={1920}
-                height={173}
-                priority
-              />
-              <div className="placeholder" />
+            <div className="div4 hidden">
+              <div className="hidden">
+                <Image
+                  className={`sliders__items__content__image ${
+                    !loaded ? "sliders__items__content__image--loaded" : ""
+                  } `}
+                  onLoadingComplete={() => setLoaded(false)}
+                  src={item.thumbnail?.img1.src}
+                  alt={item.thumbnail?.img1.alt}
+                  width={1920}
+                  height={173}
+                  priority
+                />
+              </div>
+            </div>
+            <div className="div3">
+              <div className="hidden">
+                <Image
+                  className={`sliders__items__content__image ${
+                    !loaded ? "sliders__items__content__image--loaded" : ""
+                  } `}
+                  onLoadingComplete={() => setLoaded(false)}
+                  src={item.thumbnail?.img2.src}
+                  alt={item.thumbnail?.img2.alt}
+                  width={1920}
+                  height={173}
+                  priority
+                />
+              </div>
+            </div>
+            <div className="div2">
+              <div className="hidden">
+                <Image
+                  className={`sliders__items__content__image ${
+                    !loaded ? "sliders__items__content__image--loaded" : ""
+                  } `}
+                  onLoadingComplete={() => setLoaded(false)}
+                  src={item.thumbnail?.img3.src}
+                  alt={item.thumbnail?.img3.alt}
+                  width={1920}
+                  height={173}
+                  priority
+                />
+              </div>
+            </div>
+            <div className="div1">
+              <div className="hidden">
+                <Image
+                  className={`sliders__items__content__image ${
+                    !loaded ? "sliders__items__content__image--loaded" : ""
+                  } `}
+                  onLoadingComplete={() => setLoaded(false)}
+                  src={item.thumbnail?.img4.src}
+                  alt={item.thumbnail?.img4.alt}
+                  width={1920}
+                  height={173}
+                  priority
+                />
+              </div>
             </div>
             <div
-              className="hidden"
+              className="hidden div5"
               style={{
-                marginBottom: "76px",
+                marginBottom: "44px",
               }}
             >
               <h1 className="slide__title">{item.name}</h1>
             </div>
-            <Link href={`/projects/${item.path}`}>
+            <Link className="div6" href={`/projects/${item.path}`}>
               {language === "fr" ? "Lire le projet" : "Read the case"}
             </Link>
           </li>
