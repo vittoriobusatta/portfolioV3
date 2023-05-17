@@ -99,7 +99,7 @@
     font-size: 64px;
     text-transform: uppercase;
     color: var(--color);
-    margin-bottom: 88px;
+    margin-bottom: 76px;
     // letter-spacing: 0.03em;
   }
   & a {
@@ -120,6 +120,7 @@
   align-items: baseline;
   column-gap: 22px;
   padding: 0 26px;
+  max-width: 470px;
   & button {
     background: none;
     cursor: pointer;

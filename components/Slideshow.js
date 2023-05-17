@@ -58,7 +58,6 @@ const Slideshow = ({ data }) => {
             <Link href={`/projects/${item.path}`}>Read the case</Link>
           </div>
         ))}
-
        
       </div>
       <div className="slideshow__controls">
