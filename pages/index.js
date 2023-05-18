@@ -1,10 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Carousel from "@/components/Carousel/Carousel";
+import { GeneralContext } from "store/context";
 
 function Home() {
   const [data, setData] = useState([]);
+  const { slideCurrent } = useContext(GeneralContext);
 
   useEffect(() => {
     fetch("/db.json")
@@ -12,6 +14,8 @@ function Home() {
       .then((resdata) => setData(resdata))
       .catch((err) => setErreur(err.message));
   }, []);
+
+  const themeColor = data[slideCurrent]?.color || "";
 
   return (
     <>
@@ -26,10 +30,10 @@ function Home() {
         />
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:url" content="https://www.example.com" />
-        <meta name="theme-color" content="#fffde8" />
+        <meta name="theme-color" content={themeColor} />
       </Head>
 
-      <Header logoColor={"#222"} />
+      <Header logoColor={themeColor} />
 
       <main className="landing">
         <Carousel data={data} />
