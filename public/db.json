@@ -835,7 +835,7 @@
     "placeholder": "#fff7c3",
     "thumbnail": {
       "img4": {
-        "src": "/images/kaigai/kgathumb4.jpg",
+        "src": "/images/kaigai/kgathumb4.webp",
         "alt": "Kaigai - Thumbnail"
       },
       "img3": {
@@ -843,7 +843,7 @@
         "alt": "Kaigai - Thumbnail"
       },
       "img2": {
-        "src": "/images/kaigai/kgathumb2.jpg",
+        "src": "/images/kaigai/kgathumb2.webp",
         "alt": "Kaigai - Thumbnail"
       },
       "img1": {
