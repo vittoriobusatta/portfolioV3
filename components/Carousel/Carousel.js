@@ -50,11 +50,12 @@ const Slideshow = ({ data }) => {
             style={{
               "--color": item.color,
               "--color2": item.color2,
+              "--placeholder": item.color,
             }}
           >
             {[1, 2, 3, 4].map((index) => (
               <div className={`sliders__items__thumbs__${index}`} key={index}>
-                <div className="hidden">
+                <div className="hidden relative">
                   <Image
                     className={`sliders__items__image ${
                       !loaded ? "sliders__items__image--loaded" : ""
@@ -70,6 +71,7 @@ const Slideshow = ({ data }) => {
                     height={173}
                     priority
                   />
+                  <div className="placeholder"></div>
                 </div>
               </div>
             ))}
