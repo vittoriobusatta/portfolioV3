@@ -48,7 +48,7 @@ const Slideshow = ({ data }) => {
               "--color2": item.color2,
             }}
           >
-            <div className="div4">
+            {/* <div className="div4">
               <div className="hidden">
                 <Image
                   className={`sliders__items__content__image ${
@@ -107,16 +107,33 @@ const Slideshow = ({ data }) => {
                   priority
                 />
               </div>
-            </div>
+            </div> */}
+            {[1, 2, 3, 4].map((index) => (
+              <div className={`sliders__items__thumbs__${index}`} key={index}>
+                <div className="hidden">
+                  <Image
+                    className={`sliders__items__image ${
+                      !loaded ? "sliders__items__image--loaded" : ""
+                    } `}
+                    onLoadingComplete={() => setLoaded(false)}
+                    src={item.thumbnail?.[`img${index}`].src}
+                    alt={item.thumbnail?.[`img${index}`].alt}
+                    width={1920}
+                    height={173}
+                    priority
+                  />
+                </div>
+              </div>
+            ))}
             <div
-              className="hidden div5"
+              className="hidden sliders__items__thumbs__5"
               style={{
                 marginBottom: "44px",
               }}
             >
               <h1 className="slide__title">{item.name}</h1>
             </div>
-            <div className="div6">
+            <div className="sliders__items__thumbs__6">
               <Link href={`/projects/${item.path}`}>
                 {language === "fr" ? "Lire le projet" : "Read the case"}
               </Link>

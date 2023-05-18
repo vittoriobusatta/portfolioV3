@@ -17,7 +17,7 @@ function Header({ logoColor, color, color2 }) {
 
   useEffect(() => {
     function onScroll() {
-      let currentPosition = window.pageYOffset;
+      let currentPosition = window.scrollY;
       if (currentPosition > scrollTop) {
         header.current.style.top = "-100px";
       } else {
