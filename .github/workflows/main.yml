@@ -27,10 +27,10 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.vittoriobusatta.fr
+          server: 185.135.132.49
           username: vitto1874827
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .next/
           server-dir: /
-          debug: true
+          protocol: ftp
 
