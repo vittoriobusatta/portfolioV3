@@ -1,20 +1,20 @@
 import Head from "next/head";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
-import { LanguageContext } from "utils/translate";
+import { GeneralContext } from "store/context";
 import Image from "next/image";
 import { Star } from "assets/icons";
 import ProjectHead from "@/components/Projects/ProjectHead";
-import axios from "axios";
 import Typography from "@/components/Projects/Typography";
 import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
+import data from "../../public/db.json";
+import { motion } from "framer-motion";
 
-export default function Product({ projects, data }) {
-  const { language } = useContext(LanguageContext);
+export default function Product({ projects }) {
+  const { language } = useContext(GeneralContext);
 
   const [logoColor, setColor2] = useState(projects.color2);
-
   const button = useRef(null);
 
   useEffect(() => {
@@ -58,7 +58,14 @@ export default function Product({ projects, data }) {
         color2={projects.color2}
       />
 
-      <section
+      <motion.section
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{ duration: 0.15, ease: "easeOut" }}
         className="projects"
         style={{
           backgroundColor: projects.color2,
@@ -71,8 +78,12 @@ export default function Product({ projects, data }) {
         <ProjectHead projects={projects} button={button} language={language} />
 
         <div className="projects__content">
-          <AboutProject projects={projects} language={language} />
-          <ProjectView projects={projects} language={language} />
+          {projects.aboutproject && (
+            <AboutProject projects={projects} language={language} />
+          )}
+          {projects.viewproject && (
+            <ProjectView projects={projects} language={language} />
+          )}
           {projects.brandingproject && (
             <div className="projects__branding">
               <div className="projects__typography__subtitle">
@@ -114,7 +125,7 @@ export default function Product({ projects, data }) {
             />
           </div>
         )}
-      </section>
+      </motion.section>
       {/* <section
         className="projects__next"
         style={{
@@ -130,18 +141,17 @@ export default function Product({ projects, data }) {
   );
 }
 
-
 export async function getStaticProps({ params }) {
-  const res = await axios.get("http://localhost:3000/api/database/db");
-  const data = await res.data;
+  // const res = await axios.get("http://localhost:3000/api/database/db");
+  // const data = await res.data;
   const { path } = params;
   let projects = data.find((item) => item.path === path);
-  return { props: { data, projects } };
+  return { props: { projects } };
 }
 
 export async function getStaticPaths() {
-  const res = await axios.get("http://localhost:3000/api/database/db");
-  const data = await res.data;
+  // const res = await axios.get("http://localhost:3000/api/database/db");
+  // const data = await res.data;
   const paths = data.map((item) => ({
     params: { path: item.path.toString() },
   }));

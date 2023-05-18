@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Logo } from "assets/icons";
 import Link from "next/link";
-import { LanguageContext } from "utils/translate";
+import { GeneralContext } from "store/context";
 
 function Header({ logoColor, color, color2 }) {
-  const { language } = useContext(LanguageContext);
-  const { setLanguage } = useContext(LanguageContext);
+  const { language } = useContext(GeneralContext);
+  const { setLanguage } = useContext(GeneralContext);
 
   const handleLanguageChange = (e) => {
     setLanguage(e.target.value);
@@ -17,7 +17,7 @@ function Header({ logoColor, color, color2 }) {
 
   useEffect(() => {
     function onScroll() {
-      let currentPosition = window.pageYOffset;
+      let currentPosition = window.scrollY;
       if (currentPosition > scrollTop) {
         header.current.style.top = "-100px";
       } else {

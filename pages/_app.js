@@ -1,6 +1,6 @@
 import React from "react";
 import "../sass/styles.scss";
-import { LanguageProvider } from "utils/translate";
+import { LanguageProvider } from "store/context";
 import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader";
 
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       touchMultiplier: 2,
       infinite: false,
     });
-    
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
