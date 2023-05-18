@@ -24,7 +24,7 @@ function Home() {
         <meta name="theme-color" content={themeColor} />
       </Head>
 
-      <Header logoColor={themeColor} />
+      <Header logoColor={themeColor} color2={themeColor} />
 
       <main className="landing">
         <Carousel data={data} />

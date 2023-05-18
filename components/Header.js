@@ -30,6 +30,8 @@ function Header({ logoColor, color, color2 }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
+  console.log(color);
+
   return (
     <header ref={header}>
       <Link href="/">
