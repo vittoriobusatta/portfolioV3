@@ -394,19 +394,17 @@
     }
     &__image {
       height: auto;
-      width: 90vw;
-      max-width: 500px;
+      min-width: 100%;
       object-fit: cover;
       object-position: center;
       transition: clip-path 0.5s ease-in-out;
-      margin-bottom: 44px;
-      max-height: 450px;
-      opacity: 0;
-      &--loaded {
-        transform: scale(1);
-        opacity: 1;
+      @media screen and (min-width: 576px) {
+        min-width: calc(100vw - 10% - 148px);
       }
-      
+      @media screen and (min-width: 768px) {
+        max-width: 300px;
+        min-width: calc(80vw - 10% - 148px);
+      }
     }
   }
   &__list {
@@ -460,4 +458,3 @@
     max-width: 70px;
   }
 }
-

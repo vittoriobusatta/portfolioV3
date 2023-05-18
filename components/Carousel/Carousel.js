@@ -28,10 +28,6 @@ const Slideshow = ({ data }) => {
   //   return () => clearInterval(interval);
   // }, [slideCurrent]);
 
-  {
-    data.map((item, index) => console.log(item.thumbnail));
-  }
-
   return (
     <div
       className="landing__carousel"
@@ -52,7 +48,7 @@ const Slideshow = ({ data }) => {
               "--color2": item.color2,
             }}
           >
-            <div className="div4 hidden">
+            <div className="div4">
               <div className="hidden">
                 <Image
                   className={`sliders__items__content__image ${
@@ -120,9 +116,11 @@ const Slideshow = ({ data }) => {
             >
               <h1 className="slide__title">{item.name}</h1>
             </div>
-            <Link className="div6" href={`/projects/${item.path}`}>
-              {language === "fr" ? "Lire le projet" : "Read the case"}
-            </Link>
+            <div className="div6">
+              <Link href={`/projects/${item.path}`}>
+                {language === "fr" ? "Lire le projet" : "Read the case"}
+              </Link>
+            </div>
           </li>
         ))}
       </ul>

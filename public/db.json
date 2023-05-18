@@ -17,11 +17,11 @@
     "placeholder": "#ffe7d2",
     "thumbnail": {
       "img1": {
-        "src": "/images/decortakaz/dtkthumb1.jpg",
+        "src": "/images/decortakaz/dtkthumb1.webp",
         "alt": "Décor Ta Kaz - Thumbnail"
       },
       "img2": {
-        "src": "/images/decortakaz/dtkthumb2.jpg",
+        "src": "/images/decortakaz/dtkthumb2.webp",
         "alt": "Décor Ta Kaz - Thumbnail"
       },
       "img3": {
@@ -29,7 +29,7 @@
         "alt": "Décor Ta Kaz - Thumbnail"
       },
       "img4": {
-        "src": "/images/decortakaz/dtkthumb3.svg",
+        "src": "/images/decortakaz/dtk5.svg",
         "alt": "Décor Ta Kaz - Thumbnail"
       }
     },
@@ -96,7 +96,7 @@
         },
         "img7": {
           "id": 5,
-          "src": "/images/decortakaz/dtk7.jpg",
+          "src": "/images/decortakaz/dtk7.webp",
           "alt": "Décor Ta Kaz - Image 7"
         },
         "img8": {
@@ -162,8 +162,22 @@
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
-      "src": "/images/nocta/nct0.webp",
-      "alt": "Nocta - Thumbnail"
+      "img1": {
+        "src": "/images/nocta/nctthumb1.webp",
+        "alt": "Nocta - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/nocta/nctthumb2.webp",
+        "alt": "Nocta - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/nocta/nctthumb3.webp",
+        "alt": "Nocta - Thumbnail"
+      },
+      "img4": {
+        "src": "/images/nocta/nctthumb4.webp",
+        "alt": "Nocta - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/nocta/logo.svg"
@@ -282,8 +296,22 @@
     "paragraph": "#201713",
     "placeholder": "#ffece3",
     "thumbnail": {
-      "src": "/images/muteza/mtz0.webp",
-      "alt": "Muteza - Thumbnail"
+      "img1": {
+        "src": "/images/muteza/mtz3.webp",
+        "alt": "Muteza - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/muteza/mtz0.webp",
+        "alt": "Muteza - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/muteza/mtzthumb3.webp",
+        "alt": "Muteza - Thumbnail"
+      },
+      "img4": {
+        "src": "/images/muteza/mtz4.webp",
+        "alt": "Muteza - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/muteza/logo.svg"
@@ -417,8 +445,22 @@
     "paragraph": "#666e8e",
     "placeholder": "#dae0fa",
     "thumbnail": {
-      "src": "/images/galleria/gla0.webp",
-      "alt": "Galleria - Thumbnail"
+      "img4": {
+        "src": "/images/galleria/gla3.webp",
+        "alt": "Galleria - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/galleria/glathumb2.webp",
+        "alt": "Galleria - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/galleria/gla0.webp",
+        "alt": "Galleria - Thumbnail"
+      },
+      "img1": {
+        "src": "/images/galleria/gla5.webp",
+        "alt": "Galleria - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/galleria/logo.svg"
@@ -536,8 +578,22 @@
     "paragraph": "#99a8af",
     "placeholder": "#d9f5ff",
     "thumbnail": {
-      "src": "/images/unkle/unk0.webp",
-      "alt": "Unkle - Thumbnail"
+      "img1": {
+        "src": "/images/unkle/unk6.webp",
+        "alt": "Unkle - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/unkle/unk0.webp",
+        "alt": "Unkle - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/unkle/unkthumb3.webp",
+        "alt": "Unkle - Thumbnail"
+      },
+      "img4": {
+        "src": "/images/unkle/unk4.webp",
+        "alt": "Unkle - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/unkle/logo.svg"
@@ -626,8 +682,22 @@
     "paragraph": "#a9a99e",
     "placeholder": "#fff7c3",
     "thumbnail": {
-      "src": "/images/sunnyside/sun0.webp",
-      "alt": "Sunnyside - Thumbnail"
+      "img4": {
+        "src": "/images/sunnyside/sun6.webp",
+        "alt": "Sunnyside - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/sunnyside/sunthumb2.webp",
+        "alt": "Sunnyside - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/sunnyside/sun0.webp",
+        "alt": "Sunnyside - Thumbnail"
+      },
+      "img1": {
+        "src": "/images/sunnyside/sun3.webp",
+        "alt": "Sunnyside - Thumbnail"
+      }
     },
     "logo": {
       "src": "/images/sunnyside/logo.svg"
