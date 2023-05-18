@@ -28,6 +28,10 @@ const Slideshow = ({ data }) => {
     return () => clearInterval(interval);
   }, [slideCurrent]);
 
+  const itemFalse = data.find((item) => item.readytoview === false);
+
+  const verifyItemUnavailable = slideCurrent === itemFalse?.id;
+
   return (
     <div
       className="landing__carousel"
@@ -46,15 +50,20 @@ const Slideshow = ({ data }) => {
             style={{
               "--color": item.color,
               "--color2": item.color2,
+              "--placeholder": item.color,
             }}
           >
             {[1, 2, 3, 4].map((index) => (
               <div className={`sliders__items__thumbs__${index}`} key={index}>
-                <div className="hidden">
+                <div className="hidden relative">
                   <Image
                     className={`sliders__items__image ${
                       !loaded ? "sliders__items__image--loaded" : ""
-                    } `}
+                    } ${
+                      verifyItemUnavailable
+                        ? "sliders__items__image--unavailable"
+                        : ""
+                    }`}
                     onLoadingComplete={() => setLoaded(false)}
                     src={item.thumbnail?.[`img${index}`].src}
                     alt={item.thumbnail?.[`img${index}`].alt}
@@ -62,6 +71,7 @@ const Slideshow = ({ data }) => {
                     height={173}
                     priority
                   />
+                  <div className="placeholder"></div>
                 </div>
               </div>
             ))}
@@ -73,9 +83,23 @@ const Slideshow = ({ data }) => {
             >
               <h1 className="slide__title">{item.name}</h1>
             </div>
-            <div className="sliders__items__thumbs__6">
+            <div
+              className={`sliders__items__thumbs__6
+            ${
+              verifyItemUnavailable
+                ? "sliders__items__thumbs__6--unavailable"
+                : ""
+            }
+            `}
+            >
               <Link href={`/projects/${item.path}`}>
-                {language === "fr" ? "Lire le projet" : "Read the case"}
+                {!verifyItemUnavailable
+                  ? language === "fr"
+                    ? "Lire le projet"
+                    : "Read the case"
+                  : language === "fr"
+                  ? "Bientôt disponible"
+                  : "Soon available"}
               </Link>
             </div>
           </li>
