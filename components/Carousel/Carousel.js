@@ -21,12 +21,16 @@ const Slideshow = ({ data }) => {
     setSlideCurrent(index);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      navigate(slideCurrent + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slideCurrent]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     navigate(slideCurrent + 1);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [slideCurrent]);
+
+  const itemFalse = data.find((item) => item.readytoview === false);
+
+  const verifyItemUnavailable = slideCurrent === itemFalse?.id;
 
   return (
     <div
@@ -54,7 +58,11 @@ const Slideshow = ({ data }) => {
                   <Image
                     className={`sliders__items__image ${
                       !loaded ? "sliders__items__image--loaded" : ""
-                    } `}
+                    } ${
+                      verifyItemUnavailable
+                        ? "sliders__items__image--unavailable"
+                        : ""
+                    }`}
                     onLoadingComplete={() => setLoaded(false)}
                     src={item.thumbnail?.[`img${index}`].src}
                     alt={item.thumbnail?.[`img${index}`].alt}
@@ -73,9 +81,23 @@ const Slideshow = ({ data }) => {
             >
               <h1 className="slide__title">{item.name}</h1>
             </div>
-            <div className="sliders__items__thumbs__6">
+            <div
+              className={`sliders__items__thumbs__6
+            ${
+              verifyItemUnavailable
+                ? "sliders__items__thumbs__6--unavailable"
+                : ""
+            }
+            `}
+            >
               <Link href={`/projects/${item.path}`}>
-                {language === "fr" ? "Lire le projet" : "Read the case"}
+                {!verifyItemUnavailable
+                  ? language === "fr"
+                    ? "Lire le projet"
+                    : "Read the case"
+                  : language === "fr"
+                  ? "Bientôt disponible"
+                  : "Soon available"}
               </Link>
             </div>
           </li>

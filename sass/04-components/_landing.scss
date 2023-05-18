@@ -62,6 +62,7 @@
       color: var(--color);
       opacity: 0;
       transform: translateY(100%);
+      text-align: center;
       @media screen and (min-width: 992px) {
         font-size: 4.5vw;
       }
@@ -82,9 +83,6 @@
     &__image {
       height: auto;
       width: 85vw;
-      @media screen and (min-width: 992px) {
-        width: 30vw;
-      }
       max-width: 520px;
       object-fit: contain;
       object-position: center;
@@ -93,8 +91,14 @@
       opacity: 0;
       z-index: 2;
       position: relative;
+      @media screen and (min-width: 992px) {
+        width: 30vw;
+      }
       &--loaded {
         opacity: 1;
+      }
+      &--unavailable {
+        filter: blur(6px);
       }
     }
     &__thumbs {
@@ -149,6 +153,9 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        &--unavailable {
+          pointer-events: none;
+        }
         @media screen and (min-width: 992px) {
           grid-area: 6 / 5 / 7 / 8;
         }
@@ -159,13 +166,27 @@
 
 .controls {
   height: auto;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   column-gap: 22px;
+  max-width: 500px;
   padding: 0 26px;
-  max-width: 470px;
+  @media screen and (min-width: 576px) {
+    padding: 0 32px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 42px;
+    max-width: 700px;
+    width: 100%;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 0 52px;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 0 62px;
+  }
   &__button {
     background: none;
     cursor: pointer;
@@ -174,23 +195,31 @@
     }
   }
   &__container {
+    $gap: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 8px;
+    column-gap: $gap;
     width: 100%;
+    overflow: hidden;
     &__thumbs {
-      width: 100%;
-      max-width: 50px;
-      height: 30px;
+      height: auto;
+      min-width: calc(100% / 3 - ($gap));
       border-radius: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       opacity: 0.5;
+      padding: 4px 0;
       & img {
         max-height: 15px;
+      }
+      @media screen and (min-width: 768px) {
+        width: 100%;
+        max-width: 80px;
+        height: 30px;
+        min-width: initial;
       }
       &--active {
         opacity: 1;

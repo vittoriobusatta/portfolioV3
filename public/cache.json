@@ -1,6 +1,6 @@
 {
     "name": "AB Distribution",
-    "id": 5,
+    "id": 8,
     "path": "ab-distribution",
     "type": "Mission",
     "date": { "fr": "Janvier 2023", "en": "January 2023" },
@@ -14,6 +14,27 @@
     "color2": "#FFF0D1",
     "background": "#F8F0EC",
     "placeholder": "#ffdad2",
+    "thumbnail": {
+      "img4": {
+        "src": "/images/abdistribution/abd7.jpg",
+        "alt": "AB Distribution - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/abdistribution/abd7.jpg",
+        "alt": "AB Distribution - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/abdistribution/abd7.jpg",
+        "alt": "AB Distribution - Thumbnail"
+      },
+      "img1": {
+        "src": "/images/abdistribution/abd7.jpg",
+        "alt": "AB Distribution - Thumbnail"
+      }
+    },
+    "logo": {
+      "src": "/images/abdistribution/logo.svg"
+    },
     "aboutproject": {
       "title": {
         "fr": "Une grand distribution",

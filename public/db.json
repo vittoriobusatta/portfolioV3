@@ -1,7 +1,8 @@
 [
   {
     "name": "Décor Ta Kaz",
-    "id": 1,
+    "id": 0,
+    "readytoview": true,
     "path": "decortakaz",
     "type": "Mission",
     "date": { "fr": "Décembre 2022", "en": "December 2022" },
@@ -147,7 +148,8 @@
   },
   {
     "name": "Nocta",
-    "id": 2,
+    "id": 1,
+    "readytoview": true,
     "path": "nocta",
     "type": "Expérimental",
     "date": { "fr": "Février 2023", "en": "February 2023" },
@@ -280,7 +282,8 @@
   },
   {
     "name": "Muteza",
-    "id": 3,
+    "id": 2,
+    "readytoview": true,
     "path": "muteza",
     "type": "Expérimental",
     "date": { "fr": "Novembre 2022", "en": "November 2022" },
@@ -429,7 +432,8 @@
   },
   {
     "name": "Galleria",
-    "id": 4,
+    "id": 3,
+    "readytoview": true,
     "path": "galleria",
     "type": "Expérimental",
     "date": { "fr": "Août 2022", "en": "August 2022" },
@@ -562,7 +566,8 @@
   },
   {
     "name": "Unkle",
-    "id": 5,
+    "id": 4,
+    "readytoview": true,
     "path": "unkle",
     "type": "Mission",
     "date": { "fr": "Juin 2022", "en": "June 2022" },
@@ -666,7 +671,8 @@
   },
   {
     "name": "Sunnyside",
-    "id": 6,
+    "id": 5,
+    "readytoview": true,
     "path": "sunnyside",
     "type": "Expérimental",
     "date": { "fr": "Juillet 2022", "en": "July 2022" },
@@ -807,6 +813,46 @@
           }
         }
       }
+    }
+  },
+  {
+    "name": "Kaigai",
+    "id": 6,
+    "readytoview": false,
+    "path": "kaigai",
+    "type": "Competition",
+    "date": { "fr": "Avril 2023", "en": "April 2023" },
+    "role": {
+      "fr": "Branding",
+      "en": "Branding"
+    },
+    "technologies": "Figma, Illustrator",
+    "link": "",
+    "color": "#E38EA6",
+    "color2": "#FBE0ED",
+    "background": "#FCFFEC",
+    "paragraph": "#a9a99e",
+    "placeholder": "#fff7c3",
+    "thumbnail": {
+      "img4": {
+        "src": "/images/kaigai/kgathumb4.jpg",
+        "alt": "Kaigai - Thumbnail"
+      },
+      "img3": {
+        "src": "/images/kaigai/kgathumb3.svg",
+        "alt": "Kaigai - Thumbnail"
+      },
+      "img2": {
+        "src": "/images/kaigai/kgathumb2.jpg",
+        "alt": "Kaigai - Thumbnail"
+      },
+      "img1": {
+        "src": "/images/kaigai/kgathumb1.svg",
+        "alt": "Kaigai - Thumbnail"
+      }
+    },
+    "logo": {
+      "src": "/images/kaigai/logo.svg"
     }
   }
 ]
