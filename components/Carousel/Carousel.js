@@ -48,66 +48,6 @@ const Slideshow = ({ data }) => {
               "--color2": item.color2,
             }}
           >
-            {/* <div className="div4">
-              <div className="hidden">
-                <Image
-                  className={`sliders__items__content__image ${
-                    !loaded ? "sliders__items__content__image--loaded" : ""
-                  } `}
-                  onLoadingComplete={() => setLoaded(false)}
-                  src={item.thumbnail?.img1.src}
-                  alt={item.thumbnail?.img1.alt}
-                  width={1920}
-                  height={173}
-                  priority
-                />
-              </div>
-            </div>
-            <div className="div3">
-              <div className="hidden">
-                <Image
-                  className={`sliders__items__content__image ${
-                    !loaded ? "sliders__items__content__image--loaded" : ""
-                  } `}
-                  onLoadingComplete={() => setLoaded(false)}
-                  src={item.thumbnail?.img2.src}
-                  alt={item.thumbnail?.img2.alt}
-                  width={1920}
-                  height={173}
-                  priority
-                />
-              </div>
-            </div>
-            <div className="div2">
-              <div className="hidden">
-                <Image
-                  className={`sliders__items__content__image ${
-                    !loaded ? "sliders__items__content__image--loaded" : ""
-                  } `}
-                  onLoadingComplete={() => setLoaded(false)}
-                  src={item.thumbnail?.img3.src}
-                  alt={item.thumbnail?.img3.alt}
-                  width={1920}
-                  height={173}
-                  priority
-                />
-              </div>
-            </div>
-            <div className="div1">
-              <div className="hidden">
-                <Image
-                  className={`sliders__items__content__image ${
-                    !loaded ? "sliders__items__content__image--loaded" : ""
-                  } `}
-                  onLoadingComplete={() => setLoaded(false)}
-                  src={item.thumbnail?.img4.src}
-                  alt={item.thumbnail?.img4.alt}
-                  width={1920}
-                  height={173}
-                  priority
-                />
-              </div>
-            </div> */}
             {[1, 2, 3, 4].map((index) => (
               <div className={`sliders__items__thumbs__${index}`} key={index}>
                 <div className="hidden">
