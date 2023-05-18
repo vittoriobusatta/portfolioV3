@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       touchMultiplier: 2,
       infinite: false,
     });
-    
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <LanguageProvider>
-        {/* <Loader /> */}
+        <Loader />
         <Component {...pageProps} />
       </LanguageProvider>
     </>
