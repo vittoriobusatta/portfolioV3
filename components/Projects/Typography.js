@@ -5,8 +5,12 @@ import React, { useEffect, useRef, useState } from "react";
 function Typography({ typo, name, language, typographyproject }) {
   const typoArray = Object.entries(typo.details).map(([key, value]) => value);
 
+  const projectTypography = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTypo = typoArray[currentIndex];
+
+  let key = Object.keys(currentTypo.src[language]);
+  let value = Object.values(currentTypo.src[language]);
 
   const handleCircleClick = (index) => {
     setCurrentIndex(index);
@@ -21,45 +25,35 @@ function Typography({ typo, name, language, typographyproject }) {
     return () => clearInterval(interval);
   }, []);
 
-  let key = Object.keys(currentTypo.src[language]);
-  let value = Object.values(currentTypo.src[language]);
-
-  const projectTypography = useRef(null);
-
-  // typoArray.map((item, index) => (
-  //   console.log(item)
-  // ))
-
   return (
     <>
-      <div className="projects__typography" ref={projectTypography}>
-        <div className="projects__typography__subtitle">
-          <Star />
-          <h4>{typographyproject.subtitle[language]}</h4>
+      <div className="typography" ref={projectTypography}>
+        <div className="typography__head">
+          <div className="typography__head__subtitle">
+            <Star />
+            <h4>{typographyproject.subtitle[language]}</h4>
+          </div>
+          <div className="typography__head__bar" />
         </div>
-        <div className="projects__bar"></div>
-        <div className="projects__typography__content">
-          <div className="projects__typography__inner">
-            <div className="projects__typography__image">
-              <Image
-                className={`projects__typography__vector 
-            projects__typography__vector__${name}`}
-                src={currentTypo.vector.src}
-                alt={currentTypo.vector.alt}
-                width={570}
-                height={55}
-                priority
-              />
-            </div>
+        <div className="typography__body">
+          <div className="typography__content">
+            <Image
+              className={`typography__content__vector typography__content__vector${name}`}
+              src={currentTypo.vector.src}
+              alt={currentTypo.vector.alt}
+              width={570}
+              height={55}
+              priority
+            />
             {typoArray.length > 1 && (
-              <div className="projects__typography__circles">
+              <div className="typography__circles">
                 {typoArray.map((item, index) => (
                   <div
                     key={index}
                     className={
                       index === currentIndex
-                        ? "projects__typography__button projects__typography__button--active"
-                        : "projects__typography__button"
+                        ? "typography__circles__button typography__circles__button--active"
+                        : "typography__circles__button"
                     }
                     onClick={() => handleCircleClick(index)}
                   />
@@ -67,13 +61,12 @@ function Typography({ typo, name, language, typographyproject }) {
               </div>
             )}
           </div>
-
-          <div className="projects__typography__details">
-            <span className="projects__typography__info">
+          <div className="typography__details">
+            <span className="typography__details__info">
               <p>{key[0]}</p>
               <p>{value[0]}</p>
             </span>
-            <span className="projects__typography__info">
+            <span className="typography__details__info">
               <p>{key[1]}</p>
               <p>{value[1]}</p>
             </span>
