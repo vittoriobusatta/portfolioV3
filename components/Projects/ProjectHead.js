@@ -11,7 +11,7 @@ function ProjectHead({ projects, button, language }) {
     <div className="projects__head" ref={button}>
       <div className="hidden">
         <motion.h1
-          className="head__title"
+          className="projects__head__title"
           initial={{
             y: "100%",
             skewY: 10,
@@ -28,10 +28,10 @@ function ProjectHead({ projects, button, language }) {
           {projects.name}
         </motion.h1>
       </div>
-      <ul className="head__list">
+      <ul className="projects__head__list">
         {headList.map((item, index) => (
-          <li key={index} className="head__item">
-            <div className="head__item__inner">
+          <li key={index} className="projects__head__item">
+            <div className="projects__head__item__inner">
               <div className="hidden">
                 <motion.h4
                   initial={{
@@ -58,7 +58,7 @@ function ProjectHead({ projects, button, language }) {
       </ul>
       {projects.link && (
         <a
-          className="head__link"
+          className="projects__head__link"
           href={projects.link}
           target="_blank"
           rel="noopener noreferrer"

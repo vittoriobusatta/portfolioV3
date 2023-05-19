@@ -1,0 +1,93 @@
+.projects__head {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 122px 26px;
+  color: $color_secondary;
+  background-color: $color_primary;
+  @media screen and (min-width: 576px) {
+    align-items: center;
+    padding: 188px 32px 144px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 204px 32px 188px;
+  }
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 44px;
+    column-gap: 22px;
+    row-gap: 32px;
+    @media screen and (min-width: 576px) {
+      display: inline-flex;
+      justify-content: space-evenly;
+      max-width: 1200px;
+      margin-top: 62px;
+    }
+  }
+  &__item {
+    grid-area: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      & h4 {
+        font-size: 16px;
+        font-family: $tuskerGrotesk;
+        font-style: normal;
+        font-weight: $medium;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      & p {
+        text-align: start;
+        font-size: 14px;
+        font-weight: $regular;
+        font-family: $rivalSans;
+        max-width: 100px;
+        @media screen and (min-width: 992px) {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 52px;
+    font-weight: $medium;
+    font-family: $tuskerGrotesk;
+    text-transform: uppercase;
+    // letter-spacing: 0.03em;
+  }
+  &__link {
+    position: relative;
+    font-size: 16px;
+    font-family: $tuskerGrotesk;
+    font-style: normal;
+    font-weight: $medium;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-top: 32px;
+    color: $color_secondary;
+    @media screen and (min-width: 576px) {
+      margin-top: 88px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color_secondary;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

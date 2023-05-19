@@ -1,0 +1,45 @@
+.projects__about {
+  &__images {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 52px;
+    @media screen and (min-width: 576px) {
+      margin-top: 62px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 88px;
+    }
+    @media screen and (min-width: 992px) {
+      justify-content: space-around;
+    }
+    &__inner {
+      position: relative;
+      height: fit-content;
+      overflow: hidden;
+      &:first-child {
+        transform: translateX(-20px);
+        width: 60vw;
+        max-width: 385px;
+        max-height: 481px;
+      }
+      &:last-child {
+        transform: translateY(120px) translateX(20px);
+        width: 70vw;
+        max-width: 385px;
+        max-height: 481px;
+      }
+      & img {
+        position: relative;
+        z-index: 2;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        // transform: scale(1.2);
+        height: auto;
+        width: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}

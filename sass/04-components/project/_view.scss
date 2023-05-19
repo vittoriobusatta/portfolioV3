@@ -1,0 +1,16 @@
+.projects__view {
+  margin-top: 202px;
+  &__slideshow {
+    width: 100%;
+    margin-top: 44px;
+    @media screen and (min-width: 576px) {
+      margin-top: 62px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

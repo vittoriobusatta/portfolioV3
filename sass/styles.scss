@@ -10,6 +10,14 @@
 @import './03-globals/loader';
 @import './03-globals/menu';
 
-@import './04-components/projects';
-@import './04-components/landing';
+@import './04-components/landing/index';
+
+@import './04-components/project/typography';
+@import './04-components/project/index';
+@import './04-components/project/slideshow';
+@import './04-components/project/head';
+@import './04-components/project/view';
+@import './04-components/project/branding';
+@import './04-components/project/about';
+
 

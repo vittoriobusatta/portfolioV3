@@ -1,0 +1,89 @@
+.slideshow {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 26px;
+    @media screen and (min-width: 576px) {
+      flex-direction: row;
+      column-gap: 22px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 80%;
+    }
+  }
+  &__banner {
+    width: 100%;
+    overflow: hidden;
+    display: inline-flex;
+    @media screen and (min-width: 576px) {
+      width: 90%;
+    }
+    &__image {
+      height: auto;
+      min-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: clip-path 0.5s ease-in-out;
+      @media screen and (min-width: 576px) {
+        min-width: calc(100vw - 10% - 148px);
+      }
+      @media screen and (min-width: 768px) {
+        max-width: 300px;
+        min-width: calc(80vw - 10% - 148px);
+      }
+    }
+  }
+  &__list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    position: relative;
+    @media screen and (min-width: 576px) {
+      width: 10%;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+    @media screen and (min-width: 992px) {
+      row-gap: 22px;
+    }
+    &__border {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      height: 100%;
+      border: 1px solid $color_primary;
+      z-index: 2;
+      flex: 1;
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(var(--borderTranslateX));
+      height: 100%;
+      width: var(--thubnailsWidth);
+      @media screen and (min-width: 576px) {
+        transform: translateY(var(--borderTranslateY));
+        height: var(--thubnailsHeight);
+        width: 100%;
+        max-width: 70px;
+      }
+    }
+  }
+  &__thubnails {
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+    min-height: 40px;
+    flex: 1;
+    background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
+    background-position: 50% 90%;
+    background-size: cover;
+    background-repeat: repeat;
+    object-fit: fill;
+    cursor: pointer;
+    max-width: 70px;
+  }
+}
