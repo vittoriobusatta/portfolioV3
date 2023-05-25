@@ -1,5 +1,5 @@
 .projects__about {
-  &__images {
+  &__body {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -17,27 +17,30 @@
       position: relative;
       height: fit-content;
       overflow: hidden;
+      width: 50%;
+      max-width: 385px;
+      max-height: 481px;
       &:first-child {
-        transform: translateX(-20px);
-        width: 60vw;
-        max-width: 385px;
-        max-height: 481px;
+        transform: translateX(-16px);
+        // width: 60vw;
       }
       &:last-child {
-        transform: translateY(120px) translateX(20px);
-        width: 70vw;
-        max-width: 385px;
-        max-height: 481px;
+        transform: translateY(120px) translateX(16px);
+        // width: 70vw;
       }
-      & img {
+      &--loaded {
+        & img {
+          transform: scale(1);
+        }
+      }
+      &__image {
         position: relative;
         z-index: 2;
-        height: auto;
         object-fit: cover;
         object-position: center;
-        // transform: scale(1.2);
-        height: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
+        transform: scale(1.1);
         transition: transform 0.3s ease-in-out;
       }
     }

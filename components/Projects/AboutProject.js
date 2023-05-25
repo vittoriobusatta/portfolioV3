@@ -1,17 +1,15 @@
 import { Star } from "assets/icons";
 import { gsap } from "gsap";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-function AboutProject({
-  projects,
-  language,
-}) {
+function AboutProject({ projects, language }) {
   const { title, subtitle, about, images } = projects.aboutproject;
-  const {placeholder} = projects
+  const { placeholder } = projects;
 
   const projectAbout = useRef([]);
   const subtle = useRef([]);
+  const [imageLoaded, setImageLoaded] = useState(true);
 
   useEffect(() => {
     gsap.set(subtle.current.children, { y: "100%", opacity: 0 });
@@ -48,37 +46,34 @@ function AboutProject({
           <Star />
           <h4>{subtitle[language]}</h4>
         </div>
-        <h3 className="projects__title">
-          {title[language]}
-        </h3>
-        <p className="projects__description">
-          {about[language]}
-        </p>
+        <h3 className="projects__title">{title[language]}</h3>
+        <p className="projects__description">{about[language]}</p>
       </div>
       <div
-        className="projects__about__images"
+        className="projects__about__body"
         style={{
-          "--placeholder": placeholder,
+          "--placeholder": projects.color,
         }}
       >
         {Object.values(images).map((item, index) => (
-          <div className="projects__about__images__inner" key={index}>
+          <div
+            className={`projects__about__body__inner ${
+              !imageLoaded ? "projects__about__body__inner--loaded" : ""
+            }`}
+            key={index}
+          >
             <Image
-              className="image"
+            className="projects__about__body__inner__image"
               src={item.src}
               alt={item.alt}
               width={385}
               height={481}
+              onLoadingComplete={() => setImageLoaded(false)}
               priority
               placeholder="blur"
               blurDataURL={placeholder}
             />
-            <div
-              style={{
-                "--placeholder": placeholder,
-              }}
-              className="placeholder"
-            />
+            <div className="placeholder" />
           </div>
         ))}
       </div>
