@@ -1,46 +1,30 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import React, { useContext, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GeneralContext } from "store/context";
 import CarouselControls from "./CarouselControls";
+import { GeneralContext } from "store/context";
 
 const Slideshow = ({ data }) => {
   const slideContainerRef = useRef(null);
   const slideWrapperRef = useRef(null);
   const { language } = useContext(GeneralContext);
-  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
   const [loaded, setLoaded] = useState(true);
+  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
 
-  const navigate = (index) => {
-    if (index < 0) {
-      index = data.length - 1;
-    } else if (index >= data.length) {
-      index = 0;
-    }
-    setSlideCurrent(index);
-  };
+  const itemReadyToView =
+    slideCurrent === data.find((item) => item.readytoview === false)?.id;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      navigate(slideCurrent + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slideCurrent]);
-
-  const itemFalse = data.find((item) => item.readytoview === false);
-
-  const verifyItemUnavailable = slideCurrent === itemFalse?.id;
+  const dataAvailable = data.filter((item) => item.available === true);
 
   return (
     <div
       className="landing__carousel"
       style={{
-        backgroundColor: data[slideCurrent]?.color2,
+        backgroundColor: dataAvailable[slideCurrent]?.color2,
       }}
     >
       <ul className="sliders" ref={slideWrapperRef}>
-        {data.map((item, index) => (
+        {dataAvailable.map((item, index) => (
           <li
             className={`sliders__items ${
               slideCurrent === index ? "sliders__items--active" : ""
@@ -60,7 +44,7 @@ const Slideshow = ({ data }) => {
                     className={`sliders__items__image ${
                       !loaded ? "sliders__items__image--loaded" : ""
                     } ${
-                      verifyItemUnavailable
+                      itemReadyToView
                         ? "sliders__items__image--unavailable"
                         : ""
                     }`}
@@ -85,15 +69,11 @@ const Slideshow = ({ data }) => {
             </div>
             <div
               className={`sliders__items__thumbs__6
-            ${
-              verifyItemUnavailable
-                ? "sliders__items__thumbs__6--unavailable"
-                : ""
-            }
+            ${itemReadyToView ? "sliders__items__thumbs__6--unavailable" : ""}
             `}
             >
               <Link href={`/projects/${item.path}`}>
-                {!verifyItemUnavailable
+                {!itemReadyToView
                   ? language === "fr"
                     ? "Lire le projet"
                     : "Read the case"
@@ -106,10 +86,9 @@ const Slideshow = ({ data }) => {
         ))}
       </ul>
       <CarouselControls
-        data={data}
+        data={dataAvailable}
         slideCurrent={slideCurrent}
         setSlideCurrent={setSlideCurrent}
-        navigate={navigate}
       />
     </div>
   );

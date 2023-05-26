@@ -15,7 +15,9 @@ function Home() {
       .catch((err) => setErreur(err.message));
   }, []);
 
-  const themeColor = data[slideCurrent]?.color || "";
+  const dataAvailable = data.filter((item) => item.available === true);
+
+  const themeColor = dataAvailable[slideCurrent]?.color || "";
 
   return (
     <>

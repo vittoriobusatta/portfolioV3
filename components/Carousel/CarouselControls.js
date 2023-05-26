@@ -1,11 +1,29 @@
 import Image from "next/image";
 import Arrow from "./Arrow";
+import { useEffect } from "react";
 
-function CarouselControls({ data, slideCurrent, navigate, setSlideCurrent }) {
+function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
   const handleImageSelect = (index) => {
     setSlideCurrent(index);
     window.localStorage.setItem("slideCurrent", index);
   };
+
+  const navigate = (index) => {
+    if (index < 0) {
+      index = data.length - 1;
+    } else if (index >= data.length) {
+      index = 0;
+    }
+    setSlideCurrent(index);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      navigate(slideCurrent + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slideCurrent]);
+
   return (
     <div className="controls">
       <button
