@@ -16,7 +16,6 @@ const Slideshow = ({ data }) => {
 
   const dataAvailable = data.filter((item) => item.available === true);
 
-
   return (
     <div
       className="landing__carousel"

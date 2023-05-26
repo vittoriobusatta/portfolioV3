@@ -17,12 +17,12 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
     setSlideCurrent(index);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     navigate(slideCurrent + 1);
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [slideCurrent]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      navigate(slideCurrent + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slideCurrent]);
 
   return (
     <div className="controls">
