@@ -7,23 +7,14 @@ export const LanguageProvider = ({ children }) => {
   const [slideCurrent, setSlideCurrent] = useState(0);
 
   useEffect(() => {
-    const localLanguage = window.localStorage.getItem("language");
-    if (localLanguage) {
-      setLanguage(localLanguage);
-    }
-
     const localSlideCurrent = window.localStorage.getItem("slideCurrent");
     if (localSlideCurrent) {
       setSlideCurrent(Number(localSlideCurrent));
     }
 
-    const browserLanguage =
-      navigator.language || navigator.userLanguage || "fr";
-
-    if (browserLanguage.startsWith("en")) {
-      setLanguage("en");
-    } else {
-      setLanguage("fr");
+    const localLanguage = window.localStorage.getItem("language");
+    if (localLanguage) {
+      setLanguage(localLanguage);
     }
   }, []);
 
