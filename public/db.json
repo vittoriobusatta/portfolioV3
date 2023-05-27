@@ -466,7 +466,7 @@
         "alt": "Galleria - Thumbnail"
       },
       "img1": {
-        "src": "/images/galleria/gla5.webp",
+        "src": "/images/galleria/gla4.webp",
         "alt": "Galleria - Thumbnail"
       }
     },
@@ -535,11 +535,6 @@
           "id": 5,
           "src": "/images/galleria/gla7.webp",
           "alt": "Galleria - Image 7"
-        },
-        "img8": {
-          "id": 6,
-          "src": "/images/galleria/gla8.webp",
-          "alt": "Galleria - Image 8"
         }
       }
     },
@@ -663,13 +658,13 @@
         },
         "img7": {
           "id": 4,
-          "src": "/images/unkle/unk7.webp",
-          "alt": "Unkle - Image 7"
+          "src": "/images/unkle/unk6.webp",
+          "alt": "Unkle - Image 6"
         },
         "img6": {
           "id": 5,
-          "src": "/images/unkle/unk6.webp",
-          "alt": "Unkle - Image 6"
+          "src": "/images/unkle/unk7.webp",
+          "alt": "Unkle - Image 7"
         }
       }
     }
