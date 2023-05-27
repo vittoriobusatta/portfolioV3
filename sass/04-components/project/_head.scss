@@ -36,7 +36,7 @@
       flex-direction: column;
       width: fit-content;
       & h4 {
-        font-size: 16px;
+        font-size: max(2rem, 16px);
         font-family: $tuskerGrotesk;
         font-style: normal;
         font-weight: $medium;
@@ -45,7 +45,7 @@
       }
       & p {
         text-align: start;
-        font-size: 14px;
+        font-size: max(1.8rem, 14px);
         font-weight: $regular;
         font-family: $rivalSans;
         max-width: 100px;
@@ -56,16 +56,15 @@
     }
   }
   &__title {
-    font-size: 52px;
+    font-size: 8.5rem;
     font-weight: $medium;
     font-family: $tuskerGrotesk;
     text-transform: uppercase;
-    // letter-spacing: 0.03em;
   }
   &__link {
     position: relative;
-    font-size: 16px;
-    font-family: $tuskerGrotesk;
+    font-size: max(1.8rem, 14px);
+    font-family: $rivalSans;
     font-style: normal;
     font-weight: $medium;
     letter-spacing: 0.03em;
