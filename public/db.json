@@ -48,8 +48,23 @@
         "en": "About project"
       },
       "about": {
-        "fr": "J'ai eu l'opportunité de travailler avec Décor ta kaz, une entreprise de menuiserie artisanale basée sur l'île de la Réunion. J'ai été responsable de la création d'une identité visuelle complète, comprenant un nouveau logo, le design du site, une palette de couleurs attrayante et une refonte des réseaux sociaux. Pour le développement du site web, j'ai utilisé les technologies Next.js, MongoDB et Prisma. Next.js m'a permis de créer un site web dynamique et performant, tandis que MongoDB a été utilisé comme base de données et Prisma a facilité la communication avec celle-ci.",
-        "en": "I had the opportunity to work with Décor ta kaz, a craft carpentry company based on the island of Reunion. I was responsible for creating a complete visual identity, including a new logo, the design of the site, an attractive color scheme and a redesign of social networks. For website development, I used Next.js, MongoDB and Prisma technologies. Next.js allowed me to create a dynamic and powerful website, while MongoDB was used as a database and Prisma facilitated communication with it."
+        "fr": [
+          "J'ai eu l'opportunité de travailler avec Décor ta kaz, une entreprise de menuiserie artisanale basée ",
+          "sur l'île de la Réunion. J'ai été responsable de la création d'une identité visuelle complète, ",
+          " comprenant un nouveau logo, le design du site, une palette de couleurs attrayante et une refonte ",
+          " des réseaux sociaux. Pour le développement du site web, j'ai utilisé les technologies Next.js, ",
+          " MongoDB et Prisma. Next.js m'a permis de créer un site web dynamique et performant, tandis ",
+          "que MongoDB a été utilisé comme base de données et Prisma a facilité la communication",
+          "avec celle-ci."
+        ],
+        "en": [
+          "I had the opportunity to work with Décor ta kaz, a craft carpentry company based on the",
+          "island of Reunion. I was responsible for creating a complete visual identity, including a",
+          "new logo, the design of the site, an attractive color scheme and a redesign of social",
+          "networks. For website development, I used Next.js, MongoDB and Prisma technologies. ",
+          "Next.js allowed me to create a dynamic and powerful website, while MongoDB was used as a ",
+          "database and Prisma facilitated communication with it."
+        ]
       },
       "images": {
         "img1": {
@@ -72,8 +87,23 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Découvrez les talents remarquables de Décor Ta Kaz à travers un site web soigneusement conçu pour mettre en lumière les produits et services de l'entreprise. Vous serez enchanté par la variété des réalisations présentées, chacune étant mise en valeur par un design captivant et esthétiquement plaisant. Le site a été spécialement conçu pour répondre aux besoins des utilisateurs, en offrant une expérience personnalisée adaptée à leurs centres d'intérêt. Préparez-vous à être inspiré par le talent de Décor Ta Kaz et plongez dans un univers de menuiserie artisanale exceptionnelle.",
-        "en": "Discover the remarkable talents of Décor Ta Kaz through a carefully designed website to highlight the company’s products and services. You will be delighted by the variety of creations presented, each one being highlighted by a captivating and aesthetically pleasing design. The site has been specially designed to meet the needs of users, offering a personalized experience tailored to their interests. Get ready to be inspired by the talent of Décor Ta Kaz and immerse yourself in a world of exceptional artisanal carpentry."
+        "fr": [
+          "Découvrez les talents remarquables de Décor Ta Kaz à travers un site web soigneusement conçu ",
+          "pour mettre en lumière les produits et services de l'entreprise. Vous serez enchanté par la variété ",
+          "des réalisations présentées, chacune étant mise en valeur par un design captivant et ",
+          "esthétiquement plaisant. Le site a été spécialement conçu pour répondre aux besoins ",
+          "des utilisateurs, en offrant une expérience personnalisée adaptée à leurs centres d'intérêt. ",
+          "Préparez-vous à être inspiré par le talent de Décor Ta Kaz et plongez dans un univers de ",
+          "menuiserie artisanale exceptionnelle."
+        ],
+        "en": [
+          "Discover the remarkable talents of Décor Ta Kaz through a carefully designed website to highlight ",
+          "the company’s products and services. You will be delighted by the variety of creations presented, ",
+          "each one being highlighted by a captivating and aesthetically pleasing design. The site has been ",
+          "specially designed to meet the needs of users, offering a personalized experience tailored to their ",
+          "interests. Get ready to be inspired by the talent of Décor Ta Kaz and immerse yourself in a world ",
+          "of exceptional artisanal carpentry."
+        ]
       },
       "images": {
         "img3": {
@@ -131,20 +161,6 @@
           }
         }
       }
-    },
-    "brandingproject": {
-      "subtitle": {
-        "fr": "Création du logo",
-        "en": "Logo creation"
-      },
-      "description": {
-        "fr": "J'ai représenté une maison pour retrouver l'idée de la Kaz, un mot créole qui signifie « maison ». J'ai ensuite fusionner à cela plusieurs planches de bois avec plusieurs variétés de marrons pour rappeler le domaine de l'entreprise qui est la menuiserie.",
-        "en": "I represented a house to find the idea of the Kaz, a Creole word that means «house». I then fuse to this several planks of wood with several varieties of chestnuts to recall the domain of the company which is carpentry."
-      },
-      "images": {
-        "src": "/images/decortakaz/dkt9.svg",
-        "alt": "Décor Ta Kaz - Image 9"
-      }
     }
   },
   {
@@ -162,7 +178,7 @@
     "technologies": "Figma",
     "color": "#093738",
     "color2": "#ECF8F5",
-    "paragraph": "#6e8586",
+    "paragraph": "#0d4f50",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
@@ -196,8 +212,24 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Pour ce projet, j'ai travaillé sur le rebranding de la marque Nocta, une marque de vêtements streetwear appartenant à Nike. Mon objectif était de refaire entièrement l'identité visuelle de Nocta pour leur nouvelle collection de vêtements de golf. j'ai donné à Nocta une image fraîche et moderne, mettant en valeur sa nouvelle collection de vêtements de golf avec des couleurs et des pages web personnalisées, donnant ainsi à la marque une allure distinctive et attrayante. Tout au long du processus de conception, j'ai utilisé le logiciel Figma, qui m'a permis de visualiser et de peaufiner chaque détail pour offrir une expérience visuelle cohérente et attractive aux utilisateurs.",
-        "en": "For this project, I worked on the rebranding of the brand Nocta, a streetwear brand owned by Nike. My goal was to completely redesign Nocta’s visual identity for their new golf clothing collection. I gave Nocta a fresh and modern image, showcasing her new golf clothing collection with custom colors and web pages, giving the brand a distinctive and attractive look. Throughout the design process, I used Figma software, which allowed me to visualize and refine every detail to provide a consistent and attractive visual experience for users."
+        "fr": [
+          "Pour ce projet, j'ai travaillé sur le rebranding de la marque Nocta, une marque de vêtements ",
+          "streetwear appartenant à Nike. Mon objectif était de refaire entièrement l'identité visuelle de ",
+          "Nocta pour leur  nouvelle collection de vêtements de golf. j'ai donné à Nocta une image ",
+          "fraîche et  valeur sa nouvelle collection de vêtements de golf avec des couleurs et des pages web",
+          "personnalisées, moderne, mettant en  donnant ainsi à la marque une allure distinctive et attrayante. ",
+          "Tout au long du processus de conception, j'ai utilisé le  logiciel Figma, qui m'a permis de visualiser et ",
+          "de peaufiner chaque détail pour offrir  une expérience visuelle cohérente et attractive ",
+          "aux utilisateurs."
+        ],
+        "en": [
+          "For this project, I worked on the rebranding of the brand Nocta, a streetwear brand owned by Nike. ",
+          "My goal was to completely redesign Nocta’s visual identity for their new golf clothing collection. ",
+          "I gave Nocta a fresh and modern image, showcasing her new golf clothing collection with ",
+          "custom colors and web pages, giving the brand a distinctive and attractive look. Throughout the ",
+          "design process, I used Figma software, which allowed me to visualize and refine every detail ",
+          "to provide a consistent and attractive visual experience for users."
+        ]
       },
       "images": {
         "img1": {
@@ -220,8 +252,23 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Explorez la nouvelle collection de vêtements de golf de Nocta à travers un site web minutieusement conçu pour sublimer chaque modèle. Plongez dans un univers unique et laissez-vous inspirer par le style audacieux et contemporain qui transcende la rencontre entre le streetwear et le golf. Explorez les pages produits qui mettent en valeur les détails et les caractéristiques de chaque article avec une présentation soignée. Préparez-vous à être captivé par l'audace et l'élégance de Nocta, où chaque création incarne une fusion créative sans précédent entre deux univers distincts.",
-        "en": "Explore Nocta’s new golf apparel collection through a carefully designed website to enhance each model. Immerse yourself in a unique world and be inspired by the bold and contemporary style that transcends the encounter between streetwear and golf. Explore the product pages that highlight the details and features of each item with a neat presentation. Prepare to be captivated by the audacity and elegance of Nocta, where each creation embodies an unprecedented creative fusion between two distinct universes."
+        "fr": [
+          "Explorez la nouvelle collection de vêtements de golf de Nocta à travers un site web ",
+          "minutieusement conçu pour sublimer chaque modèle. Plongez dans un univers unique et ",
+          "laissez-vous inspirer par le style audacieux et contemporain qui transcende la rencontre entre ",
+          "le streetwear et le golf. Explorez les pages produits qui mettent en valeur les détails et les ",
+          "caractéristiques de chaque article avec une présentation soignée. Préparez-vous à être captivé par ",
+          "l'audace et l'élégance de Nocta, où chaque création incarne une fusion créative sans précédent entre ",
+          "deux univers distincts."
+        ],
+        "en": [
+          "Explore Nocta’s new golf apparel collection through a carefully designed website to enhance each ",
+          "model. Immerse yourself in a unique world and be inspired by the bold and contemporary style that ",
+          "transcends the encounter between streetwear and golf. Explore the product pages that highlight the ",
+          "details and features of each item with a neat presentation. Prepare to be captivated by the ",
+          "audacity and elegance of Nocta, where each creation embodies an unprecedented creative fusion ",
+          "between two distinct universes."
+        ]
       },
       "images": {
         "img3": {
@@ -332,8 +379,27 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Muteza est une entreprise fictive qui propose un sérum révolutionnaire pour sublimer la beauté. J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de développer la version responsive du site. Pour mener à bien cette mission, j'ai utilisé React et intégré la bibliothèque Locomotive Scroll pour créer une expérience de navigation fluide et captivante. J'ai travaillé avec soin pour offrir aux utilisateurs une expérience visuelle immersive, où ils peuvent explorer les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Muteza s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs une expérience harmonieuse et captivante.",
-        "en": "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. I took the initiative to resume the work of Abhishek Jha to develop the responsive version of the site. To accomplish this mission, I used React and integrated the Locomotive Scroll library to create a smooth and engaging browsing experience. I have worked carefully to provide users with an immersive visual experience, where they can explore the exceptional benefits of the serum and discover its beauty secrets. Muteza has evolved to shine on all devices, providing users with a seamless and engaging experience."
+        "fr": [
+          "Muteza est une entreprise fictive qui propose un sérum révolutionnaire pour sublimer ",
+          "la beauté. J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de ",
+          "développer la version responsive du site. Pour mener à bien cette mission, ",
+          "j'ai utilisé React et intégré la bibliothèque Locomotive Scroll pour créer une ",
+          "expérience de navigation fluide et captivante. J'ai travaillé avec soin pour offrir ",
+          "aux utilisateurs une expérience visuelle immersive, où ils peuvent explorer ",
+          "les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Muteza ",
+          "s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs ",
+          "une expérience harmonieuse et captivante."
+        ],
+        "en": [
+          "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. ",
+          "I took the initiative to resume the work of Abhishek Jha to develop the responsive ",
+          "version of the site. To accomplish this mission, I used React and integrated ",
+          "the Locomotive Scroll library to create a smooth and engaging browsing experience. ",
+          "I have worked carefully to provide users with an immersive visual experience, ",
+          "where they can explore the exceptional benefits of the serum and discover its ",
+          "beauty secrets. Muteza has evolved to shine on all devices, providing users with ",
+          "a seamless and engaging experience."
+        ]
       },
       "images": {
         "img1": {
@@ -356,8 +422,22 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Le site Muteza offre une présentation minutieuse du sérum miracle conçu pour répondre aux besoins de la peau. Les ingrédients clés sont mis en avant, mettant en valeur leur efficacité. Les témoignages des utilisateurs viennent appuyer les bénéfices concrets obtenus grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable, permettant une découverte approfondie du produit et de son impact sur la peau. Découvrez le secret d'une peau resplendissante avec Muteza : le sérum miracle qui révèle votre beauté naturelle.",
-        "en": "The Muteza site features a miracle serum that has been designed to meet the needs of the skin. The presentation of the product is careful and highlights the key ingredients that make it up. User reviews are also available, allowing to see the concrete testimonies of the benefits obtained through the use of serum. The experience of browsing the site is pleasant and allows to discover in detail the product and its impact on the skin."
+        "fr": [
+          "Le site Muteza offre une présentation minutieuse du sérum miracle conçu pour répondre ",
+          "aux besoins de la peau. Les ingrédients clés sont mis en avant, mettant en valeur ",
+          "leur efficacité. Les témoignages des utilisateurs viennent appuyer les bénéfices concrets obtenus ",
+          "grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable, permettant",
+          "une découverte approfondie du produit et de son impact sur la peau. Découvrez le secret",
+          " d'une peau resplendissante avec Muteza : le sérum miracle qui révèle votre",
+          "beauté naturelle."
+        ],
+        "en": [
+          "The Muteza site features a miracle serum that has been designed to meet the needs ",
+          "of the skin. The presentation of the product is careful and highlights the key ingredients that",
+          " make it up. User reviews are also available, allowing to see the concrete testimonies ",
+          "of the benefits obtained through the use of serum. The experience of browsing the site",
+          "is pleasant and allows to discover in detail the product and its impact on the skin."
+        ]
       },
       "images": {
         "img3": {
@@ -450,7 +530,7 @@
     "color": "#030D3E",
     "color2": "#EEECF8",
     "background": "#EEECF8",
-    "paragraph": "#666e8e",
+    "paragraph": "#010829",
     "placeholder": "#dae0fa",
     "thumbnail": {
       "img4": {
@@ -483,8 +563,21 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Galleria est une plateforme interactive dédiée à la découverte d'œuvres d'art exceptionnelles. Lors de ce projet, mon objectif principal était de concevoir une expérience immersive et visuellement captivante pour les visiteurs. En utilisant les puissantes fonctionnalités de React, j'ai donné vie à une interface utilisateur fluide et esthétiquement plaisante. En respectant une maquette prédéfinie, j'ai intégré les différentes fonctionnalités nécessaires pour offrir aux utilisateurs une expérience de diaporama interactif et engageante.",
-        "en": "Galleria is an interactive platform dedicated to the discovery of exceptional works of art. During this project, my main goal was to create an immersive and visually captivating experience for visitors. Using the powerful features of React, I brought to life a smooth and aesthetically pleasing user interface. By adhering to a predefined layout, I have integrated the various features necessary to offer users an interactive and engaging slideshow experience."
+        "fr": [
+          "Galleria est une plateforme interactive dédiée à la découverte d'œuvres d'art exceptionnelles. ",
+          "Lors de ce projet, mon objectif principal était de concevoir une expérience immersive ",
+          "et visuellement captivante pour les visiteurs. En utilisant les puissantes fonctionnalités ",
+          "de React, j'ai donné vie à une interface utilisateur fluide et esthétiquement plaisante. ",
+          "En respectant une maquette prédéfinie, j'ai intégré les différentes fonctionnalités nécessaires ",
+          "pour offrir aux utilisateurs une expérience de diaporama interactif et engageante."
+        ],
+        "en": [
+          "Galleria is an interactive platform dedicated to the discovery of exceptional works of art. During this ",
+          "project, my main goal was to create an immersive and visually captivating experience for visitors. ",
+          "Using the powerful features of React, I brought to life a smooth and aesthetically pleasing user ",
+          "interface. By adhering to a predefined layout, I have integrated the various features necessary ",
+          "to offer users an interactive and engaging slideshow experience."
+        ]
       },
       "images": {
         "img1": {
@@ -507,8 +600,22 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Plongez dans le monde de l'art avec Galleria, une plateforme interactive qui propose une expérience visuelle immersive. Chaque œuvre d'art est présentée avec un design attrayant, vous permettant de naviguer facilement à travers une variété de styles, de techniques et d'histoires captivantes. Explorez les galeries virtuelles, laissez-vous inspirer par la diversité des œuvres et découvrez de nouveaux horizons artistiques, le tout depuis le confort de votre navigateur. Galleria vous offre une expérience enrichissante et inspirante, vous transportant dans un univers visuel sans limites.",
-        "en": "Discover an enchanting artistic world with Galleria, where art comes to life and takes you on a captivating journey. Each artwork is presented with an attractive design, allowing you to easily navigate through a variety of styles, techniques and compelling stories. Explore virtual galleries, be inspired by the diversity of works and discover new artistic horizons, all from the comfort of your browser. Galleria offers you an enriching and inspiring experience, taking you into a visual universe without limits."
+        "fr": [
+          "Plongez dans le monde de l'art avec Galleria, une plateforme interactive qui propose une expérience ",
+          "visuelle immersive. Chaque œuvre d'art est présentée avec un design attrayant, vous permettant ",
+          "de naviguer facilement à travers une variété de styles, de techniques et d'histoires captivantes. ",
+          "Explorez les galeries virtuelles, laissez-vous inspirer par la diversité des œuvres et découvrez de ",
+          "nouveaux horizons artistiques, le tout depuis le confort de votre navigateur. Galleria vous offre une ",
+          "expérience enrichissante et inspirante, vous transportant dans un univers visuel sans limites."
+        ],
+        "en": [
+          "Discover an enchanting artistic world with Galleria, where art comes to life and takes you on a ",
+          "captivating journey. Each artwork is presented with an attractive design, allowing you to easily ",
+          "navigate through a variety of styles, techniques and compelling stories. Explore virtual galleries, ",
+          "be inspired by the diversity of works and discover new artistic horizons, all from the comfort of ",
+          "your browser. Galleria offers you an enriching and inspiring experience, taking you into a visual ",
+          "universe without limits."
+        ]
       },
       "images": {
         "img3": {
@@ -580,7 +687,7 @@
     "color": "#2B9DFE",
     "color2": "#ECFAFF",
     "background": "#ECFAFF",
-    "paragraph": "#99a8af",
+    "paragraph": "#034075",
     "placeholder": "#d9f5ff",
     "thumbnail": {
       "img1": {
@@ -613,8 +720,25 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Pendant mon stage chez Unkle, une entreprise spécialisée dans les garanties loyer impayé (GLI), j'ai eu l'opportunité de travailler en collaboration avec le product manager et le designer. J'ai contribué à renforcer la sécurité du site en implémentant une fonctionnalité permettant de vérifier la complexité des mots de passe choisis par les utilisateurs. Grâce à cette fonctionnalité, nous avons pu garantir que les mots de passe répondent aux normes de sécurité élevées établies par l'entreprise, assurant ainsi une meilleure protection des comptes des utilisateurs. J'ai utilisé des expressions régulières (REGEX) et React pour créer un composant réutilisable, offrant une solution pratique et fiable pour renforcer la sécurité du site.",
-        "en": "During my internship at Unkle, a company specialized in unpaid rent guarantees (URG), I had the opportunity to work in collaboration with the product manager and the designer. I helped strengthen the security of the site by implementing a feature to check the complexity of passwords chosen by users. With this feature, we have been able to ensure that passwords meet the high security standards set by the company, ensuring better protection of user accounts. I used regular expressions (REGEX) and React to create a reusable component, offering a convenient and reliable solution to enhance site security."
+        "fr": [
+          "Pendant mon stage chez Unkle, une entreprise spécialisée dans les garanties loyer impayé (GLI), ",
+          "j'ai eu l'opportunité de travailler en collaboration avec le product manager et le designer. ",
+          "J'ai contribué à renforcer la sécurité du site en implémentant une fonctionnalité permettant de ",
+          "vérifier la complexité des mots de passe choisis par les utilisateurs. Grâce à cette fonctionnalité, ",
+          "nous avons pu garantir que les mots de passe répondent aux normes de sécurité élevées établies ",
+          "par l'entreprise, assurant ainsi une meilleure protection des comptes des utilisateurs. J'ai utilisé ",
+          "des expressions régulières (REGEX) et React pour créer un composant réutilisable, offrant une ",
+          "solution pratique et fiable pour renforcer la sécurité du site."
+        ],
+        "en": [
+          "During my internship at Unkle, a company specialized in unpaid rent guarantees (URG), I had the ",
+          "opportunity to work in collaboration with the product manager and the designer. I helped ",
+          "strengthen the security of the site by implementing a feature to check the complexity of ",
+          "passwords chosen by users. With this feature, we have been able to ensure that passwords meet ",
+          "the high security standards set by the company, ensuring better protection of user accounts. ",
+          "I used regular expressions (REGEX) and React to create a reusable component, offering a convenient ",
+          "and reliable solution to enhance site security."
+        ]
       },
       "images": {
         "img1": {
@@ -637,8 +761,23 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Le composant de vérification de complexité de mots de passe propose cinq niveaux de sécurité, allant de \"ultra faible\" à \"ultra fort”. Il permet aux utilisateurs de choisir un mot de passe conforme aux normes de sécurité établies par l'entreprise. Des visuels de couleurs et des messages guident les utilisateurs dans le choix de leur mot de passe, en fonction du niveau de sécurité sélectionné, assurant ainsi une expérience visuelle claire et informative. Que vous soyez un client d'Unkle ou un employé, ce composant garantit que votre mot de passe répondra aux exigences de sécurité les plus élevées.",
-        "en": "The password complexity verification component offers five levels of security, ranging from \"very low\" to \"very high\". It allows users to choose a password that meets the security standards set by the company. Colour visuals and messages guide users in choosing their password, depending on the security level selected, ensuring a clear and informative visual experience. Whether you are a Unkle customer or an employee, this component guarantees that your password will meet the highest security requirements."
+        "fr": [
+          "Le composant de vérification de complexité de mots de passe propose cinq niveaux de sécurité, ",
+          "allant de \"ultra faible\" à \"ultra fort”. Il permet aux utilisateurs de choisir un mot de passe ",
+          "conforme aux normes de sécurité établies par l'entreprise. Des visuels de couleurs et des messages",
+          " guident les utilisateurs dans le choix de leur mot de passe, en fonction du niveau de sécurité ",
+          "sélectionné, assurant ainsi une expérience visuelle claire et informative. Que vous soyez un client ",
+          "d'Unkle ou un employé, ce composant garantit que votre mot de passe répondra aux exigences de ",
+          "sécurité les plus élevées."
+        ],
+        "en": [
+          "The password complexity verification component offers five levels of security, ranging from ",
+          "\"very low\" to \"very high\". It allows users to choose a password that meets the security standards ",
+          "set by the company. Colour visuals and messages guide users in choosing their password, depending ",
+          "on the security level selected, ensuring a clear and informative visual experience. Whether you are ",
+          "a Unklecustomer or an employee, this component guarantees that your password will meet ",
+          "the highest security requirements."
+        ]
       },
       "images": {
         "img3": {
@@ -686,7 +825,7 @@
     "color": "#ffdc00",
     "color2": "#FCFFEC",
     "background": "#FCFFEC",
-    "paragraph": "#a9a99e",
+    "paragraph": "#231e00",
     "placeholder": "#fff7c3",
     "thumbnail": {
       "img4": {
@@ -719,8 +858,21 @@
         "en": "About project"
       },
       "about": {
-        "fr": "Pour le projet Sunnyside, en tant que développeur, j'ai travaillé sur la mise en œuvre de la maquette reçue pour créer un site web réactif et fonctionnel. Grâce à l'utilisation de React, j'ai pu transformer la maquette en une interface utilisateur interactive, offrant aux utilisateurs une expérience fluide et engageante. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et cohérente pour l'agence.",
-        "en": "For the Sunnyside project, as a developer, I worked on the implementation of the received template to create a responsive and functional website. Thanks to the use of React, I was able to transform the model into an interactive user interface, offering users a smooth and engaging experience. I ensured that the visual quality of the model was maintained throughout the integration process, providing a professional and consistent presentation for the agency."
+        "fr": [
+          "Pour le projet Sunnyside, en tant que développeur, j'ai travaillé sur la mise en œuvre de la maquette ",
+          "reçue pour créer un site web réactif et fonctionnel. Grâce à l'utilisation de React, j'ai pu ",
+          "transformer la maquette en une interface utilisateur interactive, offrant aux utilisateurs une ",
+          "expérience fluide et engageante. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée ",
+          "tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et ",
+          "cohérente pour l'agence."
+        ],
+        "en": [
+          "For the Sunnyside project, as a developer, I worked on the implementation of the received template ",
+          "to create a responsive and functional website. Thanks to the use of React, I was able to transform ",
+          "the model into an interactive user interface, offering users a smooth and engaging experience. ",
+          "I ensured that the visual quality of the model was maintained throughout the integration process, ",
+          "providing a professional and consistent presentation for the agency."
+        ]
       },
       "images": {
         "img1": {
@@ -743,8 +895,17 @@
         "en": "Project view"
       },
       "about": {
-        "fr": "Plongez dans l'univers ensoleillé de Sunnyside, une agence digitale fictive où la créativité rencontre l'excellence technologique. Grâce à l'utilisation de React et une parfaite intégration, j'ai donné vie à une maquette captivante, mettant en valeur les services uniques proposés par l'agence. Explorez les différentes sections de cette landing page, découvrez les témoignages élogieux des clients satisfaits et laissez-vous séduire par la gamme complète de services de pointe. Avec Sunnyside, votre présence en ligne sera inoubliable.",
-        "en": "Dive into the sunny world of Sunnyside, a fictional digital agency where creativity meets technological excellence. Thanks to the use of React and a perfect integration, I gave life to an exciting model, highlighting the unique services offered by the agency. Explore the different sections of this landing page, discover the positive testimonials of satisfied customers and let yourself be seduced by the full range of cutting-edge services. With Sunnyside, your online presence will be unforgettable."
+        "fr": [
+          "Plongez dans l'univers ensoleillé de Sunnyside, une agence digitale fictive où la créativité rencontre ",
+          "l'excellence technologique. Grâce à l'utilisation de React et une parfaite intégration, j'ai donné ",
+          "vie à une maquette captivante, mettant en valeur les services uniques proposés par l'agence. ",
+          "Explorez les différentes sections de cette landing page, découvrez les témoignages élogieux des",
+          "clients satisfaits et laissez-vous séduire par la gamme complète de services de pointe. ",
+          "Avec Sunnyside, votre présence en ligne sera inoubliable."
+        ],
+        "en": [
+          "Dive into the sunny world of Sunnyside, a fictional digital agency where creativity meets technological excellence. Thanks to the use of React and a perfect integration, I gave life to an exciting model, highlighting the unique services offered by the agency. Explore the different sections of this landing page, discover the positive testimonials of satisfied customers and let yourself be seduced by the full range of cutting-edge services. With Sunnyside, your online presence will be unforgettable."
+        ]
       },
       "images": {
         "img3": {
