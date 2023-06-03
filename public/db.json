@@ -178,6 +178,7 @@
     "technologies": "Figma",
     "color": "#093738",
     "color2": "#ECF8F5",
+    "behance": "",
     "paragraph": "#0d4f50",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
@@ -897,12 +898,17 @@
           "Plongez dans l'univers ensoleillé de Sunnyside, une agence digitale fictive où la créativité rencontre ",
           "l'excellence technologique. Grâce à l'utilisation de React et une parfaite intégration, j'ai donné ",
           "vie à une maquette captivante, mettant en valeur les services uniques proposés par l'agence. ",
-          "Explorez les différentes sections de cette landing page, découvrez les témoignages élogieux des",
+          "Explorez les différentes sections de cette landing page, découvrez les témoignages élogieux des ",
           "clients satisfaits et laissez-vous séduire par la gamme complète de services de pointe. ",
           "Avec Sunnyside, votre présence en ligne sera inoubliable."
         ],
         "en": [
-          "Dive into the sunny world of Sunnyside, a fictional digital agency where creativity meets technological excellence. Thanks to the use of React and a perfect integration, I gave life to an exciting model, highlighting the unique services offered by the agency. Explore the different sections of this landing page, discover the positive testimonials of satisfied customers and let yourself be seduced by the full range of cutting-edge services. With Sunnyside, your online presence will be unforgettable."
+          "Dive into the sunny world of Sunnyside, a fictional digital agency where creativity meets ",
+          "technological excellence. Thanks to the use of React and a perfect integration, I gave life to ",
+          "an exciting model, highlighting the unique services offered by the agency. Explore the different ",
+          "sections of this landing page, discover the positive testimonials of satisfied customers and let ",
+          "yourself be seduced by the full range of cutting-edge services. With Sunnyside, your online presence ",
+          "will be unforgettable."
         ]
       },
       "images": {
