@@ -20,39 +20,44 @@
   &__subtitle {
     display: inline-flex;
     align-items: baseline;
+    justify-content: flex-start;
     overflow: hidden;
     & h4 {
+      display: flex;
       font-family: $tuskerGrotesk;
       text-transform: uppercase;
       letter-spacing: 0.03em;
-      font-size: 12px;
-      margin-left: 8px;
+      margin-left: 16px;
+      width: fit-content;
+      font-size: clamp(14px, 1.5vw, 18px);
+      column-gap: 2px;
+      @media screen and (min-width: 992px) {
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-left: 22px;
+      }
     }
   }
   &__title {
     font-family: $tuskerGrotesk;
     text-transform: uppercase;
-    font-size: 44px;
-    max-width: 300px;
+    font-size: clamp(44px, 6vw, 74px);
     line-height: 120%;
-    // letter-spacing: 0.03em;
     margin: 16px 0 22px;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
   }
   &__description {
+    font-size: min(1.7vw, 20px);
     font-family: $rivalSans;
-    font-weight: $regular;
-    font-size: 14px;
+    font-weight: $medium;
     color: $paragraph_color;
-    max-width: 400px;
-    line-height: $p_line_height;
-    @media screen and (min-width: 576px) {
-      max-width: 500px;
-    }
-    @media screen and (min-width: 768px) {
-      max-width: 600px;
+    @media screen and (max-width: 992px) {
+      font-size: max(2vw, 15px);
     }
   }
 }
-
-

@@ -21,51 +21,6 @@ export const Logo = ({ logoColor }) => {
     </svg>
   );
 };
-
-export const FRFlag = () => {
-  return (
-    <svg
-      height="16"
-      viewBox="0 0 34 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M11.2 0H0V20H11.2V0Z" fill="#002494" />
-      <path d="M22.3113 0H11.1113V20H22.3113V0Z" fill="#F7F7F7" />
-      <path d="M33.3318 0H22.2207V20H33.3318V0Z" fill="#ED2938" />
-    </svg>
-  );
-};
-
-export const ENFlag = () => {
-  return (
-    <svg
-      height="16"
-      viewBox="0 0 34 21"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M33.3333 0.922333H0V20.9223H33.3333V0.922333Z" fill="#000066" />
-      <path
-        d="M0 0.922333V3.15839L29.6067 20.9223H33.3333V18.6863L3.72667 0.922399L0 0.922333ZM33.3333 0.922333V3.15833L3.72667 20.9223H0V18.6863L29.6067 0.922333H33.3333Z"
-        fill="white"
-      />
-      <path
-        d="M13.8889 0.922333V20.9223H19.4444V0.922333H13.8889ZM0 7.58898V14.2556H33.3333V7.58898H0Z"
-        fill="white"
-      />
-      <path
-        d="M0 8.92231V12.9223H33.3333V8.92231H0ZM15 0.922333V20.9223H18.3333V0.922333H15Z"
-        fill="#CC0000"
-      />
-      <path
-        d="M0 20.9223L11.1111 14.2556H13.5956L2.48444 20.9223H0ZM0 0.922333L11.1111 7.58898H8.62667L0 2.41306L0 0.922333ZM19.7378 7.58898L30.8489 0.922333H33.3333L22.2222 7.58898H19.7378ZM33.3333 20.9223L22.2222 14.2556H24.7067L33.3333 19.4316V20.9223Z"
-        fill="#CC0000"
-      />
-    </svg>
-  );
-};
-
 export const Star = () => {
   return (
     <svg
@@ -73,7 +28,7 @@ export const Star = () => {
       viewBox="0 0 12 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      height="12"
+      height="16"
     >
       <path
         data-v-669b4a84=""
@@ -84,4 +39,4 @@ export const Star = () => {
   );
 };
 
-export default { Logo, FRFlag, ENFlag, Star };
+export default { Logo, Star };
