@@ -9,7 +9,7 @@ import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
 import data from "../../public/db.json";
 import { motion } from "framer-motion";
-import Branding from "@/components/Projects/Branding";
+
 
 export default function Product({ projects }) {
   const { language } = useContext(GeneralContext);
@@ -65,16 +65,12 @@ export default function Product({ projects }) {
         }}
       >
         <ProjectHead projects={projects} button={button} language={language} />
-
         <div className="projects__content">
           {projects.aboutproject && (
             <AboutProject projects={projects} language={language} />
           )}
           {projects.viewproject && (
             <ProjectView projects={projects} language={language} />
-          )}
-          {projects.brandingproject && (
-            <Branding projects={projects} language={language} />
           )}
           {projects.typographyproject && (
             <Typography
