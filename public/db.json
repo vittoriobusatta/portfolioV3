@@ -40,12 +40,12 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Une maison d'oeuvre",
-        "en": "A work house"
+        "fr": ["Une maison", "d'oeuvre."],
+        "en": ["A work", "house."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
@@ -79,12 +79,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Un design sur mesure",
-        "en": "A tailored design"
+        "fr": ["Un design", "sur mesure."],
+        "en": ["A tailored", " design."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -204,12 +204,12 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Une collection inspirée du présent",
-        "en": "A collection inspired by today's"
+        "fr": ["Une collection", "inspirée du présent."],
+        "en": ["A collection", "inspired by today's."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
@@ -244,12 +244,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Une élégance sur le terrain",
-        "en": "An elegance on the field"
+        "fr": ["Une élégance", "sur le terrain."],
+        "en": ["An elegance", "on the field."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -258,8 +258,8 @@
           "laissez-vous inspirer par le style audacieux et contemporain qui transcende la rencontre entre ",
           "le streetwear et le golf. Explorez les pages produits qui mettent en valeur les détails et les ",
           "caractéristiques de chaque article avec une présentation soignée. Préparez-vous à être captivé par ",
-          "l'audace et l'élégance de Nocta, où chaque création incarne une fusion créative sans précédent entre ",
-          "deux univers distincts."
+          "l'audace et l'élégance de Nocta, où chaque création incarne une fusion créative sans précédent ",
+          "entre deux univers distincts."
         ],
         "en": [
           "Explore Nocta’s new golf apparel collection through a carefully designed website to enhance each ",
@@ -371,34 +371,32 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Un sérum personnalisé",
-        "en": "A personalized skin serum"
+        "fr": ["Un sérum ", "personnalisé."],
+        "en": ["A personalized", "skin serum."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
-          "Muteza est une entreprise fictive qui propose un sérum révolutionnaire pour sublimer ",
-          "la beauté. J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de ",
-          "développer la version responsive du site. Pour mener à bien cette mission, ",
-          "j'ai utilisé React et intégré la bibliothèque Locomotive Scroll pour créer une ",
-          "expérience de navigation fluide et captivante. J'ai travaillé avec soin pour offrir ",
-          "aux utilisateurs une expérience visuelle immersive, où ils peuvent explorer ",
-          "les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Muteza ",
-          "s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs ",
-          "une expérience harmonieuse et captivante."
+          "Muteza est une entreprise fictive qui propose un sérum révolutionnaire pour sublimer la beauté.",
+          " J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de développer la version ",
+          "responsive du site. Pour mener à bien cette mission, j'ai utilisé React et intégré la bibliothèque",
+          " Locomotive Scroll pour créer une expérience de navigation fluide et captivante. J'ai travaillé",
+          "avec soin pour offrir aux utilisateurs une expérience visuelle immersive, où ils peuvent ",
+          "explorer les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Muteza ",
+          "s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs une",
+          "expérience harmonieuse et captivante."
         ],
         "en": [
-          "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. ",
-          "I took the initiative to resume the work of Abhishek Jha to develop the responsive ",
-          "version of the site. To accomplish this mission, I used React and integrated ",
-          "the Locomotive Scroll library to create a smooth and engaging browsing experience. ",
-          "I have worked carefully to provide users with an immersive visual experience, ",
-          "where they can explore the exceptional benefits of the serum and discover its ",
-          "beauty secrets. Muteza has evolved to shine on all devices, providing users with ",
-          "a seamless and engaging experience."
+          "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. I took",
+          "the initiative to resume the work of Abhishek Jha to develop the responsive version of ",
+          "the site. To accomplish this mission, I used React and integrated the Locomotive ",
+          "Scroll library to create a smooth and engaging browsing experience. I have worked carefully ",
+          "to provide users with an immersive visual experience, where they can explore the ",
+          "exceptional benefits of the serum and discover its beauty secrets. Muteza has evolved ",
+          "to shine on all devices, providing users with a seamless and engaging experience."
         ]
       },
       "images": {
@@ -414,12 +412,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Un éclat de beauté",
-        "en": "A beauty glow"
+        "fr": ["Un éclat", "de beauté."],
+        "en": ["A beauty", "glow."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -555,12 +553,12 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Découvrez l’art de l’interaction.",
-        "en": "Discover the art of interaction."
+        "fr": ["Découvrez l’art", "de l’interaction."],
+        "en": ["Discover the art", "of interaction."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
@@ -592,12 +590,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Un voyage dans l'histoire",
-        "en": "A journey through history"
+        "fr": ["Un voyage", "dans l'histoire."],
+        "en": ["A journey", "through history."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -712,12 +710,12 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Une sécurité garantie",
-        "en": "A guaranteed safety"
+        "fr": ["Une sécurité", "garantie."],
+        "en": ["A guaranteed", "safety."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
@@ -753,12 +751,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Une protection renforcée",
-        "en": "A reinforced protection"
+        "fr": ["Une protection", "renforcée."],
+        "en": ["A reinforced", "protection."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -850,12 +848,12 @@
     },
     "aboutproject": {
       "title": {
-        "fr": "Une agence brillante",
-        "en": "A brilliant agency"
+        "fr": ["Une agence", "brillante."],
+        "en": ["A brilliant", "agency."]
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": [
@@ -887,12 +885,12 @@
     },
     "viewproject": {
       "title": {
-        "fr": "Explorez le côté ensoleillé ",
-        "en": "Explore the sunny side"
+        "fr": ["Explorez le", "côté ensoleillé."],
+        "en": ["Explore the", "sunny side."]
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": [
@@ -1063,8 +1061,8 @@
         "en": "A big distribution"
       },
       "subtitle": {
-        "fr": "À propos du projet",
-        "en": "About project"
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
       },
       "about": {
         "fr": "La mission consistait à réaliser un site vitrine pour une entreprise de vente en gros. J'ai d'abord désigné la maquette graphique pour ensuite l'intégrer en site web. Pour faire la distinction entre les 8 différentes catégories, j'ai essayé de jouer avec plusieurs couleurs.",
@@ -1087,8 +1085,8 @@
         "en": "The title of the site"
       },
       "subtitle": {
-        "fr": "Aperçu du projet",
-        "en": "Project view"
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
       },
       "about": {
         "fr": "Le site est un site vitrine qui présente les services de l'entreprise. Il est composé de 4 pages : Accueil, Services, Contact et A propos. Le site est responsive et est compatible avec les navigateurs les plus utilisés.",
