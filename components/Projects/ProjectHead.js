@@ -14,14 +14,15 @@ function ProjectHead({ projects, button, language }) {
           className="projects__head__title"
           initial={{
             y: "100%",
-            skewY: 10,
+            skewY: 5,
           }}
           animate={{
             y: 0,
             skewY: 0,
             transition: {
-              duration: 0.35,
-              ease: "easeOut",
+              duration: 0.55,
+              ease: [0.33, 1, 0.68, 1],
+              delay: 0.075,
             },
           }}
         >
@@ -36,15 +37,13 @@ function ProjectHead({ projects, button, language }) {
                 <motion.h4
                   initial={{
                     y: "100%",
-                    // skewY: 10,
                   }}
                   animate={{
                     y: 0,
-                    // skewY: 0,
                     transition: {
                       duration: 0.25,
                       ease: "easeOut",
-                      delay: 0.1 * index
+                      delay: 0.1 * index,
                     },
                   }}
                 >
@@ -56,7 +55,7 @@ function ProjectHead({ projects, button, language }) {
           </li>
         ))}
       </ul>
-      {projects.link && (
+      {(projects.link && (
         <a
           className="projects__head__link"
           href={projects.link}
@@ -64,6 +63,15 @@ function ProjectHead({ projects, button, language }) {
           rel="noopener noreferrer"
         >
           {language === "en" ? "Visit website" : "Voir le site"}
+        </a>
+      )) || (
+        <a
+          className="projects__head__link"
+          // href={projects.behance}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {language === "en" ? "Visit Behance" : "Voir le Behance"}
         </a>
       )}
     </div>

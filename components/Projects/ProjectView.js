@@ -2,6 +2,7 @@ import { Star } from "assets/icons";
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import Slideshow from "./Slideshow/Slideshow";
+import { MaskText, setTitles } from "utils/utils";
 
 function ProjectView({ language, projects }) {
   const { title, subtitle, about } = projects.viewproject;
@@ -35,19 +36,28 @@ function ProjectView({ language, projects }) {
 
   return (
     <div className="projects__view" ref={projectView}>
-      <div
-        className="projects__subtitle"
-        ref={(el) => {
-          subtle.current = el;
-        }}
-      >
-        <Star />
-        <h4>{subtitle[language]}</h4>
+      <div className="projects__view__head">
+        <div
+          className="projects__subtitle"
+          ref={(el) => {
+            subtle.current = el;
+          }}
+        >
+          <Star />
+          {setTitles({
+            phrases: subtitle[language],
+            headingLevel: 4,
+          })}
+        </div>
+        {setTitles({
+          phrases: title[language],
+          headingLevel: 3,
+          className: "projects__title",
+        })}
+        <MaskText phrases={about[language]} />
       </div>
-      <h3 className="projects__title">{title[language]}</h3>
-      <p className="projects__description">{about[language]}</p>
       <div className="projects__view__slideshow">
-        <Slideshow thubnails={thubnails} projects={projects}/>
+        <Slideshow thubnails={thubnails} projects={projects} />
       </div>
     </div>
   );
