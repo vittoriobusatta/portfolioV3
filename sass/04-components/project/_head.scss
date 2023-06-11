@@ -12,6 +12,9 @@
   @media screen and (min-width: 768px) {
     padding: 204px 32px 188px;
   }
+  @media screen and (min-width: 992px) {
+    padding: 262px 32px 262px;
+  }
   &__list {
     width: 100%;
     display: grid;
@@ -36,7 +39,7 @@
       flex-direction: column;
       width: fit-content;
       & h4 {
-        font-size: max(2rem, 16px);
+        font-size: max(2.2rem, 16px);
         font-family: $tuskerGrotesk;
         font-style: normal;
         font-weight: $medium;
@@ -56,14 +59,14 @@
     }
   }
   &__title {
-    font-size: 8.5rem;
+    font-size: 10rem;
     font-weight: $medium;
     font-family: $tuskerGrotesk;
     text-transform: uppercase;
   }
   &__link {
     position: relative;
-    font-size: max(1.8rem, 14px);
+    font-size: max(1.6rem, 14px);
     font-family: $rivalSans;
     font-style: normal;
     font-weight: $medium;
@@ -71,6 +74,7 @@
     text-transform: uppercase;
     margin-top: 32px;
     color: $color_secondary;
+    cursor: pointer;
     @media screen and (min-width: 576px) {
       margin-top: 88px;
     }

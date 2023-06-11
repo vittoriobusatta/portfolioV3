@@ -38,7 +38,7 @@ function Typography({ typo, name, language, typographyproject }) {
         <div className="typography__body">
           <div className="typography__content">
             <Image
-              className={`typography__content__vector typography__content__vector${name}`}
+              className={`typography__content__vector typography__content__vector__${name}`}
               src={currentTypo.vector.src}
               alt={currentTypo.vector.alt}
               width={570}

@@ -2,6 +2,7 @@ import { Star } from "assets/icons";
 import { gsap } from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { MaskText, setTitles } from "utils/utils";
 
 function AboutProject({ projects, language }) {
   const { title, subtitle, about, images } = projects.aboutproject;
@@ -44,10 +45,17 @@ function AboutProject({ projects, language }) {
           }}
         >
           <Star />
-          <h4>{subtitle[language]}</h4>
+          {setTitles({
+            phrases: subtitle[language],
+            headingLevel: 4,
+          })}
         </div>
-        <h3 className="projects__title">{title[language]}</h3>
-        <p className="projects__description">{about[language]}</p>
+        {setTitles({
+          phrases: title[language],
+          headingLevel: 3,
+          className: "projects__title",
+        })}
+        <MaskText phrases={about[language]} />
       </div>
       <div
         className="projects__about__body"
@@ -63,7 +71,7 @@ function AboutProject({ projects, language }) {
             key={index}
           >
             <Image
-            className="projects__about__body__inner__image"
+              className="projects__about__body__inner__image"
               src={item.src}
               alt={item.alt}
               width={385}

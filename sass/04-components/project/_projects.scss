@@ -5,10 +5,10 @@
     overflow: hidden;
     color: $color_primary;
     @media screen and (min-width: 576px) {
-      padding: 44px 32px;
+      padding: 62px 32px;
     }
     @media screen and (min-width: 768px) {
-      padding: 44px 42px;
+      padding: 88px 42px;
     }
     @media screen and (min-width: 992px) {
       padding: 44px 52px;
@@ -31,6 +31,7 @@
       width: fit-content;
       font-size: clamp(14px, 1.5vw, 18px);
       column-gap: 2px;
+      overflow: hidden;
       @media screen and (min-width: 992px) {
         align-items: flex-end;
         justify-content: flex-end;
@@ -42,7 +43,7 @@
   &__title {
     font-family: $tuskerGrotesk;
     text-transform: uppercase;
-    font-size: clamp(44px, 6vw, 74px);
+    font-size: clamp(44px, 6vw, 64px);
     line-height: 120%;
     margin: 16px 0 22px;
     overflow: hidden;
@@ -58,6 +59,15 @@
     color: $paragraph_color;
     @media screen and (max-width: 992px) {
       font-size: max(2vw, 15px);
+    }
+  }
+  &__other {
+    @media screen and (min-width: 992px) {
+      margin-top: 88px;
+    }
+    & img {
+      width: 100%;
+      height: auto;
     }
   }
 }
