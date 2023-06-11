@@ -24,7 +24,7 @@ export const setTitles = ({ phrases, headingLevel, className }) => {
 
   return (
     <HeadingComponent className={className ? className : null} ref={ref}>
-      {phrases.map((phrase, index) => (
+      {phrases?.map((phrase, index) => (
         <div key={index} className="hidden">
           <motion.p
             custom={index}
