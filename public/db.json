@@ -1020,6 +1020,51 @@
     },
     "logo": {
       "src": "/images/kaigai/logo.svg"
+    },
+    "aboutproject": {
+      "title": {
+        "fr": [""],
+        "en": [""]
+      },
+      "subtitle": {
+        "fr": [""],
+        "en": [""]
+      },
+      "about": {
+        "fr": [],
+        "en": []
+      },
+      "images": {
+        "img1": {
+          "src": "",
+          "alt": ""
+        },
+        "img2": {
+          "src": "",
+          "alt": ""
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": [""],
+        "en": [""]
+      },
+      "subtitle": {
+        "fr": [""],
+        "en": [""]
+      },
+      "about": {
+        "fr": [],
+        "en": []
+      },
+      "images": {
+        "img3": {
+          "id": 1,
+          "src": "",
+          "alt": ""
+        }
+      }
     }
   },
   {
@@ -1071,8 +1116,16 @@
         "en": ["About", "project"]
       },
       "about": {
-        "fr": "La mission consistait à réaliser un site vitrine pour une entreprise de vente en gros. J'ai d'abord désigné la maquette graphique pour ensuite l'intégrer en site web. Pour faire la distinction entre les 8 différentes catégories, j'ai essayé de jouer avec plusieurs couleurs.",
-        "en": "The mission consisted of creating a website for a wholesale company. I first designed the graphic layout to then integrate it into a website. To distinguish the 8 different categories, I tried to play with several colors."
+        "fr": [
+          "La mission consistait à réaliser un site vitrine pour une entreprise de vente en gros. J'ai d'abord ",
+          "désigné la maquette graphique pour ensuite l'intégrer en site web. Pour faire la distinction entre ",
+          "les 8 différentes catégories, j'ai essayé de jouer avec plusieurs couleurs."
+        ],
+        "en": [
+          "The mission consisted of creating a website for a wholesale company. I first designed the graphic ",
+          "layout to then integrate it into a website. To distinguish the 8 different categories, I tried to ",
+          "play with several colors."
+        ]
       },
       "images": {
         "img1": {
@@ -1095,8 +1148,15 @@
         "en": ["Project", "view"]
       },
       "about": {
-        "fr": "Le site est un site vitrine qui présente les services de l'entreprise. Il est composé de 4 pages : Accueil, Services, Contact et A propos. Le site est responsive et est compatible avec les navigateurs les plus utilisés.",
-        "en": "The site is a showcase site that presents the services of the company. It consists of 4 pages: Home, Services, Contact and About. The site is responsive and is compatible with the most used browsers."
+        "fr": [
+          "Le site est un site vitrine qui présente les services de l'entreprise. Il est composé de 4 pages : ",
+          "Accueil, Services, Contact et A propos. Le site est responsive et est compatible avec les navigateurs ",
+          "les plus utilisés. "
+        ],
+        "en": [
+          "The site is a showcase site that presents the services of the company. It consists of 4 pages: Home, ",
+          "Services, Contact and About. The site is responsive and is compatible with the most used browsers."
+        ]
       },
       "images": {
         "img3": {
