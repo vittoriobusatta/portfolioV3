@@ -82,6 +82,7 @@
     background-position: 50% 90%;
     background-size: cover;
     background-repeat: repeat;
+    background-clip: content-box;
     object-fit: fill;
     cursor: pointer;
     max-width: 70px;

@@ -8,9 +8,10 @@ function Typography({ typo, name, language, typographyproject }) {
   const projectTypography = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTypo = typoArray[currentIndex];
+  const { details, vector } = currentTypo;
 
-  let key = Object.keys(currentTypo.src[language]);
-  let value = Object.values(currentTypo.src[language]);
+  let key = Object.keys(details[language]);
+  let value = Object.values(details[language]);
 
   const handleCircleClick = (index) => {
     setCurrentIndex(index);
@@ -39,15 +40,15 @@ function Typography({ typo, name, language, typographyproject }) {
           <div className="typography__content">
             <Image
               className={`typography__content__vector typography__content__vector__${name}`}
-              src={currentTypo.vector.src}
-              alt={currentTypo.vector.alt}
+              src={`/assets/${name}/${vector.src}.svg`}
+              alt={`${name} - Vector`}
               width={570}
               height={55}
               priority
             />
             {typoArray.length > 1 && (
               <div className="typography__circles">
-                {typoArray.map((item, index) => (
+                {typoArray.map((_, index) => (
                   <div
                     key={index}
                     className={

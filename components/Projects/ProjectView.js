@@ -6,7 +6,6 @@ import { MaskText, setTitles } from "utils/utils";
 
 function ProjectView({ language, projects }) {
   const { title, subtitle, about } = projects.viewproject;
-  const thubnails = Object.values(projects.viewproject.images);
 
   const projectView = useRef(null);
   const subtle = useRef([]);
@@ -57,7 +56,7 @@ function ProjectView({ language, projects }) {
         <MaskText phrases={about[language]} />
       </div>
       <div className="projects__view__slideshow">
-        <Slideshow thubnails={thubnails} projects={projects} />
+        <Slideshow projects={projects} />
       </div>
     </div>
   );

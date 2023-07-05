@@ -15,7 +15,6 @@ const Slideshow = ({ data }) => {
     slideCurrent === data.find((item) => item.readytoview === false)?.id;
 
   const dataAvailable = data.filter((item) => item.available === true);
-
   return (
     <div
       className="landing__carousel"
@@ -37,28 +36,33 @@ const Slideshow = ({ data }) => {
               "--placeholder": item.color,
             }}
           >
-            {[1, 2, 3, 4].map((index) => (
-              <div className={`sliders__items__thumbs__${index}`} key={index}>
-                <div className="hidden relative">
-                  <Image
-                    className={`sliders__items__image ${
-                      !loaded ? "sliders__items__image--loaded" : ""
-                    } ${
-                      itemReadyToView
-                        ? "sliders__items__image--unavailable"
-                        : ""
-                    }`}
-                    onLoadingComplete={() => setLoaded(false)}
-                    src={item.thumbnail?.[`img${index}`].src}
-                    alt={item.thumbnail?.[`img${index}`].alt}
-                    width={1920}
-                    height={173}
-                    priority
-                  />
-                  <div className="placeholder"></div>
+            {Array.from({ length: 4 }, (_, i) => i + 1).map((index) => {
+              const { src } = item?.thumbnail?.[`thumb${index}`];
+              const { path } = item;
+              const isSvg = src.includes(".svg");
+              return (
+                <div className={`sliders__items__thumbs__${index}`} key={index}>
+                  <div className="hidden relative">
+                    <Image
+                      className={`sliders__items__image ${
+                        !loaded ? "sliders__items__image--loaded" : ""
+                      } ${
+                        itemReadyToView
+                          ? "sliders__items__image--unavailable"
+                          : ""
+                      }`}
+                      onLoadingComplete={() => setLoaded(false)}
+                      src={`/assets/${path}/${src}${isSvg ? "" : ".webp"}`}
+                      alt={`${item.name} - Thumb ${index}`}
+                      width={1920}
+                      height={173}
+                      priority
+                    />
+                    <div className="placeholder"></div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
             <div
               className="hidden sliders__items__thumbs__5"
               style={{

@@ -7,6 +7,7 @@ import { MaskText, setTitles } from "utils/utils";
 function AboutProject({ projects, language }) {
   const { title, subtitle, about, images } = projects.aboutproject;
   const { placeholder } = projects;
+  const { path } = projects;
 
   const projectAbout = useRef([]);
   const subtle = useRef([]);
@@ -63,27 +64,34 @@ function AboutProject({ projects, language }) {
           "--placeholder": projects.color,
         }}
       >
-        {Object.values(images).map((item, index) => (
-          <div
-            className={`projects__about__body__inner ${
-              !imageLoaded ? "projects__about__body__inner--loaded" : ""
-            }`}
-            key={index}
-          >
-            <Image
-              className="projects__about__body__inner__image"
-              src={item.src}
-              alt={item.alt}
-              width={385}
-              height={481}
-              onLoadingComplete={() => setImageLoaded(false)}
-              priority
-              placeholder="blur"
-              blurDataURL={placeholder}
-            />
-            <div className="placeholder" />
-          </div>
-        ))}
+        {Object.values(images).map((item, index) => {
+          const { src } = item;
+          const isSvg = src.includes(".svg");
+          return (
+            <div
+              className={`projects__about__body__inner ${
+                !imageLoaded ? "projects__about__body__inner--loaded" : ""
+              }`}
+              key={index}
+            >
+              <Image
+                className="projects__about__body__inner__image"
+                src={`/assets/${path}/${src}${isSvg ? "" : ".webp"}`}
+                alt={
+                  `${projects.name} - About Project - ` +
+                  `${index + 1} of ${Object.values(images).length}`
+                }
+                width={385}
+                height={481}
+                onLoadingComplete={() => setImageLoaded(false)}
+                priority
+                placeholder="blur"
+                blurDataURL={placeholder}
+              />
+              <div className="placeholder" />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
