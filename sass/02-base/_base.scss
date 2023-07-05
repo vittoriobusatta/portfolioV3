@@ -72,7 +72,7 @@ html {
   background-color: $color_background;
   width: 100%;
   transform-origin: right;
-  z-index: 102;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@ html {
   width: 100%;
   background-color: $color_background;
   transform-origin: left;
-  z-index: 102;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +104,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 90;
   mix-blend-mode: color-burn;
   opacity: 0;
   pointer-events: none;
