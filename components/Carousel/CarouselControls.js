@@ -33,8 +33,10 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
         {Arrow("left", data[slideCurrent]?.color)}
       </button>
       <div className="controls__container">
-        {data.map((item, index) => (
-          <div
+        {data.map((item, index) => {
+          const { path } = item;
+          return (
+            <div
             className={`controls__container__thumbs ${
               slideCurrent === index
                 ? "controls__container__thumbs--active"
@@ -46,9 +48,17 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
             }}
             onClick={() => handleImageSelect(index)}
           >
-            <Image src={item.logo?.src} alt="salut" height={15} width={15} />
+            <Image
+              src={`/assets/${path}/logo.svg`}
+              alt={`${item.name} - Logo`}
+              height={15}
+              width={15}
+            />
           </div>
-        ))}
+          )
+        }
+        )}
+          
       </div>
 
       <button

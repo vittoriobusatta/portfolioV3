@@ -14,8 +14,6 @@ import { motion } from "framer-motion";
 export default function Product({ projects }) {
   const { language } = useContext(GeneralContext);
 
-  console.log(projects);
-
   const [logoColor, setColor2] = useState(projects.color2);
   const button = useRef(null);
 
