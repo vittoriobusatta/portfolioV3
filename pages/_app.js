@@ -3,6 +3,7 @@ import "../sass/styles.scss";
 import { LanguageProvider } from "store/context";
 import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader";
+import Cursor from "@/components/Cursor";
 
 function MyApp({ Component, pageProps }) {
   if (typeof window !== "undefined") {
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <LanguageProvider>
         <Loader />
+        <Cursor />
         <Component {...pageProps} />
       </LanguageProvider>
     </>
