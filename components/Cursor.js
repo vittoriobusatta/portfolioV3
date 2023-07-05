@@ -12,7 +12,7 @@ function Cursor() {
   useEffect(() => {
     fetch("/db.json")
       .then((response) => response.json())
-      .then((resdata) => setData(resdata[slideCurrent]))
+      .then((resdata) => setData(resdata[slideCurrent].color))
       .catch((err) => setErreur(err.message));
   }, []);
 
@@ -106,7 +106,7 @@ function Cursor() {
     <div
       className="custom-cursor"
       style={{
-        "--color": data.color,
+        "--color": data,
       }}
     >
       <div
