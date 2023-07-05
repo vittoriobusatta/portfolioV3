@@ -1,9 +1,20 @@
 import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { GeneralContext } from "store/context";
 
 function Cursor() {
   const cursorBig = useRef(null);
   const cursorSmall = useRef(null);
+
+  const [data, setData] = useState([]);
+  const { slideCurrent } = useContext(GeneralContext);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((resdata) => setData(resdata[slideCurrent]))
+      .catch((err) => setErreur(err.message));
+  }, []);
 
   useEffect(() => {
     const cursorBigRef = cursorBig.current;
@@ -13,8 +24,18 @@ function Cursor() {
 
     const links = document.querySelectorAll("a");
     const buttons = document.querySelectorAll("button");
-    const showimgs = document.querySelectorAll(".showcase__images");
-    const withHover = [...links, ...buttons, ...showimgs];
+    const select = document.querySelectorAll("select");
+    const controlers = document.querySelectorAll(
+      ".controls__container__thumbs"
+    );
+    const thumbnails = document.querySelectorAll(".slideshow__thubnails");
+    const withHover = [
+      ...links,
+      ...buttons,
+      ...controlers,
+      ...thumbnails,
+      ...select,
+    ];
 
     function onMouseMove(e) {
       cursorSmallRef.style.opacity = 1;
@@ -33,7 +54,7 @@ function Cursor() {
     function onMouseHover() {
       gsap.to(cursorBigRef, {
         duration: 0.3,
-        scale: 1.8,
+        scale: 1.5,
       });
     }
 
@@ -82,7 +103,12 @@ function Cursor() {
   }, [cursorBig, cursorSmall]);
 
   return (
-    <div className="custom-cursor">
+    <div
+      className="custom-cursor"
+      style={{
+        "--color": data.color,
+      }}
+    >
       <div
         id="cursor-big"
         ref={cursorBig}
