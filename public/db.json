@@ -8,35 +8,28 @@
     "type": "Mission",
     "date": { "fr": "Décembre 2022", "en": "December 2022" },
     "role": {
-      "fr": "Développement & Conception",
-      "en": "Development & Design"
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
     },
-    "technologies": "Nextjs, Prisma, MongoDB",
+    "technologies": "Nextjs, MongoDB, API Canvas",
     "link": "https://decortakaz.re/",
     "color": "#4E2705",
     "color2": "#FEF1E7",
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
-      "img1": {
-        "src": "/images/decortakaz/dtkthumb1.webp",
-        "alt": "Décor Ta Kaz - Thumbnail"
+      "thumb1": {
+        "src": "dtkthumb1"
       },
-      "img2": {
-        "src": "/images/decortakaz/dtkthumb2.webp",
-        "alt": "Décor Ta Kaz - Thumbnail"
+      "thumb2": {
+        "src": "dtkthumb2"
       },
-      "img3": {
-        "src": "/images/decortakaz/dtk0.webp",
-        "alt": "Décor Ta Kaz - Thumbnail"
+      "thumb3": {
+        "src": "dtk0"
       },
-      "img4": {
-        "src": "/images/decortakaz/dtk5.svg",
-        "alt": "Décor Ta Kaz - Thumbnail"
+      "thumb4": {
+        "src": "dtk5.svg"
       }
-    },
-    "logo": {
-      "src": "/images/decortakaz/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -51,29 +44,28 @@
         "fr": [
           "J'ai eu l'opportunité de travailler avec Décor ta kaz, une entreprise de menuiserie artisanale basée ",
           "sur l'île de la Réunion. J'ai été responsable de la création d'une identité visuelle complète, ",
-          " comprenant un nouveau logo, le design du site, une palette de couleurs attrayante et une refonte ",
-          " des réseaux sociaux. Pour le développement du site web, j'ai utilisé les technologies Next.js, ",
-          " MongoDB et Prisma. Next.js m'a permis de créer un site web dynamique et performant, tandis ",
-          "que MongoDB a été utilisé comme base de données et Prisma a facilité la communication",
-          "avec celle-ci."
+          "comprenant un nouveau logo, le design du site, une palette de couleurs attrayante et une refonte ",
+          "des réseaux sociaux. Pour le développement du site web, j'ai utilisé les technologies Next.js, ",
+          "MongoDB et l'API Canvas. En utilisant Next.js, MongoDB et l'API Canvas, j'ai créé un site web ",
+          "dynamique et performant avec des fonctionnalités personnalisées et une base de données pour stocker ",
+          "les informations nécessaires."
         ],
+
         "en": [
-          "I had the opportunity to work with Décor ta kaz, a craft carpentry company based on the",
-          "island of Reunion. I was responsible for creating a complete visual identity, including a",
-          "new logo, the design of the site, an attractive color scheme and a redesign of social",
-          "networks. For website development, I used Next.js, MongoDB and Prisma technologies. ",
-          "Next.js allowed me to create a dynamic and powerful website, while MongoDB was used as a ",
-          "database and Prisma facilitated communication with it."
+          "I had the opportunity to work with Décor ta kaz, a craft carpentry company based in Paris",
+          "on Reunion Island. I was responsible for creating a complete visual identity, including a new logo, ",
+          "site design, attractive colour scheme and redesign social networks. For the development of the website, ",
+          "I used Next.js technologies, MongoDB and the Canvas API. Using Next.js, MongoDB and the Canvas API, ",
+          "I created a website dynamic and efficient with customized features and a database to store",
+          "the necessary information."
         ]
       },
       "images": {
         "img1": {
-          "src": "/images/decortakaz/dkt1.webp",
-          "alt": "Décor Ta Kaz - Image 1"
+          "src": "dkt1"
         },
         "img2": {
-          "src": "/images/decortakaz/dkt2.webp",
-          "alt": "Décor Ta Kaz - Image 2"
+          "src": "dkt2"
         }
       }
     },
@@ -108,33 +100,27 @@
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/decortakaz/dtk3.svg",
-          "alt": "Décor Ta Kaz - Image 3"
+          "src": "dtk3.svg"
         },
         "img4": {
           "id": 2,
-          "src": "/images/decortakaz/dtk4.svg",
-          "alt": "Décor Ta Kaz - Image 4"
+          "src": "dtk4.svg"
         },
         "img5": {
           "id": 3,
-          "src": "/images/decortakaz/dtk5.svg",
-          "alt": "Décor Ta Kaz - Image 5"
+          "src": "dtk5.svg"
         },
         "img6": {
           "id": 4,
-          "src": "/images/decortakaz/dtk6.svg",
-          "alt": "Décor Ta Kaz - Image 6"
+          "src": "dtk6.svg"
         },
         "img7": {
           "id": 5,
-          "src": "/images/decortakaz/dtk7.webp",
-          "alt": "Décor Ta Kaz - Image 7"
+          "src": "dtk7"
         },
         "img8": {
           "id": 6,
-          "src": "/images/decortakaz/dtk8.svg",
-          "alt": "Décor Ta Kaz - Image 8"
+          "src": "dtk8.svg"
         }
       }
     },
@@ -146,10 +132,9 @@
       "details": {
         "typo1": {
           "vector": {
-            "src": "/images/decortakaz/typo1.svg",
-            "alt": "Décor Ta Kaz - Typography"
+            "src": "typo1"
           },
-          "src": {
+          "details": {
             "fr": {
               "font": "Manrope",
               "foundry": "Google Fonts, fonts.google.com"
@@ -169,13 +154,17 @@
     "readytoview": true,
     "available": true,
     "path": "nocta",
-    "type": "Expérimental",
-    "date": { "fr": "Février 2023", "en": "February 2023" },
-    "role": {
-      "fr": "Identité visuelle & Conception",
-      "en": "Branding & Design"
+    "type": {
+      "fr": "Concours",
+      "en": "Contest"
     },
-    "technologies": "Figma",
+    "date": { "fr": "Juillet 2023", "en": "July 2023" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "Nextjs, GSAP",
+    "link": "https://nocta.vercel.app/",
     "color": "#093738",
     "color2": "#ECF8F5",
     "behance": "",
@@ -183,25 +172,18 @@
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
-      "img1": {
-        "src": "/images/nocta/nctthumb1.webp",
-        "alt": "Nocta - Thumbnail"
+      "thumb1": {
+        "src": "nctthumb1"
       },
-      "img2": {
-        "src": "/images/nocta/nctthumb2.webp",
-        "alt": "Nocta - Thumbnail"
+      "thumb2": {
+        "src": "nctthumb2"
       },
-      "img3": {
-        "src": "/images/nocta/nctthumb3.webp",
-        "alt": "Nocta - Thumbnail"
+      "thumb3": {
+        "src": "nctthumb3"
       },
-      "img4": {
-        "src": "/images/nocta/nctthumb4.webp",
-        "alt": "Nocta - Thumbnail"
+      "thumb4": {
+        "src": "nctthumb4"
       }
-    },
-    "logo": {
-      "src": "/images/nocta/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -216,11 +198,11 @@
         "fr": [
           "Pour ce projet, j'ai travaillé sur le rebranding de la marque Nocta, une marque de vêtements ",
           "streetwear appartenant à Nike. Mon objectif était de refaire entièrement l'identité visuelle de ",
-          "Nocta pour leur  nouvelle collection de vêtements de golf. j'ai donné à Nocta une image ",
-          "fraîche et  valeur sa nouvelle collection de vêtements de golf avec des couleurs et des pages web",
-          "personnalisées, moderne, mettant en  donnant ainsi à la marque une allure distinctive et attrayante. ",
-          "Tout au long du processus de conception, j'ai utilisé le  logiciel Figma, qui m'a permis de visualiser et ",
-          "de peaufiner chaque détail pour offrir  une expérience visuelle cohérente et attractive ",
+          "Nocta pour leur  nouvelle collection de vêtements de golf. J'ai donné à Nocta une image ",
+          "fraîche et mettant en valeur sa nouvelle collection de vêtements de golf avec des couleurs et des pages web ",
+          "personnalisées, donnant ainsi à la marque une allure distinctive et moderne. ",
+          "Tout au long du processus de conception, j'ai utilisé le logiciel Figma, qui m'a permis de visualiser et ",
+          "de peaufiner chaque détail pour offrir une expérience visuelle cohérente et attractive ",
           "aux utilisateurs."
         ],
         "en": [
@@ -234,12 +216,10 @@
       },
       "images": {
         "img1": {
-          "src": "/images/nocta/nct1.webp",
-          "alt": "Nocta - Image 1"
+          "src": "nct1"
         },
         "img2": {
-          "src": "/images/nocta/nct2.webp",
-          "alt": "Nocta - Image 2"
+          "src": "nct2"
         }
       }
     },
@@ -272,30 +252,20 @@
         ]
       },
       "images": {
+        "img1": {
+          "src": "nct3"
+        },
+        "img2": {
+          "src": "nct4"
+        },
         "img3": {
-          "id": 1,
-          "src": "/images/nocta/nct3.webp",
-          "alt": "Nocta - Image 3"
+          "src": "nct5"
         },
         "img4": {
-          "id": 2,
-          "src": "/images/nocta/nct4.webp",
-          "alt": "Nocta - Image 4"
+          "src": "nct6"
         },
         "img5": {
-          "id": 3,
-          "src": "/images/nocta/nct5.webp",
-          "alt": "Nocta - Image 5"
-        },
-        "img6": {
-          "id": 4,
-          "src": "/images/nocta/nct6.webp",
-          "alt": "Nocta - Image 6"
-        },
-        "img7": {
-          "id": 5,
-          "src": "/images/nocta/nct7.webp",
-          "alt": "Nocta - Image 7"
+          "src": "nct7"
         }
       }
     },
@@ -307,10 +277,10 @@
       "details": {
         "typo1": {
           "vector": {
-            "src": "/images/nocta/noctaTypo.svg",
+            "src": "noctaTypo",
             "alt": "Nocta - Typography"
           },
-          "src": {
+          "details": {
             "fr": {
               "police": "Univers 93",
               "source": "Fonts Geek, fontsgeek.com"
@@ -350,25 +320,18 @@
     "paragraph": "#201713",
     "placeholder": "#ffece3",
     "thumbnail": {
-      "img1": {
-        "src": "/images/muteza/mtz3.webp",
-        "alt": "Muteza - Thumbnail"
+      "thumb1": {
+        "src": "mtz3"
       },
-      "img2": {
-        "src": "/images/muteza/mtz0.webp",
-        "alt": "Muteza - Thumbnail"
+      "thumb2": {
+        "src": "mtz0"
       },
-      "img3": {
-        "src": "/images/muteza/mtzthumb3.webp",
-        "alt": "Muteza - Thumbnail"
+      "thumb3": {
+        "src": "mtzthumb3"
       },
-      "img4": {
-        "src": "/images/muteza/mtz4.webp",
-        "alt": "Muteza - Thumbnail"
+      "thumb4": {
+        "src": "mtz4"
       }
-    },
-    "logo": {
-      "src": "/images/muteza/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -382,16 +345,16 @@
       "about": {
         "fr": [
           "Muteza est une entreprise fictive qui propose un sérum révolutionnaire pour sublimer la beauté.",
-          " J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de développer la version ",
-          "responsive du site. Pour mener à bien cette mission, j'ai utilisé React et intégré la bibliothèque",
-          " Locomotive Scroll pour créer une expérience de navigation fluide et captivante. J'ai travaillé",
+          "J'ai pris l'initiative de reprendre le travail d’Abhishek Jha afin de développer la version ",
+          "responsive du site. Pour mener à bien cette mission, j'ai utilisé React et intégré la bibliothèque ",
+          "Locomotive Scroll pour créer une expérience de navigation fluide et captivante. J'ai travaillé ",
           "avec soin pour offrir aux utilisateurs une expérience visuelle immersive, où ils peuvent ",
-          "explorer les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Muteza ",
-          "s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs une",
+          "explorer les bienfaits exceptionnels du sérum et découvrir ses secrets de beauté. Le site ",
+          "s'est transformé pour briller sur tous les appareils, offrant aux utilisateurs une ",
           "expérience harmonieuse et captivante."
         ],
         "en": [
-          "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. I took",
+          "Muteza is a fictional company that offers a revolutionary serum to sublimate beauty. I took ",
           "the initiative to resume the work of Abhishek Jha to develop the responsive version of ",
           "the site. To accomplish this mission, I used React and integrated the Locomotive ",
           "Scroll library to create a smooth and engaging browsing experience. I have worked carefully ",
@@ -402,12 +365,10 @@
       },
       "images": {
         "img1": {
-          "src": "/images/muteza/mtz1.webp",
-          "alt": "Muteza - Image 1"
+          "src": "mtz1"
         },
         "img2": {
-          "src": "/images/muteza/mtz2.webp",
-          "alt": "Muteza - Image 2"
+          "src": "mtz2"
         }
       }
     },
@@ -422,52 +383,46 @@
       },
       "about": {
         "fr": [
-          "Le site Muteza offre une présentation minutieuse du sérum miracle conçu pour répondre ",
+          "Le site Muteza offre une présentation détaillée du sérum miracle conçu pour répondre ",
           "aux besoins de la peau. Les ingrédients clés sont mis en avant, mettant en valeur ",
           "leur efficacité. Les témoignages des utilisateurs viennent appuyer les bénéfices concrets obtenus ",
-          "grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable, permettant",
-          "une découverte approfondie du produit et de son impact sur la peau. Découvrez le secret",
+          "grâce à l'utilisation du sérum. L'expérience de navigation sur le site est agréable, permettant ",
+          "une découverte approfondie du produit et de son impact sur la peau. Découvrez le secret ",
           " d'une peau resplendissante avec Muteza : le sérum miracle qui révèle votre",
           "beauté naturelle."
         ],
         "en": [
           "The Muteza site features a miracle serum that has been designed to meet the needs ",
-          "of the skin. The presentation of the product is careful and highlights the key ingredients that",
+          "of the skin. The presentation of the product is careful and highlights the key ingredients that ",
           " make it up. User reviews are also available, allowing to see the concrete testimonies ",
-          "of the benefits obtained through the use of serum. The experience of browsing the site",
+          "of the benefits obtained through the use of serum. The experience of browsing the site ",
           "is pleasant and allows to discover in detail the product and its impact on the skin."
         ]
       },
       "images": {
         "img3": {
           "id": 1,
-          "src": "/images/muteza/mtz3.webp",
-          "alt": "Muteza - Image 3"
+          "src": "mtz3"
         },
         "img4": {
           "id": 2,
-          "src": "/images/muteza/mtz4.webp",
-          "alt": "Muteza - Image 4"
+          "src": "mtz4"
         },
         "img5": {
           "id": 3,
-          "src": "/images/muteza/mtz5.webp",
-          "alt": "Muteza - Image 5"
+          "src": "mtz5"
         },
         "img6": {
           "id": 4,
-          "src": "/images/muteza/mtz6.webp",
-          "alt": "Muteza - Image 6"
+          "src": "mtz6"
         },
         "img7": {
           "id": 5,
-          "src": "/images/muteza/mtz7.webp",
-          "alt": "Muteza - Image 7"
+          "src": "mtz7"
         },
         "img8": {
           "id": 6,
-          "src": "/images/muteza/mtz8.webp",
-          "alt": "Muteza - Image 8"
+          "src": "mtz8"
         }
       }
     },
@@ -479,10 +434,9 @@
       "details": {
         "typo1": {
           "vector": {
-            "src": "/images/muteza/typo1.svg",
-            "alt": "Muteza - Typography 1"
+            "src": "typo1"
           },
-          "src": {
+          "details": {
             "fr": {
               "police": "Elgoc",
               "source": "Fonts Geek, fontsgeek.com"
@@ -495,10 +449,9 @@
         },
         "typo2": {
           "vector": {
-            "src": "/images/muteza/typo2.svg",
-            "alt": "Muteza - Typography 2"
+            "src": "typo2"
           },
-          "src": {
+          "details": {
             "fr": {
               "police": "TT Norms",
               "source": "Fonts Geek, fontsgeek.com"
@@ -532,25 +485,18 @@
     "paragraph": "#010829",
     "placeholder": "#dae0fa",
     "thumbnail": {
-      "img4": {
-        "src": "/images/galleria/gla3.webp",
-        "alt": "Galleria - Thumbnail"
+      "thumb4": {
+        "src": "gla3"
       },
-      "img3": {
-        "src": "/images/galleria/glathumb2.webp",
-        "alt": "Galleria - Thumbnail"
+      "thumb3": {
+        "src": "glathumb2"
       },
-      "img2": {
-        "src": "/images/galleria/gla0.webp",
-        "alt": "Galleria - Thumbnail"
+      "thumb2": {
+        "src": "gla0"
       },
-      "img1": {
-        "src": "/images/galleria/gla4.webp",
-        "alt": "Galleria - Thumbnail"
+      "thumb1": {
+        "src": "gla4"
       }
-    },
-    "logo": {
-      "src": "/images/galleria/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -580,12 +526,10 @@
       },
       "images": {
         "img1": {
-          "src": "/images/galleria/gla1.webp",
-          "alt": "Galleria - Image 1"
+          "src": "gla1"
         },
         "img2": {
-          "src": "/images/galleria/gla2.webp",
-          "alt": "Galleria - Image 2"
+          "src": "gla2"
         }
       }
     },
@@ -618,29 +562,19 @@
       },
       "images": {
         "img3": {
-          "id": 1,
-          "src": "/images/galleria/gla3.webp",
-          "alt": "Galleria - Image 3"
+          "src": "gla3"
         },
         "img4": {
-          "id": 2,
-          "src": "/images/galleria/gla4.webp",
-          "alt": "Galleria - Image 4"
+          "src": "gla4"
         },
         "img5": {
-          "id": 3,
-          "src": "/images/galleria/gla5.webp",
-          "alt": "Galleria - Image 5"
+          "src": "gla5"
         },
         "img6": {
-          "id": 4,
-          "src": "/images/galleria/gla6.webp",
-          "alt": "Galleria - Image 6"
+          "src": "gla6"
         },
         "img7": {
-          "id": 5,
-          "src": "/images/galleria/gla7.webp",
-          "alt": "Galleria - Image 7"
+          "src": "gla7"
         }
       }
     },
@@ -652,10 +586,9 @@
       "details": {
         "typo1": {
           "vector": {
-            "src": "/images/galleria/typo1.svg",
-            "alt": "Galleria - Typography"
+            "src": "typo1"
           },
-          "src": {
+          "details": {
             "fr": {
               "font": "Libre Baskerville",
               "foundry": "Fonts Geek, fontsgeek.com"
@@ -675,7 +608,10 @@
     "readytoview": true,
     "available": true,
     "path": "unkle",
-    "type": "Mission",
+    "type": {
+      "fr": "Stage",
+      "en": "Internship"
+    },
     "date": { "fr": "Juin 2022", "en": "June 2022" },
     "role": {
       "fr": "Développement",
@@ -689,25 +625,18 @@
     "paragraph": "#034075",
     "placeholder": "#d9f5ff",
     "thumbnail": {
-      "img1": {
-        "src": "/images/unkle/unk6.webp",
-        "alt": "Unkle - Thumbnail"
+      "thumb1": {
+        "src": "unk6"
       },
-      "img2": {
-        "src": "/images/unkle/unk0.webp",
-        "alt": "Unkle - Thumbnail"
+      "thumb2": {
+        "src": "unk0"
       },
-      "img3": {
-        "src": "/images/unkle/unkthumb3.webp",
-        "alt": "Unkle - Thumbnail"
+      "thumb3": {
+        "src": "unkthumb3"
       },
-      "img4": {
-        "src": "/images/unkle/unk4.webp",
-        "alt": "Unkle - Thumbnail"
+      "thumb4": {
+        "src": "unk4"
       }
-    },
-    "logo": {
-      "src": "/images/unkle/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -741,12 +670,10 @@
       },
       "images": {
         "img1": {
-          "src": "/images/unkle/unk1.svg",
-          "alt": "Unkle - Image 1"
+          "src": "unk1.svg"
         },
         "img2": {
-          "src": "/images/unkle/unk2.svg",
-          "alt": "Unkle - Image 2"
+          "src": "unk2.svg"
         }
       }
     },
@@ -780,29 +707,19 @@
       },
       "images": {
         "img3": {
-          "id": 1,
-          "src": "/images/unkle/unk3.webp",
-          "alt": "Unkle - Image 3"
+          "src": "unk3"
         },
         "img4": {
-          "id": 2,
-          "src": "/images/unkle/unk4.webp",
-          "alt": "Unkle - Image 4"
+          "src": "unk4"
         },
         "img5": {
-          "id": 3,
-          "src": "/images/unkle/unk5.webp",
-          "alt": "Unkle - Image 5"
+          "src": "unk5"
         },
         "img7": {
-          "id": 4,
-          "src": "/images/unkle/unk6.webp",
-          "alt": "Unkle - Image 6"
+          "src": "unk6"
         },
         "img6": {
-          "id": 5,
-          "src": "/images/unkle/unk7.webp",
-          "alt": "Unkle - Image 7"
+          "src": "unk7"
         }
       }
     }
@@ -827,25 +744,18 @@
     "paragraph": "#231e00",
     "placeholder": "#fff7c3",
     "thumbnail": {
-      "img4": {
-        "src": "/images/sunnyside/sun6.webp",
-        "alt": "Sunnyside - Thumbnail"
+      "thumb4": {
+        "src": "sun6"
       },
-      "img3": {
-        "src": "/images/sunnyside/sunthumb2.webp",
-        "alt": "Sunnyside - Thumbnail"
+      "thumb3": {
+        "src": "sunthumb2"
       },
-      "img2": {
-        "src": "/images/sunnyside/sun0.webp",
-        "alt": "Sunnyside - Thumbnail"
+      "thumb2": {
+        "src": "sun0"
       },
-      "img1": {
-        "src": "/images/sunnyside/sun3.webp",
-        "alt": "Sunnyside - Thumbnail"
+      "thumb1": {
+        "src": "sun3"
       }
-    },
-    "logo": {
-      "src": "/images/sunnyside/logo.svg"
     },
     "aboutproject": {
       "title": {
@@ -860,7 +770,7 @@
         "fr": [
           "Pour le projet Sunnyside, en tant que développeur, j'ai travaillé sur la mise en œuvre de la maquette ",
           "reçue pour créer un site web réactif et fonctionnel. Grâce à l'utilisation de React, j'ai pu ",
-          "transformer la maquette en une interface utilisateur interactive, offrant aux utilisateurs une ",
+          "transformer la maquette en une interface utilisateur interactive, offrant ainsi une ",
           "expérience fluide et engageante. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée ",
           "tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et ",
           "cohérente pour l'agence."
@@ -875,12 +785,10 @@
       },
       "images": {
         "img1": {
-          "src": "/images/sunnyside/sun1.webp",
-          "alt": "Sunnyside - Image 1"
+          "src": "sun1"
         },
         "img2": {
-          "src": "/images/sunnyside/sun2.webp",
-          "alt": "Sunnyside - Image 2"
+          "src": "sun2"
         }
       }
     },
@@ -913,29 +821,19 @@
       },
       "images": {
         "img3": {
-          "id": 1,
-          "src": "/images/sunnyside/sun3.webp",
-          "alt": "Sunnyside - Image 3"
+          "src": "sun3"
         },
         "img4": {
-          "id": 2,
-          "src": "/images/sunnyside/sun4.webp",
-          "alt": "Sunnyside - Image 4"
+          "src": "sun4"
         },
         "img5": {
-          "id": 3,
-          "src": "/images/sunnyside/sun5.webp",
-          "alt": "Sunnyside - Image 5"
+          "src": "sun5"
         },
         "img6": {
-          "id": 4,
-          "src": "/images/sunnyside/sun6.webp",
-          "alt": "Sunnyside - Image 6"
+          "src": "sun6"
         },
         "img7": {
-          "id": 5,
-          "src": "/images/sunnyside/sun7.webp",
-          "alt": "Sunnyside - Image 7"
+          "src": "sun7"
         }
       }
     },
@@ -947,10 +845,9 @@
       "details": {
         "typo1": {
           "vector": {
-            "src": "/images/sunnyside/typo1.svg",
-            "alt": "Sunnyside - Typography"
+            "src": "typo1"
           },
-          "src": {
+          "details": {
             "fr": {
               "police": "Barlow",
               "source": "Google Fonts, fonts.google.com"
@@ -963,11 +860,9 @@
         },
         "typo2": {
           "vector": {
-            "src": "/images/sunnyside/typo2.svg",
-            "alt": "Sunnyside - Typography 2"
+            "src": "typo2"
           },
-
-          "src": {
+          "details": {
             "fr": {
               "police": "Faunces",
               "source": "Google Fonts, fonts.google.com"
@@ -977,92 +872,6 @@
               "foundry": "Google Fonts, fonts.google.com"
             }
           }
-        }
-      }
-    }
-  },
-  {
-    "name": "Kaigai",
-    "id": 6,
-    "readytoview": false,
-    "available": true,
-    "path": "kaigai",
-    "type": "Competition",
-    "date": { "fr": "Avril 2023", "en": "April 2023" },
-    "role": {
-      "fr": "Branding",
-      "en": "Branding"
-    },
-    "technologies": "Figma, Illustrator",
-    "link": "",
-    "color": "#E38EA6",
-    "color2": "#FBE0ED",
-    "background": "#FCFFEC",
-    "paragraph": "#a9a99e",
-    "placeholder": "#fff7c3",
-    "thumbnail": {
-      "img4": {
-        "src": "/images/kaigai/kgathumb4.webp",
-        "alt": "Kaigai - Thumbnail"
-      },
-      "img3": {
-        "src": "/images/kaigai/kgathumb3.svg",
-        "alt": "Kaigai - Thumbnail"
-      },
-      "img2": {
-        "src": "/images/kaigai/kgathumb2.webp",
-        "alt": "Kaigai - Thumbnail"
-      },
-      "img1": {
-        "src": "/images/kaigai/kgathumb1.svg",
-        "alt": "Kaigai - Thumbnail"
-      }
-    },
-    "logo": {
-      "src": "/images/kaigai/logo.svg"
-    },
-    "aboutproject": {
-      "title": {
-        "fr": [""],
-        "en": [""]
-      },
-      "subtitle": {
-        "fr": [""],
-        "en": [""]
-      },
-      "about": {
-        "fr": [],
-        "en": []
-      },
-      "images": {
-        "img1": {
-          "src": "",
-          "alt": ""
-        },
-        "img2": {
-          "src": "",
-          "alt": ""
-        }
-      }
-    },
-    "viewproject": {
-      "title": {
-        "fr": [""],
-        "en": [""]
-      },
-      "subtitle": {
-        "fr": [""],
-        "en": [""]
-      },
-      "about": {
-        "fr": [],
-        "en": []
-      },
-      "images": {
-        "img3": {
-          "id": 1,
-          "src": "",
-          "alt": ""
         }
       }
     }
