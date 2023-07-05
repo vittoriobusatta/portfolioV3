@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Carousel from "@/components/Carousel/Carousel";
 import { GeneralContext } from "store/context";
+import Transition from "utils/transitions";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -35,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Transition(Home);
