@@ -63,3 +63,30 @@ html {
 .relative {
   position: relative;
 }
+
+.custom-cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.custom-cursor__ball--big {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.custom-cursor__ball--small {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+}
