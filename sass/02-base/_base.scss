@@ -64,6 +64,42 @@ html {
   position: relative;
 }
 
+.slide-in {
+  position: fixed;
+  min-height: -webkit-fill-available;
+  height: calc(100% + env(safe-area-inset-top));
+  inset: 0;
+  background-color: $color_background;
+  width: 100%;
+  transform-origin: right;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & svg {
+    height: 80px;
+    width: auto;
+  }
+}
+
+.slide-out {
+  position: fixed;
+  min-height: -webkit-fill-available;
+  height: calc(100% + env(safe-area-inset-top));
+  inset: 0;
+  width: 100%;
+  background-color: $color_background;
+  transform-origin: left;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & svg {
+    height: 80px;
+    width: auto;
+  }
+}
+
 .custom-cursor__ball {
   position: fixed;
   top: 0;

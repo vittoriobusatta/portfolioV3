@@ -4,8 +4,11 @@ import { LanguageProvider } from "store/context";
 import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader";
 import Cursor from "@/components/Cursor";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   if (typeof window !== "undefined") {
     const lenis = new Lenis({
       duration: 1.2,
@@ -31,7 +34,9 @@ function MyApp({ Component, pageProps }) {
       <LanguageProvider>
         <Loader />
         <Cursor />
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait" initial={false}>
+          <Component {...pageProps} key={router.asPath}/>
+        </AnimatePresence>
       </LanguageProvider>
     </>
   );

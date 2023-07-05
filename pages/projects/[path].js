@@ -9,9 +9,10 @@ import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
 import data from "../../public/db.json";
 import { motion } from "framer-motion";
+import Transition from "utils/transitions";
 
 
-export default function Product({ projects }) {
+function Product({ projects }) {
   const { language } = useContext(GeneralContext);
 
   const [logoColor, setColor2] = useState(projects.color2);
@@ -96,6 +97,8 @@ export default function Product({ projects }) {
     </>
   );
 }
+
+export default Transition(Product);
 
 export async function getStaticProps({ params }) {
   const { path } = params;
