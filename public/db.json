@@ -879,8 +879,8 @@
   {
     "name": "Mascarin",
     "id": 6,
-    "readytoview": true,
-    "available": true,
+    "readytoview": false,
+    "available": false,
     "path": "mascarin",
     "type": "Expérimental",
     "date": { "fr": "Août 2023", "en": "August 2023" },

@@ -81,6 +81,7 @@ const Slideshow = ({ data }) => {
       <ul className="sliders" ref={slideWrapperRef}>
         {data.map((item, index) => {
           const { thumbnail, name, path, color, color2 } = item;
+
           const nameWords = [
             ...new Set(
               item?.name
@@ -185,6 +186,14 @@ const Slideshow = ({ data }) => {
                     ? "Bientôt disponible"
                     : "Soon available"}
                 </Link>
+              </div>
+              <div className="sliders__items__thumbs__7">
+                <h3>Type</h3>
+                <p>{item.type[language] ? item.type[language] : item.type}</p>
+              </div>
+              <div className="sliders__items__thumbs__8">
+                <h3>Date</h3>
+                <p>{item.date[language]}</p>
               </div>
             </li>
           );
