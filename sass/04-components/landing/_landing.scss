@@ -12,7 +12,7 @@
 }
 
 .sliders {
-  height: calc(100% - 122px);
+  height: calc(100%);
   width: 100%;
   position: relative;
   &__items {
@@ -122,6 +122,48 @@
           grid-area: 6 / 5 / 7 / 8;
         }
       }
+      &__7 {
+        grid-area: 7/1/7/3;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      &__8 {
+        grid-area: 7/12/7/10;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+      &__7,
+      &__8 {
+        row-gap: 0.5vw;
+        display: none;
+        @media screen and (min-width: 1224px) {
+          display: flex;
+        }
+        & h3 {
+          color: var(--color);
+          font-family: Tusker Grotesk;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+          letter-spacing: 0.7px;
+          text-transform: uppercase;
+        }
+        & p {
+          color: var(--color);
+          font-family: "Outfit", sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 }
@@ -156,7 +198,7 @@
     }
   }
   & a {
-    font-family: $rivalSans;
+    font-family: $outfit;
     font-weight: $bold;
     font-size: 14px;
     text-decoration-line: underline;
@@ -171,28 +213,23 @@
 }
 
 .controls {
+  position: fixed;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
   height: auto;
-  // width: 90%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   column-gap: 22px;
   max-width: 500px;
-  padding: 0 16px;
-  @media screen and (min-width: 576px) {
-    padding: 0 32px;
-  }
   @media screen and (min-width: 768px) {
     padding: 0 42px;
     max-width: 700px;
-    // width: 100%;
-  }
-  @media screen and (min-width: 992px) {
-    padding: 0 52px;
   }
   @media screen and (min-width: 1224px) {
-    padding: 0 62px;
+    bottom: 22px;
   }
   &__button {
     background: none;
@@ -236,7 +273,3 @@
     }
   }
 }
-
-// .thumbsnail {
-//   background-color: var(--color);
-// }

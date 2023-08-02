@@ -33,7 +33,7 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
     <div className="controls">
       <button
         className="controls__button"
-        onClick={() => navigate(slideCurrent - 1)}
+        onClick={() => navigate(data[slideCurrent]?.id, slideCurrent - 1)}
       >
         {Arrow("left", data[slideCurrent]?.color)}
       </button>

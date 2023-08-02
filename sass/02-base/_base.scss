@@ -19,7 +19,7 @@
 
 @supports (padding: env(safe-area-inset-top)) {
   body {
-    font-family: $rivalSans;
+    font-family: $outfit;
     font-size: 1.6rem;
   }
 }
@@ -101,6 +101,10 @@ html {
 }
 
 .cursor {
+  display: none;
+  @media screen and (min-width: 1224px) {
+    display: block;
+  }
   pointer-events: none;
   &__ball {
     position: fixed;
