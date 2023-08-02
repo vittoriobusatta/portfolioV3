@@ -165,10 +165,10 @@
     },
     "technologies": "Nextjs, GSAP",
     "link": "https://nocta.vercel.app/",
-    "color": "#093738",
-    "color2": "#ECF8F5",
+    "color": "#383838",
+    "color2": "#E8EDEF",
     "behance": "",
-    "paragraph": "#0d4f50",
+    "paragraph": "#1D1D1D",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
     "thumbnail": {
@@ -256,16 +256,16 @@
           "src": "nct3"
         },
         "img2": {
-          "src": "nct4"
+          "src": "nctthumb4"
         },
         "img3": {
           "src": "nct5"
         },
         "img4": {
-          "src": "nct6"
+          "src": "nct4"
         },
         "img5": {
-          "src": "nct7"
+          "src": "nctthumb1"
         }
       }
     },
@@ -875,5 +875,57 @@
         }
       }
     }
+  },
+  {
+    "name": "Mascarin",
+    "id": 6,
+    "readytoview": true,
+    "available": true,
+    "path": "mascarin",
+    "type": "Expérimental",
+    "date": { "fr": "Août 2023", "en": "August 2023" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "TS, Auth, MongoDB, Prisma",
+    "link": "",
+    "color": "#189E8E",
+    "color2": "#ECF8F5",
+    "paragraph": "#231e00",
+    "placeholder": "#",
+    "thumbnail": {
+      "thumb1": {
+        "src": "mscthumb1"
+      },
+      "thumb2": {
+        "src": "mscthumb3"
+      },
+      "thumb3": {
+        "src": "mscthumb4"
+      },
+      "thumb4": {
+        "src": "mscthumb2"
+      }
+    }
+  },
+  {
+    "name": "Ab Distribution",
+    "id": 7,
+    "readytoview": false,
+    "available": false,
+    "path": "abdistribution",
+    "type": "Expérimental",
+    "date": { "fr": "Août 2023", "en": "August 2023" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "TS, Shopify",
+    "link": "",
+    "color": "#F86542",
+    "color2": "#F8F0EC",
+    "paragraph": "#",
+    "placeholder": "#"
   }
 ]

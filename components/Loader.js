@@ -12,7 +12,7 @@ function Loader() {
     fetch("/db.json")
       .then((response) => response.json())
       .then((resdata) => setData(resdata))
-      .catch((err) => setErreur(err.message));
+      .catch((err) => console.log(err.message));
   }, []);
 
   // const themeColor = data[slideCurrent]?.color || "";

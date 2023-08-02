@@ -12,13 +12,17 @@ function Home() {
   useEffect(() => {
     fetch("/db.json")
       .then((response) => response.json())
-      .then((resdata) => setData(resdata))
-      .catch((err) => setErreur(err.message));
+      .then((resdata) =>
+        setData(
+          resdata
+            .filter((item) => item.available === true)
+            .sort((a, b) => new Date(b.date.en) - new Date(a.date.en))
+        )
+      )
+      .catch((err) => setError(err.message));
   }, []);
 
-  const dataAvailable = data.filter((item) => item.available === true);
-
-  const themeColor = dataAvailable[slideCurrent]?.color || "";
+  const themeColor = data[slideCurrent.index]?.color || "";
 
   return (
     <>

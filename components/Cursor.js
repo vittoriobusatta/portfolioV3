@@ -11,9 +11,17 @@ function Cursor() {
   useEffect(() => {
     fetch("/db.json")
       .then((response) => response.json())
-      .then((resdata) => setData(resdata[slideCurrent].color))
-      .catch((err) => setErreur(err.message));
-  }, [slideCurrent]);
+      .then((resdata) =>
+        setData(
+          resdata
+            .filter((item) => item.available === true)
+            .sort((a, b) => new Date(b.date.en) - new Date(a.date.en))[
+            slideCurrent.index
+          ]?.color
+        )
+      )
+      .catch((err) => console.log(err.message));
+  }, [slideCurrent.index]);
 
   function onMouseMove(e) {
     const bigBall = bigBallRef.current;
