@@ -36,7 +36,7 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
         {data.map((item, index) => {
           const { path } = item;
           return (
-            <div
+            <button
             className={`controls__container__thumbs ${
               slideCurrent === index
                 ? "controls__container__thumbs--active"
@@ -54,7 +54,7 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
               height={15}
               width={15}
             />
-          </div>
+          </button>
           )
         }
         )}
