@@ -22,13 +22,6 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
     });
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     navigate(slideCurrent + 1);
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [slideCurrent]);
-
   return (
     <div className="controls">
       <button

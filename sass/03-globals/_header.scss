@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,6 +21,27 @@ header {
   }
   @media screen and (min-width: 1224px) {
     padding: 20px 62px;
+  }
+  &__status {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &__circle {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color);
+      margin-right: 16px;
+      animation: bounce-in 2s ease infinite;
+    }
+    & p {
+      color: var(--color);
+      text-overflow: ellipsis;
+      font-family: $outfit;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 }
 
