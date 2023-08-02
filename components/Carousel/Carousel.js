@@ -104,9 +104,9 @@ const Slideshow = ({ data }) => {
             <li
               className={itemClassName}
               key={index}
-              // onMouseMove={(e) => {
-              //   manageMouseMove(e);
-              // }}
+              onMouseMove={(e) => {
+                manageMouseMove(e);
+              }}
               ref={(el) => (planes.current[index] = el)}
               style={{
                 "--color": color,
