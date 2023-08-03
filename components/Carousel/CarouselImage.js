@@ -1,13 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const CarouselImage = ({
-  name,
-  src,
-  totalThumbnails,
-  index,
-  path,
-}) => {
+const CarouselImage = ({ name, src, totalThumbnails, index, path }) => {
   const isSvg = src && src.includes(".svg");
   const srcImage = `/assets/${path}/${src}${isSvg ? "" : ".webp"}`;
   const [loaded, setLoaded] = useState(true);
@@ -24,7 +18,6 @@ const CarouselImage = ({
           alt={`${name} - ${index + 1} of ${totalThumbnails}`}
           width={1920}
           height={173}
-          priority
         />
         <div className="placeholder" />
       </div>
