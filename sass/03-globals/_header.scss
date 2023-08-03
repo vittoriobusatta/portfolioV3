@@ -31,8 +31,11 @@
       height: 6px;
       border-radius: 50%;
       background-color: var(--color);
-      margin-right: 16px;
+      margin-right: 8px;
       animation: bounce-in 2s ease infinite;
+      @media screen and (min-width: 576px) {
+        margin-right: 16px;
+      }
     }
     & p {
       color: var(--color);

@@ -238,14 +238,14 @@
   bottom: 8%;
   transform: translateX(-50%);
   height: auto;
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   column-gap: 22px;
   max-width: 500px;
   @media screen and (min-width: 768px) {
-    padding: 0 42px;
+    width: 100%;
     max-width: 700px;
   }
   @media screen and (min-width: 1224px) {
