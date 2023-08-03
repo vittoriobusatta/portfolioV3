@@ -1,25 +1,52 @@
-import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Link from "next/link";
 import CarouselControls from "./CarouselControls";
 import { GeneralContext } from "store/context";
 import { gsap } from "gsap";
+import CarouselImage from "./CarouselImage";
 
 const bannedTitles = ["decortakaz"];
+
+const throttle = (fn, wait) => {
+  let inThrottle, lastFn, lastTime;
+  return function () {
+    const context = this,
+      args = arguments;
+    if (!inThrottle) {
+      fn.apply(context, args);
+      lastTime = Date.now();
+      inThrottle = true;
+    } else {
+      clearTimeout(lastFn);
+      lastFn = setTimeout(function () {
+        if (Date.now() - lastTime >= wait) {
+          fn.apply(context, args);
+          lastTime = Date.now();
+        }
+      }, Math.max(wait - (Date.now() - lastTime), 0));
+    }
+  };
+};
+const lerp = (start, target, amount) => start * (1 - amount) + target * amount;
 
 const Slideshow = ({ data }) => {
   const planes = useRef([]);
   const [planes1, setPlanes1] = useState([]);
   const [planes2, setPlanes2] = useState([]);
-  const { language } = useContext(GeneralContext);
-  const [loaded, setLoaded] = useState(true);
-  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
-  const slideIndex = slideCurrent?.index;
 
+  const { language } = useContext(GeneralContext);
+  const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
+
+  const slideIndex = slideCurrent?.index;
   const planesCurrent = planes.current[slideCurrent?.index];
 
   useEffect(() => {
-
     if (slideCurrent && planes.current[slideCurrent.index]) {
       setPlanes1([
         planes.current[slideCurrent.index].children[0].children[0],
@@ -39,18 +66,20 @@ const Slideshow = ({ data }) => {
   const easing = 0.08;
   const speed = 0.01;
 
-  const manageMouseMove = (e) => {
-    const { movementX, movementY } = e;
-    xForce += movementX * speed;
-    yForce += movementY * speed;
+  const handleMouseMove = useCallback(
+    (e) => {
+      const { movementX, movementY } = e;
+      xForce += movementX * speed;
+      yForce += movementY * speed;
 
-    if (requestAnimationFrameId == null) {
-      requestAnimationFrameId = requestAnimationFrame(animate);
-    }
-  };
+      if (requestAnimationFrameId == null) {
+        requestAnimationFrameId = requestAnimationFrame(animate);
+      }
+    },
+    [planes1, planes2]
+  );
 
-  const lerp = (start, target, amount) =>
-    start * (1 - amount) + target * amount;
+  const throttledMouseMove = throttle(handleMouseMove, 1000 / 60);
 
   const animate = () => {
     xForce = lerp(xForce, 0, easing);
@@ -82,14 +111,13 @@ const Slideshow = ({ data }) => {
 
           const nameWords = [
             ...new Set(
-              item?.name
+              name
                 .split(" ")
                 .map((word) =>
                   word.toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "")
                 )
             ),
           ];
-
           const itemReadyToView =
             slideCurrent.id ===
             data.find((item) => item.readytoview === false)?.id;
@@ -102,12 +130,23 @@ const Slideshow = ({ data }) => {
             slideIndex === index ? "sliders__items--active" : ""
           }`;
 
+          const totalThumbnails = thumbnail ? Object.keys(thumbnail).length : 0;
+
+          const linkText =
+            !itemReadyToView && language === "fr"
+              ? "Lire le projet"
+              : !itemReadyToView
+              ? "Read the case"
+              : language === "fr"
+              ? "Bientôt disponible"
+              : "Soon available";
+
           return (
             <li
               className={itemClassName}
               key={index}
               onMouseMove={(e) => {
-                manageMouseMove(e);
+                throttledMouseMove(e);
               }}
               ref={(el) => (planes.current[index] = el)}
               style={{
@@ -117,38 +156,15 @@ const Slideshow = ({ data }) => {
               }}
             >
               {Array.from({ length: 4 }, (_, i) => i + 1).map((index) => {
-                const thumbnailImage = thumbnail?.[`thumb${index}`];
-                const { src } = thumbnailImage || {
-                  src: "placeholder",
-                };
-                const { path, name } = item;
-                const isSvg = src && src.includes(".svg");
-                const srcImage = `/assets/${path}/${src}${
-                  isSvg ? "" : ".webp"
-                }`;
-
                 return (
-                  <div
-                    className={`sliders__items__thumbs sliders__items__thumbs__${index}`}
+                  <CarouselImage
                     key={index}
-                  >
-                    <div className="sliders__items__thumbs__content hidden relative">
-                      <Image
-                        className={`sliders__items__image ${
-                          !loaded ? "sliders__items__image--loaded" : ""
-                        }`}
-                        onLoadingComplete={() => setLoaded(false)}
-                        src={srcImage}
-                        alt={`${name} - ${index + 1} of ${
-                          thumbnail ? Object.keys(thumbnail).length : 0
-                        }`}
-                        width={1920}
-                        height={173}
-                        priority
-                      />
-                      <div className="placeholder" />
-                    </div>
-                  </div>
+                    name={name}
+                    src={thumbnail?.[`thumb${index}`]?.src || "placeholder"}
+                    totalThumbnails={totalThumbnails}
+                    index={index}
+                    path={path}
+                  />
                 );
               })}
               <div className="hidden sliders__items__thumbs__5">
@@ -179,15 +195,9 @@ const Slideshow = ({ data }) => {
             ${itemReadyToView ? "sliders__items__thumbs__6--unavailable" : ""}
             `}
               >
-                <Link href={`/projects/${path}`}>
-                  {!itemReadyToView
-                    ? language === "fr"
-                      ? "Lire le projet"
-                      : "Read the case"
-                    : language === "fr"
-                    ? "Bientôt disponible"
-                    : "Soon available"}
-                </Link>
+                <div className="hidden">
+                  <Link href={`/projects/${path}`}>{linkText}</Link>
+                </div>
               </div>
               <div className="sliders__items__thumbs__7">
                 <div className="hidden">
