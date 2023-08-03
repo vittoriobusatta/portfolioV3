@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Arrow from "./Arrow";
+import { useEffect } from "react";
 
 function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
   const handleImageSelect = (id, index) => {
@@ -21,6 +22,18 @@ function CarouselControls({ data, slideCurrent, setSlideCurrent }) {
       index,
     });
   };
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "ArrowRight") {
+        navigate(data[slideCurrent]?.id, slideCurrent + 1);
+      } else if (e.key === "ArrowLeft") {
+        navigate(data[slideCurrent]?.id, slideCurrent - 1);
+      }
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [slideCurrent]);
 
   return (
     <div className="controls">
