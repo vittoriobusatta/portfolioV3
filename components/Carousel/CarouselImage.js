@@ -18,6 +18,7 @@ const CarouselImage = ({ name, src, totalThumbnails, index, path }) => {
           alt={`${name} - ${index + 1} of ${totalThumbnails}`}
           width={1920}
           height={173}
+          priority
         />
         <div className="placeholder" />
       </div>

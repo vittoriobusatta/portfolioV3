@@ -58,7 +58,7 @@ const Slideshow = ({ data }) => {
         planes.current[slideCurrent.index].children[3].children[0],
       ]);
     }
-  }, [planes.current, slideCurrent?.index, , planesCurrent]);
+  }, [planes.current, slideCurrent?.index,planesCurrent]);
 
   let requestAnimationFrameId = null;
   let xForce = 0;
