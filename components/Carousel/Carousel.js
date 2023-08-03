@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CarouselControls from "./CarouselControls";
@@ -8,32 +8,30 @@ import { gsap } from "gsap";
 const bannedTitles = ["decortakaz"];
 
 const Slideshow = ({ data }) => {
-  const slideWrapperRef = useRef(null);
   const planes = useRef([]);
   const [planes1, setPlanes1] = useState([]);
   const [planes2, setPlanes2] = useState([]);
   const { language } = useContext(GeneralContext);
   const [loaded, setLoaded] = useState(true);
   const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
-
   const slideIndex = slideCurrent?.index;
 
-  const itemReadyToView =
-    slideCurrent.id === data.find((item) => item.readytoview === false)?.id;
+  const planesCurrent = planes.current[slideCurrent?.index];
 
   useEffect(() => {
-    if (planes.current[slideIndex]) {
+
+    if (slideCurrent && planes.current[slideCurrent.index]) {
       setPlanes1([
-        planes.current[slideIndex].children[0].children[0],
-        planes.current[slideIndex].children[2].children[0],
+        planes.current[slideCurrent.index].children[0].children[0],
+        planes.current[slideCurrent.index].children[2].children[0],
       ]);
 
       setPlanes2([
-        planes.current[slideIndex].children[1].children[0],
-        planes.current[slideIndex].children[3].children[0],
+        planes.current[slideCurrent.index].children[1].children[0],
+        planes.current[slideCurrent.index].children[3].children[0],
       ]);
     }
-  }, [planes.current, slideIndex]);
+  }, [planes.current, slideCurrent?.index, , planesCurrent]);
 
   let requestAnimationFrameId = null;
   let xForce = 0;
@@ -78,7 +76,7 @@ const Slideshow = ({ data }) => {
         backgroundColor: data[slideIndex]?.color2,
       }}
     >
-      <ul className="sliders" ref={slideWrapperRef}>
+      <ul className="sliders">
         {data.map((item, index) => {
           const { thumbnail, name, path, color, color2 } = item;
 
@@ -91,6 +89,10 @@ const Slideshow = ({ data }) => {
                 )
             ),
           ];
+
+          const itemReadyToView =
+            slideCurrent.id ===
+            data.find((item) => item.readytoview === false)?.id;
 
           const isBannedTitle = bannedTitles.some((bannedTitle) =>
             path.toLowerCase().includes(bannedTitle)
@@ -188,12 +190,20 @@ const Slideshow = ({ data }) => {
                 </Link>
               </div>
               <div className="sliders__items__thumbs__7">
-                <h3>Type</h3>
-                <p>{item.type[language] ? item.type[language] : item.type}</p>
+                <div className="hidden">
+                  <h3>Type</h3>
+                </div>
+                <div className="hidden">
+                  <p>{item.type[language] ? item.type[language] : item.type}</p>
+                </div>
               </div>
               <div className="sliders__items__thumbs__8">
-                <h3>Date</h3>
-                <p>{item.date[language]}</p>
+                <div className="hidden">
+                  <h3>Date</h3>
+                </div>
+                <div className="hidden">
+                  <p>{item.date[language]}</p>
+                </div>
               </div>
             </li>
           );
