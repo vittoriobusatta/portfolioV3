@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <LanguageProvider>
-        {/* <Loader /> */}
+        <Loader />
         <Cursor />
         <AnimatePresence mode="wait" initial={false}>
           <Component {...pageProps} key={router.asPath}/>
