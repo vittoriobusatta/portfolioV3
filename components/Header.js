@@ -30,18 +30,31 @@ function Header({ logoColor, color, color2 }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
+  const availability =
+    language === "en" ? "Available for work" : "Disponible pour mission";
+
   return (
-    <header ref={header}>
+    <header
+      className="header"
+      ref={header}
+      style={{
+        "--color": logoColor,
+      }}
+    >
       <Link href="/">
         <Logo logoColor={logoColor} />
       </Link>
+      <div className="header__status">
+        <span className="header__status__circle" />
+        <p>{availability}</p>
+      </div>
       <select
         style={{
           backgroundColor: color,
           color: color2,
           border: `1px solid ${logoColor}`,
           borderRadius: "20px",
-          padding: "2px"
+          padding: "2px",
         }}
         onChange={handleLanguageChange}
         value={language}

@@ -1,21 +1,9 @@
 import gsap from "gsap";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { GeneralContext } from "store/context";
+import React, { useEffect, useRef, useState } from "react";
 
 function Loader() {
   const year = new Date().getFullYear();
 
-  const [data, setData] = useState([]);
-  const { slideCurrent } = useContext(GeneralContext);
-
-  useEffect(() => {
-    fetch("/db.json")
-      .then((response) => response.json())
-      .then((resdata) => setData(resdata))
-      .catch((err) => setErreur(err.message));
-  }, []);
-
-  // const themeColor = data[slideCurrent]?.color || "";
   const themeColor = "#1d1d1d";
 
   let container = useRef(null);

@@ -19,7 +19,7 @@
 
 @supports (padding: env(safe-area-inset-top)) {
   body {
-    font-family: $rivalSans;
+    font-family: $outfit;
     font-size: 1.6rem;
   }
 }
@@ -100,29 +100,33 @@ html {
   }
 }
 
-.custom-cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  mix-blend-mode: color-burn;
-  opacity: 0;
+.cursor {
+  display: none;
+  @media screen and (min-width: 1224px) {
+    display: block;
+  }
   pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-
-.custom-cursor__ball--big {
-  content: "";
-  width: 35px;
-  height: 35px;
-  background-color: var(--color);
-  border-radius: 50%;
-}
-
-.custom-cursor__ball--small {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: $color_background;
-  border-radius: 50%;
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    &--big {
+      content: "";
+      width: 35px;
+      height: 35px;
+      background-color: var(--color);
+      border-radius: 50%;
+      mix-blend-mode: color-burn;
+      transition: opacity 0.5s ease;
+    }
+    &--small {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--color);
+      border-radius: 50%;
+      transition: opacity 0.5s ease;
+    }
+  }
 }

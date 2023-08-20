@@ -38,6 +38,7 @@
       display: flex;
       flex-direction: column;
       width: fit-content;
+      row-gap: 8px;
       & h4 {
         font-size: max(2.2rem, 16px);
         font-family: $tuskerGrotesk;
@@ -50,8 +51,9 @@
         text-align: start;
         font-size: max(1.8rem, 14px);
         font-weight: $regular;
-        font-family: $rivalSans;
+        font-family: $outfit;
         max-width: 100px;
+        line-height: 1.5;
         @media screen and (min-width: 992px) {
           max-width: 400px;
         }
@@ -67,7 +69,7 @@
   &__link {
     position: relative;
     font-size: max(1.6rem, 14px);
-    font-family: $rivalSans;
+    font-family: $outfit;
     font-style: normal;
     font-weight: $medium;
     letter-spacing: 0.03em;

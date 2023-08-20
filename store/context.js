@@ -4,17 +4,20 @@ export const GeneralContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("fr");
-  const [slideCurrent, setSlideCurrent] = useState(0);
+  const [slideCurrent, setSlideCurrent] = useState({
+    id: 0,
+    index: 0,
+  });
 
   useEffect(() => {
-    const localSlideCurrent = window.localStorage.getItem("slideCurrent");
-    if (localSlideCurrent) {
-      setSlideCurrent(Number(localSlideCurrent));
-    }
-
-    const localLanguage = window.localStorage.getItem("language");
-    if (localLanguage) {
-      setLanguage(localLanguage);
+    if (typeof window !== "undefined") {
+      const slideCurrent = window.localStorage.getItem("slideCurrent");
+      if (slideCurrent) {
+        setSlideCurrent({
+          id: 0,
+          index: parseInt(slideCurrent),
+        });
+      }
     }
   }, []);
 

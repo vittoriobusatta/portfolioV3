@@ -1,123 +1,103 @@
-import { gsap } from "gsap";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { GeneralContext } from "store/context";
+import { gsap } from "gsap";
 
 function Cursor() {
-  const cursorBig = useRef(null);
-  const cursorSmall = useRef(null);
-
   const [data, setData] = useState([]);
   const { slideCurrent } = useContext(GeneralContext);
+  const bigBallRef = useRef(null);
+  const smallBallRef = useRef(null);
 
   useEffect(() => {
     fetch("/db.json")
       .then((response) => response.json())
-      .then((resdata) => setData(resdata[slideCurrent].color))
-      .catch((err) => setErreur(err.message));
-  }, []);
+      .then((resdata) =>
+        setData(
+          resdata
+            .filter((item) => item.available === true)
+            .sort((a, b) => new Date(b.date.en) - new Date(a.date.en))[
+            slideCurrent.index
+          ]?.color
+        )
+      )
+      .catch((err) => console.log(err.message));
+  }, [slideCurrent.index]);
 
-  useEffect(() => {
-    const cursorBigRef = cursorBig.current;
-    const cursorSmallRef = cursorSmall.current;
+  function onMouseMove(e) {
+    const bigBall = bigBallRef.current;
+    const smallBall = smallBallRef.current;
 
-    if (!cursorBigRef || !cursorSmallRef) return;
-
-    const links = document.querySelectorAll("a");
-    const buttons = document.querySelectorAll("button");
-    const select = document.querySelectorAll("select");
-    const controlers = document.querySelectorAll(
-      ".controls__container__thumbs"
-    );
-    const thumbnails = document.querySelectorAll(".slideshow__thubnails");
-    const withHover = [
-      ...links,
-      ...buttons,
-      ...controlers,
-      ...thumbnails,
-      ...select,
-    ];
-
-    function onMouseMove(e) {
-      cursorSmallRef.style.opacity = 1;
-      gsap.to(cursorBigRef, {
+    if (bigBall && smallBall) {
+      gsap.to(bigBall, {
         duration: 0.4,
-        x: e.clientX - 18,
-        y: e.clientY - 18,
+        x: e.clientX - 15,
+        y: e.clientY - 15,
       });
-      gsap.to(cursorSmallRef, {
+      gsap.to(smallBall, {
         duration: 0.1,
-        x: e.clientX - 4,
-        y: e.clientY - 4,
+        x: e.clientX - 3,
+        y: e.clientY - 3,
       });
     }
+  }
 
-    function onMouseHover() {
-      gsap.to(cursorBigRef, {
+  function onMouseHover() {
+    const bigBall = bigBallRef.current;
+
+    if (bigBall) {
+      gsap.to(bigBall, {
         duration: 0.3,
-        scale: 1.5,
+        scale: 1.7,
       });
     }
+  }
 
-    function onMouseHoverOut() {
-      gsap.to(cursorBigRef, {
+  function onMouseHoverOut() {
+    const bigBall = bigBallRef.current;
+
+    if (bigBall) {
+      gsap.to(bigBall, {
         duration: 0.3,
         scale: 1,
       });
     }
+  }
 
+  useEffect(() => {
+    const bigBall = bigBallRef.current;
+    const smallBall = smallBallRef.current;
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mousedown", onMouseHover);
     document.addEventListener("mouseup", onMouseHoverOut);
     document.addEventListener("mouseenter", () => {
-      cursorBigRef.style.opacity = 1;
-      cursorSmallRef.style.opacity = 1;
+      bigBall.style.opacity = 1;
+      smallBall.style.opacity = 1;
     });
     document.addEventListener("mouseleave", () => {
-      cursorBigRef.style.opacity = 0;
-      cursorSmallRef.style.opacity = 0;
+      bigBall.style.opacity = 0;
+      smallBall.style.opacity = 0;
     });
-
-    withHover.forEach((element) => {
-      element.addEventListener("mouseover", onMouseHover);
-      element.addEventListener("mouseout", onMouseHoverOut);
-    });
-
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mousedown", onMouseHover);
-      document.removeEventListener("mouseup", onMouseHoverOut);
+      document.addEventListener("mousedown", onMouseHover);
+      document.addEventListener("mouseup", onMouseHoverOut);
       document.removeEventListener("mouseenter", () => {
-        cursorBigRef.style.opacity = 1;
-        cursorSmallRef.style.opacity = 1;
+        bigBall.style.opacity = 1;
+        smallBall.style.opacity = 1;
       });
       document.removeEventListener("mouseleave", () => {
-        cursorBigRef.style.opacity = 0;
-        cursorSmallRef.style.opacity = 0;
-      });
-
-      withHover.forEach((element) => {
-        element.removeEventListener("mouseover", onMouseHover);
-        element.removeEventListener("mouseout", onMouseHoverOut);
+        bigBall.style.opacity = 0;
+        smallBall.style.opacity = 0;
       });
     };
-  }, [cursorBig, cursorSmall]);
+  }, []);
 
   return (
-    <div
-      className="custom-cursor"
-      style={{
-        "--color": data,
-      }}
-    >
+    <div className="cursor" style={{ "--color": data }}>
+      <div className="cursor__ball cursor__ball--big" ref={bigBallRef}></div>
       <div
-        id="cursor-big"
-        ref={cursorBig}
-        className="custom-cursor__ball custom-cursor__ball--big"
-      ></div>
-      <div
-        id="cursor-small"
-        ref={cursorSmall}
-        className="custom-cursor__ball custom-cursor__ball--small"
+        className="cursor__ball cursor__ball--small"
+        ref={smallBallRef}
       ></div>
     </div>
   );
