@@ -30,15 +30,13 @@ function MyApp({ Component, pageProps }) {
     requestAnimationFrame(raf);
   }
   return (
-    <>
-      <LanguageProvider>
-        <Loader />
-        <Cursor />
-        <AnimatePresence mode="wait" initial={false}>
-          <Component {...pageProps} key={router.asPath}/>
-        </AnimatePresence>
-      </LanguageProvider>
-    </>
+    <LanguageProvider>
+      {/* <Loader /> */}
+      <Cursor />
+      <AnimatePresence mode="wait" initial={false}>
+        <Component {...pageProps} key={router.asPath} />
+      </AnimatePresence>
+    </LanguageProvider>
   );
 }
 

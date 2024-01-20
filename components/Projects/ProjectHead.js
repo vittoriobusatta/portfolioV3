@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-function ProjectHead({ projects, button, language }) {
+function ProjectHead({ project, button, language }) {
   const allowedKeys = ["type", "date", "role", "technologies"];
-  const headList = Object.entries(projects).filter(([key]) =>
+  const headList = Object.entries(project).filter(([key]) =>
     allowedKeys.includes(key)
   );
 
@@ -26,7 +26,7 @@ function ProjectHead({ projects, button, language }) {
             },
           }}
         >
-          {projects.name}
+          {project.name}
         </motion.h1>
       </div>
       <ul className="projects__head__list">
@@ -55,10 +55,10 @@ function ProjectHead({ projects, button, language }) {
           </li>
         ))}
       </ul>
-      {(projects.link && (
+      {(project.link && (
         <a
           className="projects__head__link"
-          href={projects.link}
+          href={project.link}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -67,7 +67,7 @@ function ProjectHead({ projects, button, language }) {
       )) || (
         <a
           className="projects__head__link"
-          // href={projects.behance}
+          // href={project.behance}
           target="_blank"
           rel="noopener noreferrer"
         >

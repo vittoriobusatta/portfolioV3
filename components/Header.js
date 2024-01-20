@@ -2,16 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Logo } from "assets/icons";
 import Link from "next/link";
 import { GeneralContext } from "store/context";
+import styled from "styled-components";
 
 function Header({ logoColor, color, color2 }) {
   const { language } = useContext(GeneralContext);
-  const { setLanguage } = useContext(GeneralContext);
-
-  const handleLanguageChange = (e) => {
-    setLanguage(e.target.value);
-    window.localStorage.setItem("language", e.target.value);
-  };
-
   const [scrollTop, setScrollTop] = useState(0);
   const header = useRef(null);
 
@@ -30,8 +24,15 @@ function Header({ logoColor, color, color2 }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  const availability =
-    language === "en" ? "Available for work" : "Disponible pour mission";
+  const month = language === "en" ? "February" : "Février";
+
+  const monthAvailable =
+    language === "en"
+      ? `Available from ${month}`
+      : `Disponible à partir de ${month}`;
+
+  // const availability =
+  //   language === "en" ? "Available for work" : "Disponible pour mission";
 
   return (
     <header
@@ -39,31 +40,66 @@ function Header({ logoColor, color, color2 }) {
       ref={header}
       style={{
         "--color": logoColor,
+        "--color2": color,
       }}
     >
-      <Link href="/">
+      <Link
+        href="/"
+        style={{
+          flex: "1",
+        }}
+      >
         <Logo logoColor={logoColor} />
       </Link>
-      <div className="header__status">
-        <span className="header__status__circle" />
-        <p>{availability}</p>
-      </div>
-      <select
+      <Status
         style={{
-          backgroundColor: color,
-          color: color2,
-          border: `1px solid ${logoColor}`,
-          borderRadius: "20px",
-          padding: "2px",
+          flex: "2",
         }}
-        onChange={handleLanguageChange}
-        value={language}
+        className="header__status"
       >
-        <option value="fr">FR</option>
-        <option value="en">EN</option>
-      </select>
+        <span className="header__status__circle" />
+        <p>{monthAvailable}</p>
+      </Status>
+      <Buttons
+        style={{
+          flex: "1",
+        }}
+      >
+        <Link className="header__link" href="/projets">
+          Projets
+        </Link>
+        /
+        <Link className="header__link" href="/contact">
+          Contact
+        </Link>
+      </Buttons>
     </header>
   );
 }
 
 export default Header;
+
+const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color);
+  font-size: 12px;
+  gap: 6px;
+  & a {
+    color: var(--color);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`;
+
+const Status = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;

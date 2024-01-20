@@ -11,8 +11,6 @@ import { GeneralContext } from "store/context";
 import { gsap } from "gsap";
 import CarouselImage from "./CarouselImage";
 
-const bannedTitles = ["decortakaz"];
-
 const throttle = (fn, wait) => {
   let inThrottle, lastFn, lastTime;
   return function () {
@@ -46,19 +44,19 @@ const Slideshow = ({ data }) => {
   const slideIndex = slideCurrent?.index;
   const planesCurrent = planes.current[slideCurrent?.index];
 
-  useEffect(() => {
-    if (slideCurrent && planes.current[slideCurrent.index]) {
-      setPlanes1([
-        planes.current[slideCurrent.index].children[0].children[0],
-        planes.current[slideCurrent.index].children[2].children[0],
-      ]);
+  // useEffect(() => {
+  //   if (slideCurrent && planes.current[slideCurrent.index]) {
+  //     setPlanes1([
+  //       planes.current[slideCurrent.index].children[0].children[0],
+  //       planes.current[slideCurrent.index].children[2].children[0],
+  //     ]);
 
-      setPlanes2([
-        planes.current[slideCurrent.index].children[1].children[0],
-        planes.current[slideCurrent.index].children[3].children[0],
-      ]);
-    }
-  }, [planes.current, slideCurrent?.index,planesCurrent]);
+  //     setPlanes2([
+  //       planes.current[slideCurrent.index].children[1].children[0],
+  //       planes.current[slideCurrent.index].children[3].children[0],
+  //     ]);
+  //   }
+  // }, [planes.current, slideCurrent?.index, planesCurrent]);
 
   let requestAnimationFrameId = null;
   let xForce = 0;
@@ -118,13 +116,7 @@ const Slideshow = ({ data }) => {
                 )
             ),
           ];
-          const itemReadyToView =
-            slideCurrent.id ===
-            data.find((item) => item.readytoview === false)?.id;
-
-          const isBannedTitle = bannedTitles.some((bannedTitle) =>
-            path.toLowerCase().includes(bannedTitle)
-          );
+          const itemReadyToView = item.readytoview === false;
 
           const itemClassName = `sliders__items ${
             slideIndex === index ? "sliders__items--active" : ""
@@ -169,25 +161,19 @@ const Slideshow = ({ data }) => {
               })}
               <div className="hidden sliders__items__thumbs__5">
                 <h1 className="slide__title">
-                  {isBannedTitle ? (
-                    <div>{name}</div>
-                  ) : (
-                    <>
-                      {nameWords.map((word, index) => {
-                        return (
-                          <div
-                            key={index}
-                            style={{
-                              "--index": index,
-                            }}
-                          >
-                            {word}
-                            {index < nameWords.length - 1 && " "}{" "}
-                          </div>
-                        );
-                      })}
-                    </>
-                  )}
+                  {nameWords.map((word, index) => {
+                    return (
+                      <div
+                        key={index}
+                        style={{
+                          "--index": index,
+                        }}
+                      >
+                        {word}
+                        {index < nameWords.length - 1 && " "}{" "}
+                      </div>
+                    );
+                  })}
                 </h1>
               </div>
               <div
@@ -196,7 +182,7 @@ const Slideshow = ({ data }) => {
             `}
               >
                 <div className="hidden">
-                  <Link href={`/projects/${path}`}>{linkText}</Link>
+                  <Link href={`/case/${path}`}>{linkText}</Link>
                 </div>
               </div>
               <div className="sliders__items__thumbs__7">

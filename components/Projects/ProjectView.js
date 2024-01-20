@@ -1,12 +1,12 @@
 import { Star } from "assets/icons";
 import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slideshow from "./Slideshow/Slideshow";
 import { MaskText, setTitles } from "utils/utils";
+import styled from "styled-components";
 
-function ProjectView({ language, projects }) {
-  const { title, subtitle, about } = projects.viewproject;
-
+function ProjectView({ language, project }) {
+  const { title, subtitle, about } = project.viewproject;
   const projectView = useRef(null);
   const subtle = useRef([]);
 
@@ -34,7 +34,13 @@ function ProjectView({ language, projects }) {
   }, []);
 
   return (
-    <div className="projects__view" ref={projectView}>
+    <Section
+      className="projects__view"
+      ref={projectView}
+      style={{
+        backgroundColor: project.color3,
+      }}
+    >
       <div className="projects__view__head">
         <div
           className="projects__subtitle"
@@ -56,10 +62,23 @@ function ProjectView({ language, projects }) {
         <MaskText phrases={about[language]} />
       </div>
       <div className="projects__view__slideshow">
-        <Slideshow projects={projects} />
+        <Slideshow project={project} />
       </div>
-    </div>
+    </Section>
   );
 }
 
 export default ProjectView;
+
+const Section = styled.section`
+  margin: 244px 2.5vw 0 2.5vw;
+  /* border-radius: 50px; */
+  border-radius: clamp(20px, 1.5vw, 50px);
+  /* padding: clamp(22px, 3vw, 88px); */
+  padding: 5vw 3vw;
+  row-gap: clamp(88px, 10vw, 144px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;

@@ -24,24 +24,24 @@
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    padding: 0 62px;
+    padding: 0 5.5vw;
     justify-content: center;
     background-color: var(--color2);
 
     @media screen and (min-width: 576px) {
-      padding: 16px 32px;
+      padding: 16px 5.5vw;
     }
     @media screen and (min-width: 768px) {
-      padding: 16px 42px;
+      padding: 16px 5.5vw;
     }
     @media screen and (min-width: 992px) {
       display: grid;
       grid-template-columns: repeat(11, 1fr);
       grid-template-rows: repeat(7, 1fr);
-      padding: 20px 52px;
+      padding: 20px 5.5vw;
     }
     @media screen and (min-width: 1224px) {
-      padding: 20px 62px;
+      padding: 20px 5.5vw;
     }
     &__image {
       height: auto;
@@ -63,6 +63,10 @@
     }
     &__thumbs {
       aspect-ratio: 16/9;
+      // &__content {
+      //   height: 100%;
+      //   width: 100%;
+      // }
       &__1 {
         display: none;
         @media screen and (min-width: 992px) {
@@ -76,12 +80,13 @@
       }
       &__2 {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         margin-bottom: 10vh;
         @media screen and (min-width: 992px) {
           grid-area: 2 / 8 / 5 / 12;
           margin-bottom: 0vh;
+          justify-content: flex-end;
         }
       }
       &__3 {
@@ -217,6 +222,8 @@
     }
   }
   & h1 {
+    display: flex;
+    column-gap: clamp(10px, 1vw, 18px);
     font-family: $tuskerGrotesk;
     font-size: min(12vw, 72px);
     text-transform: uppercase;

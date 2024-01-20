@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Décor Ta Kaz",
+    "id": 0,
+    "readytoview": true,
+    "available": true,
+    "path": "decortakaz",
+    "type": "Mission",
+    "date": { "fr": "Décembre 2022", "en": "December 2022" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "Nextjs, MongoDB",
+    "link": "https://decortakaz.re/",
+    "primary": "#4E2705",
+    "secondary": "#FEF1E7",
+    "paragraph": "#301702",
+    "placeholder": "#ffe7d2",
+    "introduction": ""
+  }
+]
