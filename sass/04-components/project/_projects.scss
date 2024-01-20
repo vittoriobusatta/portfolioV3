@@ -3,6 +3,7 @@
     min-height: 1000px;
     overflow: hidden;
     color: $color_primary;
+    background-color: var(--color2);
     @media screen and (min-width: 576px) {
       padding: 62px 32px;
     }

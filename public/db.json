@@ -723,7 +723,7 @@
     "name": "Sunnyside",
     "id": 5,
     "readytoview": true,
-    "available": true,
+    "available": false,
     "path": "sunnyside",
     "type": "Expérimental",
     "date": { "fr": "Juillet 2022", "en": "July 2022" },
@@ -1008,7 +1008,7 @@
   {
     "name": "Komstart",
     "id": 8,
-    "readytoview": false,
+    "readytoview": true,
     "available": true,
     "path": "komstart",
     "type": "Mission",
@@ -1018,7 +1018,7 @@
       "en": "Design & Development"
     },
     "technologies": "Nextjs, Wordpress",
-    "link": "",
+    "link": "https://komstart.com/",
     "color": "#B5FF00",
     "color2": "#1C1E20",
     "color3": "#26282A",

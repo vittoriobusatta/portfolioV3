@@ -35,14 +35,14 @@ const lerp = (start, target, amount) => start * (1 - amount) + target * amount;
 
 const Slideshow = ({ data }) => {
   const planes = useRef([]);
-  const [planes1, setPlanes1] = useState([]);
-  const [planes2, setPlanes2] = useState([]);
+  // const [planes1, setPlanes1] = useState([]);
+  // const [planes2, setPlanes2] = useState([]);
 
   const { language } = useContext(GeneralContext);
   const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
 
   const slideIndex = slideCurrent?.index;
-  const planesCurrent = planes.current[slideCurrent?.index];
+  // const planesCurrent = planes.current[slideCurrent?.index];
 
   // useEffect(() => {
   //   if (slideCurrent && planes.current[slideCurrent.index]) {
@@ -58,43 +58,43 @@ const Slideshow = ({ data }) => {
   //   }
   // }, [planes.current, slideCurrent?.index, planesCurrent]);
 
-  let requestAnimationFrameId = null;
-  let xForce = 0;
-  let yForce = 0;
-  const easing = 0.08;
-  const speed = 0.01;
+  // let requestAnimationFrameId = null;
+  // let xForce = 0;
+  // let yForce = 0;
+  // const easing = 0.08;
+  // const speed = 0.01;
 
-  const handleMouseMove = useCallback(
-    (e) => {
-      const { movementX, movementY } = e;
-      xForce += movementX * speed;
-      yForce += movementY * speed;
+  // const handleMouseMove = useCallback(
+  //   (e) => {
+  //     const { movementX, movementY } = e;
+  //     xForce += movementX * speed;
+  //     yForce += movementY * speed;
 
-      if (requestAnimationFrameId == null) {
-        requestAnimationFrameId = requestAnimationFrame(animate);
-      }
-    },
-    [planes1, planes2]
-  );
+  //     if (requestAnimationFrameId == null) {
+  //       requestAnimationFrameId = requestAnimationFrame(animate);
+  //     }
+  //   },
+  //   [planes1, planes2]
+  // );
 
-  const throttledMouseMove = throttle(handleMouseMove, 1000 / 60);
+  // const throttledMouseMove = throttle(handleMouseMove, 1000 / 60);
 
-  const animate = () => {
-    xForce = lerp(xForce, 0, easing);
-    yForce = lerp(yForce, 0, easing);
-    gsap.set(planes1, { x: `+=${xForce}`, y: `+=${yForce}` });
-    gsap.set(planes2, { x: `+=${xForce * 0.5}`, y: `+=${yForce * 0.5}` });
+  // const animate = () => {
+  //   xForce = lerp(xForce, 0, easing);
+  //   yForce = lerp(yForce, 0, easing);
+  //   gsap.set(planes1, { x: `+=${xForce}`, y: `+=${yForce}` });
+  //   gsap.set(planes2, { x: `+=${xForce * 0.5}`, y: `+=${yForce * 0.5}` });
 
-    if (Math.abs(xForce) < 0.01) xForce = 0;
-    if (Math.abs(yForce) < 0.01) yForce = 0;
+  //   if (Math.abs(xForce) < 0.01) xForce = 0;
+  //   if (Math.abs(yForce) < 0.01) yForce = 0;
 
-    if (xForce != 0 || yForce != 0) {
-      requestAnimationFrame(animate);
-    } else {
-      cancelAnimationFrame(requestAnimationFrameId);
-      requestAnimationFrameId = null;
-    }
-  };
+  //   if (xForce != 0 || yForce != 0) {
+  //     requestAnimationFrame(animate);
+  //   } else {
+  //     cancelAnimationFrame(requestAnimationFrameId);
+  //     requestAnimationFrameId = null;
+  //   }
+  // };
 
   return (
     <div
@@ -137,9 +137,9 @@ const Slideshow = ({ data }) => {
             <li
               className={itemClassName}
               key={index}
-              onMouseMove={(e) => {
-                throttledMouseMove(e);
-              }}
+              // onMouseMove={(e) => {
+              //   throttledMouseMove(e);
+              // }}
               ref={(el) => (planes.current[index] = el)}
               style={{
                 "--color": color,

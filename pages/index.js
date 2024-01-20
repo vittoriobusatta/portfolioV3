@@ -3,8 +3,8 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Carousel from "@/components/Carousel/Carousel";
 import { GeneralContext } from "store/context";
-import Transition from "utils/transitions";
 import db from "../public/db.json";
+import InnerPage from "@/components/Layout/Inner";
 
 function Home() {
   const { slideCurrent } = useContext(GeneralContext);
@@ -14,6 +14,7 @@ function Home() {
     .sort((a, b) => new Date(b.date.en) - new Date(a.date.en));
 
   const themeColor = data[slideCurrent.index]?.color || "";
+  const themeColor2 = data[slideCurrent.index]?.color2 || "";
 
   return (
     <>
@@ -21,12 +22,18 @@ function Home() {
         <title>Accueil | Vittorio Busatta</title>
         <meta name="theme-color" content={themeColor} />
       </Head>
-      <Header logoColor={themeColor} color2={themeColor} />
-      <main className="landing">
+      <InnerPage
+        style={{
+          "--color": themeColor,
+          backgroundColor: themeColor2,
+        }}
+        className="landing"
+      >
+        <Header logoColor={themeColor} color2={themeColor} />
         <Carousel data={data} />
-      </main>
+      </InnerPage>
     </>
   );
 }
 
-export default Transition(Home);
+export default Home;

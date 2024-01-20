@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { MaskText, setTitles } from "utils/utils";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 function AboutProject({ project, language }) {
   const { title, subtitle, about, images } = project.aboutproject;
@@ -38,7 +39,15 @@ function AboutProject({ project, language }) {
   }, []);
 
   return (
-    <Section className="projects__about" ref={projectAbout}>
+    <motion.section
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+      className="projects__about"
+      ref={projectAbout}
+    >
       <Head className="projects__about__head">
         <div
           className="projects__subtitle"
@@ -94,18 +103,13 @@ function AboutProject({ project, language }) {
           );
         })}
       </div>
-    </Section>
+    </motion.section>
   );
 }
 
 export default AboutProject;
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-`;
+const Section = styled.section``;
 
 const Head = styled.div`
   padding: 62px 5.5vw 0;

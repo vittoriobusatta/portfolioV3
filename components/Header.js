@@ -60,26 +60,26 @@ function Header({ logoColor, color, color2 }) {
         <span className="header__status__circle" />
         <p>{monthAvailable}</p>
       </Status>
-      <Buttons
+      <Links
         style={{
           flex: "1",
         }}
       >
-        <Link className="header__link" href="/projets">
+        <Link className="header__link" href="/works">
           Projets
         </Link>
         /
         <Link className="header__link" href="/contact">
           Contact
         </Link>
-      </Buttons>
+      </Links>
     </header>
   );
 }
 
 export default Header;
 
-const Buttons = styled.div`
+const Links = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;

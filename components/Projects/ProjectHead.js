@@ -8,7 +8,7 @@ function ProjectHead({ project, button, language }) {
   );
 
   return (
-    <div className="projects__head" ref={button}>
+    <section className="projects__head" ref={button}>
       <div className="hidden">
         <motion.h1
           className="projects__head__title"
@@ -74,7 +74,7 @@ function ProjectHead({ project, button, language }) {
           {language === "en" ? "Visit Behance" : "Voir le Behance"}
         </a>
       )}
-    </div>
+    </section>
   );
 }
 

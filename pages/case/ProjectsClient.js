@@ -15,6 +15,7 @@ import React, {
 import Header from "@/components/Header";
 import { GeneralContext } from "store/context";
 import Image from "next/image";
+import InnerPage from "@/components/Layout/Inner";
 
 function ProjectsClient({ project, data }) {
   const { language } = useContext(GeneralContext);
@@ -25,18 +26,18 @@ function ProjectsClient({ project, data }) {
 
   const projectsPath = data.map((item) => item.path);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting === false) {
-          setColor2(project.color);
-        } else return setColor2(project.color2);
-      });
-    });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting === false) {
+  //         setColor2(project.color);
+  //       } else return setColor2(project.color2);
+  //     });
+  //   });
 
-    observer.observe(button.current);
-    return () => observer.disconnect();
-  }, []);
+  //   observer.observe(button.current);
+  //   return () => observer.disconnect();
+  // }, []);
 
   // useEffect(() => {
   //   const handleScrollToBottom = () => {
@@ -69,29 +70,21 @@ function ProjectsClient({ project, data }) {
         <meta name="theme-color" content={project.color} />
       </Head>
 
-      <Header
-        logoColor={logoColor}
-        color={project.color}
-        color2={project.color2}
-      />
-
-      <motion.section
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{ duration: 0.15, ease: "easeOut" }}
+      <InnerPage
         className="project"
         style={{
-          backgroundColor: project.color2,
           "--color": project.color,
           "--color2": project.color2,
           "--placeholder": project.placeholder,
           "--paragraph": project.paragraph,
+          backgroundColor: project.color,
         }}
       >
+        <Header
+          logoColor={logoColor}
+          color={project.color}
+          color2={project.color2}
+        />
         <ProjectHead project={project} button={button} language={language} />
         <div className="projects__content">
           {project.aboutproject && (
@@ -112,9 +105,9 @@ function ProjectsClient({ project, data }) {
             />
           </div>
         )}
-      </motion.section>
+      </InnerPage>
     </Fragment>
   );
 }
 
-export default Transition(ProjectsClient);
+export default ProjectsClient;

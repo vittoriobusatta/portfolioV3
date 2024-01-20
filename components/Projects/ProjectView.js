@@ -71,7 +71,7 @@ function ProjectView({ language, project }) {
 export default ProjectView;
 
 const Section = styled.section`
-  margin: 244px 2.5vw 0 2.5vw;
+  margin: 244px 2.5vw 2.5vw 2.5vw;
   /* border-radius: 50px; */
   border-radius: clamp(20px, 1.5vw, 50px);
   /* padding: clamp(22px, 3vw, 88px); */
