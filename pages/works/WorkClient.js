@@ -1,7 +1,7 @@
 import Plane from "@/components/Three/Plane";
 import React, { useRef } from "react";
 import db from "public/db.json";
-import { useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { gsap } from "gsap";
 import { getPiramidalIndex, lerp } from "utils/utils";
 
@@ -105,4 +105,20 @@ function WorkClient() {
   );
 }
 
-export default WorkClient;
+function Page() {
+  return (
+    <Canvas
+      style={{
+        height: "100vh",
+        width: "100%",
+        background: "#1d1d1d",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <WorkClient />
+    </Canvas>
+  );
+}
+
+export default Page;
