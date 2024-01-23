@@ -18,13 +18,17 @@ import Image from "next/image";
 import InnerPage from "@/components/Layout/Inner";
 
 function ProjectsClient({ project, data }) {
+  if (!project) {
+    return null;
+  }
+
   const { language } = useContext(GeneralContext);
-  const [logoColor, setColor2] = useState(project.color2);
+  const [logoColor, setColor2] = useState(project?.color2);
 
   const button = useRef(null);
   const router = useRouter();
 
-  const projectsPath = data.map((item) => item.path);
+  // const projectsPath = data.map((item) => item.path);
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver((entries) => {
@@ -58,47 +62,52 @@ function ProjectsClient({ project, data }) {
   //   return () => window.removeEventListener("scroll", handleScrollToBottom);
   // }, [projectsPath, project.path, router]);
 
-  const { path } = project;
+  const {
+    path,
+    name,
+    introduction,
+    color,
+    color2,
+    placeholder,
+    paragraph,
+    aboutproject,
+    viewproject,
+    otherproject,
+  } = project || {};
 
   return (
     <Fragment>
       <Head>
-        <title>{project.name} | Vittorio Busatta</title>
-        <meta name="description" content={project.introduction} />
+        <title>{name} | Vittorio Busatta</title>
+        <meta name="description" content={introduction} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content={project.color} />
+        <meta name="theme-color" content={color} />
       </Head>
 
       <InnerPage
         className="project"
         style={{
-          "--color": project.color,
-          "--color2": project.color2,
-          "--placeholder": project.placeholder,
-          "--paragraph": project.paragraph,
-          backgroundColor: project.color,
+          "--color": color,
+          "--color2": color2,
+          "--placeholder": placeholder,
+          "--paragraph": paragraph,
+          backgroundColor: color,
         }}
       >
-        <Header
-          logoColor={logoColor}
-          color={project.color}
-          color2={project.color2}
-        />
+        <Header logoColor={logoColor} color={color} color2={color2} />
         <ProjectHead project={project} button={button} language={language} />
         <div className="projects__content">
-          {project.aboutproject && (
+          {aboutproject && (
             <AboutProject project={project} language={language} />
           )}
-          {project.viewproject && (
-            <ProjectView project={project} language={language} />
-          )}
+          {viewproject && <ProjectView project={project} language={language} />}
         </div>
-        {project.otherproject && (
+        {otherproject && (
           <div className="projects__other">
             <Image
-              src={`/assets/${path}/${project.otherproject.images.src}.webp`}
-              alt={project.otherproject.images.alt}
+              src={`/assets/${path}/${otherproject?.images?.src}.webp`}
+              alt={otherproject?.images?.alt}
               width={1512}
               height={1612}
               priority

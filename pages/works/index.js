@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import InnerPage from "@/components/Layout/Inner";
 import WorkClient from "./WorkClient";
 import { Canvas } from "@react-three/fiber";
-import styled from "styled-components";
 import Header from "@/components/Header";
 
 function Page() {
@@ -15,21 +14,19 @@ function Page() {
       }}
     >
       <Header logoColor={themeColor} color2={themeColor} />
-      <Section>
-        <Suspense fallback={null}>
-          <WorkClient />
-        </Suspense>
-      </Section>
+      <Canvas
+        style={{
+          height: "100vh",
+          width: "100%",
+          background: "#1d1d1d",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <WorkClient />
+      </Canvas>
     </InnerPage>
   );
 }
 
 export default Page;
-
-const Section = styled(Canvas)`
-  width: 100%;
-  height: 100vh;
-  background: #1d1d1d;
-  position: relative;
-  overflow: hidden;
-`;

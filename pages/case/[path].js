@@ -1,10 +1,10 @@
 import React from "react";
-import data from "public/db.json";
+import db from "public/db.json";
 import ProjectsClient from "./ProjectsClient";
 
-// const data = db
-//   .filter((item) => item.available === true)
-//   .sort((a, b) => new Date(b.date.en) - new Date(a.date.en));
+const data = db
+  // .filter((item) => item.available === true)
+  .sort((a, b) => new Date(b.date.en) - new Date(a.date.en));
 
 function Page({ project }) {
   return <ProjectsClient project={project} data={data} />;
