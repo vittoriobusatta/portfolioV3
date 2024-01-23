@@ -987,25 +987,6 @@
     }
   },
   {
-    "name": "Ab Distribution",
-    "id": 7,
-    "readytoview": false,
-    "available": false,
-    "path": "abdistribution",
-    "type": "Expérimental",
-    "date": { "fr": "Août 2023", "en": "August 2023" },
-    "role": {
-      "fr": "Conception & Développement",
-      "en": "Design & Development"
-    },
-    "technologies": "TS, Shopify",
-    "link": "",
-    "color": "#F86542",
-    "color2": "#F8F0EC",
-    "paragraph": "#",
-    "placeholder": "#"
-  },
-  {
     "name": "Komstart",
     "id": 8,
     "readytoview": true,
@@ -1019,11 +1000,10 @@
     },
     "technologies": "Nextjs, Wordpress",
     "link": "https://komstart.com/",
-    "color": "#B5FF00",
-    "color2": "#1C1E20",
-    "color3": "#26282A",
-    "paragraph": "#FFFFFF",
-    "placeholder": "#26282A",
+    "color": "#1C1E20",
+    "color2": "#F5FFDC",
+    "paragraph": "#201A1A",
+    "placeholder": "#F0FFC9",
     "thumbnail": {
       "thumb1": {
         "src": "kst0"
@@ -1052,12 +1032,11 @@
       "en": "Design & Development"
     },
     "technologies": "Nextjs, Wordpress",
-    "link": "",
-    "color": "#222325",
-    "color2": "#FFFFFF",
-    "color3": "#26282A",
+    "link": "https://byusmedia.fr/",
+    "color": "#3F2915",
+    "color2": "#FAF9EC",
     "paragraph": "#111",
-    "placeholder": "#EEEEEE",
+    "placeholder": "#F4F1E2",
     "thumbnail": {
       "thumb1": {
         "src": "bum0"

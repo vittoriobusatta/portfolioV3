@@ -59,8 +59,19 @@ function InnerPage({ children, style }) {
         }}
         {...anim(slide)}
       />
-      <motion.div {...anim(perspective)}>
-        <motion.div>{children}</motion.div>
+      <motion.div
+        style={{
+          height: "100%",
+        }}
+        {...anim(perspective)}
+      >
+        <motion.div
+          style={{
+            height: "100%",
+          }}
+        >
+          {children}
+        </motion.div>
       </motion.div>
     </section>
   );

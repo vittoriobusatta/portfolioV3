@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 function Loader() {
   const year = new Date().getFullYear();
 
-  const themeColor = "#1d1d1d";
+  const themeColor = "#fff";
 
   let container = useRef(null);
   let elements = useRef([]);

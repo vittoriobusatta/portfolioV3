@@ -1,6 +1,6 @@
 import { Star } from "assets/icons";
 import { gsap } from "gsap";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Slideshow from "./Slideshow/Slideshow";
 import { MaskText, setTitles } from "utils/utils";
 import styled from "styled-components";

@@ -18,5 +18,24 @@
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "introduction": ""
+  },
+  {
+    "name": "Ab Distribution",
+    "id": 7,
+    "readytoview": false,
+    "available": false,
+    "path": "abdistribution",
+    "type": "Expérimental",
+    "date": { "fr": "Août 2023", "en": "August 2023" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "TS, Shopify",
+    "link": "",
+    "color": "#F86542",
+    "color2": "#F8F0EC",
+    "paragraph": "#",
+    "placeholder": "#"
   }
 ]
