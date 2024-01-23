@@ -34,6 +34,7 @@ const Plane = forwardRef(({ image, path, planeSettings, index }, ref) => {
         uImageRes: {
           value: { x: tex.source.data.width, y: tex.source.data.height },
         },
+        uHover: { value: hover ? 1.0 : 0.0 },
       },
       vertexShader: /* glsl */ `
         varying vec2 vUv;
@@ -48,6 +49,7 @@ const Plane = forwardRef(({ image, path, planeSettings, index }, ref) => {
       uniform sampler2D uTex;
       uniform vec2 uRes;
       uniform vec2 uImageRes;
+      uniform float uHover; 
 
       /*------------------------------
       Background Cover UV
@@ -71,11 +73,12 @@ const Plane = forwardRef(({ image, path, planeSettings, index }, ref) => {
       
         // Calculer la luminosité
         float luminosity = dot(color, vec3(0.299, 0.587, 0.114));
-      
-        // Utiliser la luminosité pour les composantes de couleur
         vec3 grayscale = vec3(luminosity);
       
-        gl_FragColor = vec4(grayscale, 1.0);
+        // Mélanger entre couleur et niveaux de gris en fonction de uHover
+        vec3 finalColor = mix(grayscale, color, uHover);
+      
+        gl_FragColor = vec4(finalColor, 1.0);
       }
       `,
     }),
@@ -96,6 +99,11 @@ const Plane = forwardRef(({ image, path, planeSettings, index }, ref) => {
       duration: 0.5,
       ease: "power3.out",
     });
+
+    // Mettre à jour l'uniforme uHover
+    if ($mesh.current.material.uniforms.uHover) {
+      $mesh.current.material.uniforms.uHover.value = hover ? 1.0 : 0.0;
+    }
   }, [hover]);
 
   return (

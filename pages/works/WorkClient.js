@@ -3,11 +3,12 @@ import React, { useRef } from "react";
 import db from "public/db.json";
 import { useFrame, useThree } from "@react-three/fiber";
 import { gsap } from "gsap";
+import { getPiramidalIndex, lerp } from "utils/utils";
 
 const data = db.sort((a, b) => new Date(b.date.en) - new Date(a.date.en));
 
 const planeSettings = {
-  width: 1.8,
+  width: 1.4,
   height: 3,
   gap: 0.07,
 };
@@ -18,22 +19,34 @@ function WorkClient() {
   const progress = useRef(0);
   const startX = useRef(0);
   const isDown = useRef(false);
-  const speedWheel = 0.3;
+  const speedWheel = 0.03;
   const speedDrag = -0.2;
+  const oldProgress = useRef(0);
+  const speed = useRef(0);
+
+  const { viewport } = useThree();
 
   const displayItems = (item, index, active) => {
+    const piramidalIndex = getPiramidalIndex($items.current, active)[index];
     gsap.to(item.position, {
       x: (index - active) * (planeSettings.width + planeSettings.gap),
-      y: 0,
+      y: $items.current.length * -0.05 + piramidalIndex * 0.05,
     });
   };
 
   useFrame(() => {
-    const current = progress.current;
-    const active = Math.floor(current / 100) * ($items.current.length - 1);
-    $items.current.forEach((item, index) => {
-      displayItems(item, index, active);
-    });
+    progress.current = Math.max(0, Math.min(progress.current, 100));
+    const active =
+      Math.floor(progress.current / 100) * ($items.current.length - 1);
+
+    $items.current.forEach((item, index) => displayItems(item, index, active));
+    speed.current = lerp(
+      speed.current,
+      Math.abs(oldProgress.current - progress.current),
+      0.1
+    );
+
+    oldProgress.current = lerp(oldProgress.current, progress.current, 0.1);
   });
 
   const handleWheel = (e) => {
@@ -59,10 +72,20 @@ function WorkClient() {
     startX.current = x;
   };
 
-  const { viewport } = useThree();
-
   return (
     <group>
+      <mesh
+        position={[0, 0, -0.01]}
+        onWheel={handleWheel}
+        onPointerDown={handleDown}
+        onPointerUp={handleUp}
+        onPointerMove={handleMove}
+        onPointerLeave={handleUp}
+        onPointerCancel={handleUp}
+      >
+        <planeGeometry args={[viewport.width, viewport.height]} />
+        <meshBasicMaterial transparent={true} opacity={0} />
+      </mesh>
       <group>
         {data.map((item, index) => {
           return (
@@ -78,16 +101,6 @@ function WorkClient() {
           );
         })}
       </group>
-      <mesh
-        onWheel={handleWheel}
-        onPointerDown={handleDown}
-        onPointerUp={handleUp}
-        onPointerMove={handleMove}
-        position={[0, 0, -0.01]}
-      >
-        <planeGeometry args={[viewport.width, viewport.height]} />
-        <meshBasicMaterial transparent={true} opacity={0} />
-      </mesh>
     </group>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import InnerPage from "@/components/Layout/Inner";
 import WorkClient from "./WorkClient";
 import { Canvas } from "@react-three/fiber";
@@ -16,7 +16,9 @@ function Page() {
     >
       <Header logoColor={themeColor} color2={themeColor} />
       <Section>
-        <WorkClient />
+        <Suspense fallback={null}>
+          <WorkClient />
+        </Suspense>
       </Section>
     </InnerPage>
   );
@@ -27,7 +29,7 @@ export default Page;
 const Section = styled(Canvas)`
   width: 100%;
   height: 100vh;
-  background: #1D1D1D;
+  background: #1d1d1d;
   position: relative;
   overflow: hidden;
 `;
