@@ -1,22 +1,27 @@
 import HeadFoot from "@/components/Layout/HeadFoot";
 import Header from "@/components/Layout/Header";
 import InnerPage from "@/components/Layout/Inner";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 function Page() {
   const themeColor = "#FFF6E7";
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = async (data) => {
     try {
       await axios.post("/api/contact", data);
+      reset();
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
       console.error(error);
     }
@@ -101,6 +106,7 @@ function Page() {
                   placeholder="Parlez-moi de votre projet"
                 />
                 {errors.projet && <p>La description du projet est requise.</p>}
+                {isSubmitted && <p>Votre message a été envoyé avec succès!</p>}
               </div>
               <Button type="submit">Envoyer</Button>
             </Form>
