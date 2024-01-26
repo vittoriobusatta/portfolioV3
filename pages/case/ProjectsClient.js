@@ -1,17 +1,9 @@
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
 import ProjectHead from "@/components/Projects/ProjectHead";
 import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
-import Transition from "utils/transitions";
 import Head from "next/head";
-import React, {
-  Fragment,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Fragment, useContext, useRef, useState } from "react";
 import Header from "@/components/Layout/Header";
 import { GeneralContext } from "store/context";
 import Image from "next/image";

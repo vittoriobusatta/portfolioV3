@@ -1,4 +1,4 @@
-import { transporter, mailOptions } from "../../utils/utils";
+import { transporter, mailOptions } from "utils/utils";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Nom",
