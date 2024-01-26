@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import nodemailer from "nodemailer";
 
 export const setTitles = ({ phrases, headingLevel, className }) => {
   const animation = {
@@ -119,3 +120,20 @@ export const getPiramidalIndex = (array, index) =>
   array.map((_, i) =>
     index === i ? array.length : array.length - Math.abs(index - i)
   );
+
+
+const email = process.env.NEXT_PUBLIC_EMAIL;
+const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
+
+export const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: email,
+    pass,
+  },
+});
+
+export const mailOptions = {
+  from: email,
+  to: email,
+};

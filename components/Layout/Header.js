@@ -35,7 +35,7 @@ function Header({ logoColor, color, color2 }) {
   //   language === "en" ? "Available for work" : "Disponible pour mission";
 
   return (
-    <header
+    <Container
       className="header"
       ref={header}
       style={{
@@ -73,11 +73,25 @@ function Header({ logoColor, color, color2 }) {
           Contact
         </Link>
       </Links>
-    </header>
+    </Container>
   );
 }
 
 export default Header;
+
+const Container = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  z-index: 80;
+  transition: top 0.3s ease-in-out;
+  padding: 16px 5.5vw;
+`;
 
 const Links = styled.div`
   display: flex;
