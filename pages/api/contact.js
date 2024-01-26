@@ -44,4 +44,5 @@ const handler = async (req, res) => {
   }
   return res.status(400).json({ message: "Bad request" });
 };
+
 export default handler;
