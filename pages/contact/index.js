@@ -16,17 +16,16 @@ function Page() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("/api/contact", data);
-      console.log(response); // Traiter la réponse
+      await axios.post("/api/contact", data);
     } catch (error) {
-      console.error(error); // Gérer les erreurs
+      console.error(error);
     }
   };
   return (
     <InnerPage
       style={{
         "--color": "#1D1D1D",
-        height: "100vh",
+        minHeight: "100vh",
         background: "#1D1D1D",
       }}
     >
@@ -120,7 +119,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5.5vw;
+  padding: 0 5.5vw 5.5vw;
   gap: clamp(50px, 10vw, 66px);
   color: #fff6e7;
   @media (max-width: 768px) {
