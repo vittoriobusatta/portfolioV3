@@ -29,6 +29,22 @@ const handler = async (req, res) => {
       return res.status(400).json({ message: "Missing fields" });
     }
 
+    if (!data.message) {
+      return res.status(400).json({ message: "Missing message" });
+    }
+
+    if (data.name.length > 50) {
+      return res.status(400).json({ message: "Name too long" });
+    }
+
+    if (data.email.length > 50) {
+      return res.status(400).json({ message: "Email too long" });
+    }
+
+    if (data.message.length > 500) {
+      return res.status(400).json({ message: "Message too long" });
+    }
+
     try {
       await transporter.sendMail({
         ...mailOptions,
@@ -38,11 +54,11 @@ const handler = async (req, res) => {
 
       return res.status(200).json({ success: true });
     } catch (err) {
-      console.log(err);
-      return res.status(400).json({ message: err.message });
+      console.error(err);
+      return res.status(500).json({ message: "Internal server error" });
     }
   }
-  return res.status(400).json({ message: "Bad request" });
+  return res.status(404).json({ message: "Not found" });
 };
 
 export default handler;
