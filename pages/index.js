@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Head from "next/head";
-import Header from "@/components/Header";
+import Header from "@/components/Layout/Header";
 import Carousel from "@/components/Carousel/Carousel";
 import { GeneralContext } from "store/context";
 import db from "../public/db.json";

@@ -65,10 +65,10 @@ function Header({ logoColor, color, color2 }) {
           flex: "1",
         }}
       >
-        <Link className="header__link" href="/works">
+        {/* <Link className="header__link" href="/works">
           Projets
         </Link>
-        /
+        / */}
         <Link className="header__link" href="/contact">
           Contact
         </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import "../sass/styles.scss";
 import { LanguageProvider } from "store/context";
 import Lenis from "@studio-freight/lenis";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Layout/Loader";
 import Cursor from "@/components/Cursor";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";

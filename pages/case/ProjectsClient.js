@@ -12,7 +12,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/Layout/Header";
 import { GeneralContext } from "store/context";
 import Image from "next/image";
 import InnerPage from "@/components/Layout/Inner";
