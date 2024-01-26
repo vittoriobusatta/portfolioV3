@@ -6,6 +6,7 @@ import Loader from "@/components/Loader";
 import Cursor from "@/components/Cursor";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -32,10 +33,23 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <LanguageProvider>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+          page_path: window.location.pathname,
+          });`}
+        </Script>
         <Loader />
         <Cursor />
         <AnimatePresence mode="wait" initial={false}>
-          <Component {...pageProps} key={router.asPath}/>
+          <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </LanguageProvider>
     </>
