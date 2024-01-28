@@ -1002,6 +1002,7 @@
     "link": "https://komstart.com/",
     "color": "#1C1E20",
     "color2": "#F5FFDC",
+    "color3": "#F0FFC9",
     "paragraph": "#201A1A",
     "placeholder": "#F0FFC9",
     "thumbnail": {
@@ -1037,11 +1038,12 @@
           "chaque projet reflétant l'énergie et l'innovation de Komstart. "
         ],
         "en": [
-          "Galleria is an interactive platform dedicated to the discovery of exceptional works of art. During this ",
-          "project, my main goal was to create an immersive and visually captivating experience for visitors. ",
-          "Using the powerful features of React, I brought to life a smooth and aesthetically pleasing user ",
-          "interface. By adhering to a predefined layout, I have integrated the various features necessary ",
-          "to offer users an interactive and engaging slideshow experience."
+          "I collaborated with Komstart, a sports visual creation agency in Reunion Island, to design a website ",
+          "that embodies the dynamic spirit of the company and supports its expansion. Using Next.js for the ",
+          "front-end and WordPress for the content, merging graphic boldness and intuitive navigation. The user ",
+          "experience is designed for easy and engaging discovery of the agency's sports achievements. The site ",
+          "is a crossroads where art and functionality meet, each project reflecting the energy and innovation ",
+          "of Komstart."
         ]
       },
       "images": {
@@ -1055,8 +1057,8 @@
     },
     "viewproject": {
       "title": {
-        "fr": ["Un design qui", "bouge avec le sport."],
-        "en": ["A journey", "through history."]
+        "fr": ["Un design qui", "s'anime avec l'énergie"],
+        "en": ["A design that", "comes to life with energy"]
       },
       "subtitle": {
         "fr": ["Aperçu", "du projet"],
@@ -1071,12 +1073,11 @@
           "Plongez dans un univers où chaque création reflète la beauté et le dynamisme du domaine sportif."
         ],
         "en": [
-          "Discover an enchanting artistic world with Galleria, where art comes to life and takes you on a ",
-          "captivating journey. Each artwork is presented with an attractive design, allowing you to easily ",
-          "navigate through a variety of styles, techniques and compelling stories. Explore virtual galleries, ",
-          "be inspired by the diversity of works and discover new artistic horizons, all from the comfort of ",
-          "your browser. Galleria offers you an enriching and inspiring experience, taking you into a visual ",
-          "universe without limits."
+          "The Komstart site is a showcase of visual excellence, illustrating the richness of sports creations. ",
+          "Carefully designed, it focuses on a smooth and engaging user experience. ",
+          "Each project is a demonstration of the agency's ability to capture the essence of sport with innovation. ",
+          "The portfolio invites you to a visual exploration, where shapes and colors celebrate sport. ",
+          "Dive into a world where each creation reflects the beauty and dynamism of the sports field."
         ]
       },
       "images": {

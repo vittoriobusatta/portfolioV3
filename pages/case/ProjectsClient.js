@@ -28,18 +28,18 @@ function ProjectsClient({ project, data }) {
 
   // const projectsPath = data.map((item) => item.path);
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting === false) {
-  //         setColor2(project.color);
-  //       } else return setColor2(project.color2);
-  //     });
-  //   });
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === false) {
+          setColor2(project.color);
+        } else return setColor2(project.color2);
+      });
+    });
 
-  //   observer.observe(button.current);
-  //   return () => observer.disconnect();
-  // }, []);
+    observer.observe(button.current);
+    return () => observer.disconnect();
+  }, []);
 
   // useEffect(() => {
   //   const handleScrollToBottom = () => {
