@@ -161,7 +161,7 @@ const Content = styled.div`
   }
   & h2 {
     font-family: Tusker Grotesk;
-    font-size: clamp(16px, 4vw, 30px);
+    font-size: clamp(20px, 4vw, 30px);
     font-weight: 800;
     text-transform: uppercase;
     color: #fff6e7;

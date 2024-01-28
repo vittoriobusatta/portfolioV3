@@ -23,9 +23,7 @@
       text-transform: uppercase;
     }
   }
-}
-
-select {
-  background-color: transparent;
-  font-family: $outfit;
+  &__link {
+    font-size: 14px;
+  }
 }
