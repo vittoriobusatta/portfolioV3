@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 import moment from "moment-timezone";
 
@@ -6,13 +6,13 @@ function HeadFoot() {
   let heureReunion = moment().tz("Indian/Reunion");
   return (
     <Footer>
-    <p>{heureReunion.format("HH:mm")} - (GMT +04, Reunion)</p>
-    <p>All rights reserved</p>
-  </Footer>
-  )
+      <p>{heureReunion.format("HH:mm")} - (GMT +04, Reunion)</p>
+      <p>All rights reserved</p>
+    </Footer>
+  );
 }
 
-export default HeadFoot
+export default HeadFoot;
 
 const Footer = styled.div`
   position: absolute;
@@ -32,9 +32,9 @@ const Footer = styled.div`
     }
     &:last-child {
       text-align: right;
-      @media (max-width: 468px) {
-        display: none;
-      }
     }
+  }
+  @media (max-width: 468px) {
+    display: none;
   }
 `;

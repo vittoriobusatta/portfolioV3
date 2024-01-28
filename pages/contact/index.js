@@ -212,6 +212,7 @@ const Button = styled.button`
   border-radius: 5px;
   width: fit-content;
   cursor: pointer;
+  color: #1d1d1d;
   &:hover {
     opacity: 0.8;
   }
