@@ -31,7 +31,7 @@ function Page() {
       style={{
         "--color": "#1D1D1D",
         minHeight: "100vh",
-        background: "#1D1D1D",
+        background: themeColor,
       }}
     >
       <Header logoColor={themeColor} color2={themeColor} />
@@ -103,7 +103,6 @@ function Page() {
                 <Input
                   className="message"
                   {...register("message", { required: true })}
-                  // style={{ height: "40vw", maxHeight: "200px" }}
                   placeholder="Parlez-moi de votre projet"
                 />
                 {errors.projet && <p>La description du projet est requise.</p>}
@@ -114,7 +113,6 @@ function Page() {
           </Contact>
         </Content>
       </Container>
-
       <HeadFoot />
     </InnerPage>
   );
@@ -129,6 +127,8 @@ const Container = styled.div`
   padding: 0 5.5vw 5.5vw;
   gap: clamp(50px, 10vw, 66px);
   color: #fff6e7;
+  min-height: 100vh;
+  background-color: #1d1d1d;
   @media (max-width: 768px) {
     align-items: flex-start;
   }

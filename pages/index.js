@@ -25,7 +25,7 @@ function Home() {
       <InnerPage
         style={{
           "--color": themeColor,
-          backgroundColor: themeColor2,
+          backgroundColor: themeColor,
         }}
         className="landing"
       >

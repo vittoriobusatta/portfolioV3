@@ -108,7 +108,7 @@ const Links = styled.div`
     transition: color 0.2s ease-in-out;
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        color: var(--color2);
+        opacity: 0.8;
       }
     }
   }

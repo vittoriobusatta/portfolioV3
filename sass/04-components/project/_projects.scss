@@ -1,20 +1,16 @@
 .projects {
   &__content {
-    min-height: 1000px;
     overflow: hidden;
     color: $color_primary;
     background-color: var(--color2);
     @media screen and (min-width: 576px) {
-      padding: 62px 32px;
+      padding: 62px 5.5vw;
     }
     @media screen and (min-width: 768px) {
-      padding: 88px 42px;
+      padding: 88px 5.5vw;
     }
     @media screen and (min-width: 992px) {
-      padding: 44px 52px;
-    }
-    @media screen and (min-width: 1224px) {
-      padding: 44px 62px;
+      padding: 44px 5.5vw;
     }
   }
   &__subtitle {

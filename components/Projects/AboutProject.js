@@ -39,7 +39,7 @@ function AboutProject({ project, language }) {
   }, []);
 
   return (
-    <motion.section
+    <section
       style={{
         display: "flex",
         flexDirection: "column",
@@ -103,13 +103,11 @@ function AboutProject({ project, language }) {
           );
         })}
       </div>
-    </motion.section>
+    </section>
   );
 }
 
 export default AboutProject;
-
-const Section = styled.section``;
 
 const Head = styled.div`
   padding: 62px 5.5vw 0;
@@ -121,9 +119,6 @@ const Head = styled.div`
     & > :first-child {
       grid-area: 2 / 1 / 3 / 2;
       padding-top: 8px;
-      // & h4 {
-      //   max-width: 100px;
-      // }
     }
     & > :nth-child(2) {
       grid-area: 1 / 2 / 2 / 5;

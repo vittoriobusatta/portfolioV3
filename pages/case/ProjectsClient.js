@@ -3,7 +3,13 @@ import ProjectHead from "@/components/Projects/ProjectHead";
 import AboutProject from "@/components/Projects/AboutProject";
 import ProjectView from "@/components/Projects/ProjectView";
 import Head from "next/head";
-import React, { Fragment, useContext, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Header from "@/components/Layout/Header";
 import { GeneralContext } from "store/context";
 import Image from "next/image";
@@ -84,7 +90,7 @@ function ProjectsClient({ project, data }) {
           "--color2": color2,
           "--placeholder": placeholder,
           "--paragraph": paragraph,
-          backgroundColor: color,
+          backgroundColor: color2,
         }}
       >
         <Header logoColor={logoColor} color={color} color2={color2} />
