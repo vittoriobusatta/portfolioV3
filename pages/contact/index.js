@@ -166,7 +166,7 @@ const Content = styled.div`
     text-transform: uppercase;
     color: #fff6e7;
     padding-bottom: 6px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
   }
 `;
 const Title = styled.div`
