@@ -101,8 +101,9 @@ function Page() {
               </div>
               <div>
                 <Input
+                  className="message"
                   {...register("message", { required: true })}
-                  style={{ height: "40vw", maxHeight: "200px" }}
+                  // style={{ height: "40vw", maxHeight: "200px" }}
                   placeholder="Parlez-moi de votre projet"
                 />
                 {errors.projet && <p>La description du projet est requise.</p>}
@@ -160,12 +161,12 @@ const Content = styled.div`
   }
   & h2 {
     font-family: Tusker Grotesk;
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: clamp(16px, 4vw, 30px);
     font-weight: 800;
     text-transform: uppercase;
     color: #fff6e7;
-    letter-spacing: 0.02em;
     padding-bottom: 6px;
+    letter-spacing: 0.05em;
   }
 `;
 const Title = styled.div`
@@ -204,6 +205,10 @@ const Input = styled.input`
   padding: 15px 20px;
   border-radius: 5px;
   width: 100%;
+  &.message {
+    padding: 15px 20px 200px;
+    resize: none;
+  }
 `;
 
 const Button = styled.button`
@@ -213,8 +218,10 @@ const Button = styled.button`
   width: fit-content;
   cursor: pointer;
   color: #1d1d1d;
-  &:hover {
-    opacity: 0.8;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 

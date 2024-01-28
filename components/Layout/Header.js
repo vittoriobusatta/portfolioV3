@@ -106,8 +106,10 @@ const Links = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
-    &:hover {
-      opacity: 0.8;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color2);
+      }
     }
   }
 `;
