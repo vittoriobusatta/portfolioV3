@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           page_path: window.location.pathname,
           });`}
       </Script>
-      {/* <Loader /> */}
+      <Loader />
       <Cursor />
       <AnimatePresence mode="wait" initial={false}>
         <Component {...pageProps} key={router.asPath} />
