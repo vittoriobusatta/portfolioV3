@@ -5,7 +5,6 @@ import Header from "@/components/Layout/Header";
 import HeadFoot from "@/components/Layout/HeadFoot";
 
 function Page() {
-  return null;
   const themeColor = "#FFF6E7";
   return (
     <InnerPage
