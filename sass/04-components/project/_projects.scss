@@ -1,20 +1,16 @@
 .projects {
   &__content {
-    min-height: 1000px;
-    padding: 62px 26px;
     overflow: hidden;
     color: $color_primary;
+    background-color: var(--color2);
     @media screen and (min-width: 576px) {
-      padding: 62px 32px;
+      padding: 62px 5.5vw;
     }
     @media screen and (min-width: 768px) {
-      padding: 88px 42px;
+      padding: 88px 5.5vw;
     }
     @media screen and (min-width: 992px) {
-      padding: 44px 52px;
-    }
-    @media screen and (min-width: 1224px) {
-      padding: 44px 62px;
+      padding: 44px 5.5vw;
     }
   }
   &__subtitle {
@@ -29,7 +25,7 @@
       letter-spacing: 0.03em;
       margin-left: 16px;
       width: fit-content;
-      font-size: clamp(14px, 1.5vw, 18px);
+      font-size: clamp(14px, 0.8vw, 16px);
       column-gap: 2px;
       overflow: hidden;
       @media screen and (min-width: 992px) {
@@ -53,14 +49,14 @@
     flex-direction: column;
   }
   &__description {
-    font-size: min(1.7vw, 20px);
+    font-size: clamp(14px, 1.5vw, 18px);
     font-family: $outfit;
     font-weight: $medium;
     color: $paragraph_color;
     line-height: 1.4;
-    @media screen and (max-width: 992px) {
-      font-size: max(2vw, 15px);
-    }
+    // @media screen and (max-width: 992px) {
+    //   font-size: max(2vw, 15px);
+    // }
   }
   &__other {
     @media screen and (min-width: 992px) {
@@ -69,6 +65,40 @@
     & img {
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+.projects__view {
+  &__head {
+    @media screen and (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 0.4fr repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      width: fit-content;
+      & > :first-child {
+        grid-area: 2 / 1 / 3 / 2;
+        padding-top: 8px;
+        & h4 {
+          text-align: right;
+        }
+      }
+      & > :nth-child(2) {
+        grid-area: 1 / 2 / 2 / 5;
+        padding-left: min(3vw, 45px);
+      }
+      & > :nth-child(3) {
+        grid-area: 2 / 2 / 4 / 5;
+        padding-left: min(3vw, 45px);
+      }
+    }
+  }
+  &__slideshow {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

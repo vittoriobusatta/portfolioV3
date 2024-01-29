@@ -11,8 +11,6 @@ import { GeneralContext } from "store/context";
 import { gsap } from "gsap";
 import CarouselImage from "./CarouselImage";
 
-const bannedTitles = ["decortakaz"];
-
 const throttle = (fn, wait) => {
   let inThrottle, lastFn, lastTime;
   return function () {
@@ -37,66 +35,66 @@ const lerp = (start, target, amount) => start * (1 - amount) + target * amount;
 
 const Slideshow = ({ data }) => {
   const planes = useRef([]);
-  const [planes1, setPlanes1] = useState([]);
-  const [planes2, setPlanes2] = useState([]);
+  // const [planes1, setPlanes1] = useState([]);
+  // const [planes2, setPlanes2] = useState([]);
 
   const { language } = useContext(GeneralContext);
   const { slideCurrent, setSlideCurrent } = useContext(GeneralContext);
 
   const slideIndex = slideCurrent?.index;
-  const planesCurrent = planes.current[slideCurrent?.index];
+  // const planesCurrent = planes.current[slideCurrent?.index];
 
-  useEffect(() => {
-    if (slideCurrent && planes.current[slideCurrent.index]) {
-      setPlanes1([
-        planes.current[slideCurrent.index].children[0].children[0],
-        planes.current[slideCurrent.index].children[2].children[0],
-      ]);
+  // useEffect(() => {
+  //   if (slideCurrent && planes.current[slideCurrent.index]) {
+  //     setPlanes1([
+  //       planes.current[slideCurrent.index].children[0].children[0],
+  //       planes.current[slideCurrent.index].children[2].children[0],
+  //     ]);
 
-      setPlanes2([
-        planes.current[slideCurrent.index].children[1].children[0],
-        planes.current[slideCurrent.index].children[3].children[0],
-      ]);
-    }
-  }, [planes.current, slideCurrent?.index,planesCurrent]);
+  //     setPlanes2([
+  //       planes.current[slideCurrent.index].children[1].children[0],
+  //       planes.current[slideCurrent.index].children[3].children[0],
+  //     ]);
+  //   }
+  // }, [planes.current, slideCurrent?.index, planesCurrent]);
 
-  let requestAnimationFrameId = null;
-  let xForce = 0;
-  let yForce = 0;
-  const easing = 0.08;
-  const speed = 0.01;
+  // let requestAnimationFrameId = null;
+  // let xForce = 0;
+  // let yForce = 0;
+  // const easing = 0.08;
+  // const speed = 0.01;
 
-  const handleMouseMove = useCallback(
-    (e) => {
-      const { movementX, movementY } = e;
-      xForce += movementX * speed;
-      yForce += movementY * speed;
+  // const handleMouseMove = useCallback(
+  //   (e) => {
+  //     const { movementX, movementY } = e;
+  //     xForce += movementX * speed;
+  //     yForce += movementY * speed;
 
-      if (requestAnimationFrameId == null) {
-        requestAnimationFrameId = requestAnimationFrame(animate);
-      }
-    },
-    [planes1, planes2]
-  );
+  //     if (requestAnimationFrameId == null) {
+  //       requestAnimationFrameId = requestAnimationFrame(animate);
+  //     }
+  //   },
+  //   [planes1, planes2]
+  // );
 
-  const throttledMouseMove = throttle(handleMouseMove, 1000 / 60);
+  // const throttledMouseMove = throttle(handleMouseMove, 1000 / 60);
 
-  const animate = () => {
-    xForce = lerp(xForce, 0, easing);
-    yForce = lerp(yForce, 0, easing);
-    gsap.set(planes1, { x: `+=${xForce}`, y: `+=${yForce}` });
-    gsap.set(planes2, { x: `+=${xForce * 0.5}`, y: `+=${yForce * 0.5}` });
+  // const animate = () => {
+  //   xForce = lerp(xForce, 0, easing);
+  //   yForce = lerp(yForce, 0, easing);
+  //   gsap.set(planes1, { x: `+=${xForce}`, y: `+=${yForce}` });
+  //   gsap.set(planes2, { x: `+=${xForce * 0.5}`, y: `+=${yForce * 0.5}` });
 
-    if (Math.abs(xForce) < 0.01) xForce = 0;
-    if (Math.abs(yForce) < 0.01) yForce = 0;
+  //   if (Math.abs(xForce) < 0.01) xForce = 0;
+  //   if (Math.abs(yForce) < 0.01) yForce = 0;
 
-    if (xForce != 0 || yForce != 0) {
-      requestAnimationFrame(animate);
-    } else {
-      cancelAnimationFrame(requestAnimationFrameId);
-      requestAnimationFrameId = null;
-    }
-  };
+  //   if (xForce != 0 || yForce != 0) {
+  //     requestAnimationFrame(animate);
+  //   } else {
+  //     cancelAnimationFrame(requestAnimationFrameId);
+  //     requestAnimationFrameId = null;
+  //   }
+  // };
 
   return (
     <div
@@ -118,13 +116,7 @@ const Slideshow = ({ data }) => {
                 )
             ),
           ];
-          const itemReadyToView =
-            slideCurrent.id ===
-            data.find((item) => item.readytoview === false)?.id;
-
-          const isBannedTitle = bannedTitles.some((bannedTitle) =>
-            path.toLowerCase().includes(bannedTitle)
-          );
+          const itemReadyToView = item.readytoview === false;
 
           const itemClassName = `sliders__items ${
             slideIndex === index ? "sliders__items--active" : ""
@@ -145,9 +137,9 @@ const Slideshow = ({ data }) => {
             <li
               className={itemClassName}
               key={index}
-              onMouseMove={(e) => {
-                throttledMouseMove(e);
-              }}
+              // onMouseMove={(e) => {
+              //   throttledMouseMove(e);
+              // }}
               ref={(el) => (planes.current[index] = el)}
               style={{
                 "--color": color,
@@ -169,25 +161,19 @@ const Slideshow = ({ data }) => {
               })}
               <div className="hidden sliders__items__thumbs__5">
                 <h1 className="slide__title">
-                  {isBannedTitle ? (
-                    <div>{name}</div>
-                  ) : (
-                    <>
-                      {nameWords.map((word, index) => {
-                        return (
-                          <div
-                            key={index}
-                            style={{
-                              "--index": index,
-                            }}
-                          >
-                            {word}
-                            {index < nameWords.length - 1 && " "}{" "}
-                          </div>
-                        );
-                      })}
-                    </>
-                  )}
+                  {nameWords.map((word, index) => {
+                    return (
+                      <div
+                        key={index}
+                        style={{
+                          "--index": index,
+                        }}
+                      >
+                        {word}
+                        {index < nameWords.length - 1 && " "}{" "}
+                      </div>
+                    );
+                  })}
                 </h1>
               </div>
               <div
@@ -196,7 +182,7 @@ const Slideshow = ({ data }) => {
             `}
               >
                 <div className="hidden">
-                  <Link href={`/projects/${path}`}>{linkText}</Link>
+                  <Link href={`/case/${path}`}>{linkText}</Link>
                 </div>
               </div>
               <div className="sliders__items__thumbs__7">

@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 
-function Slideshow({ projects }) {
-  const slideshowImages = Object.values(projects.viewproject.images);
+function Slideshow({ project }) {
+  const slideshowImages = Object.values(project.viewproject.images);
   const [currentImage, setCurrentImage] = useState(
     slideshowImages?.[0] ?? null
   );
   const [selected, setSelected] = useState(0);
-  const { path } = projects;
+  const { path } = project;
 
   const handleImageSelect = (image, index) => {
     setCurrentImage(image);
@@ -39,7 +39,7 @@ function Slideshow({ projects }) {
                 <Image
                   className="slideshow__banner__image"
                   src={`/assets/${path}/${src}${isSvg ? "" : ".webp"}`}
-                  alt={`${projects.name} - ${index + 1} of ${
+                  alt={`${project.name} - ${index + 1} of ${
                     slideshowImages.length
                   }`}
                   width={958}
@@ -64,7 +64,7 @@ function Slideshow({ projects }) {
           );
         })}
       </div>
-      <ul className="slideshow__list" style={{ color: projects.color2 }}>
+      <ul className="slideshow__list" style={{ color: project.color2 }}>
         <div
           className="slideshow__list__border"
           style={{

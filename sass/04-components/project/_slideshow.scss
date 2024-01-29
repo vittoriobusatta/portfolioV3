@@ -26,14 +26,8 @@
       min-width: 100%;
       object-fit: cover;
       object-position: center;
+      aspect-ratio: 16/9;
       transition: clip-path 0.9s cubic-bezier(0.33, 1, 0.68, 1);
-      @media screen and (min-width: 576px) {
-        min-width: calc(100vw - 10% - 148px);
-      }
-      @media screen and (min-width: 768px) {
-        max-width: 300px;
-        min-width: calc(80vw - 10% - 148px);
-      }
     }
   }
   &__list {

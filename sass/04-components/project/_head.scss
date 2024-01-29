@@ -2,8 +2,9 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 122px 26px;
+  justify-content: center;
   color: $color_secondary;
+  padding: 122px 5.5vw;
   background-color: $color_primary;
   @media screen and (min-width: 576px) {
     align-items: center;
@@ -91,8 +92,10 @@
       background-color: $color_secondary;
       transition: width 0.3s ease-in-out;
     }
-    &:hover::after {
-      width: 100%;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 }

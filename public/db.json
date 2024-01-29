@@ -11,10 +11,11 @@
       "fr": "Conception & Développement",
       "en": "Design & Development"
     },
-    "technologies": "Nextjs, MongoDB, API Canvas",
+    "technologies": "Nextjs, MongoDB",
     "link": "https://decortakaz.re/",
     "color": "#4E2705",
     "color2": "#FEF1E7",
+    "color3": "#FFEDDC",
     "paragraph": "#301702",
     "placeholder": "#ffe7d2",
     "thumbnail": {
@@ -164,10 +165,11 @@
     "link": "https://nocta.vercel.app/",
     "color": "#383838",
     "color2": "#E8EDEF",
-    "behance": "",
+    "color3": "#DEE3E5",
     "paragraph": "#1D1D1D",
     "background": "#ECF8F5",
     "placeholder": "#d8f3ee",
+    "behance": "",
     "thumbnail": {
       "thumb1": {
         "src": "nctthumb1"
@@ -289,19 +291,13 @@
           }
         }
       }
-    },
-    "otherproject": {
-      "images": {
-        "src": "/images/nocta/nct8.webp",
-        "alt": "Nocta - Image 8"
-      }
     }
   },
   {
     "name": "Muteza",
     "id": 2,
-    "readytoview": true,
-    "available": true,
+    "readytoview": false,
+    "available": false,
     "path": "muteza",
     "type": "Expérimental",
     "date": { "fr": "Novembre 2022", "en": "November 2022" },
@@ -478,6 +474,7 @@
     "link": "http://galleria-ten.vercel.app/",
     "color": "#030D3E",
     "color2": "#EEECF8",
+    "color3": "#e9e5fd",
     "background": "#EEECF8",
     "paragraph": "#010829",
     "placeholder": "#dae0fa",
@@ -618,6 +615,7 @@
     "link": "https://password-components.vercel.app/",
     "color": "#2B9DFE",
     "color2": "#ECFAFF",
+    "color3": "#DBF5FF",
     "background": "#ECFAFF",
     "paragraph": "#034075",
     "placeholder": "#d9f5ff",
@@ -725,7 +723,7 @@
     "name": "Sunnyside",
     "id": 5,
     "readytoview": true,
-    "available": true,
+    "available": false,
     "path": "sunnyside",
     "type": "Expérimental",
     "date": { "fr": "Juillet 2022", "en": "July 2022" },
@@ -737,6 +735,7 @@
     "link": "https://sunnyside-lovat.vercel.app/",
     "color": "#ffdc00",
     "color2": "#FCFFEC",
+    "color3": "#f9ffd8",
     "background": "#FCFFEC",
     "paragraph": "#231e00",
     "placeholder": "#fff7c3",
@@ -885,10 +884,11 @@
       "fr": "Conception & Développement",
       "en": "Design & Development"
     },
-    "technologies": "TS, Auth, MongoDB, Prisma",
+    "technologies": "Next-Auth, MongoDB, Prisma",
     "link": "",
-    "color": "#189E8E",
+    "color": "#103A36",
     "color2": "#ECF8F5",
+    "color3": "#D9F2EC",
     "paragraph": "#231e00",
     "placeholder": "#",
     "thumbnail": {
@@ -904,25 +904,232 @@
       "thumb4": {
         "src": "mscthumb2"
       }
+    },
+    "aboutproject": {
+      "title": {
+        "fr": ["Une agence", "brillante."],
+        "en": ["A brilliant", "agency."]
+      },
+      "subtitle": {
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
+      },
+      "about": {
+        "fr": [
+          "Pour le projet Sunnyside, en tant que développeur, j'ai travaillé sur la mise en œuvre de la maquette ",
+          "reçue pour créer un site web réactif et fonctionnel. Grâce à l'utilisation de React, j'ai pu ",
+          "transformer la maquette en une interface utilisateur interactive, offrant ainsi une ",
+          "expérience fluide et engageante. J'ai veillé à ce que la qualité visuelle de la maquette soit préservée ",
+          "tout au long du processus d'intégration, offrant ainsi une présentation professionnelle et ",
+          "cohérente pour l'agence."
+        ],
+        "en": [
+          "For the Sunnyside project, as a developer, I worked on the implementation of the received template ",
+          "to create a responsive and functional website. Thanks to the use of React, I was able to transform ",
+          "the model into an interactive user interface, offering users a smooth and engaging experience. ",
+          "I ensured that the visual quality of the model was maintained throughout the integration process, ",
+          "providing a professional and consistent presentation for the agency."
+        ]
+      },
+      "images": {
+        "img1": {
+          "src": "sun1"
+        },
+        "img2": {
+          "src": "sun2"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": ["Explorez le", "côté ensoleillé."],
+        "en": ["Explore the", "sunny side."]
+      },
+      "subtitle": {
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
+      },
+      "about": {
+        "fr": [
+          "Plongez dans l'univers ensoleillé de Sunnyside, une agence digitale fictive où la créativité rencontre ",
+          "l'excellence technologique. Grâce à l'utilisation de React et une parfaite intégration, j'ai donné ",
+          "vie à une maquette captivante, mettant en valeur les services uniques proposés par l'agence. ",
+          "Explorez les différentes sections de cette landing page, découvrez les témoignages élogieux des ",
+          "clients satisfaits et laissez-vous séduire par la gamme complète de services de pointe. ",
+          "Avec Sunnyside, votre présence en ligne sera inoubliable."
+        ],
+        "en": [
+          "Dive into the sunny world of Sunnyside, a fictional digital agency where creativity meets ",
+          "technological excellence. Thanks to the use of React and a perfect integration, I gave life to ",
+          "an exciting model, highlighting the unique services offered by the agency. Explore the different ",
+          "sections of this landing page, discover the positive testimonials of satisfied customers and let ",
+          "yourself be seduced by the full range of cutting-edge services. With Sunnyside, your online presence ",
+          "will be unforgettable."
+        ]
+      },
+      "images": {
+        "img3": {
+          "src": "mscthumb1"
+        },
+        "img4": {
+          "src": "mscthumb2"
+        },
+        "img5": {
+          "src": "mscthumb3"
+        },
+        "img6": {
+          "src": "mscthumb4"
+        },
+        "img7": {
+          "src": "sun7"
+        }
+      }
     }
   },
   {
-    "name": "Ab Distribution",
-    "id": 7,
-    "readytoview": false,
-    "available": false,
-    "path": "abdistribution",
-    "type": "Expérimental",
-    "date": { "fr": "Août 2023", "en": "August 2023" },
+    "name": "Komstart",
+    "id": 8,
+    "readytoview": true,
+    "available": true,
+    "path": "komstart",
+    "type": "Mission",
+    "date": { "fr": "Novembre 2023", "en": "November 2023" },
     "role": {
       "fr": "Conception & Développement",
       "en": "Design & Development"
     },
-    "technologies": "TS, Shopify",
-    "link": "",
-    "color": "#F86542",
-    "color2": "#F8F0EC",
-    "paragraph": "#",
-    "placeholder": "#"
+    "technologies": "Nextjs, Wordpress",
+    "link": "https://komstart.com/",
+    "color": "#1C1E20",
+    "color2": "#F5FFDC",
+    "color3": "#F0FFC9",
+    "paragraph": "#201A1A",
+    "placeholder": "#F0FFC9",
+    "thumbnail": {
+      "thumb1": {
+        "src": "kst0"
+      },
+      "thumb2": {
+        "src": "kst1"
+      },
+      "thumb3": {
+        "src": "kst2"
+      },
+      "thumb4": {
+        "src": "kst3"
+      }
+    },
+    "aboutproject": {
+      "title": {
+        "fr": ["Une Vision", "graphique du sport"],
+        "en": ["A graphic", "vision of sport"]
+      },
+      "subtitle": {
+        "fr": ["À propos", "du projet"],
+        "en": ["About", "project"]
+      },
+      "about": {
+        "fr": [
+          "J'ai collaborer avec Komstart, agence de création visuelle sportive à La Réunion, ",
+          "pour concevoir un site web incarnant l'esprit dynamique de l'entreprise et soutenant son expansion. ",
+          "Utilisation de Next.js pour le front-end et WordPress pour le contenu, fusionnant audace graphique ",
+          "et navigation intuitive. L'expérience utilisateur est pensée pour une découverte aisée et engageante des ",
+          "réalisations sportives de l'agence. Le site est un carrefour où art et fonctionnalité se rencontrent, ",
+          "chaque projet reflétant l'énergie et l'innovation de Komstart. "
+        ],
+        "en": [
+          "I collaborated with Komstart, a sports visual creation agency in Reunion Island, to design a website ",
+          "that embodies the dynamic spirit of the company and supports its expansion. Using Next.js for the ",
+          "front-end and WordPress for the content, merging graphic boldness and intuitive navigation. The user ",
+          "experience is designed for easy and engaging discovery of the agency's sports achievements. The site ",
+          "is a crossroads where art and functionality meet, each project reflecting the energy and innovation ",
+          "of Komstart."
+        ]
+      },
+      "images": {
+        "img1": {
+          "src": "kst4"
+        },
+        "img2": {
+          "src": "kst5"
+        }
+      }
+    },
+    "viewproject": {
+      "title": {
+        "fr": ["Un design qui", "s'anime avec l'énergie"],
+        "en": ["A design that", "comes to life with energy"]
+      },
+      "subtitle": {
+        "fr": ["Aperçu", "du projet"],
+        "en": ["Project", "view"]
+      },
+      "about": {
+        "fr": [
+          "Le site de Komstart est une vitrine de l'excellence visuelle, illustrant la richesse des créations sportives. ",
+          "Conçu avec soin, il met l'accent sur une expérience utilisateur fluide et captivante. ",
+          "Chaque projet est une démonstration de la capacité de l'agence à capturer l'essence du sport avec innovation. ",
+          "Le portfolio invite à une exploration visuelle, où formes et couleurs célèbrent le sport. ",
+          "Plongez dans un univers où chaque création reflète la beauté et le dynamisme du domaine sportif."
+        ],
+        "en": [
+          "The Komstart site is a showcase of visual excellence, illustrating the richness of sports creations. ",
+          "Carefully designed, it focuses on a smooth and engaging user experience. ",
+          "Each project is a demonstration of the agency's ability to capture the essence of sport with innovation. ",
+          "The portfolio invites you to a visual exploration, where shapes and colors celebrate sport. ",
+          "Dive into a world where each creation reflects the beauty and dynamism of the sports field."
+        ]
+      },
+      "images": {
+        "img3": {
+          "src": "kst3"
+        },
+        "img4": {
+          "src": "kst0"
+        },
+        "img5": {
+          "src": "kst7"
+        },
+        "img6": {
+          "src": "kst8"
+        },
+        "img7": {
+          "src": "kst6"
+        }
+      }
+    }
+  },
+  {
+    "name": "By us media",
+    "id": 9,
+    "readytoview": true,
+    "available": false,
+    "path": "byusmedia",
+    "type": "Mission",
+    "date": { "fr": "Décembre 2023", "en": "December 2023" },
+    "role": {
+      "fr": "Conception & Développement",
+      "en": "Design & Development"
+    },
+    "technologies": "Nextjs, Wordpress",
+    "link": "https://byusmedia.fr/",
+    "color": "#3F2915",
+    "color2": "#FAF9EC",
+    "paragraph": "#111",
+    "placeholder": "#F4F1E2",
+    "thumbnail": {
+      "thumb1": {
+        "src": "bum0"
+      },
+      "thumb2": {
+        "src": "bum1"
+      },
+      "thumb3": {
+        "src": "bum2"
+      },
+      "thumb4": {
+        "src": "bum3"
+      }
+    }
   }
 ]
