@@ -461,8 +461,8 @@
   {
     "name": "Galleria",
     "id": 3,
-    "readytoview": true,
-    "available": true,
+    "readytoview": false,
+    "available": false,
     "path": "galleria",
     "type": "Expérimental",
     "date": { "fr": "Août 2022", "en": "August 2022" },
