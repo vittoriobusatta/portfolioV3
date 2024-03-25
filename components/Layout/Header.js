@@ -24,7 +24,7 @@ function Header({ logoColor, color, color2 }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  const month = language === "en" ? "February" : "Février";
+  const month = language === "en" ? "May" : "Mai";
 
   const monthAvailable =
     language === "en"
